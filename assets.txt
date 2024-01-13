@@ -1,0 +1,7 @@
+Search Bar: #e7f2df
+Font Color: #4c6f72
+Background: #f8fff7
+Font 01 (EN Pokemon Names): Lato Bold 
+Font 02 (JP Pokemon Names):Kozuka Gothic Pr6N R
+Font 03 (How To/Search): Lato Regular
+Font 04 (KR Pokemon Names): Malgun Gothic Regular
