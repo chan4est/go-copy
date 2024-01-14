@@ -10,7 +10,6 @@ pokemon_names = None
 class PokemonNames():
     def __init__(self) -> None:
         self.pokemon_dict = {}
-        self.length = 0
         self.bulbaurl = 'https://bulbapedia.bulbagarden.net/wiki/List_of_{}_Pok%C3%A9mon_names'
         ## Test the REGEX on https://regex101.com/
         self.languages = [
@@ -46,7 +45,7 @@ class PokemonNames():
                     if ("\'" in english_name):
                         english_name_html = english_name_html.replace("\'", "")
                     pokemon_data = {
-                        "number": i+1,
+                        "id": i+1,
                         "EN_name": english_name,
                         "sprite_image": "https://img.pokemondb.net/sprites/home/normal/{}.png".format(english_name_html)
                     }
@@ -57,7 +56,7 @@ class PokemonNames():
                     self.pokemon_dict[i+1]['{}_name'.format(language['tlc'])] = pokemon_names[i]
 
 @app.route('/pokemon_names', methods=['GET'])
-def pokemon_names():
+def pokemon_names() -> dict:
     resp = jsonify(pokemon_names.pokemon_dict)
     resp.status_code = 200
     return resp
