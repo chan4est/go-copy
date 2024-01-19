@@ -9,7 +9,7 @@ pokemon_names = None
 
 class PokemonNames():
     def __init__(self) -> None:
-        self.pokemon_dict = {}
+        self.pokemon_arr = []
         self.bulbaurl = 'https://bulbapedia.bulbagarden.net/wiki/List_of_{}_Pok%C3%A9mon_names'
         ## Test the REGEX on https://regex101.com/
         self.languages = [
@@ -38,26 +38,45 @@ class PokemonNames():
                     english_name = pokemon_names[i]
                     ## Lowercase for the images on pokemondb.net
                     english_name_html = english_name.lower()
-                    ## Replace the spaces for Paradox Pokemon (ex: "iron bundle" -> "iron-bundle")
-                    if (" " in english_name):
-                        english_name_html = english_name_html.replace(" ", "-")
-                    ## Replace the apostrophe for Pokemon like Farfetch'd (ex: farfetch'd -> "farfetchd")
-                    if ("\'" in english_name):
+                    ## Fix Nidoran Female
+                    if ("♀" in english_name):
+                        english_name_html = english_name_html.replace("♀", "-f")
+                    ## Fix Nidoran Male
+                    elif ("♂" in english_name):
+                        english_name_html = english_name_html.replace("♂", "-m")
+                    ## Fix Farfetch'd
+                    elif ("\'" in english_name):
                         english_name_html = english_name_html.replace("\'", "")
+                    ## Fix Mr. Mime and Mr. Rime
+                    elif (". " in english_name):
+                        english_name_html = english_name_html.replace(". ", "-")
+                    ## Fix Mime Jr.
+                    elif (" Jr." in english_name):
+                        print(english_name)
+                        english_name_html = english_name_html.replace(" jr.", "-jr")
+                    ## Fix Flabebe
+                    elif ("é" in english_name):
+                        english_name_html = english_name_html.replace("é", "e")
+                    ## Fix Type: Null
+                    elif (": " in english_name):
+                        english_name_html = english_name_html.replace(": ", "-")   
+                    ## Fix Paradox Pokemon
+                    elif (" " in english_name):
+                        english_name_html = english_name_html.replace(" ", "-")
                     pokemon_data = {
                         "id": i+1,
                         "EN_name": english_name,
                         "sprite_image": "https://img.pokemondb.net/sprites/home/normal/{}.png".format(english_name_html)
                     }
-                    self.pokemon_dict[i+1] = pokemon_data
+                    self.pokemon_arr.append(pokemon_data)
             ## Run through the remaining languages
             else:
                 for i in range(len(pokemon_names)):
-                    self.pokemon_dict[i+1]['{}_name'.format(language['tlc'])] = pokemon_names[i]
+                    self.pokemon_arr[i]['{}_name'.format(language['tlc'])] = pokemon_names[i]
 
 @app.route('/pokemon_names', methods=['GET'])
-def pokemon_names() -> dict:
-    resp = jsonify(pokemon_names.pokemon_dict)
+def pokemon_names() -> list:
+    resp = jsonify(pokemon_names.pokemon_arr)
     resp.status_code = 200
     return resp
 
