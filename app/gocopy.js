@@ -5,6 +5,102 @@ import copy from 'copy-to-clipboard';
 import Image from 'next/image'
 import leftBorder from '../public/left-border.jpg'
 import rightBorder from '../public/right-border.jpg'
+import { useState } from 'react';
+
+// https://stackoverflow.com/a/175787/5221437
+function isNumber(str) {
+    if (typeof str != "string") return false // we only process strings!  
+    return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+           !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
+  }
+
+function copyAndPopup(JP_name, setPopupVis, setPopupName) {
+    copy(JP_name);
+    setPopupName(JP_name)
+    setPopupVis("visible");
+    // TODO: Make this transition better
+    setTimeout(() => {
+        setPopupVis("hidden")
+    }, 2500);
+}
+
+function Pokemon({EN_name, JP_name, sprite_image, setPopupVis, setPopupName}) {
+    return (
+        <div className="pokemon-grid-item" onClick={() => copyAndPopup(JP_name, setPopupVis, setPopupName)}>
+            <img
+                src={sprite_image}
+                alt={"Image of the Pokemon " + EN_name}
+            />
+            <br></br>
+            <div className="pokemon-en-text">
+                {EN_name}
+            </div>
+            {JP_name}
+        </div>
+    )
+}
+
+function PokemonTable({setPopupVis, setPopupName, searchValue}) {
+    let filteredPokemon = pokemondata;
+    // Can search by dex number, or by name
+    if (searchValue) {
+        if (isNumber(searchValue)) {
+            console.log("It is a numeric string")
+            console.log(searchValue)
+            filteredPokemon = pokemondata.filter((pokemon) => pokemon.id == Number(searchValue));
+        } else {
+            const searchRegex = new RegExp(`^${searchValue.toLowerCase()}.*`);
+            filteredPokemon = pokemondata.filter((pokemon) => pokemon.EN_name.toLowerCase().match(searchRegex) != null);
+        }
+    }
+    filteredPokemon = filteredPokemon.map(pokemon => {
+        return (
+            <Pokemon
+                key={pokemon.id}
+                EN_name={pokemon.EN_name}
+                JP_name={pokemon.JP_name}
+                sprite_image={pokemon.sprite_image}
+                setPopupVis={setPopupVis}
+                setPopupName={setPopupName}
+            />
+        )}
+    )
+    return (
+        <div className="pokemon-grid">
+           {filteredPokemon}
+        </div>
+    )
+}
+
+function CopyPopup({popupVis, popupName}) {
+    return (
+        <div className='copy-popup' style={{visibility: popupVis}}>
+            {popupName} COPIED
+        </div>
+    )
+}
+
+function SearchBar({setSearchValue}) {
+    return (
+        <div className="searchbox">
+            <form onSubmit={e => { e.preventDefault(); }}>
+                <input type="text" placeholder="Search" onChange={(e) => setSearchValue(e.target.value)}/>
+            </form>
+        </div>
+    )
+}
+
+function TopBar({popupVis, popupName, setSearchValue}) {
+    return (
+        <div className='topbar'>
+            TAP TO COPY POKÉMON'S JAPANESE
+            <br></br>
+            NAME ONTO YOUR CLIPBOARD
+            <CopyPopup popupVis={popupVis} popupName={popupName}/>
+            <SearchBar setSearchValue={setSearchValue}/>
+        </div>
+    )
+}
 
 function LeftBorder() {
     return<Image 
@@ -22,82 +118,16 @@ function RightBorder() {
         />
 }
 
-function ScrollBar() {
-    return (
-        <div>
-        </div>
-    )
-}
-
-function copyAndPopup(JP_name) {
-    copy(JP_name)
-    alert(`${JP_name} COPIED`)
-}
-
-function Pokemon({EN_name, JP_name, sprite_image}) {
-    return (
-        <div className="pokemon-grid-item" onClick={() => copyAndPopup(JP_name)}>
-            <img
-                src={sprite_image}
-                alt={"Image of the Pokemon " + EN_name}
-            />
-            <br></br>
-            <div className="pokemon-en-text">
-                {EN_name}
-            </div>
-            {JP_name}
-        </div>
-    )
-}
-
-function PokemonTable() {
-    const list = pokemondata.map(pokemon => {
-        return (
-            <Pokemon
-                key={pokemon.id}
-                EN_name={pokemon.EN_name}
-                JP_name={pokemon.JP_name}
-                sprite_image={pokemon.sprite_image}
-            />
-        )}
-    )
-    return (
-        <div className="pokemon-grid">
-           {list}
-        </div>
-    )
-}
-
-function TopBar() {
-    return (
-        <div className='topbar'>
-            TAP TO COPY POKÉMON'S JAPANESE
-            <br></br>
-            NAME ONTO YOUR CLIPBOARD
-            <SearchBar/>
-        </div>
-    )
-}
-
-function SearchBar() {
-    return (
-        <div className="searchbox">
-            <form >
-                <input type="text" placeholder="Search" />
-            </form>
-        </div>
-    )
-}
-
 export default function FilterablePokedex() {
+    const [popupVis, setPopupVis] = useState('hidden');
+    const [popupName, setPopupName] = useState('')
+    const [searchValue, setSearchValue] = useState(null);
     return (
         <>
-            <LeftBorder />
-            <RightBorder />
-            <TopBar />
-            <div className="filterable-dex">
-                <PokemonTable/>
-            </div>
+            <LeftBorder/>
+            <RightBorder/>
+            <TopBar popupVis={popupVis} popupName={popupName} setSearchValue={setSearchValue}/>
+            <PokemonTable setPopupVis={setPopupVis} setPopupName={setPopupName} searchValue={searchValue}/>
         </>
     )
 }

@@ -1,38 +1,47 @@
+html,body{
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Lato', sans-serif;;
-  margin: 20px;
-  padding: 0;
   background-color: #f8fff7;
   color: #4c6f72;
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 
 .left-background {
   width: 2%;
-  z-index:5;
+  z-index: 5;
   position: fixed;
   left: 0;
 }
 
 .right-background {
   width: 2%;
-  z-index:5;
+  z-index: 5;
   position: fixed;
   right: 0;
 }
 
 .topbar {
+  /* position: -webkit-sticky; Safari */
   position: sticky;
-  top: 50px;
+  top: 0px;
+  padding-top: 50px;
   background-color: #f8fff7;
   padding-bottom: 6px;
+  font-size: 1.05rem;
+  word-spacing: 5px;
+  line-height:25px;
+  align-items: center;
 }
 
 input[type=text] {
   font-family: 'Lato', sans-serif;
-  font-size: 20px;
+  font-size: 1.05rem;
   background-color: #e7f2df;
   color: #4c6f72;
   border: none;
@@ -41,26 +50,52 @@ input[type=text] {
   background-size:20px;
   background-position: 35% 50%;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 90%;
   height: 45px;
   border-radius: 25px;
 }
 
-.searchbox {
-  margin-top: 20px;
+::placeholder {
+  color: #4c6f72;
+  opacity: 1; /* Firefox */
 }
 
-.filterable-dex {
-  margin-top: 1rem;
+::-ms-input-placeholder { /* Edge 12 -18 */
+  color: #4c6f72;
+  opacity: 1; /* Firefox */
+}
+
+.searchbox {
+  padding-top: 20px;
+}
+
+.copy-popup {
+  visibility: hidden;
+  position: absolute;
+  background-color: #e7f2e1;
+  border-color: #43a282;
+  width: 90%;
+  height: 65px;
+  font-size: 2rem;
+  border-radius: 10px;
+  border-width: thick ;
+  border-style: solid;
+  line-height: 60px;
+  top: 65%;
+  /** 2 HOURS TO FIND THIS!!!!!!!!! FUCK CSS!
+    https://stackoverflow.com/questions/15627401/centering-div-without-using-margin-auto
+  **/
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .pokemon-en-text {
   font-weight: bold;
-  margin-top: 0.2em
+  padding-top: 0.2rem
 }
 
 .pokemon-grid-item {
-  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 .pokemon-grid img {
@@ -69,9 +104,13 @@ input[type=text] {
 }
 
 .pokemon-grid {
+  padding-top: 1rem;
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 20% 20% 20%;
+  column-gap: 3rem;
+  row-gap: 1rem;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-bottom: 2rem;
 }
