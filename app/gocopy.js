@@ -7,7 +7,6 @@ import leftBorder from '../public/left-border.jpg'
 import rightBorder from '../public/right-border.jpg'
 import { useState } from 'react';
 
-
 // https://stackoverflow.com/a/175787/5221437
 function isNumber(str) {
     if (typeof str != "string") return false // we only process strings!  
@@ -25,13 +24,9 @@ function copyAndPopup(JP_name, setPopupVis, setPopupName) {
     }, 2500);
 }
 
-function Pokemon({EN_name, JP_name, sprite_image, pokemon_number, setPopupVis, setPopupName}) {
+function Pokemon({EN_name, JP_name, pokemon_number, setPopupVis, setPopupName}) {
     return (
         <div className="pokemon-grid-item" onClick={() => copyAndPopup(JP_name, setPopupVis, setPopupName)}>
-            {/* <img
-                src={`/pokemon-images/${pokemon_number}.webm`}
-                alt={"Image of the Pokemon " + EN_name}
-            /> */}
             <Image 
                 src={`/pokemon-images/${pokemon_number}.webp`} 
                 alt={"Image of the Pokemon " + EN_name}
@@ -43,7 +38,9 @@ function Pokemon({EN_name, JP_name, sprite_image, pokemon_number, setPopupVis, s
             <div className="pokemon-en-text">
                 {EN_name}
             </div>
-            {JP_name}
+            <div className="pokemon-jp-text">
+                {JP_name}
+            </div>
         </div>
     )
 }
