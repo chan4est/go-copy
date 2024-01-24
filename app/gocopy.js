@@ -7,6 +7,7 @@ import leftBorder from '../public/left-border.jpg'
 import rightBorder from '../public/right-border.jpg'
 import { useState } from 'react';
 
+
 // https://stackoverflow.com/a/175787/5221437
 function isNumber(str) {
     if (typeof str != "string") return false // we only process strings!  
@@ -24,12 +25,19 @@ function copyAndPopup(JP_name, setPopupVis, setPopupName) {
     }, 2500);
 }
 
-function Pokemon({EN_name, JP_name, sprite_image, setPopupVis, setPopupName}) {
+function Pokemon({EN_name, JP_name, sprite_image, pokemon_number, setPopupVis, setPopupName}) {
     return (
         <div className="pokemon-grid-item" onClick={() => copyAndPopup(JP_name, setPopupVis, setPopupName)}>
-            <img
-                src={sprite_image}
+            {/* <img
+                src={`/pokemon-images/${pokemon_number}.webm`}
                 alt={"Image of the Pokemon " + EN_name}
+            /> */}
+            <Image 
+                src={`/pokemon-images/${pokemon_number}.webp`} 
+                alt={"Image of the Pokemon " + EN_name}
+                height={256}
+                width={256}
+                quality={100}
             />
             <br></br>
             <div className="pokemon-en-text">
@@ -45,8 +53,6 @@ function PokemonTable({setPopupVis, setPopupName, searchValue}) {
     // Can search by dex number, or by name
     if (searchValue) {
         if (isNumber(searchValue)) {
-            console.log("It is a numeric string")
-            console.log(searchValue)
             filteredPokemon = pokemondata.filter((pokemon) => pokemon.id == Number(searchValue));
         } else {
             const searchRegex = new RegExp(`^${searchValue.toLowerCase()}.*`);
@@ -60,6 +66,7 @@ function PokemonTable({setPopupVis, setPopupName, searchValue}) {
                 EN_name={pokemon.EN_name}
                 JP_name={pokemon.JP_name}
                 sprite_image={pokemon.sprite_image}
+                pokemon_number={pokemon.id}
                 setPopupVis={setPopupVis}
                 setPopupName={setPopupName}
             />

@@ -52,7 +52,6 @@ class PokemonNames():
                         english_name_html = english_name_html.replace(". ", "-")
                     ## Fix Mime Jr.
                     elif (" Jr." in english_name):
-                        print(english_name)
                         english_name_html = english_name_html.replace(" jr.", "-jr")
                     ## Fix Flabebe
                     elif ("é" in english_name):

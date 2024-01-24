@@ -7,7 +7,6 @@ body {
   font-family: 'Lato', sans-serif;;
   background-color: #f8fff7;
   color: #4c6f72;
-  display: flex;
   justify-content: center;
   text-align: center;
 }
@@ -50,7 +49,7 @@ input[type=text] {
   background-size:20px;
   background-position: 35% 50%;
   background-repeat: no-repeat;
-  width: 90%;
+  width: 85%;
   height: 45px;
   border-radius: 25px;
 }
@@ -80,7 +79,7 @@ input[type=text] {
   border-radius: 10px;
   border-width: thick ;
   border-style: solid;
-  line-height: 60px;
+  line-height: 65px;
   top: 65%;
   /** 2 HOURS TO FIND THIS!!!!!!!!! FUCK CSS!
     https://stackoverflow.com/questions/15627401/centering-div-without-using-margin-auto
@@ -101,6 +100,7 @@ input[type=text] {
 .pokemon-grid img {
   vertical-align: middle;
   width: clamp(50px, 100%, 600px);
+  height: auto;
 }
 
 .pokemon-grid {
