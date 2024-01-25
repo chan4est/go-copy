@@ -28,7 +28,7 @@ body {
 .topbar {
   position: sticky;
   top: 0px;
-  padding-top: 50px;
+  padding-top: 10px;
   background-color: #f8fff7;
   padding-bottom: 6px;
   font-size: 1.05rem;
@@ -48,7 +48,7 @@ input[type=text] {
   background-size: 20px;
   background-position: 35% 50%;
   background-repeat: no-repeat;
-  width: 85%;
+  width: 87.5%;
   height: 45px;
   border-radius: 25px;
 }
@@ -67,6 +67,12 @@ input[type=text] {
   padding-top: 20px;
 }
 
+.copy-popup-fade-out {
+  animation-name: fade-out;
+  animation-duration: 0.25s;
+  animation-delay: 2.75s;
+}
+
 .copy-popup {
   visibility: hidden;
   position: absolute;
@@ -79,7 +85,7 @@ input[type=text] {
   border-width: thick ;
   border-style: solid;
   line-height: 200%;
-  top: 62%;
+  top: 67px;
   /** 2 HOURS TO FIND THIS!!!!!!!!! FUCK CSS!
     https://stackoverflow.com/questions/15627401/centering-div-without-using-margin-auto
   **/
@@ -87,47 +93,31 @@ input[type=text] {
   transform: translateX(-50%);
 }
 
-.copy-popup-fade-out {
-  animation-name: fade-out;
-  animation-duration: 2s;
-  animation-delay: 4s;
-}
-
 @keyframes fade-out {
   0%   {opacity: 1.00;}
   25%  {opacity: 0.75;}
   50%  {opacity: 0.50;}
   75%  {opacity: 0.25;}
-  100% {opacity: 0.00; visibility: hidden;}
-}
-
-@keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+  100% {opacity: 0.00;}
 }
 
 .pokemon-en-text {
   font-weight: 600;
-  font-size: medium;
+  font-size: 3.5vw;
   padding-top: 0.2rem
 }
 
 .pokemon-jp-text {
-  font-size: small;
+  font-size: 3.0vw;
 }
 
 .pokemon-grid-item {
   font-family: 'Lato', sans-serif;
   padding-bottom: 5px;
   border: none;
-  background-color: #f8fff7;
+  background: none;
   color: #4c6f72;
   cursor: pointer;
-  transition-duration: 0.1s;
   border-radius: 5%;
 }
 

@@ -14,19 +14,22 @@ function isNumber(str) {
            !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
   }
 
-function copyAndPopup(JP_name, setPopupVis, setPopupName) {
-    copy(JP_name);
-    setPopupName(JP_name)
-    setPopupVis("visible");
-    // TODO: Make this transition better
-    setTimeout(() => {
-        setPopupVis("hidden")
-    }, 6000);
-}
-
-function Pokemon({EN_name, JP_name, pokemon_number, setPopupVis, setPopupName}) {
+function Pokemon({EN_name, JP_name, pokemon_number, setPopupVis, setPopupName, currentTimer, setCurrentTimer}) {
+   
+    function handleClick() {
+        copy(JP_name);
+        setPopupName(JP_name)
+        if (currentTimer) {
+            clearTimeout(currentTimer);
+        }
+        setPopupVis("visible");
+        setCurrentTimer(setTimeout(() => {
+            setPopupVis("hidden");
+        }, 3000));
+    };
     return (
-        <button className="pokemon-grid-item" onClick={() => copyAndPopup(JP_name, setPopupVis, setPopupName)}>
+        <button className="pokemon-grid-item" 
+                onClick={() => handleClick()}>
             <Image 
                 src={`/pokemon-images/${pokemon_number}.webp`} 
                 alt={"Image of the Pokemon " + EN_name}
@@ -45,7 +48,7 @@ function Pokemon({EN_name, JP_name, pokemon_number, setPopupVis, setPopupName}) 
     )
 }
 
-function PokemonTable({setPopupVis, setPopupName, searchValue}) {
+function PokemonTable({setPopupVis, setPopupName, searchValue, currentTimer, setCurrentTimer}) {
     let filteredPokemon = pokemondata;
     // Can search by dex number, or by name
     if (searchValue) {
@@ -66,6 +69,8 @@ function PokemonTable({setPopupVis, setPopupName, searchValue}) {
                 pokemon_number={pokemon.id}
                 setPopupVis={setPopupVis}
                 setPopupName={setPopupName}
+                currentTimer={currentTimer}
+                setCurrentTimer={setCurrentTimer}
             />
         )}
     )
@@ -80,7 +85,6 @@ function CopyPopup({popupVis, setPopupVis, popupName}) {
     let fadeOutStyle = null;
     if (popupVis === "visible") {
         fadeOutStyle = "copy-popup-fade-out";
-        // setPopupVis("hidden")
     }
     return (
         <div className={`copy-popup ${fadeOutStyle}`} style={{visibility: popupVis}}>
@@ -131,12 +135,14 @@ export default function FilterablePokedex() {
     const [popupVis, setPopupVis] = useState('hidden');
     const [popupName, setPopupName] = useState('')
     const [searchValue, setSearchValue] = useState(null);
+    const [currentTimer, setCurrentTimer] = useState(null);
+
     return (
         <>
             <LeftBorder/>
             <RightBorder/>
             <TopBar popupVis={popupVis} setPopupVis={setPopupVis} popupName={popupName} setSearchValue={setSearchValue}/>
-            <PokemonTable setPopupVis={setPopupVis} setPopupName={setPopupName} searchValue={searchValue}/>
+            <PokemonTable setPopupVis={setPopupVis} setPopupName={setPopupName} searchValue={searchValue} currentTimer={currentTimer} setCurrentTimer={setCurrentTimer}/>
         </>
     )
 }
