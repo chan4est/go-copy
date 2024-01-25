@@ -21,12 +21,12 @@ function copyAndPopup(JP_name, setPopupVis, setPopupName) {
     // TODO: Make this transition better
     setTimeout(() => {
         setPopupVis("hidden")
-    }, 2500);
+    }, 6000);
 }
 
 function Pokemon({EN_name, JP_name, pokemon_number, setPopupVis, setPopupName}) {
     return (
-        <div className="pokemon-grid-item" onClick={() => copyAndPopup(JP_name, setPopupVis, setPopupName)}>
+        <button className="pokemon-grid-item" onClick={() => copyAndPopup(JP_name, setPopupVis, setPopupName)}>
             <Image 
                 src={`/pokemon-images/${pokemon_number}.webp`} 
                 alt={"Image of the Pokemon " + EN_name}
@@ -41,7 +41,7 @@ function Pokemon({EN_name, JP_name, pokemon_number, setPopupVis, setPopupName}) 
             <div className="pokemon-jp-text">
                 {JP_name}
             </div>
-        </div>
+        </button>
     )
 }
 
@@ -76,9 +76,14 @@ function PokemonTable({setPopupVis, setPopupName, searchValue}) {
     )
 }
 
-function CopyPopup({popupVis, popupName}) {
+function CopyPopup({popupVis, setPopupVis, popupName}) {
+    let fadeOutStyle = null;
+    if (popupVis === "visible") {
+        fadeOutStyle = "copy-popup-fade-out";
+        // setPopupVis("hidden")
+    }
     return (
-        <div className='copy-popup' style={{visibility: popupVis}}>
+        <div className={`copy-popup ${fadeOutStyle}`} style={{visibility: popupVis}}>
             {popupName} COPIED
         </div>
     )
@@ -94,13 +99,13 @@ function SearchBar({setSearchValue}) {
     )
 }
 
-function TopBar({popupVis, popupName, setSearchValue}) {
+function TopBar({popupVis, setPopupVis, popupName, setSearchValue}) {
     return (
         <div className='topbar'>
             TAP TO COPY POKÉMON'S JAPANESE
             <br></br>
             NAME ONTO YOUR CLIPBOARD
-            <CopyPopup popupVis={popupVis} popupName={popupName}/>
+            <CopyPopup popupVis={popupVis} setPopupVis={setPopupVis} popupName={popupName}/>
             <SearchBar setSearchValue={setSearchValue}/>
         </div>
     )
@@ -130,7 +135,7 @@ export default function FilterablePokedex() {
         <>
             <LeftBorder/>
             <RightBorder/>
-            <TopBar popupVis={popupVis} popupName={popupName} setSearchValue={setSearchValue}/>
+            <TopBar popupVis={popupVis} setPopupVis={setPopupVis} popupName={popupName} setSearchValue={setSearchValue}/>
             <PokemonTable setPopupVis={setPopupVis} setPopupName={setPopupName} searchValue={searchValue}/>
         </>
     )

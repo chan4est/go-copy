@@ -78,8 +78,8 @@ input[type=text] {
   border-radius: 10px;
   border-width: thick ;
   border-style: solid;
-  line-height: 65px;
-  top: 65%;
+  line-height: 200%;
+  top: 62%;
   /** 2 HOURS TO FIND THIS!!!!!!!!! FUCK CSS!
     https://stackoverflow.com/questions/15627401/centering-div-without-using-margin-auto
   **/
@@ -87,8 +87,32 @@ input[type=text] {
   transform: translateX(-50%);
 }
 
+.copy-popup-fade-out {
+  animation-name: fade-out;
+  animation-duration: 2s;
+  animation-delay: 4s;
+}
+
+@keyframes fade-out {
+  0%   {opacity: 1.00;}
+  25%  {opacity: 0.75;}
+  50%  {opacity: 0.50;}
+  75%  {opacity: 0.25;}
+  100% {opacity: 0.00; visibility: hidden;}
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .pokemon-en-text {
-  font-weight: bold;
+  font-weight: 600;
+  font-size: medium;
   padding-top: 0.2rem
 }
 
@@ -97,7 +121,18 @@ input[type=text] {
 }
 
 .pokemon-grid-item {
+  font-family: 'Lato', sans-serif;
   padding-bottom: 5px;
+  border: none;
+  background-color: #f8fff7;
+  color: #4c6f72;
+  cursor: pointer;
+  transition-duration: 0.1s;
+  border-radius: 5%;
+}
+
+.pokemon-grid-item:active {
+  background-color: rgba(183, 240, 155, 0.35);;
 }
 
 .pokemon-grid img {
@@ -109,8 +144,8 @@ input[type=text] {
 .pokemon-grid {
   padding-top: 1rem;
   display: grid;
-  grid-template-columns: 20% 20% 20%;
-  column-gap: 3rem;
+  grid-template-columns: 23% 23% 23%;
+  column-gap: 2rem;
   row-gap: 1rem;
   justify-content: center;
   align-items: center;
