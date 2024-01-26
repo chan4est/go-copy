@@ -5,7 +5,7 @@ import copy from 'copy-to-clipboard';
 import Image from 'next/image'
 import leftBorder from '../public/left-border.jpg'
 import rightBorder from '../public/right-border.jpg'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // https://stackoverflow.com/a/175787/5221437
 function isNumber(str) {
@@ -14,19 +14,14 @@ function isNumber(str) {
            !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
   }
 
-function Pokemon({EN_name, JP_name, pokemon_number, setPopupVis, setPopupName, currentTimer, setCurrentTimer}) {
+function Pokemon({ EN_name, JP_name, pokemon_number, setPopupName, setClickTime }) {
    
     function handleClick() {
         copy(JP_name);
         setPopupName(JP_name)
-        if (currentTimer) {
-            clearTimeout(currentTimer);
-        }
-        setPopupVis("visible");
-        setCurrentTimer(setTimeout(() => {
-            setPopupVis("hidden");
-        }, 3000));
+        setClickTime(Date.now());
     };
+
     return (
         <button className="pokemon-grid-item" 
                 onClick={() => handleClick()}>
@@ -48,7 +43,7 @@ function Pokemon({EN_name, JP_name, pokemon_number, setPopupVis, setPopupName, c
     )
 }
 
-function PokemonTable({setPopupVis, setPopupName, searchValue, currentTimer, setCurrentTimer}) {
+function PokemonTable({ setPopupName, searchValue, clickTime, setClickTime }) {
     let filteredPokemon = pokemondata;
     // Can search by dex number, or by name
     if (searchValue) {
@@ -67,10 +62,9 @@ function PokemonTable({setPopupVis, setPopupName, searchValue, currentTimer, set
                 JP_name={pokemon.JP_name}
                 sprite_image={pokemon.sprite_image}
                 pokemon_number={pokemon.id}
-                setPopupVis={setPopupVis}
                 setPopupName={setPopupName}
-                currentTimer={currentTimer}
-                setCurrentTimer={setCurrentTimer}
+                clickTime={clickTime}
+                setClickTime={setClickTime}
             />
         )}
     )
@@ -81,19 +75,25 @@ function PokemonTable({setPopupVis, setPopupName, searchValue, currentTimer, set
     )
 }
 
-function CopyPopup({popupVis, setPopupVis, popupName}) {
-    let fadeOutStyle = null;
-    if (popupVis === "visible") {
-        fadeOutStyle = "copy-popup-fade-out";
-    }
+function CopyPopup({ clickTime, popupName }) {
+    const [showPopup, setShowPopup] = useState(false);
+
+    useEffect(() => {
+        if (clickTime) {
+            setShowPopup(false);
+            setTimeout(() => {
+                setShowPopup(true);
+            }, 10)
+        }
+    }, [clickTime]);
     return (
-        <div className={`copy-popup ${fadeOutStyle}`} style={{visibility: popupVis}}>
+        <div className={showPopup ? "copy-popup copy-popup-fade-out" : "copy-popup"}>
             {popupName} COPIED
         </div>
     )
 }
 
-function SearchBar({setSearchValue}) {
+function SearchBar({ setSearchValue }) {
     return (
         <div className="searchbox">
             <form onSubmit={e => { e.preventDefault(); }}>
@@ -103,13 +103,13 @@ function SearchBar({setSearchValue}) {
     )
 }
 
-function TopBar({popupVis, setPopupVis, popupName, setSearchValue}) {
+function TopBar({ clickTime, popupName, setSearchValue }) {
     return (
         <div className='topbar'>
             TAP TO COPY POKÉMON'S JAPANESE
             <br></br>
             NAME ONTO YOUR CLIPBOARD
-            <CopyPopup popupVis={popupVis} setPopupVis={setPopupVis} popupName={popupName}/>
+            <CopyPopup clickTime={clickTime} popupName={popupName}/>
             <SearchBar setSearchValue={setSearchValue}/>
         </div>
     )
@@ -132,17 +132,16 @@ function RightBorder() {
 }
 
 export default function FilterablePokedex() {
-    const [popupVis, setPopupVis] = useState('hidden');
     const [popupName, setPopupName] = useState('')
     const [searchValue, setSearchValue] = useState(null);
-    const [currentTimer, setCurrentTimer] = useState(null);
+    const [clickTime, setClickTime] = useState();
 
     return (
         <>
             <LeftBorder/>
             <RightBorder/>
-            <TopBar popupVis={popupVis} setPopupVis={setPopupVis} popupName={popupName} setSearchValue={setSearchValue}/>
-            <PokemonTable setPopupVis={setPopupVis} setPopupName={setPopupName} searchValue={searchValue} currentTimer={currentTimer} setCurrentTimer={setCurrentTimer}/>
+            <TopBar clickTime={clickTime} popupName={popupName} setSearchValue={setSearchValue}/>
+            <PokemonTable setPopupName={setPopupName} searchValue={searchValue} clickTime={clickTime} setClickTime={setClickTime}/>
         </>
     )
 }
