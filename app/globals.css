@@ -1,10 +1,12 @@
-html,body{
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Lato', sans-serif;;
+  font-family: 'Lato', sans-serif;
+  ;
   background-color: #f8fff7;
   color: #4c6f72;
   justify-content: center;
@@ -33,7 +35,7 @@ body {
   padding-bottom: 6px;
   font-size: 1.05rem;
   word-spacing: 5px;
-  line-height:25px;
+  line-height: 25px;
   align-items: center;
 }
 
@@ -55,24 +57,24 @@ input[type=text] {
 
 ::placeholder {
   color: #4c6f72;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
 
-::-ms-input-placeholder { /* Edge 12 -18 */
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
   color: #4c6f72;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
 
 .searchbox {
   padding-top: 20px;
 }
 
-.copy-popup-fade-out {
-  animation: fade-out 5s;
-}
-
 .copy-popup {
-  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   position: absolute;
   background-color: #e7f2e1;
   border-color: #43a282;
@@ -80,7 +82,7 @@ input[type=text] {
   height: 65px;
   font-size: 2rem;
   border-radius: 10px;
-  border-width: thick ;
+  border-width: thick;
   border-style: solid;
   line-height: 200%;
   top: 100px;
@@ -91,13 +93,21 @@ input[type=text] {
   transform: translateX(-50%);
 }
 
+.popup-animation {
+  animation: fade-out 5s;
+}
+
 @keyframes fade-out {
   0% {
     opacity: 1.00;
+    visibility: visible;
   }
+
   75% {
     opacity: 1.00;
+    visibility: visible;
   }
+
   100% {
     opacity: 0.00;
   }
@@ -124,7 +134,8 @@ input[type=text] {
 }
 
 .pokemon-grid-item:active {
-  background-color: rgba(183, 240, 155, 0.35);;
+  background-color: rgba(183, 240, 155, 0.35);
+  ;
 }
 
 .pokemon-grid img {
