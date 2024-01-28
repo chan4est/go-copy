@@ -5,13 +5,14 @@ import copy from 'copy-to-clipboard';
 import Image from 'next/image'
 import leftBorder from '../public/left-border.jpg'
 import rightBorder from '../public/right-border.jpg'
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
-function Pokemon({ EN_name, JP_name, pokemon_number, setPopupName }) {
+function Pokemon({ EN_name, JP_name, pokemon_number, setPopupText, setPopupKey }) {
 
     function handleClick() {
         copy(JP_name);
-        setPopupName(JP_name)
+        setPopupText(JP_name)
+        setPopupKey((prevID) => prevID + 1);
     };
 
     return (
@@ -35,7 +36,7 @@ function Pokemon({ EN_name, JP_name, pokemon_number, setPopupName }) {
     )
 }
 
-function PokemonTable({ setPopupName, searchValue }) {
+function PokemonTable({ setPopupText, searchValue, setPopupKey }) {
 
     // https://stackoverflow.com/a/175787/5221437
     function isNumber(str) {
@@ -62,7 +63,8 @@ function PokemonTable({ setPopupName, searchValue }) {
                 JP_name={pokemon.JP_name}
                 sprite_image={pokemon.sprite_image}
                 pokemon_number={pokemon.id}
-                setPopupName={setPopupName}
+                setPopupText={setPopupText}
+                setPopupKey={setPopupKey}
             />
         )
     }
@@ -74,33 +76,70 @@ function PokemonTable({ setPopupName, searchValue }) {
     )
 }
 
-function CopyPopup({ popupName }) {
+function CopyPopup({ popupText, popupKey }) {
     // https://stackoverflow.com/a/63194757/5221437
+    // Re-renders every time a Pokemon is clicked
     return (
-        <div key={popupName} className={popupName ? 'copy-popup popup-animation' : 'copy-popup'}>
-            {popupName} COPIED
+        <div key={popupKey} className={popupText ? 'copy-popup popup-animation' : 'copy-popup'}>
+            {popupText}
         </div>
     )
 }
 
-function SearchBar({ setSearchValue }) {
+function SearchBar({ popupText, popupKey, searchValue, setSearchValue }) {
+
+    const [isFocused, setisFocused] = useState(false);
+    const inputRef = useRef(null);
+
+    // On focus - move left side of bar inwards to make way for the button
+    //            back arrow button should be visible
+    //            move the magnifying glass icon to the edge
+    // Once text is in in the bar, add the X button and | line
+    // If the X button is clicked, text is cleared from searchValue and the bar itself 
+    // If text is in the bar you cannot lose focus
+    // Back arrow means  text is cleared from searchValue and the bar itself and bar FINALLY loses focus
+    // ONLY WAY TO L FOCUS IS THE BACK ARROW
+
+    function handleTextClear() {
+       setSearchValue(null); 
+       inputRef.current.value=''
+    }
+
+    function handleGoBack() {
+        handleTextClear();
+        setisFocused(false);
+        inputRef.current.blur();
+        // inputRef.current = null;
+    }
+
+    function handledFocused() {
+        setisFocused(true);
+    }
+
+    function handleBlur() {
+        setisFocused(false);
+    }
+
     return (
-        <div className="searchbox">
-            <form onSubmit={e => { e.preventDefault(); }}>
-                <input type="text" placeholder="Search" onChange={(e) => setSearchValue(e.target.value)} />
-            </form>
+        <div className='searchbar-container'>
+            <CopyPopup popupText={popupText} popupKey={popupKey} />
+            <div className="searchbar">
+                {/* <button className='go-back-button' onClick={handleGoBack} style={{visibility: isFocused || searchValue ? 'visible': 'hidden'}} ></button> */}
+                <input ref={inputRef} className='search-input' type="text" placeholder="Search" onFocus={handledFocused} onBlur={handleBlur} onChange={(e) => setSearchValue(e.target.value) } />
+                {/* <button className='clear-text-button' style={{visibility: searchValue ? 'visible': 'hidden'}} onClick={handleTextClear}> X </button> */}
+            </div>
         </div>
     )
 }
 
-function TopBar({ popupName, setSearchValue }) {
+function TopBarContainer({ popupText, popupKey, searchValue, setSearchValue }) {
     return (
-        <div className='topbar'>
-            TAP TO COPY POKÉMON'S JAPANESE
+        <div className='topbar-container'>
+            TAP TO COPY POKÉMON'S <button className='lang-selector'>JAPANESE</button>
+            {/* TAP TO COPY POKÉMON'S JAPANESE */}
             <br></br>
             NAME ONTO YOUR CLIPBOARD
-            <CopyPopup popupName={popupName} />
-            <SearchBar setSearchValue={setSearchValue} />
+            <SearchBar popupText={popupText} popupKey={popupKey} searchValue={searchValue} setSearchValue={setSearchValue} />
         </div>
     )
 }
@@ -122,15 +161,16 @@ function RightBorder() {
 }
 
 export default function FilterablePokedex() {
-    const [popupName, setPopupName] = useState(null)
+    const [popupText, setPopupText] = useState(null)
+    const [popupKey, setPopupKey] = useState(0);
     const [searchValue, setSearchValue] = useState(null);
 
     return (
         <>
             <LeftBorder />
             <RightBorder />
-            <TopBar popupName={popupName} setSearchValue={setSearchValue} />
-            <PokemonTable setPopupName={setPopupName} searchValue={searchValue} />
+            <TopBarContainer popupText={popupText} popupKey={popupKey} searchValue={searchValue} setSearchValue={setSearchValue} />
+            <PokemonTable setPopupText={setPopupText} setPopupKey={setPopupKey} searchValue={searchValue} />
         </>
     )
 }
