@@ -1,0 +1,16 @@
+export const languageData = {
+  EN: 'English',
+  JA: 'Japanese',
+  DE: 'German',
+  FR: 'French',
+  ES: 'Spanish',
+  IT: 'Italian',
+  KO: 'Korean',
+  ZHS: 'Chinese (Simplified)',
+  ZHT: 'Chinese (Traditional)',
+  PT: 'Portuguese',
+  TR: 'Turkish',
+  RU: 'Russian',
+  TH: 'Thai',
+  HI: 'Hindi',
+};

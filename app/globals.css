@@ -2,156 +2,108 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: clip;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
   background-color: #f8fff7;
   color: #4c6f72;
+  display: grid;
+  font-family: 'Lato', sans-serif;
   justify-content: center;
   text-align: center;
 }
 
 .left-background {
-  width: 2%;
-  z-index: 5;
-  position: fixed;
   left: 0;
   pointer-events: none;
+  position: fixed;
+  width: 2%;
+  z-index: 1;
 }
 
 .right-background {
-  width: 2%;
-  z-index: 5;
+  pointer-events: none;
   position: fixed;
   right: 0;
-  pointer-events: none;
+  width: 2%;
+  z-index: 1;
 }
 
 .topbar-container {
+  align-items: center;
+  background-color: #f8fff7;
+  font-size: 1.05rem;
+  line-height: 25px;
+  padding-top: 45px;
   position: sticky;
   top: 0px;
-  padding-top: 45px;
-  background-color: #f8fff7;
-  padding-bottom: 6px;
-  font-size: 1.05rem;
   word-spacing: 5px;
-  line-height: 25px;
-  align-items: center;
 }
 
 .lang-selector {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.05rem;
-  border: none;
   background: none;
+  border: none;
+  border-radius: 5%;
   color: black;
   cursor: pointer;
-  border-radius: 5%;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.05rem;
 }
 
-.lang-selector:active, .lang-selector:hover {
+.lang-selector:active,
+.lang-selector:hover {
   background-color: rgba(183, 240, 155, 0.35);
 }
 
-.empty {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.05rem;
-  background-color: #e7f2df;
-  color: #4c6f72;
-  border: none;
-  text-align: center;
-  width: 87.5%;
-  height: 45px;
-  border-radius: 25px;
-  background-image: url('../public/search.png');
-  background-size: 20px;
-  background-position: 35% 50%;
-  background-repeat: no-repeat;
-  cursor: text;
-  -webkit-transition: width 0.1s;
-  transition: width 0.1s;
-}
-
 .searchbar-container {
-  padding-top: 20px;
-  height: 65px;
-  display: flex;
   align-items: center;
+  display: flex;
+  height: 65px;
   justify-content: center;
+  padding-top: 20px;
 }
 
 .searchbar {
-  width: 100%;
   height: 45px;
+  width: 100%;
 }
 
 .search-input {
-  font-family: 'Lato', sans-serif;
   background-color: #e7f2df;
-  font-size: 1.05rem;
-  height: 43px;
-  width: 87.5%;
-  border-radius: 25px;
-  border: none;
-  text-align: center;
-  justify-content: center;
   background-image: url('../public/search.png');
-  background-size: 20px;
   background-position: 35% 50%;
   background-repeat: no-repeat;
+  background-size: 20px;
+  border: none;
+  border-radius: 25px;
+  color: #4c6f72;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.05rem;
+  height: 43px;
+  text-align: center;
+  width: 87.5%;
 }
 
-::placeholder {
+.search-input::placeholder {
   color: #4c6f72;
   opacity: 1;
-  /* Firefox */
-}
-
-::-ms-input-placeholder {
-  /* Edge 12 -18 */
-  color: #4c6f72;
-  opacity: 1;
-  /* Firefox */
-}
-
-.go-back-button {
-  position: absolute;
-  background-image: url('../public/chevron_left.png');
-  background-repeat: no-repeat;
-  border: none;
-  background-color: blue;
-  top: 130px;
-}
-
-.clear-text-button {
-  position: absolute;
-  border-radius: 50%;
-  border: none;
-  background-color: #e7f2df;
-  top: 130px;
 }
 
 .copy-popup {
-  visibility: hidden;
-  pointer-events: none;
-  position: absolute;
   background-color: #e7f2e1;
   border-color: #43a282;
-  width: 90%;
-  height: 65px;
-  font-size: 2rem;
   border-radius: 10px;
-  border-width: thick;
   border-style: solid;
+  border-width: thick;
+  font-size: 2rem;
+  height: 65px;
   line-height: 200%;
-  /* top: 100px; */
-  /** 2 HOURS TO FIND THIS!!!!!!!!! FUCK CSS!
-    https://stackoverflow.com/questions/15627401/centering-div-without-using-margin-auto
-  **/
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+  width: 90%;
+  z-index: 2;
 }
 
 .popup-animation {
@@ -160,61 +112,70 @@ body {
 
 @keyframes fade-out {
   0% {
-    opacity: 1.00;
+    opacity: 1;
     visibility: visible;
   }
 
   75% {
-    opacity: 1.00;
+    opacity: 1;
     visibility: visible;
   }
 
   100% {
-    opacity: 0.00;
+    opacity: 0;
   }
 }
 
 .pokemon-en-text {
+  font-size: 1rem;
   font-weight: 600;
-  font-size: 3.5vw;
-  padding-top: 0.2rem;
   pointer-events: none;
 }
 
-.pokemon-jp-text {
-  font-size: 3.0vw;
+.pokemon-forign-text {
+  font-size: 0.85rem;
   pointer-events: none;
-}
-
-.pokemon-grid-item {
-  font-family: 'Lato', sans-serif;
-  padding-bottom: 5px;
-  border: none;
-  background: none;
-  color: #4c6f72;
-  cursor: pointer;
-  border-radius: 5%;
-}
-
-.pokemon-grid-item:active, .pokemon-grid-item:hover {
-  background-color: rgba(183, 240, 155, 0.35);
 }
 
 .pokemon-grid img {
-  vertical-align: middle;
-  width: clamp(50px, 100%, 600px);
   height: auto;
   pointer-events: none;
+  width: clamp(50px, 100%, 150px);
+}
+
+.pokemon-grid-item {
+  background: none;
+  border: none;
+  border-radius: 5%;
+  color: #4c6f72;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.pokemon-grid-item-invis {
+  background: none;
+  border: none;
+  border-radius: 5%;
+  color: #4c6f72;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  visibility: hidden;
+}
+
+.pokemon-grid-item:active,
+.pokemon-grid-item:hover {
+  background-color: rgba(183, 240, 155, 0.35);
 }
 
 .pokemon-grid {
-  padding-top: 1rem;
+  column-gap: 2rem;
   display: grid;
   grid-template-columns: 23% 23% 23%;
-  column-gap: 2rem;
-  row-gap: 1rem;
   justify-content: center;
-  align-items: center;
-  text-align: center;
   padding-bottom: 2rem;
+  padding-top: 1rem;
+  row-gap: 1.25rem;
+  text-align: center;
 }

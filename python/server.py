@@ -13,9 +13,20 @@ class PokemonNames():
         self.bulbaurl = 'https://bulbapedia.bulbagarden.net/wiki/List_of_{}_Pok%C3%A9mon_names'
         ## Test the REGEX on https://regex101.com/
         self.languages = [
-            {'name': 'English', 'searchregex': 'title=\\"([^(]*) \\(Pokémon\\)', 'tlc': 'EN'},
-            {'name': 'Japanese', 'searchregex': '.*title="ja:([^(]*)".*', 'tlc': 'JP'},
-            {'name': 'Korean', 'searchregex': '.*lang="ko">([^(]*).*', 'tlc': 'KR'}
+            {'name': 'English',     'searchregex': 'title=\\"([^(]*) \\(Pokémon\\)',    'code': 'EN'},
+            {'name': 'Japanese',    'searchregex': '.*title="ja:([^(]*)".*',            'code': 'JA'},
+            # {'name': 'German',      'searchregex': '', 'code': 'DE'},
+            # {'name': 'French',      'searchregex': '', 'code': 'FR'},
+            # {'name': 'Spanish',     'searchregex': '', 'code': 'ES'},
+            # {'name': 'Italian',     'searchregex': '', 'code': 'IT'},
+            {'name': 'Korean',      'searchregex': '.*lang="ko">([^(]*).*',             'code': 'KO'},
+            # {'name': 'Chinese',     'searchregex': '', 'code': 'ZHS'},
+            # {'name': 'Chinese',     'searchregex': '', 'code': 'ZHT'},
+            # {'name': 'Portuguese',  'searchregex': '', 'code': 'PT'},
+            # {'name': 'Turkish',     'searchregex': '', 'code': 'TR'},
+            # {'name': 'Russian',     'searchregex': '', 'code': 'RU'},
+            # {'name': 'Thai',        'searchregex': '', 'code': 'TH'},
+            # {'name': 'Hindi',       'searchregex': '', 'code': 'HI'}
         ]
         self.initialize_list()
     
@@ -38,10 +49,10 @@ class PokemonNames():
                     english_name = pokemon_names[i]
                     ## Lowercase for the images on pokemondb.net
                     english_name_html = english_name.lower()
-                    ## Fix Nidoran Female
+                    ## Fix Nidoran ♀
                     if ("♀" in english_name):
                         english_name_html = english_name_html.replace("♀", "-f")
-                    ## Fix Nidoran Male
+                    ## Fix Nidoran ♂
                     elif ("♂" in english_name):
                         english_name_html = english_name_html.replace("♂", "-m")
                     ## Fix Farfetch'd
@@ -53,25 +64,25 @@ class PokemonNames():
                     ## Fix Mime Jr.
                     elif (" Jr." in english_name):
                         english_name_html = english_name_html.replace(" jr.", "-jr")
-                    ## Fix Flabebe
+                    ## Fix Flabébé
                     elif ("é" in english_name):
                         english_name_html = english_name_html.replace("é", "e")
                     ## Fix Type: Null
                     elif (": " in english_name):
                         english_name_html = english_name_html.replace(": ", "-")   
-                    ## Fix Paradox Pokemon
+                    ## Fix Paradox Pokemon (ex: Roaring Moon)
                     elif (" " in english_name):
                         english_name_html = english_name_html.replace(" ", "-")
                     pokemon_data = {
                         "id": i+1,
-                        "EN_name": english_name,
+                        "name_EN": english_name,
                         "sprite_image": "https://img.pokemondb.net/sprites/home/normal/{}.png".format(english_name_html)
                     }
                     self.pokemon_arr.append(pokemon_data)
             ## Run through the remaining languages
             else:
                 for i in range(len(pokemon_names)):
-                    self.pokemon_arr[i]['{}_name'.format(language['tlc'])] = pokemon_names[i]
+                    self.pokemon_arr[i]['name_{}'.format(language['code'])] = pokemon_names[i]
 
 @app.route('/pokemon_names', methods=['GET'])
 def pokemon_names() -> list:
