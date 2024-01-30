@@ -29,16 +29,11 @@ body {
   z-index: 1;
 }
 
-.topbar-container {
-  align-items: center;
-  background-color: #f8fff7;
+.instructions-bar {
   font-size: 1.05rem;
-  justify-content: center;
   line-height: 25px;
   padding-top: 45px;
-  position: sticky;
   text-align: center;
-  top: 0px;
   word-spacing: 5px;
 }
 
@@ -58,9 +53,13 @@ body {
 }
 
 .searchbar-container {
+  background-color: #f8fff7;
   display: grid;
   grid-template-columns: 100%;
-  padding-top: 20px;
+  padding-top: 10px;
+  position: sticky;
+  text-align: center;
+  top: 0;
 }
 
 .searchbar {

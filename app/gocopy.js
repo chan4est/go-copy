@@ -127,25 +127,15 @@ function SearchBar({ popupText, popupKey, setSearchValue }) {
   );
 }
 
-function TopBarContainer({
-  popupText,
-  popupKey,
-  setSearchValue,
-  languageCode,
-}) {
+function InstructionsBar({ languageCode }) {
   return (
-    <div className="topbar-container">
+    <div className="instructions-bar">
       TAP TO COPY POKE&#769;MON&apos;S
       <button className="lang-selector">
         {languageData[languageCode].toUpperCase()}
       </button>
       <br></br>
       NAME ONTO YOUR CLIPBOARD
-      <SearchBar
-        popupText={popupText}
-        popupKey={popupKey}
-        setSearchValue={setSearchValue}
-      />
     </div>
   );
 }
@@ -173,11 +163,11 @@ export default function FilterablePokedex() {
       <LeftBorder />
       <RightBorder />
       <LanguageSelection setLangaugeCode={setLangaugeCode} />
-      <TopBarContainer
+      <InstructionsBar languageCode={languageCode} />
+      <SearchBar
         popupText={popupText}
         popupKey={popupKey}
         setSearchValue={setSearchValue}
-        languageCode={languageCode}
       />
       <PokemonTable
         setPopupText={setPopupText}
