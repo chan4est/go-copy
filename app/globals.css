@@ -1,17 +1,16 @@
 html,
 body {
   margin: 0;
-  padding: 0;
   overflow-x: clip;
+  padding: 0;
 }
 
 body {
   background-color: #f8fff7;
   color: #4c6f72;
-  display: grid;
+  display: flex;
   font-family: 'Lato', sans-serif;
   justify-content: center;
-  text-align: center;
 }
 
 .left-background {
@@ -34,9 +33,11 @@ body {
   align-items: center;
   background-color: #f8fff7;
   font-size: 1.05rem;
+  justify-content: center;
   line-height: 25px;
   padding-top: 45px;
   position: sticky;
+  text-align: center;
   top: 0px;
   word-spacing: 5px;
 }
@@ -57,16 +58,15 @@ body {
 }
 
 .searchbar-container {
-  align-items: center;
-  display: flex;
-  height: 65px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 100%;
   padding-top: 20px;
 }
 
 .searchbar {
-  height: 45px;
-  width: 100%;
+  align-self: center;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .search-input {
@@ -82,7 +82,7 @@ body {
   font-size: 1.05rem;
   height: 43px;
   text-align: center;
-  width: 87.5%;
+  width: 85%;
 }
 
 .search-input::placeholder {
@@ -97,10 +97,11 @@ body {
   border-style: solid;
   border-width: thick;
   font-size: 2rem;
-  height: 65px;
+  grid-column: 1;
+  grid-row: 1;
   line-height: 200%;
+  place-self: center;
   pointer-events: none;
-  position: absolute;
   visibility: hidden;
   width: 90%;
   z-index: 2;
@@ -140,7 +141,7 @@ body {
 .pokemon-grid img {
   height: auto;
   pointer-events: none;
-  width: clamp(50px, 100%, 150px);
+  width: clamp(50px, 80%, 150px);
 }
 
 .pokemon-grid-item {
@@ -152,16 +153,7 @@ body {
   font-family: 'Lato', sans-serif;
   padding-bottom: 5px;
   padding-top: 5px;
-}
-
-.pokemon-grid-item-invis {
-  background: none;
-  border: none;
-  border-radius: 5%;
-  color: #4c6f72;
-  cursor: pointer;
-  font-family: 'Lato', sans-serif;
-  visibility: hidden;
+  text-align: center;
 }
 
 .pokemon-grid-item:active,
@@ -169,13 +161,18 @@ body {
   background-color: rgba(183, 240, 155, 0.35);
 }
 
-.pokemon-grid {
-  column-gap: 2rem;
-  display: grid;
-  grid-template-columns: 23% 23% 23%;
+.pokemon-grid-container {
+  display: flex;
   justify-content: center;
+}
+
+.pokemon-grid {
+  column-gap: 5%;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-self: center;
   padding-bottom: 2rem;
   padding-top: 1rem;
-  row-gap: 1.25rem;
-  text-align: center;
+  row-gap: 1rem;
+  width: 85%;
 }

@@ -37,7 +37,6 @@ function Pokemon({
         width={256}
         quality={100}
       />
-      <br></br>
       <div className="pokemon-en-text">{nameEnglish}</div>
       <div className="pokemon-forign-text">{nameForeign}</div>
     </button>
@@ -89,7 +88,11 @@ function PokemonTable({
     );
   });
 
-  return <div className="pokemon-grid">{pokemonList}</div>;
+  return (
+    <div className="pokemon-grid-container">
+      <div className="pokemon-grid">{pokemonList}</div>
+    </div>
+  );
 }
 
 function CopyPopup({ popupText, popupKey }) {
