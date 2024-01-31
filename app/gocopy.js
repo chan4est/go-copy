@@ -43,12 +43,7 @@ function Pokemon({
   );
 }
 
-function PokemonTable({
-  setPopupText,
-  searchValue,
-  setPopupKey,
-  languageCode,
-}) {
+function PokemonGrid({ setPopupText, searchValue, setPopupKey, languageCode }) {
   // https://stackoverflow.com/a/175787/5221437
   function isNumber(str) {
     if (typeof str != 'string') return false; // we only process strings!
@@ -127,12 +122,17 @@ function SearchBar({ popupText, popupKey, setSearchValue }) {
   );
 }
 
-function InstructionsBar({ languageCode }) {
+function InstructionsBar({ languageCode, setIsMainVisible }) {
+  function handleClick() {
+    setIsMainVisible(false);
+  }
+
   return (
-    <div className="instructions-bar">
+    <div className="instructions">
       TAP TO COPY POKE&#769;MON&apos;S
-      <button className="lang-selector">
-        {languageData[languageCode].toUpperCase()}
+      <button className="language-chosen-btn" onClick={handleClick}>
+        {/* Split for Chinese (Simplified/Tradition) */}
+        {languageData[languageCode].split(' ')[0].toUpperCase()}
       </button>
       <br></br>
       NAME ONTO YOUR CLIPBOARD
@@ -140,40 +140,118 @@ function InstructionsBar({ languageCode }) {
   );
 }
 
-function LanguageSelection({ setLangaugeCode }) {
-  return <></>;
+function LanguageButton({
+  languageCode,
+  languageName,
+  setLanguageCode,
+  setIsMainVisible,
+}) {
+  function handleClick() {
+    setLanguageCode(languageCode);
+    setIsMainVisible(true);
+  }
+
+  function format(languageName) {
+    if (languageName.includes('Chinese')) {
+      const [name, specifier] = languageName.split(' ');
+      return (
+        <>
+          {name} <small> {`${specifier}`} </small>
+        </>
+      );
+    }
+    return <>{languageName}</>;
+  }
+
+  return (
+    <button onClick={handleClick} className="language-option-btn ">
+      {format(languageName)}
+    </button>
+  );
 }
 
-function LeftBorder() {
-  return <Image src={leftBorder} className={'left-background'} alt="" />;
+function LanguageSelection({
+  setLanguageCode,
+  isMainVisible,
+  setIsMainVisible,
+}) {
+  const languageList = Object.entries(languageData).map(
+    ([languageCode, languageName]) => {
+      return (
+        <LanguageButton
+          key={languageCode}
+          languageCode={languageCode}
+          languageName={languageName}
+          setLanguageCode={setLanguageCode}
+          setIsMainVisible={setIsMainVisible}
+        />
+      );
+    }
+  );
+  return (
+    <div
+      className="language-selection"
+      style={{ display: !isMainVisible ? 'grid' : 'none' }}
+    >
+      <div className="instructions language-instructions ">
+        CHOOSE YOUR NICKNAMING LANGUAGE
+      </div>
+      {languageList}
+    </div>
+  );
 }
 
 function RightBorder() {
-  return <Image src={rightBorder} className={'right-background'} alt="" />;
+  return <Image src={rightBorder} className={'border right-border'} alt="" />;
 }
 
-export default function FilterablePokedex() {
+function LeftBorder() {
+  return <Image src={leftBorder} className={'border left-border'} alt="" />;
+}
+
+function MainContent({ languageCode, isMainVisible, setIsMainVisible }) {
   const [popupText, setPopupText] = useState(null);
   const [popupKey, setPopupKey] = useState(0);
   const [searchValue, setSearchValue] = useState(null);
-  const [languageCode, setLangaugeCode] = useState('JA');
 
   return (
-    <>
-      <LeftBorder />
-      <RightBorder />
-      <LanguageSelection setLangaugeCode={setLangaugeCode} />
-      <InstructionsBar languageCode={languageCode} />
+    <div style={{ display: isMainVisible ? '' : 'none' }}>
+      <InstructionsBar
+        languageCode={languageCode}
+        setIsMainVisible={setIsMainVisible}
+      />
       <SearchBar
         popupText={popupText}
         popupKey={popupKey}
         setSearchValue={setSearchValue}
       />
-      <PokemonTable
+      <PokemonGrid
         setPopupText={setPopupText}
         setPopupKey={setPopupKey}
         searchValue={searchValue}
         languageCode={languageCode}
+      />
+    </div>
+  );
+}
+
+export default function FilterablePokedex() {
+  const [languageCode, setLanguageCode] = useState('JA');
+  const [isMainVisible, setIsMainVisible] = useState(true);
+
+  return (
+    <>
+      <LeftBorder />
+      <RightBorder />
+      <LanguageSelection
+        setLanguageCode={setLanguageCode}
+        isMainVisible={isMainVisible}
+        setIsMainVisible={setIsMainVisible}
+      />
+      <MainContent
+        languageCode={languageCode}
+        isMainVisible={isMainVisible}
+        setIsMainVisible={setIsMainVisible}
       />
     </>
   );

@@ -13,20 +13,20 @@ class PokemonNames():
         self.bulbaurl = 'https://bulbapedia.bulbagarden.net/wiki/List_of_{}_Pok%C3%A9mon_names'
         ## Test the REGEX on https://regex101.com/
         self.languages = [
-            {'name': 'English',     'searchregex': 'title=\\"([^(]*) \\(Pokémon\\)',    'code': 'EN'},
-            {'name': 'Japanese',    'searchregex': '.*title="ja:([^(]*)".*',            'code': 'JA'},
-            # {'name': 'German',      'searchregex': '', 'code': 'DE'},
-            # {'name': 'French',      'searchregex': '', 'code': 'FR'},
-            # {'name': 'Spanish',     'searchregex': '', 'code': 'ES'},
-            # {'name': 'Italian',     'searchregex': '', 'code': 'IT'},
-            {'name': 'Korean',      'searchregex': '.*lang="ko">([^(]*).*',             'code': 'KO'},
-            # {'name': 'Chinese',     'searchregex': '', 'code': 'ZHS'},
-            # {'name': 'Chinese',     'searchregex': '', 'code': 'ZHT'},
-            # {'name': 'Portuguese',  'searchregex': '', 'code': 'PT'},
-            # {'name': 'Turkish',     'searchregex': '', 'code': 'TR'},
-            # {'name': 'Russian',     'searchregex': '', 'code': 'RU'},
-            # {'name': 'Thai',        'searchregex': '', 'code': 'TH'},
-            # {'name': 'Hindi',       'searchregex': '', 'code': 'HI'}
+            {'name': 'English',                 'searchregex': '\\(Pokémon\\)">(.{1,15})<\\/a><',  'code': 'EN'},
+            {'name': 'Japanese',                'searchregex': 'title="ja:(.{1,15})".*',         'code': 'JA'},
+            {'name': 'German',                  'searchregex': 'title="de:(.{1,15})".*',         'code': 'DE'},
+            {'name': 'French',                  'searchregex': 'title="fr:(.{1,15})".*',         'code': 'FR'},
+            {'name': 'Spanish',                 'searchregex': 'title="es:(.{1,15})".*',         'code': 'ES'},
+            {'name': 'Italian',                 'searchregex': 'title="it:(.{1,15})".*',         'code': 'IT'},
+            {'name': 'Korean',                  'searchregex': 'lang="ko">(.{1,15}).*',          'code': 'KO'},
+            {'name': 'Chinese',                 'searchregex': 'lang="zh">(.{1,15})<',           'code': 'ZHS'},
+            {'name': 'Chinese',                 'searchregex': 'lang="zh">(.{1,15})<',           'code': 'ZHT'},
+            {'name': 'Brazilian_Portuguese',    'searchregex': 'lang="br">(.{1,15}).*',          'code': 'PT'},
+            {'name': 'Turkish',                 'searchregex': 'lang="tr">(.{1,15}).*',          'code': 'TR'},
+            {'name': 'Russian',                 'searchregex': 'lang="ru">(.{1,15}).*',          'code': 'RU'},
+            {'name': 'Thai',                    'searchregex': 'lang="th">(.{1,15}).*',          'code': 'TH'},
+            {'name': 'Hindi',                   'searchregex': 'lang="hi">(.{1,15}).*',          'code': 'HI'}
         ]
         self.initialize_list()
     
@@ -35,18 +35,19 @@ class PokemonNames():
             pokemon_html = requests.get(self.bulbaurl.format(language['name']))
             pokemon_html = html.unescape(pokemon_html.text)
             pokemon_names = []
+            current_number = -1
             for line in pokemon_html.splitlines():
+                pokemon_number = re.findall('monospace">#(\\d*).*', line)
                 individual_pokemon = re.findall(language['searchregex'], line)
+                if pokemon_number:
+                    current_number = pokemon_number[0]
                 if individual_pokemon:
-                    pokemon_names.append(individual_pokemon[0])
+                    pokemon_names.append({'number': int(current_number), 'name': individual_pokemon[0]})
             ## Initialilize dict w/ English data
             if language['name'] == 'English':
-                ## Trim off the first because it's Victini for some reason
-                pokemon_names = pokemon_names[1:len(pokemon_names)]
-                ## Remove the duplicate forms (ex: Alolan Rattata)
-                pokemon_names = list(OrderedDict.fromkeys(pokemon_names))
+                pokemon_names = list({(item['number'], item['name']): item for item in pokemon_names}.values())
                 for i in range(len(pokemon_names)):
-                    english_name = pokemon_names[i]
+                    english_name = pokemon_names[i]['name']
                     ## Lowercase for the images on pokemondb.net
                     english_name_html = english_name.lower()
                     ## Fix Nidoran ♀
@@ -78,11 +79,14 @@ class PokemonNames():
                         "name_EN": english_name,
                         "sprite_image": "https://img.pokemondb.net/sprites/home/normal/{}.png".format(english_name_html)
                     }
+                    ## Ititialize all the names to English since most don't have explicit localizations
+                    for language_i in self.languages:
+                        pokemon_data['name_{}'.format(language_i['code'])] = english_name
                     self.pokemon_arr.append(pokemon_data)
             ## Run through the remaining languages
             else:
-                for i in range(len(pokemon_names)):
-                    self.pokemon_arr[i]['name_{}'.format(language['code'])] = pokemon_names[i]
+                for pokemon in pokemon_names:
+                    self.pokemon_arr[pokemon['number']-1]['name_{}'.format(language['code'])] = pokemon['name']
 
 @app.route('/pokemon_names', methods=['GET'])
 def pokemon_names() -> list:

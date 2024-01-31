@@ -13,23 +13,38 @@ body {
   justify-content: center;
 }
 
-.left-background {
+button {
+  background: none;
+  border: none;
+  border: none;
+  border-radius: 5%;
+  color: #4c6f72;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+button:active,
+button:hover {
+  background-color: rgba(183, 240, 155, 0.35);
+}
+
+.border {
+  pointer-events: none;
+  position: fixed;
+  width: 2%;
+  z-index: 1;
+}
+
+.left-border {
   left: 0;
-  pointer-events: none;
-  position: fixed;
-  width: 2%;
-  z-index: 1;
 }
 
-.right-background {
-  pointer-events: none;
-  position: fixed;
+.right-border {
   right: 0;
-  width: 2%;
-  z-index: 1;
 }
 
-.instructions-bar {
+.instructions {
   font-size: 1.05rem;
   line-height: 25px;
   padding-top: 45px;
@@ -37,19 +52,28 @@ body {
   word-spacing: 5px;
 }
 
-.lang-selector {
-  background: none;
-  border: none;
-  border-radius: 5%;
+.language-chosen-btn {
   color: black;
-  cursor: pointer;
-  font-family: 'Lato', sans-serif;
   font-size: 1.05rem;
 }
 
-.lang-selector:active,
-.lang-selector:hover {
-  background-color: rgba(183, 240, 155, 0.35);
+.language-instructions {
+  padding-bottom: 20px;
+}
+
+.language-selection {
+  display: grid;
+  justify-content: center;
+  row-gap: 5px;
+}
+
+.language-option-btn {
+  border-radius: 0%;
+  font-size: 2.5rem;
+}
+
+.language-option-btn small {
+  font-size: 1rem;
 }
 
 .searchbar-container {
@@ -101,6 +125,7 @@ body {
   line-height: 200%;
   place-self: center;
   pointer-events: none;
+  text-align: center;
   visibility: hidden;
   width: 90%;
   z-index: 2;
@@ -144,20 +169,8 @@ body {
 }
 
 .pokemon-grid-item {
-  background: none;
-  border: none;
-  border-radius: 5%;
-  color: #4c6f72;
-  cursor: pointer;
-  font-family: 'Lato', sans-serif;
   padding-bottom: 5px;
   padding-top: 5px;
-  text-align: center;
-}
-
-.pokemon-grid-item:active,
-.pokemon-grid-item:hover {
-  background-color: rgba(183, 240, 155, 0.35);
 }
 
 .pokemon-grid-container {
