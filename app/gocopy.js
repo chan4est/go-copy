@@ -104,14 +104,11 @@ function CopyPopup({ popupText, popupKey }) {
 }
 
 function SearchBar({ popupText, popupKey, setSearchValue }) {
-  const inputRef = useRef(null);
-
   return (
     <div className="searchbar-container">
       <CopyPopup popupText={popupText} popupKey={popupKey} />
       <div className="searchbar">
         <input
-          ref={inputRef}
           className="search-input"
           type="text"
           placeholder="Search"
