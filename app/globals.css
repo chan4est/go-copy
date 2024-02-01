@@ -13,6 +13,13 @@ body {
   justify-content: center;
 }
 
+a,
+a:visited,
+a:hover,
+a:active {
+  color: black;
+}
+
 button {
   background: none;
   border: none;
@@ -27,21 +34,6 @@ button {
 button:active,
 button:hover {
   background-color: rgba(183, 240, 155, 0.35);
-}
-
-.border {
-  pointer-events: none;
-  position: fixed;
-  width: 2%;
-  z-index: 1;
-}
-
-.left-border {
-  left: 0;
-}
-
-.right-border {
-  right: 0;
 }
 
 .scroll-up-btn {
@@ -78,7 +70,11 @@ button:hover {
   color: #43a282;
   font-size: 1.05rem;
   margin-left: 5px;
-  padding-right: 25px;
+  padding-bottom: 0;
+  padding-left: 5px;
+  padding-right: 22px;
+  padding-top: 0;
+  word-spacing: 0px;
 }
 
 .language-instructions {

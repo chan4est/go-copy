@@ -2,11 +2,12 @@
 
 import { pokemonData } from './lib/pokemon.js';
 import { languageData } from './lib/languages.js';
-import copy from 'copy-to-clipboard';
-import Image from 'next/image';
-import leftBorder from '../public/left-border.jpg';
-import rightBorder from '../public/right-border.jpg';
+import { LeftBorder } from './Components/LeftBorder';
+import { RightBorder } from './Components/RightBorder';
 import backButton from '../public/btn-back.png';
+import Image from 'next/image';
+import copy from 'copy-to-clipboard';
+
 import { useState, useEffect } from 'react';
 
 function Pokemon({
@@ -128,7 +129,7 @@ function InstructionsBar({ languageCode, setIsMainVisible, setPopupText }) {
   }
 
   return (
-    <div className="instructions">
+    <p className="instructions">
       TAP TO COPY POKE&#769;MON&apos;S
       <button className="language-chosen-btn" onClick={handleClick}>
         {/* Split for Chinese (Simplified/Tradition) */}
@@ -136,7 +137,7 @@ function InstructionsBar({ languageCode, setIsMainVisible, setPopupText }) {
       </button>
       <br></br>
       NAME ONTO YOUR CLIPBOARD
-    </div>
+    </p>
   );
 }
 
@@ -210,7 +211,7 @@ function ScrollToTopButton() {
     const handleScroll = () => {
       // Check if the user has scrolled down a certain amount
       const scrollY = window.scrollY;
-      const scrollThreshold = 2000; // Adjust this threshold as needed
+      const scrollThreshold = 500; // Adjust this threshold as needed
       setIsVisible(scrollY > scrollThreshold);
     };
 
@@ -240,14 +241,6 @@ function ScrollToTopButton() {
       )}
     </div>
   );
-}
-
-function RightBorder() {
-  return <Image src={rightBorder} className={'border right-border'} alt="" />;
-}
-
-function LeftBorder() {
-  return <Image src={leftBorder} className={'border left-border'} alt="" />;
 }
 
 function MainContent({ languageCode, isMainVisible, setIsMainVisible }) {

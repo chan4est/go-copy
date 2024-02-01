@@ -1,0 +1,14 @@
+.border {
+  pointer-events: none;
+  position: fixed;
+  width: 2%;
+  z-index: 1;
+}
+
+.left-border {
+  left: 0;
+}
+
+.right-border {
+  right: 0;
+}
