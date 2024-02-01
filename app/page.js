@@ -1,4 +1,4 @@
-import GoCopy from './gocopy.js';
+import GoCopy from './go-copy.js';
 
 export default function Home() {
   return (

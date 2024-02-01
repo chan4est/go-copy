@@ -6,7 +6,8 @@ import copy from 'copy-to-clipboard';
 import Image from 'next/image';
 import leftBorder from '../public/left-border.jpg';
 import rightBorder from '../public/right-border.jpg';
-import { useRef, useState } from 'react';
+import backButton from '../public/btn-back.png';
+import { useState, useEffect } from 'react';
 
 function Pokemon({
   nameEnglish,
@@ -32,7 +33,7 @@ function Pokemon({
     >
       <Image
         src={`/pokemon-images/${Math.abs(pokemonNumber)}.webp`}
-        alt={'Image of the Poka&#769;mon ' + nameEnglish}
+        alt={'Image of the Pokémon ' + nameEnglish}
         height={256}
         width={256}
         quality={100}
@@ -119,9 +120,11 @@ function SearchBar({ popupText, popupKey, setSearchValue }) {
   );
 }
 
-function InstructionsBar({ languageCode, setIsMainVisible }) {
+function InstructionsBar({ languageCode, setIsMainVisible, setPopupText }) {
   function handleClick() {
     setIsMainVisible(false);
+    // Clear so popup doesn't happen after language selection
+    setPopupText(null);
   }
 
   return (
@@ -198,6 +201,47 @@ function LanguageSelection({
   );
 }
 
+// ChatGPT 3.5
+function ScrollToTopButton() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Add a scroll event listener to track the scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if the user has scrolled down a certain amount
+      const scrollY = window.scrollY;
+      const scrollThreshold = 2000; // Adjust this threshold as needed
+      setIsVisible(scrollY > scrollThreshold);
+    };
+
+    // Attach the scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Function to scroll back to the top when the button is clicked
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Add smooth scrolling effect
+    });
+  };
+
+  return (
+    <div>
+      {isVisible && (
+        <button onClick={scrollToTop} className="scroll-up-btn">
+          <Image src={backButton} height={50} width={50} alt="" />
+        </button>
+      )}
+    </div>
+  );
+}
+
 function RightBorder() {
   return <Image src={rightBorder} className={'border right-border'} alt="" />;
 }
@@ -213,9 +257,11 @@ function MainContent({ languageCode, isMainVisible, setIsMainVisible }) {
 
   return (
     <div style={{ display: isMainVisible ? '' : 'none' }}>
+      <ScrollToTopButton />
       <InstructionsBar
         languageCode={languageCode}
         setIsMainVisible={setIsMainVisible}
+        setPopupText={setPopupText}
       />
       <SearchBar
         popupText={popupText}

@@ -44,6 +44,23 @@ button:hover {
   right: 0;
 }
 
+.scroll-up-btn {
+  border-radius: 50px;
+  bottom: 5%;
+  height: 50px;
+  left: 50%;
+  padding: 0;
+  position: fixed;
+  transform: translateX(-50%);
+  width: 50px;
+  z-index: 3;
+}
+
+.scroll-up-btn:active,
+.scroll-up-btn:hover {
+  background-color: rgba(183, 240, 155, 0.7);
+}
+
 .instructions {
   font-size: 1.05rem;
   line-height: 25px;
@@ -53,7 +70,7 @@ button:hover {
 }
 
 .language-chosen-btn {
-  background-image: url('../public/down.png');
+  background-image: url('../public/btn-dropdown.png');
   background-position: 95%;
   background-repeat: no-repeat;
   background-size: 15px;
@@ -132,7 +149,6 @@ button:hover {
   grid-row: 1;
   line-height: 200%;
   place-self: center;
-  pointer-events: none;
   text-align: center;
   visibility: hidden;
   width: 90%;
