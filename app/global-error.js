@@ -1,14 +1,16 @@
+'use client';
+
 import Image from 'next/image';
 import { LeftBorder } from './components/LeftBorder';
 import { RightBorder } from './components/RightBorder';
 import questionMark from '../public/unown-qm.png';
 
 export const metadata = {
-  title: '404 Not Found',
+  title: '500 Server Error',
   description: '',
 };
 
-export default function NotFound() {
+export default function GlobalError() {
   return (
     <>
       <LeftBorder />
@@ -28,7 +30,7 @@ export default function NotFound() {
           alt=""
           style={{ 'justify-self': 'center', 'pointer-events': 'none' }}
         />
-        <h1>404 Page Not Found</h1>
+        <h1>500 Server Error</h1>
         <p>
           If you believe there is supposed to be something here,&nbsp;
           <a href="mailto:chan4est@gmail.com?subject=GO Copy Issue&body=Please include screenshots of your screen and browser console if possible">

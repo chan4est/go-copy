@@ -2,8 +2,8 @@
 
 import { pokemonData } from './lib/pokemon.js';
 import { languageData } from './lib/languages.js';
-import { LeftBorder } from './Components/LeftBorder';
-import { RightBorder } from './Components/RightBorder';
+import { LeftBorder } from './components/LeftBorder';
+import { RightBorder } from './components/RightBorder';
 import backButton from '../public/btn-back.png';
 import Image from 'next/image';
 import copy from 'copy-to-clipboard';
