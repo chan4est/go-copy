@@ -9,7 +9,9 @@ body {
 body {
   background-color: #f8fff7;
   color: #4c6f72;
+  display: flex;
   font-family: 'Lato', sans-serif;
+  justify-content: center;
 }
 
 button {
@@ -48,7 +50,8 @@ button:hover {
 .instructions {
   font-size: 1.05rem;
   line-height: 25px;
-  padding-top: 45px;
+  padding-bottom: 15px;
+  padding-top: 60px;
   text-align: center;
   word-spacing: 5px;
 }
@@ -103,6 +106,10 @@ button:hover {
   align-self: center;
   grid-column: 1;
   grid-row: 1;
+  width: 770px;
+  width: clamp(320px, 100vw, 770px);
+
+  /*  */
 }
 
 .search-input {
@@ -116,7 +123,7 @@ button:hover {
   color: #4c6f72;
   font-family: 'Lato', sans-serif;
   font-size: 1.05rem;
-  height: 43px;
+  height: 45px;
   text-align: center;
   width: 85%;
 }
@@ -164,14 +171,12 @@ button:hover {
 }
 
 .pokemon-en-text {
-  /* font-size: 1rem; */
   font-size: clamp(0.5rem, 4vw, 1rem);
   font-weight: 600;
   pointer-events: none;
 }
 
 .pokemon-forign-text {
-  /* font-size: 0.85rem; */
   font-size: clamp(0.35rem, 4vw, 0.85rem);
   pointer-events: none;
 }
@@ -196,10 +201,8 @@ button:hover {
   column-gap: 5%;
   display: grid;
   grid-template-columns: 30% 30% 30%;
-  justify-self: center;
   padding-bottom: 2rem;
   padding-top: 1rem;
   row-gap: 1rem;
-  width: 85%;
-  padding-bottom: 150px;
+  width: clamp(300px, 85vw, 650px);
 }
