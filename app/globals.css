@@ -1,3 +1,4 @@
+*,
 html,
 body {
   margin: 0;
@@ -8,16 +9,7 @@ body {
 body {
   background-color: #f8fff7;
   color: #4c6f72;
-  display: flex;
   font-family: 'Lato', sans-serif;
-  justify-content: center;
-}
-
-a,
-a:visited,
-a:hover,
-a:active {
-  color: black;
 }
 
 button {
@@ -172,13 +164,15 @@ button:hover {
 }
 
 .pokemon-en-text {
-  font-size: 1rem;
+  /* font-size: 1rem; */
+  font-size: clamp(0.5rem, 4vw, 1rem);
   font-weight: 600;
   pointer-events: none;
 }
 
 .pokemon-forign-text {
-  font-size: 0.85rem;
+  /* font-size: 0.85rem; */
+  font-size: clamp(0.35rem, 4vw, 0.85rem);
   pointer-events: none;
 }
 
@@ -207,4 +201,5 @@ button:hover {
   padding-top: 1rem;
   row-gap: 1rem;
   width: 85%;
+  padding-bottom: 150px;
 }

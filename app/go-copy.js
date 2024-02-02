@@ -13,6 +13,7 @@ import { useState, useEffect } from 'react';
 function Pokemon({
   nameEnglish,
   nameForeign,
+  sprite_image,
   pokemonNumber,
   setPopupText,
   setPopupKey,
@@ -34,6 +35,7 @@ function Pokemon({
     >
       <Image
         src={`/pokemon-images/${Math.abs(pokemonNumber)}.webp`}
+        // src={sprite_image}
         alt={'Image of the Pokémon ' + nameEnglish}
         height={256}
         width={256}

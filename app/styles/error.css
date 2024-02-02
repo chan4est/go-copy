@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: grid;
+  text-align: center;
+  width: 70%;
+  padding-top: 40px;
+  row-gap: 1.75rem;
+}
+
+.question-image {
+  justify-self: center;
+  pointer-events: none;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: black;
+}
