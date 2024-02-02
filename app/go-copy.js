@@ -40,6 +40,7 @@ function Pokemon({
         height={256}
         width={256}
         quality={100}
+        unoptimized={true}
       />
       <div className="pokemon-en-text">{nameEnglish}</div>
       <div className="pokemon-forign-text">{nameForeign}</div>
