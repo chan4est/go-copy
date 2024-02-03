@@ -32,6 +32,7 @@ function Pokemon({
       className="pokemon-grid-item"
       onClick={() => handleClick()}
       style={{ visibility: style }}
+      title={`Copy ${nameForeign}`}
     >
       <Image
         src={`/pokemon-images/${Math.abs(pokemonNumber)}.webp`}
@@ -74,12 +75,14 @@ function PokemonGrid({ setPopupText, searchValue, setPopupKey, languageCode }) {
       );
     }
   }
+
   let pokemonList = filteredPokemon.map((pokemon) => {
+    const nameForeign = pokemon[`name_${languageCode}`];
     return (
       <Pokemon
         key={pokemon.id}
         nameEnglish={pokemon.name_EN}
-        nameForeign={pokemon[`name_${languageCode}`]}
+        nameForeign={nameForeign}
         sprite_image={pokemon.sprite_image}
         pokemonNumber={pokemon.id}
         setPopupText={setPopupText}
@@ -112,12 +115,19 @@ function SearchBar({ popupText, popupKey, setSearchValue }) {
   return (
     <div className="searchbar-container">
       <CopyPopup popupText={popupText} popupKey={popupKey} />
-      <div className="searchbar">
+      <div
+        className="searchbar"
+        title="Search by a Pokémon's English name or by their dex number"
+      >
         <input
           className="search-input"
           type="text"
           placeholder="Search"
           onChange={(e) => setSearchValue(e.target.value)}
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
         />
       </div>
     </div>
@@ -134,7 +144,11 @@ function InstructionsBar({ languageCode, setIsMainVisible, setPopupText }) {
   return (
     <p className="instructions">
       TAP TO COPY POKE&#769;MON&apos;S
-      <button className="language-chosen-btn" onClick={handleClick}>
+      <button
+        className="language-chosen-btn"
+        onClick={handleClick}
+        title={'Change nicknaming language'}
+      >
         {/* Split for Chinese (Simplified/Tradition) */}
         {languageData[languageCode].split(' ')[0].toUpperCase()}
       </button>
@@ -168,7 +182,11 @@ function LanguageButton({
   }
 
   return (
-    <button onClick={handleClick} className="language-option-btn ">
+    <button
+      onClick={handleClick}
+      className="language-option-btn"
+      title={`Change nicknaming language to ${languageName}`}
+    >
       {format(languageName)}
     </button>
   );
@@ -238,7 +256,11 @@ function ScrollToTopButton() {
   return (
     <div>
       {isVisible && (
-        <button onClick={scrollToTop} className="scroll-up-btn">
+        <button
+          onClick={scrollToTop}
+          className="scroll-up-btn"
+          title="Go back to the top"
+        >
           <Image src={backButton} height={50} width={50} alt="" />
         </button>
       )}
