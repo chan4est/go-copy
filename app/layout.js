@@ -2,7 +2,10 @@ import './globals.css';
 
 export const metadata = {
   title: 'GO Copy!',
-  description: 'Copy your favorite nicknames into Pokémon GO!',
+  description:
+    'Nickname your favorites in Pokémon GO by tapping and then pasting!',
+  keywords: ['Pokemon GO', 'Nickname', 'Foreign'],
+  creator: 'Chandler Forrest',
   metadataBase: new URL('https://go-copy-production.up.railway.app'),
   alternates: {
     canonical: '/',
@@ -11,7 +14,19 @@ export const metadata = {
     },
   },
   openGraph: {
-    images: '/opengraph-image.png',
+    title: 'GO Copy!',
+    description:
+      'Nickname your favorites in Pokémon GO by tapping and then pasting!',
+    url: 'https://go-copy-production.up.railway.app',
+    siteName: 'GO Copy!',
+    image: {
+      url: '/opengraph-image.png',
+      width: 1200,
+      height: 630,
+    },
+
+    locale: 'en_US',
+    type: 'website',
   },
 };
 
@@ -32,14 +47,6 @@ export default function RootLayout({ children }) {
           type="image/<generated>"
           sizes="<generated>"
         />
-        <meta property="og:image" content="<generated>" />
-        <meta property="og:image:type" content="<generated>" />
-        <meta property="og:image:width" content="<generated>" />
-        <meta property="og:image:height" content="<generated>" />
-        <meta name="twitter:image" content="<generated>" />
-        <meta name="twitter:image:type" content="<generated>" />
-        <meta name="twitter:image:width" content="<generated>" />
-        <meta name="twitter:image:height" content="<generated>" />
       </head>
       <body>{children}</body>
     </html>
