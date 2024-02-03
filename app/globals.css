@@ -9,9 +9,9 @@ body {
 body {
   background-color: #f8fff7;
   color: #4c6f72;
-  display: flex;
+  display: flex; /* might not be needed */
   font-family: 'Lato', sans-serif;
-  justify-content: center;
+  justify-content: center; /* might not be needed */
 }
 
 button {
@@ -201,7 +201,7 @@ button:hover {
   column-gap: 5%;
   display: grid;
   grid-template-columns: 30% 30% 30%;
-  padding-bottom: 2rem;
+  padding-bottom: 150px;
   padding-top: 1rem;
   row-gap: 1rem;
   width: clamp(300px, 85vw, 650px);
