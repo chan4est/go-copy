@@ -117,7 +117,7 @@ button:hover {
 }
 
 .search-icon-translated {
-  animation: move-left 0.5s;
+  animation: move-left 0.15s;
   left: 10%;
   position: absolute;
   top: calc(50% - 5px);
