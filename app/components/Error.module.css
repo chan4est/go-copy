@@ -1,9 +1,9 @@
-body {
+.error-body {
   display: flex;
   justify-content: center;
 }
 
-main {
+.error-main {
   display: grid;
   text-align: center;
   width: 70%;
@@ -16,9 +16,9 @@ main {
   pointer-events: none;
 }
 
-a,
-a:visited,
-a:hover,
-a:active {
+.error-a,
+.error-a:visited,
+.error-a:hover,
+.error-a:active {
   color: black;
 }

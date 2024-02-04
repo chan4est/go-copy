@@ -15,7 +15,6 @@ export const pokemonData = [
     name_TR: 'Bulbasaur',
     name_ZHS: '妙蛙种子',
     name_ZHT: '妙蛙种子',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bulbasaur.png',
   },
   {
     id: 2,
@@ -33,7 +32,6 @@ export const pokemonData = [
     name_TR: 'Ivysaur',
     name_ZHS: '妙蛙草',
     name_ZHT: '妙蛙草',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ivysaur.png',
   },
   {
     id: 3,
@@ -51,7 +49,6 @@ export const pokemonData = [
     name_TR: 'Venusaur',
     name_ZHS: '妙蛙花',
     name_ZHT: '妙蛙花',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/venusaur.png',
   },
   {
     id: 4,
@@ -69,8 +66,6 @@ export const pokemonData = [
     name_TR: 'Charmander',
     name_ZHS: '小火龙',
     name_ZHT: '小火龙',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/charmander.png',
   },
   {
     id: 5,
@@ -88,8 +83,6 @@ export const pokemonData = [
     name_TR: 'Charmeleon',
     name_ZHS: '火恐龙',
     name_ZHT: '火恐龙',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/charmeleon.png',
   },
   {
     id: 6,
@@ -107,7 +100,6 @@ export const pokemonData = [
     name_TR: 'Charizard',
     name_ZHS: '喷火龙',
     name_ZHT: '喷火龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/charizard.png',
   },
   {
     id: 7,
@@ -125,7 +117,6 @@ export const pokemonData = [
     name_TR: 'Squirtle',
     name_ZHS: '杰尼龟',
     name_ZHT: '杰尼龟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/squirtle.png',
   },
   {
     id: 8,
@@ -143,7 +134,6 @@ export const pokemonData = [
     name_TR: 'Wartortle',
     name_ZHS: '卡咪龟',
     name_ZHT: '卡咪龟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wartortle.png',
   },
   {
     id: 9,
@@ -161,7 +151,6 @@ export const pokemonData = [
     name_TR: 'Blastoise',
     name_ZHS: '水箭龟',
     name_ZHT: '水箭龟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/blastoise.png',
   },
   {
     id: 10,
@@ -179,7 +168,6 @@ export const pokemonData = [
     name_TR: 'Caterpie',
     name_ZHS: '绿毛虫',
     name_ZHT: '绿毛虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/caterpie.png',
   },
   {
     id: 11,
@@ -197,7 +185,6 @@ export const pokemonData = [
     name_TR: 'Metapod',
     name_ZHS: '铁甲蛹',
     name_ZHT: '铁甲蛹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/metapod.png',
   },
   {
     id: 12,
@@ -215,8 +202,6 @@ export const pokemonData = [
     name_TR: 'Butterfree',
     name_ZHS: '巴大蝶',
     name_ZHT: '巴大蝶',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/butterfree.png',
   },
   {
     id: 13,
@@ -234,7 +219,6 @@ export const pokemonData = [
     name_TR: 'Weedle',
     name_ZHS: '独角虫',
     name_ZHT: '独角虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/weedle.png',
   },
   {
     id: 14,
@@ -252,7 +236,6 @@ export const pokemonData = [
     name_TR: 'Kakuna',
     name_ZHS: '铁壳蛹',
     name_ZHT: '铁壳蛹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kakuna.png',
   },
   {
     id: 15,
@@ -270,7 +253,6 @@ export const pokemonData = [
     name_TR: 'Beedrill',
     name_ZHS: '大针蜂',
     name_ZHT: '大针蜂',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/beedrill.png',
   },
   {
     id: 16,
@@ -288,7 +270,6 @@ export const pokemonData = [
     name_TR: 'Pidgey',
     name_ZHS: '波波',
     name_ZHT: '波波',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pidgey.png',
   },
   {
     id: 17,
@@ -306,7 +287,6 @@ export const pokemonData = [
     name_TR: 'Pidgeotto',
     name_ZHS: '比比鸟',
     name_ZHT: '比比鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pidgeotto.png',
   },
   {
     id: 18,
@@ -324,7 +304,6 @@ export const pokemonData = [
     name_TR: 'Pidgeot',
     name_ZHS: '大比鸟',
     name_ZHT: '大比鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pidgeot.png',
   },
   {
     id: 19,
@@ -342,7 +321,6 @@ export const pokemonData = [
     name_TR: 'Rattata',
     name_ZHS: '小拉达',
     name_ZHT: '小拉达',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rattata.png',
   },
   {
     id: 20,
@@ -360,7 +338,6 @@ export const pokemonData = [
     name_TR: 'Raticate',
     name_ZHS: '拉达',
     name_ZHT: '拉达',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/raticate.png',
   },
   {
     id: 21,
@@ -378,7 +355,6 @@ export const pokemonData = [
     name_TR: 'Spearow',
     name_ZHS: '烈雀',
     name_ZHT: '烈雀',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/spearow.png',
   },
   {
     id: 22,
@@ -396,7 +372,6 @@ export const pokemonData = [
     name_TR: 'Fearow',
     name_ZHS: '大嘴雀',
     name_ZHT: '大嘴雀',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/fearow.png',
   },
   {
     id: 23,
@@ -414,7 +389,6 @@ export const pokemonData = [
     name_TR: 'Ekans',
     name_ZHS: '阿柏蛇',
     name_ZHT: '阿柏蛇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ekans.png',
   },
   {
     id: 24,
@@ -432,7 +406,6 @@ export const pokemonData = [
     name_TR: 'Arbok',
     name_ZHS: '阿柏怪',
     name_ZHT: '阿柏怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/arbok.png',
   },
   {
     id: 25,
@@ -450,7 +423,6 @@ export const pokemonData = [
     name_TR: 'Pikachu',
     name_ZHS: '皮卡丘',
     name_ZHT: '皮卡丘',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pikachu.png',
   },
   {
     id: 26,
@@ -468,7 +440,6 @@ export const pokemonData = [
     name_TR: 'Raichu',
     name_ZHS: '雷丘',
     name_ZHT: '雷丘',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/raichu.png',
   },
   {
     id: 27,
@@ -486,7 +457,6 @@ export const pokemonData = [
     name_TR: 'Sandshrew',
     name_ZHS: '穿山鼠',
     name_ZHT: '穿山鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sandshrew.png',
   },
   {
     id: 28,
@@ -504,7 +474,6 @@ export const pokemonData = [
     name_TR: 'Sandslash',
     name_ZHS: '穿山王',
     name_ZHT: '穿山王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sandslash.png',
   },
   {
     id: 29,
@@ -522,7 +491,6 @@ export const pokemonData = [
     name_TR: 'Nidoran♀',
     name_ZHS: '尼多兰',
     name_ZHT: '尼多兰',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/nidoran-f.png',
   },
   {
     id: 30,
@@ -540,7 +508,6 @@ export const pokemonData = [
     name_TR: 'Nidorina',
     name_ZHS: '尼多娜',
     name_ZHT: '尼多娜',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/nidorina.png',
   },
   {
     id: 31,
@@ -558,7 +525,6 @@ export const pokemonData = [
     name_TR: 'Nidoqueen',
     name_ZHS: '尼多后',
     name_ZHT: '尼多后',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/nidoqueen.png',
   },
   {
     id: 32,
@@ -576,7 +542,6 @@ export const pokemonData = [
     name_TR: 'Nidoran♂',
     name_ZHS: '尼多朗',
     name_ZHT: '尼多朗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/nidoran-m.png',
   },
   {
     id: 33,
@@ -594,7 +559,6 @@ export const pokemonData = [
     name_TR: 'Nidorino',
     name_ZHS: '尼多力诺',
     name_ZHT: '尼多力诺',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/nidorino.png',
   },
   {
     id: 34,
@@ -612,7 +576,6 @@ export const pokemonData = [
     name_TR: 'Nidoking',
     name_ZHS: '尼多王',
     name_ZHT: '尼多王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/nidoking.png',
   },
   {
     id: 35,
@@ -630,7 +593,6 @@ export const pokemonData = [
     name_TR: 'Clefairy',
     name_ZHS: '皮皮',
     name_ZHT: '皮皮',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/clefairy.png',
   },
   {
     id: 36,
@@ -648,7 +610,6 @@ export const pokemonData = [
     name_TR: 'Clefable',
     name_ZHS: '皮可西',
     name_ZHT: '皮可西',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/clefable.png',
   },
   {
     id: 37,
@@ -666,7 +627,6 @@ export const pokemonData = [
     name_TR: 'Vulpix',
     name_ZHS: '六尾',
     name_ZHT: '六尾',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/vulpix.png',
   },
   {
     id: 38,
@@ -684,7 +644,6 @@ export const pokemonData = [
     name_TR: 'Ninetales',
     name_ZHS: '九尾',
     name_ZHT: '九尾',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ninetales.png',
   },
   {
     id: 39,
@@ -702,8 +661,6 @@ export const pokemonData = [
     name_TR: 'Jigglypuff',
     name_ZHS: '胖丁',
     name_ZHT: '胖丁',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/jigglypuff.png',
   },
   {
     id: 40,
@@ -721,8 +678,6 @@ export const pokemonData = [
     name_TR: 'Wigglytuff',
     name_ZHS: '胖可丁',
     name_ZHT: '胖可丁',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/wigglytuff.png',
   },
   {
     id: 41,
@@ -740,7 +695,6 @@ export const pokemonData = [
     name_TR: 'Zubat',
     name_ZHS: '超音蝠',
     name_ZHT: '超音蝠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zubat.png',
   },
   {
     id: 42,
@@ -758,7 +712,6 @@ export const pokemonData = [
     name_TR: 'Golbat',
     name_ZHS: '大嘴蝠',
     name_ZHT: '大嘴蝠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/golbat.png',
   },
   {
     id: 43,
@@ -776,7 +729,6 @@ export const pokemonData = [
     name_TR: 'Oddish',
     name_ZHS: '走路草',
     name_ZHT: '走路草',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/oddish.png',
   },
   {
     id: 44,
@@ -794,7 +746,6 @@ export const pokemonData = [
     name_TR: 'Gloom',
     name_ZHS: '臭臭花',
     name_ZHT: '臭臭花',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gloom.png',
   },
   {
     id: 45,
@@ -812,7 +763,6 @@ export const pokemonData = [
     name_TR: 'Vileplume',
     name_ZHS: '霸王花',
     name_ZHT: '霸王花',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/vileplume.png',
   },
   {
     id: 46,
@@ -830,7 +780,6 @@ export const pokemonData = [
     name_TR: 'Paras',
     name_ZHS: '派拉斯',
     name_ZHT: '派拉斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/paras.png',
   },
   {
     id: 47,
@@ -848,7 +797,6 @@ export const pokemonData = [
     name_TR: 'Parasect',
     name_ZHS: '派拉斯特',
     name_ZHT: '派拉斯特',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/parasect.png',
   },
   {
     id: 48,
@@ -866,7 +814,6 @@ export const pokemonData = [
     name_TR: 'Venonat',
     name_ZHS: '毛球',
     name_ZHT: '毛球',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/venonat.png',
   },
   {
     id: 49,
@@ -884,7 +831,6 @@ export const pokemonData = [
     name_TR: 'Venomoth',
     name_ZHS: '摩鲁蛾',
     name_ZHT: '摩鲁蛾',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/venomoth.png',
   },
   {
     id: 50,
@@ -902,7 +848,6 @@ export const pokemonData = [
     name_TR: 'Diglett',
     name_ZHS: '地鼠',
     name_ZHT: '地鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/diglett.png',
   },
   {
     id: 51,
@@ -920,7 +865,6 @@ export const pokemonData = [
     name_TR: 'Dugtrio',
     name_ZHS: '三地鼠',
     name_ZHT: '三地鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dugtrio.png',
   },
   {
     id: 52,
@@ -938,7 +882,6 @@ export const pokemonData = [
     name_TR: 'Meowth',
     name_ZHS: '喵喵',
     name_ZHT: '喵喵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/meowth.png',
   },
   {
     id: 53,
@@ -956,7 +899,6 @@ export const pokemonData = [
     name_TR: 'Persian',
     name_ZHS: '猫老大',
     name_ZHT: '猫老大',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/persian.png',
   },
   {
     id: 54,
@@ -974,7 +916,6 @@ export const pokemonData = [
     name_TR: 'Psyduck',
     name_ZHS: '可达鸭',
     name_ZHT: '可达鸭',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/psyduck.png',
   },
   {
     id: 55,
@@ -992,7 +933,6 @@ export const pokemonData = [
     name_TR: 'Golduck',
     name_ZHS: '哥达鸭',
     name_ZHT: '哥达鸭',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/golduck.png',
   },
   {
     id: 56,
@@ -1010,7 +950,6 @@ export const pokemonData = [
     name_TR: 'Mankey',
     name_ZHS: '猴怪',
     name_ZHT: '猴怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mankey.png',
   },
   {
     id: 57,
@@ -1028,7 +967,6 @@ export const pokemonData = [
     name_TR: 'Primeape',
     name_ZHS: '火暴猴',
     name_ZHT: '火暴猴',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/primeape.png',
   },
   {
     id: 58,
@@ -1046,7 +984,6 @@ export const pokemonData = [
     name_TR: 'Growlithe',
     name_ZHS: '卡蒂狗',
     name_ZHT: '卡蒂狗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/growlithe.png',
   },
   {
     id: 59,
@@ -1064,7 +1001,6 @@ export const pokemonData = [
     name_TR: 'Arcanine',
     name_ZHS: '风速狗',
     name_ZHT: '风速狗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/arcanine.png',
   },
   {
     id: 60,
@@ -1082,7 +1018,6 @@ export const pokemonData = [
     name_TR: 'Poliwag',
     name_ZHS: '蚊香蝌蚪',
     name_ZHT: '蚊香蝌蚪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/poliwag.png',
   },
   {
     id: 61,
@@ -1100,7 +1035,6 @@ export const pokemonData = [
     name_TR: 'Poliwhirl',
     name_ZHS: '蚊香君',
     name_ZHT: '蚊香君',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/poliwhirl.png',
   },
   {
     id: 62,
@@ -1118,7 +1052,6 @@ export const pokemonData = [
     name_TR: 'Poliwrath',
     name_ZHS: '蚊香泳士',
     name_ZHT: '蚊香泳士',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/poliwrath.png',
   },
   {
     id: 63,
@@ -1136,7 +1069,6 @@ export const pokemonData = [
     name_TR: 'Abra',
     name_ZHS: '凯西',
     name_ZHT: '凯西',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/abra.png',
   },
   {
     id: 64,
@@ -1154,7 +1086,6 @@ export const pokemonData = [
     name_TR: 'Kadabra',
     name_ZHS: '勇基拉',
     name_ZHT: '勇基拉',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kadabra.png',
   },
   {
     id: 65,
@@ -1172,7 +1103,6 @@ export const pokemonData = [
     name_TR: 'Alakazam',
     name_ZHS: '胡地',
     name_ZHT: '胡地',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/alakazam.png',
   },
   {
     id: 66,
@@ -1190,7 +1120,6 @@ export const pokemonData = [
     name_TR: 'Machop',
     name_ZHS: '腕力',
     name_ZHT: '腕力',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/machop.png',
   },
   {
     id: 67,
@@ -1208,7 +1137,6 @@ export const pokemonData = [
     name_TR: 'Machoke',
     name_ZHS: '豪力',
     name_ZHT: '豪力',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/machoke.png',
   },
   {
     id: 68,
@@ -1226,7 +1154,6 @@ export const pokemonData = [
     name_TR: 'Machamp',
     name_ZHS: '怪力',
     name_ZHT: '怪力',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/machamp.png',
   },
   {
     id: 69,
@@ -1244,8 +1171,6 @@ export const pokemonData = [
     name_TR: 'Bellsprout',
     name_ZHS: '喇叭芽',
     name_ZHT: '喇叭芽',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/bellsprout.png',
   },
   {
     id: 70,
@@ -1263,8 +1188,6 @@ export const pokemonData = [
     name_TR: 'Weepinbell',
     name_ZHS: '口呆花',
     name_ZHT: '口呆花',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/weepinbell.png',
   },
   {
     id: 71,
@@ -1282,8 +1205,6 @@ export const pokemonData = [
     name_TR: 'Victreebel',
     name_ZHS: '大食花',
     name_ZHT: '大食花',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/victreebel.png',
   },
   {
     id: 72,
@@ -1301,7 +1222,6 @@ export const pokemonData = [
     name_TR: 'Tentacool',
     name_ZHS: '玛瑙水母',
     name_ZHT: '玛瑙水母',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tentacool.png',
   },
   {
     id: 73,
@@ -1319,8 +1239,6 @@ export const pokemonData = [
     name_TR: 'Tentacruel',
     name_ZHS: '毒刺水母',
     name_ZHT: '毒刺水母',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/tentacruel.png',
   },
   {
     id: 74,
@@ -1338,7 +1256,6 @@ export const pokemonData = [
     name_TR: 'Geodude',
     name_ZHS: '小拳石',
     name_ZHT: '小拳石',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/geodude.png',
   },
   {
     id: 75,
@@ -1356,7 +1273,6 @@ export const pokemonData = [
     name_TR: 'Graveler',
     name_ZHS: '隆隆石',
     name_ZHT: '隆隆石',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/graveler.png',
   },
   {
     id: 76,
@@ -1374,7 +1290,6 @@ export const pokemonData = [
     name_TR: 'Golem',
     name_ZHS: '隆隆岩',
     name_ZHT: '隆隆岩',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/golem.png',
   },
   {
     id: 77,
@@ -1392,7 +1307,6 @@ export const pokemonData = [
     name_TR: 'Ponyta',
     name_ZHS: '小火马',
     name_ZHT: '小火马',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ponyta.png',
   },
   {
     id: 78,
@@ -1410,7 +1324,6 @@ export const pokemonData = [
     name_TR: 'Rapidash',
     name_ZHS: '烈焰马',
     name_ZHT: '烈焰马',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rapidash.png',
   },
   {
     id: 79,
@@ -1428,7 +1341,6 @@ export const pokemonData = [
     name_TR: 'Slowpoke',
     name_ZHS: '呆呆兽',
     name_ZHT: '呆呆兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/slowpoke.png',
   },
   {
     id: 80,
@@ -1446,7 +1358,6 @@ export const pokemonData = [
     name_TR: 'Slowbro',
     name_ZHS: '呆壳兽',
     name_ZHT: '呆壳兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/slowbro.png',
   },
   {
     id: 81,
@@ -1464,7 +1375,6 @@ export const pokemonData = [
     name_TR: 'Magnemite',
     name_ZHS: '小磁怪',
     name_ZHT: '小磁怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/magnemite.png',
   },
   {
     id: 82,
@@ -1482,7 +1392,6 @@ export const pokemonData = [
     name_TR: 'Magneton',
     name_ZHS: '三合一磁怪',
     name_ZHT: '三合一磁怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/magneton.png',
   },
   {
     id: 83,
@@ -1500,7 +1409,6 @@ export const pokemonData = [
     name_TR: "Farfetch'd",
     name_ZHS: '大葱鸭',
     name_ZHT: '大葱鸭',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/farfetchd.png',
   },
   {
     id: 84,
@@ -1518,7 +1426,6 @@ export const pokemonData = [
     name_TR: 'Doduo',
     name_ZHS: '嘟嘟',
     name_ZHT: '嘟嘟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/doduo.png',
   },
   {
     id: 85,
@@ -1536,7 +1443,6 @@ export const pokemonData = [
     name_TR: 'Dodrio',
     name_ZHS: '嘟嘟利',
     name_ZHT: '嘟嘟利',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dodrio.png',
   },
   {
     id: 86,
@@ -1554,7 +1460,6 @@ export const pokemonData = [
     name_TR: 'Seel',
     name_ZHS: '小海狮',
     name_ZHT: '小海狮',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/seel.png',
   },
   {
     id: 87,
@@ -1572,7 +1477,6 @@ export const pokemonData = [
     name_TR: 'Dewgong',
     name_ZHS: '白海狮',
     name_ZHT: '白海狮',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dewgong.png',
   },
   {
     id: 88,
@@ -1590,7 +1494,6 @@ export const pokemonData = [
     name_TR: 'Grimer',
     name_ZHS: '臭泥',
     name_ZHT: '臭泥',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/grimer.png',
   },
   {
     id: 89,
@@ -1608,7 +1511,6 @@ export const pokemonData = [
     name_TR: 'Muk',
     name_ZHS: '臭臭泥',
     name_ZHT: '臭臭泥',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/muk.png',
   },
   {
     id: 90,
@@ -1626,7 +1528,6 @@ export const pokemonData = [
     name_TR: 'Shellder',
     name_ZHS: '大舌贝',
     name_ZHT: '大舌贝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shellder.png',
   },
   {
     id: 91,
@@ -1644,7 +1545,6 @@ export const pokemonData = [
     name_TR: 'Cloyster',
     name_ZHS: '刺甲贝',
     name_ZHT: '刺甲贝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cloyster.png',
   },
   {
     id: 92,
@@ -1662,7 +1562,6 @@ export const pokemonData = [
     name_TR: 'Gastly',
     name_ZHS: '鬼斯',
     name_ZHT: '鬼斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gastly.png',
   },
   {
     id: 93,
@@ -1680,7 +1579,6 @@ export const pokemonData = [
     name_TR: 'Haunter',
     name_ZHS: '鬼斯通',
     name_ZHT: '鬼斯通',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/haunter.png',
   },
   {
     id: 94,
@@ -1698,7 +1596,6 @@ export const pokemonData = [
     name_TR: 'Gengar',
     name_ZHS: '耿鬼',
     name_ZHT: '耿鬼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gengar.png',
   },
   {
     id: 95,
@@ -1716,7 +1613,6 @@ export const pokemonData = [
     name_TR: 'Onix',
     name_ZHS: '大岩蛇',
     name_ZHT: '大岩蛇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/onix.png',
   },
   {
     id: 96,
@@ -1734,7 +1630,6 @@ export const pokemonData = [
     name_TR: 'Drowzee',
     name_ZHS: '催眠貘',
     name_ZHT: '催眠貘',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/drowzee.png',
   },
   {
     id: 97,
@@ -1752,7 +1647,6 @@ export const pokemonData = [
     name_TR: 'Hypno',
     name_ZHS: '引梦貘人',
     name_ZHT: '引梦貘人',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hypno.png',
   },
   {
     id: 98,
@@ -1770,7 +1664,6 @@ export const pokemonData = [
     name_TR: 'Krabby',
     name_ZHS: '大钳蟹',
     name_ZHT: '大钳蟹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/krabby.png',
   },
   {
     id: 99,
@@ -1788,7 +1681,6 @@ export const pokemonData = [
     name_TR: 'Kingler',
     name_ZHS: '巨钳蟹',
     name_ZHT: '巨钳蟹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kingler.png',
   },
   {
     id: 100,
@@ -1806,7 +1698,6 @@ export const pokemonData = [
     name_TR: 'Voltorb',
     name_ZHS: '霹雳电球',
     name_ZHT: '霹雳电球',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/voltorb.png',
   },
   {
     id: 101,
@@ -1824,7 +1715,6 @@ export const pokemonData = [
     name_TR: 'Electrode',
     name_ZHS: '顽皮雷弹',
     name_ZHT: '顽皮雷弹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/electrode.png',
   },
   {
     id: 102,
@@ -1842,7 +1732,6 @@ export const pokemonData = [
     name_TR: 'Exeggcute',
     name_ZHS: '蛋蛋',
     name_ZHT: '蛋蛋',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/exeggcute.png',
   },
   {
     id: 103,
@@ -1860,7 +1749,6 @@ export const pokemonData = [
     name_TR: 'Exeggutor',
     name_ZHS: '椰蛋树',
     name_ZHT: '椰蛋树',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/exeggutor.png',
   },
   {
     id: 104,
@@ -1878,7 +1766,6 @@ export const pokemonData = [
     name_TR: 'Cubone',
     name_ZHS: '卡拉卡拉',
     name_ZHT: '卡拉卡拉',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cubone.png',
   },
   {
     id: 105,
@@ -1896,7 +1783,6 @@ export const pokemonData = [
     name_TR: 'Marowak',
     name_ZHS: '嘎啦嘎啦',
     name_ZHT: '嘎啦嘎啦',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/marowak.png',
   },
   {
     id: 106,
@@ -1914,7 +1800,6 @@ export const pokemonData = [
     name_TR: 'Hitmonlee',
     name_ZHS: '飞腿郎',
     name_ZHT: '飞腿郎',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hitmonlee.png',
   },
   {
     id: 107,
@@ -1932,8 +1817,6 @@ export const pokemonData = [
     name_TR: 'Hitmonchan',
     name_ZHS: '快拳郎',
     name_ZHT: '快拳郎',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/hitmonchan.png',
   },
   {
     id: 108,
@@ -1951,7 +1834,6 @@ export const pokemonData = [
     name_TR: 'Lickitung',
     name_ZHS: '大舌头',
     name_ZHT: '大舌头',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lickitung.png',
   },
   {
     id: 109,
@@ -1969,7 +1851,6 @@ export const pokemonData = [
     name_TR: 'Koffing',
     name_ZHS: '瓦斯弹',
     name_ZHT: '瓦斯弹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/koffing.png',
   },
   {
     id: 110,
@@ -1987,7 +1868,6 @@ export const pokemonData = [
     name_TR: 'Weezing',
     name_ZHS: '双弹瓦斯',
     name_ZHT: '双弹瓦斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/weezing.png',
   },
   {
     id: 111,
@@ -2005,7 +1885,6 @@ export const pokemonData = [
     name_TR: 'Rhyhorn',
     name_ZHS: '独角犀牛',
     name_ZHT: '独角犀牛',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rhyhorn.png',
   },
   {
     id: 112,
@@ -2023,7 +1902,6 @@ export const pokemonData = [
     name_TR: 'Rhydon',
     name_ZHS: '钻角犀兽',
     name_ZHT: '钻角犀兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rhydon.png',
   },
   {
     id: 113,
@@ -2041,7 +1919,6 @@ export const pokemonData = [
     name_TR: 'Chansey',
     name_ZHS: '吉利蛋',
     name_ZHT: '吉利蛋',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/chansey.png',
   },
   {
     id: 114,
@@ -2059,7 +1936,6 @@ export const pokemonData = [
     name_TR: 'Tangela',
     name_ZHS: '蔓藤怪',
     name_ZHT: '蔓藤怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tangela.png',
   },
   {
     id: 115,
@@ -2077,8 +1953,6 @@ export const pokemonData = [
     name_TR: 'Kangaskhan',
     name_ZHS: '袋兽',
     name_ZHT: '袋兽',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/kangaskhan.png',
   },
   {
     id: 116,
@@ -2096,7 +1970,6 @@ export const pokemonData = [
     name_TR: 'Horsea',
     name_ZHS: '墨海马',
     name_ZHT: '墨海马',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/horsea.png',
   },
   {
     id: 117,
@@ -2114,7 +1987,6 @@ export const pokemonData = [
     name_TR: 'Seadra',
     name_ZHS: '海刺龙',
     name_ZHT: '海刺龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/seadra.png',
   },
   {
     id: 118,
@@ -2132,7 +2004,6 @@ export const pokemonData = [
     name_TR: 'Goldeen',
     name_ZHS: '角金鱼',
     name_ZHT: '角金鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/goldeen.png',
   },
   {
     id: 119,
@@ -2150,7 +2021,6 @@ export const pokemonData = [
     name_TR: 'Seaking',
     name_ZHS: '金鱼王',
     name_ZHT: '金鱼王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/seaking.png',
   },
   {
     id: 120,
@@ -2168,7 +2038,6 @@ export const pokemonData = [
     name_TR: 'Staryu',
     name_ZHS: '海星星',
     name_ZHT: '海星星',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/staryu.png',
   },
   {
     id: 121,
@@ -2186,7 +2055,6 @@ export const pokemonData = [
     name_TR: 'Starmie',
     name_ZHS: '宝石海星',
     name_ZHT: '宝石海星',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/starmie.png',
   },
   {
     id: 122,
@@ -2204,7 +2072,6 @@ export const pokemonData = [
     name_TR: 'Mr. Mime',
     name_ZHS: '魔墙人偶',
     name_ZHT: '魔墙人偶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mr-mime.png',
   },
   {
     id: 123,
@@ -2222,7 +2089,6 @@ export const pokemonData = [
     name_TR: 'Scyther',
     name_ZHS: '飞天螳螂',
     name_ZHT: '飞天螳螂',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/scyther.png',
   },
   {
     id: 124,
@@ -2240,7 +2106,6 @@ export const pokemonData = [
     name_TR: 'Jynx',
     name_ZHS: '迷唇姐',
     name_ZHT: '迷唇姐',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/jynx.png',
   },
   {
     id: 125,
@@ -2258,8 +2123,6 @@ export const pokemonData = [
     name_TR: 'Electabuzz',
     name_ZHS: '电击兽',
     name_ZHT: '电击兽',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/electabuzz.png',
   },
   {
     id: 126,
@@ -2277,7 +2140,6 @@ export const pokemonData = [
     name_TR: 'Magmar',
     name_ZHS: '鸭嘴火兽',
     name_ZHT: '鸭嘴火兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/magmar.png',
   },
   {
     id: 127,
@@ -2295,7 +2157,6 @@ export const pokemonData = [
     name_TR: 'Pinsir',
     name_ZHS: '凯罗斯',
     name_ZHT: '凯罗斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pinsir.png',
   },
   {
     id: 128,
@@ -2313,7 +2174,6 @@ export const pokemonData = [
     name_TR: 'Tauros',
     name_ZHS: '肯泰罗',
     name_ZHT: '肯泰罗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tauros.png',
   },
   {
     id: 129,
@@ -2331,7 +2191,6 @@ export const pokemonData = [
     name_TR: 'Magikarp',
     name_ZHS: '鲤鱼王',
     name_ZHT: '鲤鱼王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/magikarp.png',
   },
   {
     id: 130,
@@ -2349,7 +2208,6 @@ export const pokemonData = [
     name_TR: 'Gyarados',
     name_ZHS: '暴鲤龙',
     name_ZHT: '暴鲤龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gyarados.png',
   },
   {
     id: 131,
@@ -2367,7 +2225,6 @@ export const pokemonData = [
     name_TR: 'Lapras',
     name_ZHS: '拉普拉斯',
     name_ZHT: '拉普拉斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lapras.png',
   },
   {
     id: 132,
@@ -2385,7 +2242,6 @@ export const pokemonData = [
     name_TR: 'Ditto',
     name_ZHS: '百变怪',
     name_ZHT: '百变怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ditto.png',
   },
   {
     id: 133,
@@ -2403,7 +2259,6 @@ export const pokemonData = [
     name_TR: 'Eevee',
     name_ZHS: '伊布',
     name_ZHT: '伊布',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/eevee.png',
   },
   {
     id: 134,
@@ -2421,7 +2276,6 @@ export const pokemonData = [
     name_TR: 'Vaporeon',
     name_ZHS: '水伊布',
     name_ZHT: '水伊布',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/vaporeon.png',
   },
   {
     id: 135,
@@ -2439,7 +2293,6 @@ export const pokemonData = [
     name_TR: 'Jolteon',
     name_ZHS: '雷伊布',
     name_ZHT: '雷伊布',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/jolteon.png',
   },
   {
     id: 136,
@@ -2457,7 +2310,6 @@ export const pokemonData = [
     name_TR: 'Flareon',
     name_ZHS: '火伊布',
     name_ZHT: '火伊布',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/flareon.png',
   },
   {
     id: 137,
@@ -2475,7 +2327,6 @@ export const pokemonData = [
     name_TR: 'Porygon',
     name_ZHS: '多边兽',
     name_ZHT: '多边兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/porygon.png',
   },
   {
     id: 138,
@@ -2493,7 +2344,6 @@ export const pokemonData = [
     name_TR: 'Omanyte',
     name_ZHS: '菊石兽',
     name_ZHT: '菊石兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/omanyte.png',
   },
   {
     id: 139,
@@ -2511,7 +2361,6 @@ export const pokemonData = [
     name_TR: 'Omastar',
     name_ZHS: '多刺菊石兽',
     name_ZHT: '多刺菊石兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/omastar.png',
   },
   {
     id: 140,
@@ -2529,7 +2378,6 @@ export const pokemonData = [
     name_TR: 'Kabuto',
     name_ZHS: '化石盔',
     name_ZHT: '化石盔',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kabuto.png',
   },
   {
     id: 141,
@@ -2547,7 +2395,6 @@ export const pokemonData = [
     name_TR: 'Kabutops',
     name_ZHS: '镰刀盔',
     name_ZHT: '镰刀盔',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kabutops.png',
   },
   {
     id: 142,
@@ -2565,8 +2412,6 @@ export const pokemonData = [
     name_TR: 'Aerodactyl',
     name_ZHS: '化石翼龙',
     name_ZHT: '化石翼龙',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/aerodactyl.png',
   },
   {
     id: 143,
@@ -2584,7 +2429,6 @@ export const pokemonData = [
     name_TR: 'Snorlax',
     name_ZHS: '卡比兽',
     name_ZHT: '卡比兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/snorlax.png',
   },
   {
     id: 144,
@@ -2602,7 +2446,6 @@ export const pokemonData = [
     name_TR: 'Articuno',
     name_ZHS: '急冻鸟',
     name_ZHT: '急冻鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/articuno.png',
   },
   {
     id: 145,
@@ -2620,7 +2463,6 @@ export const pokemonData = [
     name_TR: 'Zapdos',
     name_ZHS: '闪电鸟',
     name_ZHT: '闪电鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zapdos.png',
   },
   {
     id: 146,
@@ -2638,7 +2480,6 @@ export const pokemonData = [
     name_TR: 'Moltres',
     name_ZHS: '火焰鸟',
     name_ZHT: '火焰鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/moltres.png',
   },
   {
     id: 147,
@@ -2656,7 +2497,6 @@ export const pokemonData = [
     name_TR: 'Dratini',
     name_ZHS: '迷你龙',
     name_ZHT: '迷你龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dratini.png',
   },
   {
     id: 148,
@@ -2674,7 +2514,6 @@ export const pokemonData = [
     name_TR: 'Dragonair',
     name_ZHS: '哈克龙',
     name_ZHT: '哈克龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dragonair.png',
   },
   {
     id: 149,
@@ -2692,7 +2531,6 @@ export const pokemonData = [
     name_TR: 'Dragonite',
     name_ZHS: '快龙',
     name_ZHT: '快龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dragonite.png',
   },
   {
     id: 150,
@@ -2710,7 +2548,6 @@ export const pokemonData = [
     name_TR: 'Mewtwo',
     name_ZHS: '超梦',
     name_ZHT: '超梦',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mewtwo.png',
   },
   {
     id: 151,
@@ -2728,7 +2565,6 @@ export const pokemonData = [
     name_TR: 'Mew',
     name_ZHS: '梦幻',
     name_ZHT: '梦幻',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mew.png',
   },
   {
     id: 152,
@@ -2746,7 +2582,6 @@ export const pokemonData = [
     name_TR: 'Chikorita',
     name_ZHS: '菊草叶',
     name_ZHT: '菊草叶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/chikorita.png',
   },
   {
     id: 153,
@@ -2764,7 +2599,6 @@ export const pokemonData = [
     name_TR: 'Bayleef',
     name_ZHS: '月桂叶',
     name_ZHT: '月桂叶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bayleef.png',
   },
   {
     id: 154,
@@ -2782,7 +2616,6 @@ export const pokemonData = [
     name_TR: 'Meganium',
     name_ZHS: '大竺葵',
     name_ZHT: '大竺葵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/meganium.png',
   },
   {
     id: 155,
@@ -2800,7 +2633,6 @@ export const pokemonData = [
     name_TR: 'Cyndaquil',
     name_ZHS: '火球鼠',
     name_ZHT: '火球鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cyndaquil.png',
   },
   {
     id: 156,
@@ -2818,7 +2650,6 @@ export const pokemonData = [
     name_TR: 'Quilava',
     name_ZHS: '火岩鼠',
     name_ZHT: '火岩鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/quilava.png',
   },
   {
     id: 157,
@@ -2836,8 +2667,6 @@ export const pokemonData = [
     name_TR: 'Typhlosion',
     name_ZHS: '火暴兽',
     name_ZHT: '火暴兽',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/typhlosion.png',
   },
   {
     id: 158,
@@ -2855,7 +2684,6 @@ export const pokemonData = [
     name_TR: 'Totodile',
     name_ZHS: '小锯鳄',
     name_ZHT: '小锯鳄',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/totodile.png',
   },
   {
     id: 159,
@@ -2873,7 +2701,6 @@ export const pokemonData = [
     name_TR: 'Croconaw',
     name_ZHS: '蓝鳄',
     name_ZHT: '蓝鳄',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/croconaw.png',
   },
   {
     id: 160,
@@ -2891,8 +2718,6 @@ export const pokemonData = [
     name_TR: 'Feraligatr',
     name_ZHS: '大力鳄',
     name_ZHT: '大力鳄',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/feraligatr.png',
   },
   {
     id: 161,
@@ -2910,7 +2735,6 @@ export const pokemonData = [
     name_TR: 'Sentret',
     name_ZHS: '尾立',
     name_ZHT: '尾立',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sentret.png',
   },
   {
     id: 162,
@@ -2928,7 +2752,6 @@ export const pokemonData = [
     name_TR: 'Furret',
     name_ZHS: '大尾立',
     name_ZHT: '大尾立',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/furret.png',
   },
   {
     id: 163,
@@ -2946,7 +2769,6 @@ export const pokemonData = [
     name_TR: 'Hoothoot',
     name_ZHS: '咕咕',
     name_ZHT: '咕咕',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hoothoot.png',
   },
   {
     id: 164,
@@ -2964,7 +2786,6 @@ export const pokemonData = [
     name_TR: 'Noctowl',
     name_ZHS: '猫头夜鹰',
     name_ZHT: '猫头夜鹰',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/noctowl.png',
   },
   {
     id: 165,
@@ -2982,7 +2803,6 @@ export const pokemonData = [
     name_TR: 'Ledyba',
     name_ZHS: '芭瓢虫',
     name_ZHT: '芭瓢虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ledyba.png',
   },
   {
     id: 166,
@@ -3000,7 +2820,6 @@ export const pokemonData = [
     name_TR: 'Ledian',
     name_ZHS: '安瓢虫',
     name_ZHT: '安瓢虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ledian.png',
   },
   {
     id: 167,
@@ -3018,7 +2837,6 @@ export const pokemonData = [
     name_TR: 'Spinarak',
     name_ZHS: '圆丝蛛',
     name_ZHT: '圆丝蛛',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/spinarak.png',
   },
   {
     id: 168,
@@ -3036,7 +2854,6 @@ export const pokemonData = [
     name_TR: 'Ariados',
     name_ZHS: '阿利多斯',
     name_ZHT: '阿利多斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ariados.png',
   },
   {
     id: 169,
@@ -3054,7 +2871,6 @@ export const pokemonData = [
     name_TR: 'Crobat',
     name_ZHS: '叉字蝠',
     name_ZHT: '叉字蝠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/crobat.png',
   },
   {
     id: 170,
@@ -3072,7 +2888,6 @@ export const pokemonData = [
     name_TR: 'Chinchou',
     name_ZHS: '灯笼鱼',
     name_ZHT: '灯笼鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/chinchou.png',
   },
   {
     id: 171,
@@ -3090,7 +2905,6 @@ export const pokemonData = [
     name_TR: 'Lanturn',
     name_ZHS: '电灯怪',
     name_ZHT: '电灯怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lanturn.png',
   },
   {
     id: 172,
@@ -3108,7 +2922,6 @@ export const pokemonData = [
     name_TR: 'Pichu',
     name_ZHS: '皮丘',
     name_ZHT: '皮丘',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pichu.png',
   },
   {
     id: 173,
@@ -3126,7 +2939,6 @@ export const pokemonData = [
     name_TR: 'Cleffa',
     name_ZHS: '皮宝宝',
     name_ZHT: '皮宝宝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cleffa.png',
   },
   {
     id: 174,
@@ -3144,7 +2956,6 @@ export const pokemonData = [
     name_TR: 'Igglybuff',
     name_ZHS: '宝宝丁',
     name_ZHT: '宝宝丁',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/igglybuff.png',
   },
   {
     id: 175,
@@ -3162,7 +2973,6 @@ export const pokemonData = [
     name_TR: 'Togepi',
     name_ZHS: '波克比',
     name_ZHT: '波克比',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/togepi.png',
   },
   {
     id: 176,
@@ -3180,7 +2990,6 @@ export const pokemonData = [
     name_TR: 'Togetic',
     name_ZHS: '波克基古',
     name_ZHT: '波克基古',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/togetic.png',
   },
   {
     id: 177,
@@ -3198,7 +3007,6 @@ export const pokemonData = [
     name_TR: 'Natu',
     name_ZHS: '天然雀',
     name_ZHT: '天然雀',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/natu.png',
   },
   {
     id: 178,
@@ -3216,7 +3024,6 @@ export const pokemonData = [
     name_TR: 'Xatu',
     name_ZHS: '天然鸟',
     name_ZHT: '天然鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/xatu.png',
   },
   {
     id: 179,
@@ -3234,7 +3041,6 @@ export const pokemonData = [
     name_TR: 'Mareep',
     name_ZHS: '咩利羊',
     name_ZHT: '咩利羊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mareep.png',
   },
   {
     id: 180,
@@ -3252,7 +3058,6 @@ export const pokemonData = [
     name_TR: 'Flaaffy',
     name_ZHS: '茸茸羊',
     name_ZHT: '茸茸羊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/flaaffy.png',
   },
   {
     id: 181,
@@ -3270,7 +3075,6 @@ export const pokemonData = [
     name_TR: 'Ampharos',
     name_ZHS: '电龙',
     name_ZHT: '电龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ampharos.png',
   },
   {
     id: 182,
@@ -3288,7 +3092,6 @@ export const pokemonData = [
     name_TR: 'Bellossom',
     name_ZHS: '美丽花',
     name_ZHT: '美丽花',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bellossom.png',
   },
   {
     id: 183,
@@ -3306,7 +3109,6 @@ export const pokemonData = [
     name_TR: 'Marill',
     name_ZHS: '玛力露',
     name_ZHT: '玛力露',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/marill.png',
   },
   {
     id: 184,
@@ -3324,7 +3126,6 @@ export const pokemonData = [
     name_TR: 'Azumarill',
     name_ZHS: '玛力露丽',
     name_ZHT: '玛力露丽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/azumarill.png',
   },
   {
     id: 185,
@@ -3342,7 +3143,6 @@ export const pokemonData = [
     name_TR: 'Sudowoodo',
     name_ZHS: '树才怪‎',
     name_ZHT: '树才怪‎',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sudowoodo.png',
   },
   {
     id: 186,
@@ -3360,7 +3160,6 @@ export const pokemonData = [
     name_TR: 'Politoed',
     name_ZHS: '蚊香蛙皇',
     name_ZHT: '蚊香蛙皇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/politoed.png',
   },
   {
     id: 187,
@@ -3378,7 +3177,6 @@ export const pokemonData = [
     name_TR: 'Hoppip',
     name_ZHS: '毽子草',
     name_ZHT: '毽子草',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hoppip.png',
   },
   {
     id: 188,
@@ -3396,7 +3194,6 @@ export const pokemonData = [
     name_TR: 'Skiploom',
     name_ZHS: '毽子花',
     name_ZHT: '毽子花',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/skiploom.png',
   },
   {
     id: 189,
@@ -3414,7 +3211,6 @@ export const pokemonData = [
     name_TR: 'Jumpluff',
     name_ZHS: '毽子棉',
     name_ZHT: '毽子棉',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/jumpluff.png',
   },
   {
     id: 190,
@@ -3432,7 +3228,6 @@ export const pokemonData = [
     name_TR: 'Aipom',
     name_ZHS: '长尾怪手',
     name_ZHT: '长尾怪手',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/aipom.png',
   },
   {
     id: 191,
@@ -3450,7 +3245,6 @@ export const pokemonData = [
     name_TR: 'Sunkern',
     name_ZHS: '向日种子',
     name_ZHT: '向日种子',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sunkern.png',
   },
   {
     id: 192,
@@ -3468,7 +3262,6 @@ export const pokemonData = [
     name_TR: 'Sunflora',
     name_ZHS: '向日花怪',
     name_ZHT: '向日花怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sunflora.png',
   },
   {
     id: 193,
@@ -3486,7 +3279,6 @@ export const pokemonData = [
     name_TR: 'Yanma',
     name_ZHS: '蜻蜻蜓',
     name_ZHT: '蜻蜻蜓',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/yanma.png',
   },
   {
     id: 194,
@@ -3504,7 +3296,6 @@ export const pokemonData = [
     name_TR: 'Wooper',
     name_ZHS: '乌波',
     name_ZHT: '乌波',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wooper.png',
   },
   {
     id: 195,
@@ -3522,7 +3313,6 @@ export const pokemonData = [
     name_TR: 'Quagsire',
     name_ZHS: '沼王',
     name_ZHT: '沼王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/quagsire.png',
   },
   {
     id: 196,
@@ -3540,7 +3330,6 @@ export const pokemonData = [
     name_TR: 'Espeon',
     name_ZHS: '太阳伊布',
     name_ZHT: '太阳伊布',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/espeon.png',
   },
   {
     id: 197,
@@ -3558,7 +3347,6 @@ export const pokemonData = [
     name_TR: 'Umbreon',
     name_ZHS: '月亮伊布',
     name_ZHT: '月亮伊布',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/umbreon.png',
   },
   {
     id: 198,
@@ -3576,7 +3364,6 @@ export const pokemonData = [
     name_TR: 'Murkrow',
     name_ZHS: '黑暗鸦',
     name_ZHT: '黑暗鸦',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/murkrow.png',
   },
   {
     id: 199,
@@ -3594,7 +3381,6 @@ export const pokemonData = [
     name_TR: 'Slowking',
     name_ZHS: '呆呆王',
     name_ZHT: '呆呆王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/slowking.png',
   },
   {
     id: 200,
@@ -3612,8 +3398,6 @@ export const pokemonData = [
     name_TR: 'Misdreavus',
     name_ZHS: '梦妖',
     name_ZHT: '梦妖',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/misdreavus.png',
   },
   {
     id: 201,
@@ -3631,7 +3415,6 @@ export const pokemonData = [
     name_TR: 'Unown',
     name_ZHS: '未知图腾',
     name_ZHT: '未知图腾',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/unown.png',
   },
   {
     id: 202,
@@ -3649,7 +3432,6 @@ export const pokemonData = [
     name_TR: 'Wobbuffet',
     name_ZHS: '果然翁',
     name_ZHT: '果然翁',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wobbuffet.png',
   },
   {
     id: 203,
@@ -3667,7 +3449,6 @@ export const pokemonData = [
     name_TR: 'Girafarig',
     name_ZHS: '麒麟奇',
     name_ZHT: '麒麟奇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/girafarig.png',
   },
   {
     id: 204,
@@ -3685,7 +3466,6 @@ export const pokemonData = [
     name_TR: 'Pineco',
     name_ZHS: '榛果球',
     name_ZHT: '榛果球',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pineco.png',
   },
   {
     id: 205,
@@ -3703,8 +3483,6 @@ export const pokemonData = [
     name_TR: 'Forretress',
     name_ZHS: '佛烈托斯',
     name_ZHT: '佛烈托斯',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/forretress.png',
   },
   {
     id: 206,
@@ -3722,7 +3500,6 @@ export const pokemonData = [
     name_TR: 'Dunsparce',
     name_ZHS: '土龙弟弟',
     name_ZHT: '土龙弟弟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dunsparce.png',
   },
   {
     id: 207,
@@ -3740,7 +3517,6 @@ export const pokemonData = [
     name_TR: 'Gligar',
     name_ZHS: '天蝎',
     name_ZHT: '天蝎',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gligar.png',
   },
   {
     id: 208,
@@ -3758,7 +3534,6 @@ export const pokemonData = [
     name_TR: 'Steelix',
     name_ZHS: '大钢蛇',
     name_ZHT: '大钢蛇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/steelix.png',
   },
   {
     id: 209,
@@ -3776,7 +3551,6 @@ export const pokemonData = [
     name_TR: 'Snubbull',
     name_ZHS: '布鲁',
     name_ZHT: '布鲁',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/snubbull.png',
   },
   {
     id: 210,
@@ -3794,7 +3568,6 @@ export const pokemonData = [
     name_TR: 'Granbull',
     name_ZHS: '布鲁皇',
     name_ZHT: '布鲁皇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/granbull.png',
   },
   {
     id: 211,
@@ -3812,7 +3585,6 @@ export const pokemonData = [
     name_TR: 'Qwilfish',
     name_ZHS: '千针鱼',
     name_ZHT: '千针鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/qwilfish.png',
   },
   {
     id: 212,
@@ -3830,7 +3602,6 @@ export const pokemonData = [
     name_TR: 'Scizor',
     name_ZHS: '巨钳螳螂',
     name_ZHT: '巨钳螳螂',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/scizor.png',
   },
   {
     id: 213,
@@ -3848,7 +3619,6 @@ export const pokemonData = [
     name_TR: 'Shuckle',
     name_ZHS: '壶壶',
     name_ZHT: '壶壶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shuckle.png',
   },
   {
     id: 214,
@@ -3866,7 +3636,6 @@ export const pokemonData = [
     name_TR: 'Heracross',
     name_ZHS: '赫拉克罗斯',
     name_ZHT: '赫拉克罗斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/heracross.png',
   },
   {
     id: 215,
@@ -3884,7 +3653,6 @@ export const pokemonData = [
     name_TR: 'Sneasel',
     name_ZHS: '狃拉',
     name_ZHT: '狃拉',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sneasel.png',
   },
   {
     id: 216,
@@ -3902,7 +3670,6 @@ export const pokemonData = [
     name_TR: 'Teddiursa',
     name_ZHS: '熊宝宝',
     name_ZHT: '熊宝宝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/teddiursa.png',
   },
   {
     id: 217,
@@ -3920,7 +3687,6 @@ export const pokemonData = [
     name_TR: 'Ursaring',
     name_ZHS: '圈圈熊',
     name_ZHT: '圈圈熊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ursaring.png',
   },
   {
     id: 218,
@@ -3938,7 +3704,6 @@ export const pokemonData = [
     name_TR: 'Slugma',
     name_ZHS: '熔岩虫',
     name_ZHT: '熔岩虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/slugma.png',
   },
   {
     id: 219,
@@ -3956,7 +3721,6 @@ export const pokemonData = [
     name_TR: 'Magcargo',
     name_ZHS: '熔岩蜗牛',
     name_ZHT: '熔岩蜗牛',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/magcargo.png',
   },
   {
     id: 220,
@@ -3974,7 +3738,6 @@ export const pokemonData = [
     name_TR: 'Swinub',
     name_ZHS: '小山猪',
     name_ZHT: '小山猪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/swinub.png',
   },
   {
     id: 221,
@@ -3992,7 +3755,6 @@ export const pokemonData = [
     name_TR: 'Piloswine',
     name_ZHS: '长毛猪',
     name_ZHT: '长毛猪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/piloswine.png',
   },
   {
     id: 222,
@@ -4010,7 +3772,6 @@ export const pokemonData = [
     name_TR: 'Corsola',
     name_ZHS: '太阳珊瑚',
     name_ZHT: '太阳珊瑚',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/corsola.png',
   },
   {
     id: 223,
@@ -4028,7 +3789,6 @@ export const pokemonData = [
     name_TR: 'Remoraid',
     name_ZHS: '铁炮鱼',
     name_ZHT: '铁炮鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/remoraid.png',
   },
   {
     id: 224,
@@ -4046,7 +3806,6 @@ export const pokemonData = [
     name_TR: 'Octillery',
     name_ZHS: '章鱼桶',
     name_ZHT: '章鱼桶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/octillery.png',
   },
   {
     id: 225,
@@ -4064,7 +3823,6 @@ export const pokemonData = [
     name_TR: 'Delibird',
     name_ZHS: '信使鸟',
     name_ZHT: '信使鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/delibird.png',
   },
   {
     id: 226,
@@ -4082,7 +3840,6 @@ export const pokemonData = [
     name_TR: 'Mantine',
     name_ZHS: '巨翅飞鱼',
     name_ZHT: '巨翅飞鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mantine.png',
   },
   {
     id: 227,
@@ -4100,7 +3857,6 @@ export const pokemonData = [
     name_TR: 'Skarmory',
     name_ZHS: '盔甲鸟',
     name_ZHT: '盔甲鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/skarmory.png',
   },
   {
     id: 228,
@@ -4118,7 +3874,6 @@ export const pokemonData = [
     name_TR: 'Houndour',
     name_ZHS: '戴鲁比',
     name_ZHT: '戴鲁比',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/houndour.png',
   },
   {
     id: 229,
@@ -4136,7 +3891,6 @@ export const pokemonData = [
     name_TR: 'Houndoom',
     name_ZHS: '黑鲁加',
     name_ZHT: '黑鲁加',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/houndoom.png',
   },
   {
     id: 230,
@@ -4154,7 +3908,6 @@ export const pokemonData = [
     name_TR: 'Kingdra',
     name_ZHS: '刺龙王',
     name_ZHT: '刺龙王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kingdra.png',
   },
   {
     id: 231,
@@ -4172,7 +3925,6 @@ export const pokemonData = [
     name_TR: 'Phanpy',
     name_ZHS: '小小象',
     name_ZHT: '小小象',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/phanpy.png',
   },
   {
     id: 232,
@@ -4190,7 +3942,6 @@ export const pokemonData = [
     name_TR: 'Donphan',
     name_ZHS: '顿甲',
     name_ZHT: '顿甲',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/donphan.png',
   },
   {
     id: 233,
@@ -4208,7 +3959,6 @@ export const pokemonData = [
     name_TR: 'Porygon2',
     name_ZHS: '多边兽２型',
     name_ZHT: '多边兽２型',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/porygon2.png',
   },
   {
     id: 234,
@@ -4226,7 +3976,6 @@ export const pokemonData = [
     name_TR: 'Stantler',
     name_ZHS: '惊角鹿',
     name_ZHT: '惊角鹿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/stantler.png',
   },
   {
     id: 235,
@@ -4244,7 +3993,6 @@ export const pokemonData = [
     name_TR: 'Smeargle',
     name_ZHS: '图图犬',
     name_ZHT: '图图犬',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/smeargle.png',
   },
   {
     id: 236,
@@ -4262,7 +4010,6 @@ export const pokemonData = [
     name_TR: 'Tyrogue',
     name_ZHS: '无畏小子',
     name_ZHT: '无畏小子',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tyrogue.png',
   },
   {
     id: 237,
@@ -4280,7 +4027,6 @@ export const pokemonData = [
     name_TR: 'Hitmontop',
     name_ZHS: '战舞郎',
     name_ZHT: '战舞郎',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hitmontop.png',
   },
   {
     id: 238,
@@ -4298,7 +4044,6 @@ export const pokemonData = [
     name_TR: 'Smoochum',
     name_ZHS: '迷唇娃',
     name_ZHT: '迷唇娃',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/smoochum.png',
   },
   {
     id: 239,
@@ -4316,7 +4061,6 @@ export const pokemonData = [
     name_TR: 'Elekid',
     name_ZHS: '电击怪',
     name_ZHT: '电击怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/elekid.png',
   },
   {
     id: 240,
@@ -4334,7 +4078,6 @@ export const pokemonData = [
     name_TR: 'Magby',
     name_ZHS: '鸭嘴宝宝',
     name_ZHT: '鸭嘴宝宝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/magby.png',
   },
   {
     id: 241,
@@ -4352,7 +4095,6 @@ export const pokemonData = [
     name_TR: 'Miltank',
     name_ZHS: '大奶罐',
     name_ZHT: '大奶罐',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/miltank.png',
   },
   {
     id: 242,
@@ -4370,7 +4112,6 @@ export const pokemonData = [
     name_TR: 'Blissey',
     name_ZHS: '幸福蛋',
     name_ZHT: '幸福蛋',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/blissey.png',
   },
   {
     id: 243,
@@ -4388,7 +4129,6 @@ export const pokemonData = [
     name_TR: 'Raikou',
     name_ZHS: '雷公',
     name_ZHT: '雷公',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/raikou.png',
   },
   {
     id: 244,
@@ -4406,7 +4146,6 @@ export const pokemonData = [
     name_TR: 'Entei',
     name_ZHS: '炎帝',
     name_ZHT: '炎帝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/entei.png',
   },
   {
     id: 245,
@@ -4424,7 +4163,6 @@ export const pokemonData = [
     name_TR: 'Suicune',
     name_ZHS: '水君',
     name_ZHT: '水君',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/suicune.png',
   },
   {
     id: 246,
@@ -4442,7 +4180,6 @@ export const pokemonData = [
     name_TR: 'Larvitar',
     name_ZHS: '幼基拉斯',
     name_ZHT: '幼基拉斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/larvitar.png',
   },
   {
     id: 247,
@@ -4460,7 +4197,6 @@ export const pokemonData = [
     name_TR: 'Pupitar',
     name_ZHS: '沙基拉斯',
     name_ZHT: '沙基拉斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pupitar.png',
   },
   {
     id: 248,
@@ -4478,7 +4214,6 @@ export const pokemonData = [
     name_TR: 'Tyranitar',
     name_ZHS: '班基拉斯',
     name_ZHT: '班基拉斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tyranitar.png',
   },
   {
     id: 249,
@@ -4496,7 +4231,6 @@ export const pokemonData = [
     name_TR: 'Lugia',
     name_ZHS: '洛奇亚',
     name_ZHT: '洛奇亚',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lugia.png',
   },
   {
     id: 250,
@@ -4514,7 +4248,6 @@ export const pokemonData = [
     name_TR: 'Ho-Oh',
     name_ZHS: '凤王',
     name_ZHT: '凤王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ho-oh.png',
   },
   {
     id: 251,
@@ -4532,7 +4265,6 @@ export const pokemonData = [
     name_TR: 'Celebi',
     name_ZHS: '时拉比',
     name_ZHT: '时拉比',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/celebi.png',
   },
   {
     id: 252,
@@ -4550,7 +4282,6 @@ export const pokemonData = [
     name_TR: 'Treecko',
     name_ZHS: '木守宫',
     name_ZHT: '木守宫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/treecko.png',
   },
   {
     id: 253,
@@ -4568,7 +4299,6 @@ export const pokemonData = [
     name_TR: 'Grovyle',
     name_ZHS: '森林蜥蜴',
     name_ZHT: '森林蜥蜴',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/grovyle.png',
   },
   {
     id: 254,
@@ -4586,7 +4316,6 @@ export const pokemonData = [
     name_TR: 'Sceptile',
     name_ZHS: '蜥蜴王',
     name_ZHT: '蜥蜴王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sceptile.png',
   },
   {
     id: 255,
@@ -4604,7 +4333,6 @@ export const pokemonData = [
     name_TR: 'Torchic',
     name_ZHS: '火稚鸡',
     name_ZHT: '火稚鸡',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/torchic.png',
   },
   {
     id: 256,
@@ -4622,7 +4350,6 @@ export const pokemonData = [
     name_TR: 'Combusken',
     name_ZHS: '力壮鸡',
     name_ZHT: '力壮鸡',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/combusken.png',
   },
   {
     id: 257,
@@ -4640,7 +4367,6 @@ export const pokemonData = [
     name_TR: 'Blaziken',
     name_ZHS: '火焰鸡',
     name_ZHT: '火焰鸡',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/blaziken.png',
   },
   {
     id: 258,
@@ -4658,7 +4384,6 @@ export const pokemonData = [
     name_TR: 'Mudkip',
     name_ZHS: '水跃鱼',
     name_ZHT: '水跃鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mudkip.png',
   },
   {
     id: 259,
@@ -4676,7 +4401,6 @@ export const pokemonData = [
     name_TR: 'Marshtomp',
     name_ZHS: '沼跃鱼',
     name_ZHT: '沼跃鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/marshtomp.png',
   },
   {
     id: 260,
@@ -4694,7 +4418,6 @@ export const pokemonData = [
     name_TR: 'Swampert',
     name_ZHS: '巨沼怪',
     name_ZHT: '巨沼怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/swampert.png',
   },
   {
     id: 261,
@@ -4712,7 +4435,6 @@ export const pokemonData = [
     name_TR: 'Poochyena',
     name_ZHS: '土狼犬',
     name_ZHT: '土狼犬',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/poochyena.png',
   },
   {
     id: 262,
@@ -4730,7 +4452,6 @@ export const pokemonData = [
     name_TR: 'Mightyena',
     name_ZHS: '大狼犬',
     name_ZHT: '大狼犬',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mightyena.png',
   },
   {
     id: 263,
@@ -4748,7 +4469,6 @@ export const pokemonData = [
     name_TR: 'Zigzagoon',
     name_ZHS: '蛇纹熊',
     name_ZHT: '蛇纹熊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zigzagoon.png',
   },
   {
     id: 264,
@@ -4766,7 +4486,6 @@ export const pokemonData = [
     name_TR: 'Linoone',
     name_ZHS: '直冲熊',
     name_ZHT: '直冲熊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/linoone.png',
   },
   {
     id: 265,
@@ -4784,7 +4503,6 @@ export const pokemonData = [
     name_TR: 'Wurmple',
     name_ZHS: '刺尾虫',
     name_ZHT: '刺尾虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wurmple.png',
   },
   {
     id: 266,
@@ -4802,7 +4520,6 @@ export const pokemonData = [
     name_TR: 'Silcoon',
     name_ZHS: '甲壳茧',
     name_ZHT: '甲壳茧',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/silcoon.png',
   },
   {
     id: 267,
@@ -4820,7 +4537,6 @@ export const pokemonData = [
     name_TR: 'Beautifly',
     name_ZHS: '狩猎凤蝶',
     name_ZHT: '狩猎凤蝶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/beautifly.png',
   },
   {
     id: 268,
@@ -4838,7 +4554,6 @@ export const pokemonData = [
     name_TR: 'Cascoon',
     name_ZHS: '盾甲茧',
     name_ZHT: '盾甲茧',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cascoon.png',
   },
   {
     id: 269,
@@ -4856,7 +4571,6 @@ export const pokemonData = [
     name_TR: 'Dustox',
     name_ZHS: '毒粉蛾',
     name_ZHT: '毒粉蛾',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dustox.png',
   },
   {
     id: 270,
@@ -4874,7 +4588,6 @@ export const pokemonData = [
     name_TR: 'Lotad',
     name_ZHS: '莲叶童子',
     name_ZHT: '莲叶童子',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lotad.png',
   },
   {
     id: 271,
@@ -4892,7 +4605,6 @@ export const pokemonData = [
     name_TR: 'Lombre',
     name_ZHS: '莲帽小童',
     name_ZHT: '莲帽小童',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lombre.png',
   },
   {
     id: 272,
@@ -4910,7 +4622,6 @@ export const pokemonData = [
     name_TR: 'Ludicolo',
     name_ZHS: '乐天河童',
     name_ZHT: '乐天河童',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ludicolo.png',
   },
   {
     id: 273,
@@ -4928,7 +4639,6 @@ export const pokemonData = [
     name_TR: 'Seedot',
     name_ZHS: '橡实果',
     name_ZHT: '橡实果',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/seedot.png',
   },
   {
     id: 274,
@@ -4946,7 +4656,6 @@ export const pokemonData = [
     name_TR: 'Nuzleaf',
     name_ZHS: '长鼻叶',
     name_ZHT: '长鼻叶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/nuzleaf.png',
   },
   {
     id: 275,
@@ -4964,7 +4673,6 @@ export const pokemonData = [
     name_TR: 'Shiftry',
     name_ZHS: '狡猾天狗',
     name_ZHT: '狡猾天狗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shiftry.png',
   },
   {
     id: 276,
@@ -4982,7 +4690,6 @@ export const pokemonData = [
     name_TR: 'Taillow',
     name_ZHS: '傲骨燕',
     name_ZHT: '傲骨燕',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/taillow.png',
   },
   {
     id: 277,
@@ -5000,7 +4707,6 @@ export const pokemonData = [
     name_TR: 'Swellow',
     name_ZHS: '大王燕',
     name_ZHT: '大王燕',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/swellow.png',
   },
   {
     id: 278,
@@ -5018,7 +4724,6 @@ export const pokemonData = [
     name_TR: 'Wingull',
     name_ZHS: '长翅鸥',
     name_ZHT: '长翅鸥',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wingull.png',
   },
   {
     id: 279,
@@ -5036,7 +4741,6 @@ export const pokemonData = [
     name_TR: 'Pelipper',
     name_ZHS: '大嘴鸥',
     name_ZHT: '大嘴鸥',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pelipper.png',
   },
   {
     id: 280,
@@ -5054,7 +4758,6 @@ export const pokemonData = [
     name_TR: 'Ralts',
     name_ZHS: '拉鲁拉丝',
     name_ZHT: '拉鲁拉丝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ralts.png',
   },
   {
     id: 281,
@@ -5072,7 +4775,6 @@ export const pokemonData = [
     name_TR: 'Kirlia',
     name_ZHS: '奇鲁莉安',
     name_ZHT: '奇鲁莉安',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kirlia.png',
   },
   {
     id: 282,
@@ -5090,7 +4792,6 @@ export const pokemonData = [
     name_TR: 'Gardevoir',
     name_ZHS: '沙奈朵',
     name_ZHT: '沙奈朵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gardevoir.png',
   },
   {
     id: 283,
@@ -5108,7 +4809,6 @@ export const pokemonData = [
     name_TR: 'Surskit',
     name_ZHS: '溜溜糖球',
     name_ZHT: '溜溜糖球',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/surskit.png',
   },
   {
     id: 284,
@@ -5126,8 +4826,6 @@ export const pokemonData = [
     name_TR: 'Masquerain',
     name_ZHS: '雨翅蛾',
     name_ZHT: '雨翅蛾',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/masquerain.png',
   },
   {
     id: 285,
@@ -5145,7 +4843,6 @@ export const pokemonData = [
     name_TR: 'Shroomish',
     name_ZHS: '蘑蘑菇',
     name_ZHT: '蘑蘑菇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shroomish.png',
   },
   {
     id: 286,
@@ -5163,7 +4860,6 @@ export const pokemonData = [
     name_TR: 'Breloom',
     name_ZHS: '斗笠菇',
     name_ZHT: '斗笠菇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/breloom.png',
   },
   {
     id: 287,
@@ -5181,7 +4877,6 @@ export const pokemonData = [
     name_TR: 'Slakoth',
     name_ZHS: '懒人獭',
     name_ZHT: '懒人獭',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/slakoth.png',
   },
   {
     id: 288,
@@ -5199,7 +4894,6 @@ export const pokemonData = [
     name_TR: 'Vigoroth',
     name_ZHS: '过动猿',
     name_ZHT: '过动猿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/vigoroth.png',
   },
   {
     id: 289,
@@ -5217,7 +4911,6 @@ export const pokemonData = [
     name_TR: 'Slaking',
     name_ZHS: '请假王',
     name_ZHT: '请假王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/slaking.png',
   },
   {
     id: 290,
@@ -5235,7 +4928,6 @@ export const pokemonData = [
     name_TR: 'Nincada',
     name_ZHS: '土居忍士',
     name_ZHT: '土居忍士',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/nincada.png',
   },
   {
     id: 291,
@@ -5253,7 +4945,6 @@ export const pokemonData = [
     name_TR: 'Ninjask',
     name_ZHS: '铁面忍者',
     name_ZHT: '铁面忍者',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ninjask.png',
   },
   {
     id: 292,
@@ -5271,7 +4962,6 @@ export const pokemonData = [
     name_TR: 'Shedinja',
     name_ZHS: '脱壳忍者',
     name_ZHT: '脱壳忍者',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shedinja.png',
   },
   {
     id: 293,
@@ -5289,7 +4979,6 @@ export const pokemonData = [
     name_TR: 'Whismur',
     name_ZHS: '咕妞妞',
     name_ZHT: '咕妞妞',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/whismur.png',
   },
   {
     id: 294,
@@ -5307,7 +4996,6 @@ export const pokemonData = [
     name_TR: 'Loudred',
     name_ZHS: '吼爆弹',
     name_ZHT: '吼爆弹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/loudred.png',
   },
   {
     id: 295,
@@ -5325,7 +5013,6 @@ export const pokemonData = [
     name_TR: 'Exploud',
     name_ZHS: '爆音怪',
     name_ZHT: '爆音怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/exploud.png',
   },
   {
     id: 296,
@@ -5343,7 +5030,6 @@ export const pokemonData = [
     name_TR: 'Makuhita',
     name_ZHS: '幕下力士',
     name_ZHT: '幕下力士',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/makuhita.png',
   },
   {
     id: 297,
@@ -5361,7 +5047,6 @@ export const pokemonData = [
     name_TR: 'Hariyama',
     name_ZHS: '铁掌力士',
     name_ZHT: '铁掌力士',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hariyama.png',
   },
   {
     id: 298,
@@ -5379,7 +5064,6 @@ export const pokemonData = [
     name_TR: 'Azurill',
     name_ZHS: '露力丽',
     name_ZHT: '露力丽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/azurill.png',
   },
   {
     id: 299,
@@ -5397,7 +5081,6 @@ export const pokemonData = [
     name_TR: 'Nosepass',
     name_ZHS: '朝北鼻',
     name_ZHT: '朝北鼻',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/nosepass.png',
   },
   {
     id: 300,
@@ -5415,7 +5098,6 @@ export const pokemonData = [
     name_TR: 'Skitty',
     name_ZHS: '向尾喵',
     name_ZHT: '向尾喵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/skitty.png',
   },
   {
     id: 301,
@@ -5433,7 +5115,6 @@ export const pokemonData = [
     name_TR: 'Delcatty',
     name_ZHS: '优雅猫',
     name_ZHT: '优雅猫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/delcatty.png',
   },
   {
     id: 302,
@@ -5451,7 +5132,6 @@ export const pokemonData = [
     name_TR: 'Sableye',
     name_ZHS: '勾魂眼',
     name_ZHT: '勾魂眼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sableye.png',
   },
   {
     id: 303,
@@ -5469,7 +5149,6 @@ export const pokemonData = [
     name_TR: 'Mawile',
     name_ZHS: '大嘴娃',
     name_ZHT: '大嘴娃',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mawile.png',
   },
   {
     id: 304,
@@ -5487,7 +5166,6 @@ export const pokemonData = [
     name_TR: 'Aron',
     name_ZHS: '可可多拉',
     name_ZHT: '可可多拉',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/aron.png',
   },
   {
     id: 305,
@@ -5505,7 +5183,6 @@ export const pokemonData = [
     name_TR: 'Lairon',
     name_ZHS: '可多拉',
     name_ZHT: '可多拉',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lairon.png',
   },
   {
     id: 306,
@@ -5523,7 +5200,6 @@ export const pokemonData = [
     name_TR: 'Aggron',
     name_ZHS: '波士可多拉',
     name_ZHT: '波士可多拉',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/aggron.png',
   },
   {
     id: 307,
@@ -5541,7 +5217,6 @@ export const pokemonData = [
     name_TR: 'Meditite',
     name_ZHS: '玛沙那',
     name_ZHT: '玛沙那',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/meditite.png',
   },
   {
     id: 308,
@@ -5559,7 +5234,6 @@ export const pokemonData = [
     name_TR: 'Medicham',
     name_ZHS: '恰雷姆',
     name_ZHT: '恰雷姆',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/medicham.png',
   },
   {
     id: 309,
@@ -5577,7 +5251,6 @@ export const pokemonData = [
     name_TR: 'Electrike',
     name_ZHS: '落雷兽',
     name_ZHT: '落雷兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/electrike.png',
   },
   {
     id: 310,
@@ -5595,7 +5268,6 @@ export const pokemonData = [
     name_TR: 'Manectric',
     name_ZHS: '雷电兽',
     name_ZHT: '雷电兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/manectric.png',
   },
   {
     id: 311,
@@ -5613,7 +5285,6 @@ export const pokemonData = [
     name_TR: 'Plusle',
     name_ZHS: '正电拍拍',
     name_ZHT: '正电拍拍',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/plusle.png',
   },
   {
     id: 312,
@@ -5631,7 +5302,6 @@ export const pokemonData = [
     name_TR: 'Minun',
     name_ZHS: '负电拍拍',
     name_ZHT: '负电拍拍',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/minun.png',
   },
   {
     id: 313,
@@ -5649,7 +5319,6 @@ export const pokemonData = [
     name_TR: 'Volbeat',
     name_ZHS: '电萤虫',
     name_ZHT: '电萤虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/volbeat.png',
   },
   {
     id: 314,
@@ -5667,7 +5336,6 @@ export const pokemonData = [
     name_TR: 'Illumise',
     name_ZHS: '甜甜萤',
     name_ZHT: '甜甜萤',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/illumise.png',
   },
   {
     id: 315,
@@ -5685,7 +5353,6 @@ export const pokemonData = [
     name_TR: 'Roselia',
     name_ZHS: '毒蔷薇',
     name_ZHT: '毒蔷薇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/roselia.png',
   },
   {
     id: 316,
@@ -5703,7 +5370,6 @@ export const pokemonData = [
     name_TR: 'Gulpin',
     name_ZHS: '溶食兽',
     name_ZHT: '溶食兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gulpin.png',
   },
   {
     id: 317,
@@ -5721,7 +5387,6 @@ export const pokemonData = [
     name_TR: 'Swalot',
     name_ZHS: '吞食兽',
     name_ZHT: '吞食兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/swalot.png',
   },
   {
     id: 318,
@@ -5739,7 +5404,6 @@ export const pokemonData = [
     name_TR: 'Carvanha',
     name_ZHS: '利牙鱼',
     name_ZHT: '利牙鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/carvanha.png',
   },
   {
     id: 319,
@@ -5757,7 +5421,6 @@ export const pokemonData = [
     name_TR: 'Sharpedo',
     name_ZHS: '巨牙鲨',
     name_ZHT: '巨牙鲨',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sharpedo.png',
   },
   {
     id: 320,
@@ -5775,7 +5438,6 @@ export const pokemonData = [
     name_TR: 'Wailmer',
     name_ZHS: '吼吼鲸',
     name_ZHT: '吼吼鲸',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wailmer.png',
   },
   {
     id: 321,
@@ -5793,7 +5455,6 @@ export const pokemonData = [
     name_TR: 'Wailord',
     name_ZHS: '吼鲸王',
     name_ZHT: '吼鲸王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wailord.png',
   },
   {
     id: 322,
@@ -5811,7 +5472,6 @@ export const pokemonData = [
     name_TR: 'Numel',
     name_ZHS: '呆火驼',
     name_ZHT: '呆火驼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/numel.png',
   },
   {
     id: 323,
@@ -5829,7 +5489,6 @@ export const pokemonData = [
     name_TR: 'Camerupt',
     name_ZHS: '喷火驼',
     name_ZHT: '喷火驼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/camerupt.png',
   },
   {
     id: 324,
@@ -5847,7 +5506,6 @@ export const pokemonData = [
     name_TR: 'Torkoal',
     name_ZHS: '煤炭龟',
     name_ZHT: '煤炭龟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/torkoal.png',
   },
   {
     id: 325,
@@ -5865,7 +5523,6 @@ export const pokemonData = [
     name_TR: 'Spoink',
     name_ZHS: '跳跳猪',
     name_ZHT: '跳跳猪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/spoink.png',
   },
   {
     id: 326,
@@ -5883,7 +5540,6 @@ export const pokemonData = [
     name_TR: 'Grumpig',
     name_ZHS: '噗噗猪',
     name_ZHT: '噗噗猪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/grumpig.png',
   },
   {
     id: 327,
@@ -5901,7 +5557,6 @@ export const pokemonData = [
     name_TR: 'Spinda',
     name_ZHS: '晃晃斑',
     name_ZHT: '晃晃斑',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/spinda.png',
   },
   {
     id: 328,
@@ -5919,7 +5574,6 @@ export const pokemonData = [
     name_TR: 'Trapinch',
     name_ZHS: '大颚蚁',
     name_ZHT: '大颚蚁',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/trapinch.png',
   },
   {
     id: 329,
@@ -5937,7 +5591,6 @@ export const pokemonData = [
     name_TR: 'Vibrava',
     name_ZHS: '超音波幼虫',
     name_ZHT: '超音波幼虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/vibrava.png',
   },
   {
     id: 330,
@@ -5955,7 +5608,6 @@ export const pokemonData = [
     name_TR: 'Flygon',
     name_ZHS: '沙漠蜻蜓',
     name_ZHT: '沙漠蜻蜓',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/flygon.png',
   },
   {
     id: 331,
@@ -5973,7 +5625,6 @@ export const pokemonData = [
     name_TR: 'Cacnea',
     name_ZHS: '刺球仙人掌',
     name_ZHT: '刺球仙人掌',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cacnea.png',
   },
   {
     id: 332,
@@ -5991,7 +5642,6 @@ export const pokemonData = [
     name_TR: 'Cacturne',
     name_ZHS: '梦歌仙人掌',
     name_ZHT: '梦歌仙人掌',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cacturne.png',
   },
   {
     id: 333,
@@ -6009,7 +5659,6 @@ export const pokemonData = [
     name_TR: 'Swablu',
     name_ZHS: '青绵鸟',
     name_ZHT: '青绵鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/swablu.png',
   },
   {
     id: 334,
@@ -6027,7 +5676,6 @@ export const pokemonData = [
     name_TR: 'Altaria',
     name_ZHS: '七夕青鸟',
     name_ZHT: '七夕青鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/altaria.png',
   },
   {
     id: 335,
@@ -6045,7 +5693,6 @@ export const pokemonData = [
     name_TR: 'Zangoose',
     name_ZHS: '猫鼬斩',
     name_ZHT: '猫鼬斩',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zangoose.png',
   },
   {
     id: 336,
@@ -6063,7 +5710,6 @@ export const pokemonData = [
     name_TR: 'Seviper',
     name_ZHS: '饭匙蛇',
     name_ZHT: '饭匙蛇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/seviper.png',
   },
   {
     id: 337,
@@ -6081,7 +5727,6 @@ export const pokemonData = [
     name_TR: 'Lunatone',
     name_ZHS: '月石',
     name_ZHT: '月石',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lunatone.png',
   },
   {
     id: 338,
@@ -6099,7 +5744,6 @@ export const pokemonData = [
     name_TR: 'Solrock',
     name_ZHS: '太阳岩',
     name_ZHT: '太阳岩',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/solrock.png',
   },
   {
     id: 339,
@@ -6117,7 +5761,6 @@ export const pokemonData = [
     name_TR: 'Barboach',
     name_ZHS: '泥泥鳅',
     name_ZHT: '泥泥鳅',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/barboach.png',
   },
   {
     id: 340,
@@ -6135,7 +5778,6 @@ export const pokemonData = [
     name_TR: 'Whiscash',
     name_ZHS: '鲶鱼王',
     name_ZHT: '鲶鱼王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/whiscash.png',
   },
   {
     id: 341,
@@ -6153,7 +5795,6 @@ export const pokemonData = [
     name_TR: 'Corphish',
     name_ZHS: '龙虾小兵',
     name_ZHT: '龙虾小兵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/corphish.png',
   },
   {
     id: 342,
@@ -6171,7 +5812,6 @@ export const pokemonData = [
     name_TR: 'Crawdaunt',
     name_ZHS: '铁螯龙虾',
     name_ZHT: '铁螯龙虾',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/crawdaunt.png',
   },
   {
     id: 343,
@@ -6189,7 +5829,6 @@ export const pokemonData = [
     name_TR: 'Baltoy',
     name_ZHS: '天秤偶',
     name_ZHT: '天秤偶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/baltoy.png',
   },
   {
     id: 344,
@@ -6207,7 +5846,6 @@ export const pokemonData = [
     name_TR: 'Claydol',
     name_ZHS: '念力土偶',
     name_ZHT: '念力土偶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/claydol.png',
   },
   {
     id: 345,
@@ -6225,7 +5863,6 @@ export const pokemonData = [
     name_TR: 'Lileep',
     name_ZHS: '触手百合',
     name_ZHT: '触手百合',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lileep.png',
   },
   {
     id: 346,
@@ -6243,7 +5880,6 @@ export const pokemonData = [
     name_TR: 'Cradily',
     name_ZHS: '摇篮百合',
     name_ZHT: '摇篮百合',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cradily.png',
   },
   {
     id: 347,
@@ -6261,7 +5897,6 @@ export const pokemonData = [
     name_TR: 'Anorith',
     name_ZHS: '太古羽虫',
     name_ZHT: '太古羽虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/anorith.png',
   },
   {
     id: 348,
@@ -6279,7 +5914,6 @@ export const pokemonData = [
     name_TR: 'Armaldo',
     name_ZHS: '太古盔甲',
     name_ZHT: '太古盔甲',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/armaldo.png',
   },
   {
     id: 349,
@@ -6297,7 +5931,6 @@ export const pokemonData = [
     name_TR: 'Feebas',
     name_ZHS: '丑丑鱼',
     name_ZHT: '丑丑鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/feebas.png',
   },
   {
     id: 350,
@@ -6315,7 +5948,6 @@ export const pokemonData = [
     name_TR: 'Milotic',
     name_ZHS: '美纳斯',
     name_ZHT: '美纳斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/milotic.png',
   },
   {
     id: 351,
@@ -6333,7 +5965,6 @@ export const pokemonData = [
     name_TR: 'Castform',
     name_ZHS: '飘浮泡泡',
     name_ZHT: '飘浮泡泡',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/castform.png',
   },
   {
     id: 352,
@@ -6351,7 +5982,6 @@ export const pokemonData = [
     name_TR: 'Kecleon',
     name_ZHS: '变隐龙',
     name_ZHT: '变隐龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kecleon.png',
   },
   {
     id: 353,
@@ -6369,7 +5999,6 @@ export const pokemonData = [
     name_TR: 'Shuppet',
     name_ZHS: '怨影娃娃',
     name_ZHT: '怨影娃娃',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shuppet.png',
   },
   {
     id: 354,
@@ -6387,7 +6016,6 @@ export const pokemonData = [
     name_TR: 'Banette',
     name_ZHS: '诅咒娃娃',
     name_ZHT: '诅咒娃娃',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/banette.png',
   },
   {
     id: 355,
@@ -6405,7 +6033,6 @@ export const pokemonData = [
     name_TR: 'Duskull',
     name_ZHS: '夜巡灵',
     name_ZHT: '夜巡灵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/duskull.png',
   },
   {
     id: 356,
@@ -6423,7 +6050,6 @@ export const pokemonData = [
     name_TR: 'Dusclops',
     name_ZHS: '彷徨夜灵',
     name_ZHT: '彷徨夜灵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dusclops.png',
   },
   {
     id: 357,
@@ -6441,7 +6067,6 @@ export const pokemonData = [
     name_TR: 'Tropius',
     name_ZHS: '热带龙',
     name_ZHT: '热带龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tropius.png',
   },
   {
     id: 358,
@@ -6459,7 +6084,6 @@ export const pokemonData = [
     name_TR: 'Chimecho',
     name_ZHS: '风铃铃',
     name_ZHT: '风铃铃',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/chimecho.png',
   },
   {
     id: 359,
@@ -6477,7 +6101,6 @@ export const pokemonData = [
     name_TR: 'Absol',
     name_ZHS: '阿勃梭鲁',
     name_ZHT: '阿勃梭鲁',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/absol.png',
   },
   {
     id: 360,
@@ -6495,7 +6118,6 @@ export const pokemonData = [
     name_TR: 'Wynaut',
     name_ZHS: '小果然',
     name_ZHT: '小果然',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wynaut.png',
   },
   {
     id: 361,
@@ -6513,7 +6135,6 @@ export const pokemonData = [
     name_TR: 'Snorunt',
     name_ZHS: '雪童子',
     name_ZHT: '雪童子',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/snorunt.png',
   },
   {
     id: 362,
@@ -6531,7 +6152,6 @@ export const pokemonData = [
     name_TR: 'Glalie',
     name_ZHS: '冰鬼护',
     name_ZHT: '冰鬼护',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/glalie.png',
   },
   {
     id: 363,
@@ -6549,7 +6169,6 @@ export const pokemonData = [
     name_TR: 'Spheal',
     name_ZHS: '海豹球',
     name_ZHT: '海豹球',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/spheal.png',
   },
   {
     id: 364,
@@ -6567,7 +6186,6 @@ export const pokemonData = [
     name_TR: 'Sealeo',
     name_ZHS: '海魔狮',
     name_ZHT: '海魔狮',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sealeo.png',
   },
   {
     id: 365,
@@ -6585,7 +6203,6 @@ export const pokemonData = [
     name_TR: 'Walrein',
     name_ZHS: '帝牙海狮',
     name_ZHT: '帝牙海狮',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/walrein.png',
   },
   {
     id: 366,
@@ -6603,7 +6220,6 @@ export const pokemonData = [
     name_TR: 'Clamperl',
     name_ZHS: '珍珠贝',
     name_ZHT: '珍珠贝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/clamperl.png',
   },
   {
     id: 367,
@@ -6621,7 +6237,6 @@ export const pokemonData = [
     name_TR: 'Huntail',
     name_ZHS: '猎斑鱼',
     name_ZHT: '猎斑鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/huntail.png',
   },
   {
     id: 368,
@@ -6639,7 +6254,6 @@ export const pokemonData = [
     name_TR: 'Gorebyss',
     name_ZHS: '樱花鱼',
     name_ZHT: '樱花鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gorebyss.png',
   },
   {
     id: 369,
@@ -6657,7 +6271,6 @@ export const pokemonData = [
     name_TR: 'Relicanth',
     name_ZHS: '古空棘鱼',
     name_ZHT: '古空棘鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/relicanth.png',
   },
   {
     id: 370,
@@ -6675,7 +6288,6 @@ export const pokemonData = [
     name_TR: 'Luvdisc',
     name_ZHS: '爱心鱼',
     name_ZHT: '爱心鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/luvdisc.png',
   },
   {
     id: 371,
@@ -6693,7 +6305,6 @@ export const pokemonData = [
     name_TR: 'Bagon',
     name_ZHS: '宝贝龙',
     name_ZHT: '宝贝龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bagon.png',
   },
   {
     id: 372,
@@ -6711,7 +6322,6 @@ export const pokemonData = [
     name_TR: 'Shelgon',
     name_ZHS: '甲壳龙',
     name_ZHT: '甲壳龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shelgon.png',
   },
   {
     id: 373,
@@ -6729,7 +6339,6 @@ export const pokemonData = [
     name_TR: 'Salamence',
     name_ZHS: '暴飞龙',
     name_ZHT: '暴飞龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/salamence.png',
   },
   {
     id: 374,
@@ -6747,7 +6356,6 @@ export const pokemonData = [
     name_TR: 'Beldum',
     name_ZHS: '铁哑铃',
     name_ZHT: '铁哑铃',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/beldum.png',
   },
   {
     id: 375,
@@ -6765,7 +6373,6 @@ export const pokemonData = [
     name_TR: 'Metang',
     name_ZHS: '金属怪',
     name_ZHT: '金属怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/metang.png',
   },
   {
     id: 376,
@@ -6783,7 +6390,6 @@ export const pokemonData = [
     name_TR: 'Metagross',
     name_ZHS: '巨金怪',
     name_ZHT: '巨金怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/metagross.png',
   },
   {
     id: 377,
@@ -6801,7 +6407,6 @@ export const pokemonData = [
     name_TR: 'Regirock',
     name_ZHS: '雷吉洛克',
     name_ZHT: '雷吉洛克',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/regirock.png',
   },
   {
     id: 378,
@@ -6819,7 +6424,6 @@ export const pokemonData = [
     name_TR: 'Regice',
     name_ZHS: '雷吉艾斯',
     name_ZHT: '雷吉艾斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/regice.png',
   },
   {
     id: 379,
@@ -6837,7 +6441,6 @@ export const pokemonData = [
     name_TR: 'Registeel',
     name_ZHS: '雷吉斯奇鲁',
     name_ZHT: '雷吉斯奇鲁',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/registeel.png',
   },
   {
     id: 380,
@@ -6855,7 +6458,6 @@ export const pokemonData = [
     name_TR: 'Latias',
     name_ZHS: '拉帝亚斯',
     name_ZHT: '拉帝亚斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/latias.png',
   },
   {
     id: 381,
@@ -6873,7 +6475,6 @@ export const pokemonData = [
     name_TR: 'Latios',
     name_ZHS: '拉帝欧斯',
     name_ZHT: '拉帝欧斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/latios.png',
   },
   {
     id: 382,
@@ -6891,7 +6492,6 @@ export const pokemonData = [
     name_TR: 'Kyogre',
     name_ZHS: '盖欧卡',
     name_ZHT: '盖欧卡',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kyogre.png',
   },
   {
     id: 383,
@@ -6909,7 +6509,6 @@ export const pokemonData = [
     name_TR: 'Groudon',
     name_ZHS: '固拉多',
     name_ZHT: '固拉多',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/groudon.png',
   },
   {
     id: 384,
@@ -6927,7 +6526,6 @@ export const pokemonData = [
     name_TR: 'Rayquaza',
     name_ZHS: '烈空坐',
     name_ZHT: '烈空坐',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rayquaza.png',
   },
   {
     id: 385,
@@ -6945,7 +6543,6 @@ export const pokemonData = [
     name_TR: 'Jirachi',
     name_ZHS: '基拉祈',
     name_ZHT: '基拉祈',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/jirachi.png',
   },
   {
     id: 386,
@@ -6963,7 +6560,6 @@ export const pokemonData = [
     name_TR: 'Deoxys',
     name_ZHS: '代欧奇希斯',
     name_ZHT: '代欧奇希斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/deoxys.png',
   },
   {
     id: 387,
@@ -6981,7 +6577,6 @@ export const pokemonData = [
     name_TR: 'Turtwig',
     name_ZHS: '草苗龟',
     name_ZHT: '草苗龟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/turtwig.png',
   },
   {
     id: 388,
@@ -6999,7 +6594,6 @@ export const pokemonData = [
     name_TR: 'Grotle',
     name_ZHS: '树林龟',
     name_ZHT: '树林龟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/grotle.png',
   },
   {
     id: 389,
@@ -7017,7 +6611,6 @@ export const pokemonData = [
     name_TR: 'Torterra',
     name_ZHS: '土台龟',
     name_ZHT: '土台龟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/torterra.png',
   },
   {
     id: 390,
@@ -7035,7 +6628,6 @@ export const pokemonData = [
     name_TR: 'Chimchar',
     name_ZHS: '小火焰猴',
     name_ZHT: '小火焰猴',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/chimchar.png',
   },
   {
     id: 391,
@@ -7053,7 +6645,6 @@ export const pokemonData = [
     name_TR: 'Monferno',
     name_ZHS: '猛火猴',
     name_ZHT: '猛火猴',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/monferno.png',
   },
   {
     id: 392,
@@ -7071,7 +6662,6 @@ export const pokemonData = [
     name_TR: 'Infernape',
     name_ZHS: '烈焰猴',
     name_ZHT: '烈焰猴',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/infernape.png',
   },
   {
     id: 393,
@@ -7089,7 +6679,6 @@ export const pokemonData = [
     name_TR: 'Piplup',
     name_ZHS: '波加曼',
     name_ZHT: '波加曼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/piplup.png',
   },
   {
     id: 394,
@@ -7107,7 +6696,6 @@ export const pokemonData = [
     name_TR: 'Prinplup',
     name_ZHS: '波皇子',
     name_ZHT: '波皇子',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/prinplup.png',
   },
   {
     id: 395,
@@ -7125,7 +6713,6 @@ export const pokemonData = [
     name_TR: 'Empoleon',
     name_ZHS: '帝王拿波',
     name_ZHT: '帝王拿波',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/empoleon.png',
   },
   {
     id: 396,
@@ -7143,7 +6730,6 @@ export const pokemonData = [
     name_TR: 'Starly',
     name_ZHS: '姆克儿',
     name_ZHT: '姆克儿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/starly.png',
   },
   {
     id: 397,
@@ -7161,7 +6747,6 @@ export const pokemonData = [
     name_TR: 'Staravia',
     name_ZHS: '姆克鸟',
     name_ZHT: '姆克鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/staravia.png',
   },
   {
     id: 398,
@@ -7179,7 +6764,6 @@ export const pokemonData = [
     name_TR: 'Staraptor',
     name_ZHS: '姆克鹰',
     name_ZHT: '姆克鹰',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/staraptor.png',
   },
   {
     id: 399,
@@ -7197,7 +6781,6 @@ export const pokemonData = [
     name_TR: 'Bidoof',
     name_ZHS: '大牙狸',
     name_ZHT: '大牙狸',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bidoof.png',
   },
   {
     id: 400,
@@ -7215,7 +6798,6 @@ export const pokemonData = [
     name_TR: 'Bibarel',
     name_ZHS: '大尾狸',
     name_ZHT: '大尾狸',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bibarel.png',
   },
   {
     id: 401,
@@ -7233,7 +6815,6 @@ export const pokemonData = [
     name_TR: 'Kricketot',
     name_ZHS: '圆法师',
     name_ZHT: '圆法师',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kricketot.png',
   },
   {
     id: 402,
@@ -7251,8 +6832,6 @@ export const pokemonData = [
     name_TR: 'Kricketune',
     name_ZHS: '音箱蟀',
     name_ZHT: '音箱蟀',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/kricketune.png',
   },
   {
     id: 403,
@@ -7270,7 +6849,6 @@ export const pokemonData = [
     name_TR: 'Shinx',
     name_ZHS: '小猫怪',
     name_ZHT: '小猫怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shinx.png',
   },
   {
     id: 404,
@@ -7288,7 +6866,6 @@ export const pokemonData = [
     name_TR: 'Luxio',
     name_ZHS: '勒克猫',
     name_ZHT: '勒克猫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/luxio.png',
   },
   {
     id: 405,
@@ -7306,7 +6883,6 @@ export const pokemonData = [
     name_TR: 'Luxray',
     name_ZHS: '伦琴猫',
     name_ZHT: '伦琴猫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/luxray.png',
   },
   {
     id: 406,
@@ -7324,7 +6900,6 @@ export const pokemonData = [
     name_TR: 'Budew',
     name_ZHS: '含羞苞',
     name_ZHT: '含羞苞',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/budew.png',
   },
   {
     id: 407,
@@ -7342,7 +6917,6 @@ export const pokemonData = [
     name_TR: 'Roserade',
     name_ZHS: '罗丝雷朵',
     name_ZHT: '罗丝雷朵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/roserade.png',
   },
   {
     id: 408,
@@ -7360,7 +6934,6 @@ export const pokemonData = [
     name_TR: 'Cranidos',
     name_ZHS: '头盖龙',
     name_ZHT: '头盖龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cranidos.png',
   },
   {
     id: 409,
@@ -7378,7 +6951,6 @@ export const pokemonData = [
     name_TR: 'Rampardos',
     name_ZHS: '战槌龙',
     name_ZHT: '战槌龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rampardos.png',
   },
   {
     id: 410,
@@ -7396,7 +6968,6 @@ export const pokemonData = [
     name_TR: 'Shieldon',
     name_ZHS: '盾甲龙',
     name_ZHT: '盾甲龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shieldon.png',
   },
   {
     id: 411,
@@ -7414,7 +6985,6 @@ export const pokemonData = [
     name_TR: 'Bastiodon',
     name_ZHS: '护城龙',
     name_ZHT: '护城龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bastiodon.png',
   },
   {
     id: 412,
@@ -7432,7 +7002,6 @@ export const pokemonData = [
     name_TR: 'Burmy',
     name_ZHS: '结草儿',
     name_ZHT: '结草儿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/burmy.png',
   },
   {
     id: 413,
@@ -7450,7 +7019,6 @@ export const pokemonData = [
     name_TR: 'Wormadam',
     name_ZHS: '结草贵妇',
     name_ZHT: '结草贵妇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wormadam.png',
   },
   {
     id: 414,
@@ -7468,7 +7036,6 @@ export const pokemonData = [
     name_TR: 'Mothim',
     name_ZHS: '绅士蛾',
     name_ZHT: '绅士蛾',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mothim.png',
   },
   {
     id: 415,
@@ -7486,7 +7053,6 @@ export const pokemonData = [
     name_TR: 'Combee',
     name_ZHS: '三蜜蜂',
     name_ZHT: '三蜜蜂',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/combee.png',
   },
   {
     id: 416,
@@ -7504,7 +7070,6 @@ export const pokemonData = [
     name_TR: 'Vespiquen',
     name_ZHS: '蜂女王',
     name_ZHT: '蜂女王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/vespiquen.png',
   },
   {
     id: 417,
@@ -7522,7 +7087,6 @@ export const pokemonData = [
     name_TR: 'Pachirisu',
     name_ZHS: '帕奇利兹',
     name_ZHT: '帕奇利兹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pachirisu.png',
   },
   {
     id: 418,
@@ -7540,7 +7104,6 @@ export const pokemonData = [
     name_TR: 'Buizel',
     name_ZHS: '泳圈鼬',
     name_ZHT: '泳圈鼬',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/buizel.png',
   },
   {
     id: 419,
@@ -7558,7 +7121,6 @@ export const pokemonData = [
     name_TR: 'Floatzel',
     name_ZHS: '浮潜鼬',
     name_ZHT: '浮潜鼬',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/floatzel.png',
   },
   {
     id: 420,
@@ -7576,7 +7138,6 @@ export const pokemonData = [
     name_TR: 'Cherubi',
     name_ZHS: '樱花宝',
     name_ZHT: '樱花宝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cherubi.png',
   },
   {
     id: 421,
@@ -7594,7 +7155,6 @@ export const pokemonData = [
     name_TR: 'Cherrim',
     name_ZHS: '樱花儿',
     name_ZHT: '樱花儿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cherrim.png',
   },
   {
     id: 422,
@@ -7612,7 +7172,6 @@ export const pokemonData = [
     name_TR: 'Shellos',
     name_ZHS: '无壳海兔',
     name_ZHT: '无壳海兔',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shellos.png',
   },
   {
     id: 423,
@@ -7630,7 +7189,6 @@ export const pokemonData = [
     name_TR: 'Gastrodon',
     name_ZHS: '海兔兽',
     name_ZHT: '海兔兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gastrodon.png',
   },
   {
     id: 424,
@@ -7648,7 +7206,6 @@ export const pokemonData = [
     name_TR: 'Ambipom',
     name_ZHS: '双尾怪手',
     name_ZHT: '双尾怪手',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ambipom.png',
   },
   {
     id: 425,
@@ -7666,7 +7223,6 @@ export const pokemonData = [
     name_TR: 'Drifloon',
     name_ZHS: '飘飘球',
     name_ZHT: '飘飘球',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/drifloon.png',
   },
   {
     id: 426,
@@ -7684,7 +7240,6 @@ export const pokemonData = [
     name_TR: 'Drifblim',
     name_ZHS: '随风球',
     name_ZHT: '随风球',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/drifblim.png',
   },
   {
     id: 427,
@@ -7702,7 +7257,6 @@ export const pokemonData = [
     name_TR: 'Buneary',
     name_ZHS: '卷卷耳',
     name_ZHT: '卷卷耳',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/buneary.png',
   },
   {
     id: 428,
@@ -7720,7 +7274,6 @@ export const pokemonData = [
     name_TR: 'Lopunny',
     name_ZHS: '长耳兔',
     name_ZHT: '长耳兔',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lopunny.png',
   },
   {
     id: 429,
@@ -7738,7 +7291,6 @@ export const pokemonData = [
     name_TR: 'Mismagius',
     name_ZHS: '梦妖魔',
     name_ZHT: '梦妖魔',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mismagius.png',
   },
   {
     id: 430,
@@ -7756,7 +7308,6 @@ export const pokemonData = [
     name_TR: 'Honchkrow',
     name_ZHS: '乌鸦头头',
     name_ZHT: '乌鸦头头',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/honchkrow.png',
   },
   {
     id: 431,
@@ -7774,7 +7325,6 @@ export const pokemonData = [
     name_TR: 'Glameow',
     name_ZHS: '魅力喵',
     name_ZHT: '魅力喵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/glameow.png',
   },
   {
     id: 432,
@@ -7792,7 +7342,6 @@ export const pokemonData = [
     name_TR: 'Purugly',
     name_ZHS: '东施喵',
     name_ZHT: '东施喵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/purugly.png',
   },
   {
     id: 433,
@@ -7810,7 +7359,6 @@ export const pokemonData = [
     name_TR: 'Chingling',
     name_ZHS: '铃铛响',
     name_ZHT: '铃铛响',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/chingling.png',
   },
   {
     id: 434,
@@ -7828,7 +7376,6 @@ export const pokemonData = [
     name_TR: 'Stunky',
     name_ZHS: '臭鼬噗',
     name_ZHT: '臭鼬噗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/stunky.png',
   },
   {
     id: 435,
@@ -7846,7 +7393,6 @@ export const pokemonData = [
     name_TR: 'Skuntank',
     name_ZHS: '坦克臭鼬',
     name_ZHT: '坦克臭鼬',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/skuntank.png',
   },
   {
     id: 436,
@@ -7864,7 +7410,6 @@ export const pokemonData = [
     name_TR: 'Bronzor',
     name_ZHS: '铜镜怪',
     name_ZHT: '铜镜怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bronzor.png',
   },
   {
     id: 437,
@@ -7882,7 +7427,6 @@ export const pokemonData = [
     name_TR: 'Bronzong',
     name_ZHS: '青铜钟',
     name_ZHT: '青铜钟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bronzong.png',
   },
   {
     id: 438,
@@ -7900,7 +7444,6 @@ export const pokemonData = [
     name_TR: 'Bonsly',
     name_ZHS: '盆才怪',
     name_ZHT: '盆才怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bonsly.png',
   },
   {
     id: 439,
@@ -7918,7 +7461,6 @@ export const pokemonData = [
     name_TR: 'Mime Jr.',
     name_ZHS: '魔尼尼',
     name_ZHT: '魔尼尼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mime-jr.png',
   },
   {
     id: 440,
@@ -7936,7 +7478,6 @@ export const pokemonData = [
     name_TR: 'Happiny',
     name_ZHS: '小福蛋',
     name_ZHT: '小福蛋',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/happiny.png',
   },
   {
     id: 441,
@@ -7954,7 +7495,6 @@ export const pokemonData = [
     name_TR: 'Chatot',
     name_ZHS: '聒噪鸟',
     name_ZHT: '聒噪鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/chatot.png',
   },
   {
     id: 442,
@@ -7972,7 +7512,6 @@ export const pokemonData = [
     name_TR: 'Spiritomb',
     name_ZHS: '花岩怪',
     name_ZHT: '花岩怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/spiritomb.png',
   },
   {
     id: 443,
@@ -7990,7 +7529,6 @@ export const pokemonData = [
     name_TR: 'Gible',
     name_ZHS: '圆陆鲨',
     name_ZHT: '圆陆鲨',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gible.png',
   },
   {
     id: 444,
@@ -8008,7 +7546,6 @@ export const pokemonData = [
     name_TR: 'Gabite',
     name_ZHS: '尖牙陆鲨',
     name_ZHT: '尖牙陆鲨',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gabite.png',
   },
   {
     id: 445,
@@ -8026,7 +7563,6 @@ export const pokemonData = [
     name_TR: 'Garchomp',
     name_ZHS: '烈咬陆鲨',
     name_ZHT: '烈咬陆鲨',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/garchomp.png',
   },
   {
     id: 446,
@@ -8044,7 +7580,6 @@ export const pokemonData = [
     name_TR: 'Munchlax',
     name_ZHS: '小卡比兽',
     name_ZHT: '小卡比兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/munchlax.png',
   },
   {
     id: 447,
@@ -8062,7 +7597,6 @@ export const pokemonData = [
     name_TR: 'Riolu',
     name_ZHS: '利欧路',
     name_ZHT: '利欧路',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/riolu.png',
   },
   {
     id: 448,
@@ -8080,7 +7614,6 @@ export const pokemonData = [
     name_TR: 'Lucario',
     name_ZHS: '路卡利欧',
     name_ZHT: '路卡利欧',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lucario.png',
   },
   {
     id: 449,
@@ -8098,8 +7631,6 @@ export const pokemonData = [
     name_TR: 'Hippopotas',
     name_ZHS: '沙河马',
     name_ZHT: '沙河马',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/hippopotas.png',
   },
   {
     id: 450,
@@ -8117,7 +7648,6 @@ export const pokemonData = [
     name_TR: 'Hippowdon',
     name_ZHS: '河马兽',
     name_ZHT: '河马兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hippowdon.png',
   },
   {
     id: 451,
@@ -8135,7 +7665,6 @@ export const pokemonData = [
     name_TR: 'Skorupi',
     name_ZHS: '钳尾蝎',
     name_ZHT: '钳尾蝎',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/skorupi.png',
   },
   {
     id: 452,
@@ -8153,7 +7682,6 @@ export const pokemonData = [
     name_TR: 'Drapion',
     name_ZHS: '龙王蝎',
     name_ZHT: '龙王蝎',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/drapion.png',
   },
   {
     id: 453,
@@ -8171,7 +7699,6 @@ export const pokemonData = [
     name_TR: 'Croagunk',
     name_ZHS: '不良蛙',
     name_ZHT: '不良蛙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/croagunk.png',
   },
   {
     id: 454,
@@ -8189,7 +7716,6 @@ export const pokemonData = [
     name_TR: 'Toxicroak',
     name_ZHS: '毒骷蛙',
     name_ZHT: '毒骷蛙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/toxicroak.png',
   },
   {
     id: 455,
@@ -8207,7 +7733,6 @@ export const pokemonData = [
     name_TR: 'Carnivine',
     name_ZHS: '尖牙笼',
     name_ZHT: '尖牙笼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/carnivine.png',
   },
   {
     id: 456,
@@ -8225,7 +7750,6 @@ export const pokemonData = [
     name_TR: 'Finneon',
     name_ZHS: '荧光鱼',
     name_ZHT: '荧光鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/finneon.png',
   },
   {
     id: 457,
@@ -8243,7 +7767,6 @@ export const pokemonData = [
     name_TR: 'Lumineon',
     name_ZHS: '霓虹鱼',
     name_ZHT: '霓虹鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lumineon.png',
   },
   {
     id: 458,
@@ -8261,7 +7784,6 @@ export const pokemonData = [
     name_TR: 'Mantyke',
     name_ZHS: '小球飞鱼',
     name_ZHT: '小球飞鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mantyke.png',
   },
   {
     id: 459,
@@ -8279,7 +7801,6 @@ export const pokemonData = [
     name_TR: 'Snover',
     name_ZHS: '雪笠怪',
     name_ZHT: '雪笠怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/snover.png',
   },
   {
     id: 460,
@@ -8297,7 +7818,6 @@ export const pokemonData = [
     name_TR: 'Abomasnow',
     name_ZHS: '暴雪王',
     name_ZHT: '暴雪王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/abomasnow.png',
   },
   {
     id: 461,
@@ -8315,7 +7835,6 @@ export const pokemonData = [
     name_TR: 'Weavile',
     name_ZHS: '玛狃拉',
     name_ZHT: '玛狃拉',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/weavile.png',
   },
   {
     id: 462,
@@ -8333,7 +7852,6 @@ export const pokemonData = [
     name_TR: 'Magnezone',
     name_ZHS: '自爆磁怪',
     name_ZHT: '自爆磁怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/magnezone.png',
   },
   {
     id: 463,
@@ -8351,8 +7869,6 @@ export const pokemonData = [
     name_TR: 'Lickilicky',
     name_ZHS: '大舌舔',
     name_ZHT: '大舌舔',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/lickilicky.png',
   },
   {
     id: 464,
@@ -8370,7 +7886,6 @@ export const pokemonData = [
     name_TR: 'Rhyperior',
     name_ZHS: '超甲狂犀',
     name_ZHT: '超甲狂犀',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rhyperior.png',
   },
   {
     id: 465,
@@ -8388,7 +7903,6 @@ export const pokemonData = [
     name_TR: 'Tangrowth',
     name_ZHS: '巨蔓藤',
     name_ZHT: '巨蔓藤',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tangrowth.png',
   },
   {
     id: 466,
@@ -8406,8 +7920,6 @@ export const pokemonData = [
     name_TR: 'Electivire',
     name_ZHS: '电击魔兽',
     name_ZHT: '电击魔兽',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/electivire.png',
   },
   {
     id: 467,
@@ -8425,7 +7937,6 @@ export const pokemonData = [
     name_TR: 'Magmortar',
     name_ZHS: '鸭嘴炎兽',
     name_ZHT: '鸭嘴炎兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/magmortar.png',
   },
   {
     id: 468,
@@ -8443,7 +7954,6 @@ export const pokemonData = [
     name_TR: 'Togekiss',
     name_ZHS: '波克基斯',
     name_ZHT: '波克基斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/togekiss.png',
   },
   {
     id: 469,
@@ -8461,7 +7971,6 @@ export const pokemonData = [
     name_TR: 'Yanmega',
     name_ZHS: '远古巨蜓',
     name_ZHT: '远古巨蜓',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/yanmega.png',
   },
   {
     id: 470,
@@ -8479,7 +7988,6 @@ export const pokemonData = [
     name_TR: 'Leafeon',
     name_ZHS: '叶伊布',
     name_ZHT: '叶伊布',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/leafeon.png',
   },
   {
     id: 471,
@@ -8497,7 +8005,6 @@ export const pokemonData = [
     name_TR: 'Glaceon',
     name_ZHS: '冰伊布',
     name_ZHT: '冰伊布',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/glaceon.png',
   },
   {
     id: 472,
@@ -8515,7 +8022,6 @@ export const pokemonData = [
     name_TR: 'Gliscor',
     name_ZHS: '天蝎王',
     name_ZHT: '天蝎王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gliscor.png',
   },
   {
     id: 473,
@@ -8533,7 +8039,6 @@ export const pokemonData = [
     name_TR: 'Mamoswine',
     name_ZHS: '象牙猪',
     name_ZHT: '象牙猪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mamoswine.png',
   },
   {
     id: 474,
@@ -8551,7 +8056,6 @@ export const pokemonData = [
     name_TR: 'Porygon-Z',
     name_ZHS: '多边兽乙型',
     name_ZHT: '多边兽乙型',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/porygon-z.png',
   },
   {
     id: 475,
@@ -8569,7 +8073,6 @@ export const pokemonData = [
     name_TR: 'Gallade',
     name_ZHS: '艾路雷朵',
     name_ZHT: '艾路雷朵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gallade.png',
   },
   {
     id: 476,
@@ -8587,7 +8090,6 @@ export const pokemonData = [
     name_TR: 'Probopass',
     name_ZHS: '大朝北鼻',
     name_ZHT: '大朝北鼻',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/probopass.png',
   },
   {
     id: 477,
@@ -8605,7 +8107,6 @@ export const pokemonData = [
     name_TR: 'Dusknoir',
     name_ZHS: '黑夜魔灵',
     name_ZHT: '黑夜魔灵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dusknoir.png',
   },
   {
     id: 478,
@@ -8623,7 +8124,6 @@ export const pokemonData = [
     name_TR: 'Froslass',
     name_ZHS: '雪妖女',
     name_ZHT: '雪妖女',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/froslass.png',
   },
   {
     id: 479,
@@ -8641,7 +8141,6 @@ export const pokemonData = [
     name_TR: 'Rotom',
     name_ZHS: '洛托姆',
     name_ZHT: '洛托姆',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rotom.png',
   },
   {
     id: 480,
@@ -8659,7 +8158,6 @@ export const pokemonData = [
     name_TR: 'Uxie',
     name_ZHS: '由克希',
     name_ZHT: '由克希',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/uxie.png',
   },
   {
     id: 481,
@@ -8677,7 +8175,6 @@ export const pokemonData = [
     name_TR: 'Mesprit',
     name_ZHS: '艾姆利多',
     name_ZHT: '艾姆利多',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mesprit.png',
   },
   {
     id: 482,
@@ -8695,7 +8192,6 @@ export const pokemonData = [
     name_TR: 'Azelf',
     name_ZHS: '亚克诺姆',
     name_ZHT: '亚克诺姆',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/azelf.png',
   },
   {
     id: 483,
@@ -8713,7 +8209,6 @@ export const pokemonData = [
     name_TR: 'Dialga',
     name_ZHS: '帝牙卢卡',
     name_ZHT: '帝牙卢卡',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dialga.png',
   },
   {
     id: 484,
@@ -8731,7 +8226,6 @@ export const pokemonData = [
     name_TR: 'Palkia',
     name_ZHS: '帕路奇亚',
     name_ZHT: '帕路奇亚',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/palkia.png',
   },
   {
     id: 485,
@@ -8749,7 +8243,6 @@ export const pokemonData = [
     name_TR: 'Heatran',
     name_ZHS: '席多蓝恩',
     name_ZHT: '席多蓝恩',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/heatran.png',
   },
   {
     id: 486,
@@ -8767,7 +8260,6 @@ export const pokemonData = [
     name_TR: 'Regigigas',
     name_ZHS: '雷吉奇卡斯',
     name_ZHT: '雷吉奇卡斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/regigigas.png',
   },
   {
     id: 487,
@@ -8785,7 +8277,6 @@ export const pokemonData = [
     name_TR: 'Giratina',
     name_ZHS: '骑拉帝纳',
     name_ZHT: '骑拉帝纳',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/giratina.png',
   },
   {
     id: 488,
@@ -8803,7 +8294,6 @@ export const pokemonData = [
     name_TR: 'Cresselia',
     name_ZHS: '克雷色利亚',
     name_ZHT: '克雷色利亚',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cresselia.png',
   },
   {
     id: 489,
@@ -8821,7 +8311,6 @@ export const pokemonData = [
     name_TR: 'Phione',
     name_ZHS: '霏欧纳',
     name_ZHT: '霏欧纳',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/phione.png',
   },
   {
     id: 490,
@@ -8839,7 +8328,6 @@ export const pokemonData = [
     name_TR: 'Manaphy',
     name_ZHS: '玛纳霏',
     name_ZHT: '玛纳霏',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/manaphy.png',
   },
   {
     id: 491,
@@ -8857,7 +8345,6 @@ export const pokemonData = [
     name_TR: 'Darkrai',
     name_ZHS: '达克莱伊',
     name_ZHT: '达克莱伊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/darkrai.png',
   },
   {
     id: 492,
@@ -8875,7 +8362,6 @@ export const pokemonData = [
     name_TR: 'Shaymin',
     name_ZHS: '谢米',
     name_ZHT: '谢米',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shaymin.png',
   },
   {
     id: 493,
@@ -8893,7 +8379,6 @@ export const pokemonData = [
     name_TR: 'Arceus',
     name_ZHS: '阿尔宙斯',
     name_ZHT: '阿尔宙斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/arceus.png',
   },
   {
     id: 494,
@@ -8911,7 +8396,6 @@ export const pokemonData = [
     name_TR: 'Victini',
     name_ZHS: '比克提尼',
     name_ZHT: '比克提尼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/victini.png',
   },
   {
     id: 495,
@@ -8929,7 +8413,6 @@ export const pokemonData = [
     name_TR: 'Snivy',
     name_ZHS: '藤藤蛇',
     name_ZHT: '藤藤蛇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/snivy.png',
   },
   {
     id: 496,
@@ -8947,7 +8430,6 @@ export const pokemonData = [
     name_TR: 'Servine',
     name_ZHS: '青藤蛇',
     name_ZHT: '青藤蛇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/servine.png',
   },
   {
     id: 497,
@@ -8965,7 +8447,6 @@ export const pokemonData = [
     name_TR: 'Serperior',
     name_ZHS: '君主蛇',
     name_ZHT: '君主蛇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/serperior.png',
   },
   {
     id: 498,
@@ -8983,7 +8464,6 @@ export const pokemonData = [
     name_TR: 'Tepig',
     name_ZHS: '暖暖猪',
     name_ZHT: '暖暖猪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tepig.png',
   },
   {
     id: 499,
@@ -9001,7 +8481,6 @@ export const pokemonData = [
     name_TR: 'Pignite',
     name_ZHS: '炒炒猪',
     name_ZHT: '炒炒猪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pignite.png',
   },
   {
     id: 500,
@@ -9019,7 +8498,6 @@ export const pokemonData = [
     name_TR: 'Emboar',
     name_ZHS: '炎武王',
     name_ZHT: '炎武王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/emboar.png',
   },
   {
     id: 501,
@@ -9037,7 +8515,6 @@ export const pokemonData = [
     name_TR: 'Oshawott',
     name_ZHS: '水水獭',
     name_ZHT: '水水獭',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/oshawott.png',
   },
   {
     id: 502,
@@ -9055,7 +8532,6 @@ export const pokemonData = [
     name_TR: 'Dewott',
     name_ZHS: '双刃丸',
     name_ZHT: '双刃丸',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dewott.png',
   },
   {
     id: 503,
@@ -9073,7 +8549,6 @@ export const pokemonData = [
     name_TR: 'Samurott',
     name_ZHS: '大剑鬼',
     name_ZHT: '大剑鬼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/samurott.png',
   },
   {
     id: 504,
@@ -9091,7 +8566,6 @@ export const pokemonData = [
     name_TR: 'Patrat',
     name_ZHS: '探探鼠',
     name_ZHT: '探探鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/patrat.png',
   },
   {
     id: 505,
@@ -9109,7 +8583,6 @@ export const pokemonData = [
     name_TR: 'Watchog',
     name_ZHS: '步哨鼠',
     name_ZHT: '步哨鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/watchog.png',
   },
   {
     id: 506,
@@ -9127,7 +8600,6 @@ export const pokemonData = [
     name_TR: 'Lillipup',
     name_ZHS: '小约克',
     name_ZHT: '小约克',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lillipup.png',
   },
   {
     id: 507,
@@ -9145,7 +8617,6 @@ export const pokemonData = [
     name_TR: 'Herdier',
     name_ZHS: '哈约克',
     name_ZHT: '哈约克',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/herdier.png',
   },
   {
     id: 508,
@@ -9163,7 +8634,6 @@ export const pokemonData = [
     name_TR: 'Stoutland',
     name_ZHS: '长毛狗',
     name_ZHT: '长毛狗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/stoutland.png',
   },
   {
     id: 509,
@@ -9181,7 +8651,6 @@ export const pokemonData = [
     name_TR: 'Purrloin',
     name_ZHS: '扒手猫',
     name_ZHT: '扒手猫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/purrloin.png',
   },
   {
     id: 510,
@@ -9199,7 +8668,6 @@ export const pokemonData = [
     name_TR: 'Liepard',
     name_ZHS: '酷豹',
     name_ZHT: '酷豹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/liepard.png',
   },
   {
     id: 511,
@@ -9217,7 +8685,6 @@ export const pokemonData = [
     name_TR: 'Pansage',
     name_ZHS: '花椰猴',
     name_ZHT: '花椰猴',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pansage.png',
   },
   {
     id: 512,
@@ -9235,7 +8702,6 @@ export const pokemonData = [
     name_TR: 'Simisage',
     name_ZHS: '花椰猿',
     name_ZHT: '花椰猿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/simisage.png',
   },
   {
     id: 513,
@@ -9253,7 +8719,6 @@ export const pokemonData = [
     name_TR: 'Pansear',
     name_ZHS: '爆香猴',
     name_ZHT: '爆香猴',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pansear.png',
   },
   {
     id: 514,
@@ -9271,7 +8736,6 @@ export const pokemonData = [
     name_TR: 'Simisear',
     name_ZHS: '爆香猿',
     name_ZHT: '爆香猿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/simisear.png',
   },
   {
     id: 515,
@@ -9289,7 +8753,6 @@ export const pokemonData = [
     name_TR: 'Panpour',
     name_ZHS: '冷水猴',
     name_ZHT: '冷水猴',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/panpour.png',
   },
   {
     id: 516,
@@ -9307,7 +8770,6 @@ export const pokemonData = [
     name_TR: 'Simipour',
     name_ZHS: '冷水猿',
     name_ZHT: '冷水猿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/simipour.png',
   },
   {
     id: 517,
@@ -9325,7 +8787,6 @@ export const pokemonData = [
     name_TR: 'Munna',
     name_ZHS: '食梦梦',
     name_ZHT: '食梦梦',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/munna.png',
   },
   {
     id: 518,
@@ -9343,7 +8804,6 @@ export const pokemonData = [
     name_TR: 'Musharna',
     name_ZHS: '梦梦蚀',
     name_ZHT: '梦梦蚀',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/musharna.png',
   },
   {
     id: 519,
@@ -9361,7 +8821,6 @@ export const pokemonData = [
     name_TR: 'Pidove',
     name_ZHS: '豆豆鸽',
     name_ZHT: '豆豆鸽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pidove.png',
   },
   {
     id: 520,
@@ -9379,7 +8838,6 @@ export const pokemonData = [
     name_TR: 'Tranquill',
     name_ZHS: '咕咕鸽',
     name_ZHT: '咕咕鸽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tranquill.png',
   },
   {
     id: 521,
@@ -9397,7 +8855,6 @@ export const pokemonData = [
     name_TR: 'Unfezant',
     name_ZHS: '高傲雉鸡',
     name_ZHT: '高傲雉鸡',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/unfezant.png',
   },
   {
     id: 522,
@@ -9415,7 +8872,6 @@ export const pokemonData = [
     name_TR: 'Blitzle',
     name_ZHS: '斑斑马',
     name_ZHT: '斑斑马',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/blitzle.png',
   },
   {
     id: 523,
@@ -9433,7 +8889,6 @@ export const pokemonData = [
     name_TR: 'Zebstrika',
     name_ZHS: '雷电斑马',
     name_ZHT: '雷电斑马',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zebstrika.png',
   },
   {
     id: 524,
@@ -9451,8 +8906,6 @@ export const pokemonData = [
     name_TR: 'Roggenrola',
     name_ZHS: '石丸子',
     name_ZHT: '石丸子',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/roggenrola.png',
   },
   {
     id: 525,
@@ -9470,7 +8923,6 @@ export const pokemonData = [
     name_TR: 'Boldore',
     name_ZHS: '地幔岩',
     name_ZHT: '地幔岩',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/boldore.png',
   },
   {
     id: 526,
@@ -9488,7 +8940,6 @@ export const pokemonData = [
     name_TR: 'Gigalith',
     name_ZHS: '庞岩怪',
     name_ZHT: '庞岩怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gigalith.png',
   },
   {
     id: 527,
@@ -9506,7 +8957,6 @@ export const pokemonData = [
     name_TR: 'Woobat',
     name_ZHS: '滚滚蝙蝠',
     name_ZHT: '滚滚蝙蝠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/woobat.png',
   },
   {
     id: 528,
@@ -9524,7 +8974,6 @@ export const pokemonData = [
     name_TR: 'Swoobat',
     name_ZHS: '心蝙蝠',
     name_ZHT: '心蝙蝠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/swoobat.png',
   },
   {
     id: 529,
@@ -9542,7 +8991,6 @@ export const pokemonData = [
     name_TR: 'Drilbur',
     name_ZHS: '螺钉地鼠',
     name_ZHT: '螺钉地鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/drilbur.png',
   },
   {
     id: 530,
@@ -9560,7 +9008,6 @@ export const pokemonData = [
     name_TR: 'Excadrill',
     name_ZHS: '龙头地鼠',
     name_ZHT: '龙头地鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/excadrill.png',
   },
   {
     id: 531,
@@ -9578,7 +9025,6 @@ export const pokemonData = [
     name_TR: 'Audino',
     name_ZHS: '差不多娃娃',
     name_ZHT: '差不多娃娃',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/audino.png',
   },
   {
     id: 532,
@@ -9596,7 +9042,6 @@ export const pokemonData = [
     name_TR: 'Timburr',
     name_ZHS: '搬运小匠',
     name_ZHT: '搬运小匠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/timburr.png',
   },
   {
     id: 533,
@@ -9614,7 +9059,6 @@ export const pokemonData = [
     name_TR: 'Gurdurr',
     name_ZHS: '铁骨土人',
     name_ZHT: '铁骨土人',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gurdurr.png',
   },
   {
     id: 534,
@@ -9632,8 +9076,6 @@ export const pokemonData = [
     name_TR: 'Conkeldurr',
     name_ZHS: '修建老匠',
     name_ZHT: '修建老匠',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/conkeldurr.png',
   },
   {
     id: 535,
@@ -9651,7 +9093,6 @@ export const pokemonData = [
     name_TR: 'Tympole',
     name_ZHS: '圆蝌蚪',
     name_ZHT: '圆蝌蚪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tympole.png',
   },
   {
     id: 536,
@@ -9669,7 +9110,6 @@ export const pokemonData = [
     name_TR: 'Palpitoad',
     name_ZHS: '蓝蟾蜍',
     name_ZHT: '蓝蟾蜍',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/palpitoad.png',
   },
   {
     id: 537,
@@ -9687,8 +9127,6 @@ export const pokemonData = [
     name_TR: 'Seismitoad',
     name_ZHS: '蟾蜍王',
     name_ZHT: '蟾蜍王',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/seismitoad.png',
   },
   {
     id: 538,
@@ -9706,7 +9144,6 @@ export const pokemonData = [
     name_TR: 'Throh',
     name_ZHS: '投摔鬼',
     name_ZHT: '投摔鬼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/throh.png',
   },
   {
     id: 539,
@@ -9724,7 +9161,6 @@ export const pokemonData = [
     name_TR: 'Sawk',
     name_ZHS: '打击鬼',
     name_ZHT: '打击鬼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sawk.png',
   },
   {
     id: 540,
@@ -9742,7 +9178,6 @@ export const pokemonData = [
     name_TR: 'Sewaddle',
     name_ZHS: '虫宝包',
     name_ZHT: '虫宝包',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sewaddle.png',
   },
   {
     id: 541,
@@ -9760,7 +9195,6 @@ export const pokemonData = [
     name_TR: 'Swadloon',
     name_ZHS: '宝包茧',
     name_ZHT: '宝包茧',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/swadloon.png',
   },
   {
     id: 542,
@@ -9778,7 +9212,6 @@ export const pokemonData = [
     name_TR: 'Leavanny',
     name_ZHS: '保姆虫',
     name_ZHT: '保姆虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/leavanny.png',
   },
   {
     id: 543,
@@ -9796,7 +9229,6 @@ export const pokemonData = [
     name_TR: 'Venipede',
     name_ZHS: '百足蜈蚣',
     name_ZHT: '百足蜈蚣',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/venipede.png',
   },
   {
     id: 544,
@@ -9814,8 +9246,6 @@ export const pokemonData = [
     name_TR: 'Whirlipede',
     name_ZHS: '车轮球',
     name_ZHT: '车轮球',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/whirlipede.png',
   },
   {
     id: 545,
@@ -9833,7 +9263,6 @@ export const pokemonData = [
     name_TR: 'Scolipede',
     name_ZHS: '蜈蚣王',
     name_ZHT: '蜈蚣王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/scolipede.png',
   },
   {
     id: 546,
@@ -9851,7 +9280,6 @@ export const pokemonData = [
     name_TR: 'Cottonee',
     name_ZHS: '木棉球',
     name_ZHT: '木棉球',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cottonee.png',
   },
   {
     id: 547,
@@ -9869,8 +9297,6 @@ export const pokemonData = [
     name_TR: 'Whimsicott',
     name_ZHS: '风妖精',
     name_ZHT: '风妖精',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/whimsicott.png',
   },
   {
     id: 548,
@@ -9888,7 +9314,6 @@ export const pokemonData = [
     name_TR: 'Petilil',
     name_ZHS: '百合根娃娃',
     name_ZHT: '百合根娃娃',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/petilil.png',
   },
   {
     id: 549,
@@ -9906,7 +9331,6 @@ export const pokemonData = [
     name_TR: 'Lilligant',
     name_ZHS: '裙儿小姐',
     name_ZHT: '裙儿小姐',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lilligant.png',
   },
   {
     id: 550,
@@ -9924,7 +9348,6 @@ export const pokemonData = [
     name_TR: 'Basculin',
     name_ZHS: '野蛮鲈鱼',
     name_ZHT: '野蛮鲈鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/basculin.png',
   },
   {
     id: 551,
@@ -9942,7 +9365,6 @@ export const pokemonData = [
     name_TR: 'Sandile',
     name_ZHS: '黑眼鳄',
     name_ZHT: '黑眼鳄',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sandile.png',
   },
   {
     id: 552,
@@ -9960,7 +9382,6 @@ export const pokemonData = [
     name_TR: 'Krokorok',
     name_ZHS: '混混鳄',
     name_ZHT: '混混鳄',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/krokorok.png',
   },
   {
     id: 553,
@@ -9978,8 +9399,6 @@ export const pokemonData = [
     name_TR: 'Krookodile',
     name_ZHS: '流氓鳄',
     name_ZHT: '流氓鳄',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/krookodile.png',
   },
   {
     id: 554,
@@ -9997,7 +9416,6 @@ export const pokemonData = [
     name_TR: 'Darumaka',
     name_ZHS: '火红不倒翁',
     name_ZHT: '火红不倒翁',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/darumaka.png',
   },
   {
     id: 555,
@@ -10015,8 +9433,6 @@ export const pokemonData = [
     name_TR: 'Darmanitan',
     name_ZHS: '达摩狒狒',
     name_ZHT: '达摩狒狒',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/darmanitan.png',
   },
   {
     id: 556,
@@ -10034,7 +9450,6 @@ export const pokemonData = [
     name_TR: 'Maractus',
     name_ZHS: '沙铃仙人掌',
     name_ZHT: '沙铃仙人掌',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/maractus.png',
   },
   {
     id: 557,
@@ -10052,7 +9467,6 @@ export const pokemonData = [
     name_TR: 'Dwebble',
     name_ZHS: '石居蟹',
     name_ZHT: '石居蟹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dwebble.png',
   },
   {
     id: 558,
@@ -10070,7 +9484,6 @@ export const pokemonData = [
     name_TR: 'Crustle',
     name_ZHS: '岩殿居蟹',
     name_ZHT: '岩殿居蟹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/crustle.png',
   },
   {
     id: 559,
@@ -10088,7 +9501,6 @@ export const pokemonData = [
     name_TR: 'Scraggy',
     name_ZHS: '滑滑小子',
     name_ZHT: '滑滑小子',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/scraggy.png',
   },
   {
     id: 560,
@@ -10106,7 +9518,6 @@ export const pokemonData = [
     name_TR: 'Scrafty',
     name_ZHS: '头巾混混',
     name_ZHT: '头巾混混',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/scrafty.png',
   },
   {
     id: 561,
@@ -10124,7 +9535,6 @@ export const pokemonData = [
     name_TR: 'Sigilyph',
     name_ZHS: '象征鸟',
     name_ZHT: '象征鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sigilyph.png',
   },
   {
     id: 562,
@@ -10142,7 +9552,6 @@ export const pokemonData = [
     name_TR: 'Yamask',
     name_ZHS: '哭哭面具',
     name_ZHT: '哭哭面具',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/yamask.png',
   },
   {
     id: 563,
@@ -10160,8 +9569,6 @@ export const pokemonData = [
     name_TR: 'Cofagrigus',
     name_ZHS: '迭失棺',
     name_ZHT: '迭失棺',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/cofagrigus.png',
   },
   {
     id: 564,
@@ -10179,7 +9586,6 @@ export const pokemonData = [
     name_TR: 'Tirtouga',
     name_ZHS: '原盖海龟',
     name_ZHT: '原盖海龟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tirtouga.png',
   },
   {
     id: 565,
@@ -10197,8 +9603,6 @@ export const pokemonData = [
     name_TR: 'Carracosta',
     name_ZHS: '肋骨海龟',
     name_ZHT: '肋骨海龟',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/carracosta.png',
   },
   {
     id: 566,
@@ -10216,7 +9620,6 @@ export const pokemonData = [
     name_TR: 'Archen',
     name_ZHS: '始祖小鸟',
     name_ZHT: '始祖小鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/archen.png',
   },
   {
     id: 567,
@@ -10234,7 +9637,6 @@ export const pokemonData = [
     name_TR: 'Archeops',
     name_ZHS: '始祖大鸟',
     name_ZHT: '始祖大鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/archeops.png',
   },
   {
     id: 568,
@@ -10252,7 +9654,6 @@ export const pokemonData = [
     name_TR: 'Trubbish',
     name_ZHS: '破破袋',
     name_ZHT: '破破袋',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/trubbish.png',
   },
   {
     id: 569,
@@ -10270,7 +9671,6 @@ export const pokemonData = [
     name_TR: 'Garbodor',
     name_ZHS: '灰尘山',
     name_ZHT: '灰尘山',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/garbodor.png',
   },
   {
     id: 570,
@@ -10288,7 +9688,6 @@ export const pokemonData = [
     name_TR: 'Zorua',
     name_ZHS: '索罗亚',
     name_ZHT: '索罗亚',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zorua.png',
   },
   {
     id: 571,
@@ -10306,7 +9705,6 @@ export const pokemonData = [
     name_TR: 'Zoroark',
     name_ZHS: '索罗亚克',
     name_ZHT: '索罗亚克',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zoroark.png',
   },
   {
     id: 572,
@@ -10324,7 +9722,6 @@ export const pokemonData = [
     name_TR: 'Minccino',
     name_ZHS: '泡沫栗鼠',
     name_ZHT: '泡沫栗鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/minccino.png',
   },
   {
     id: 573,
@@ -10342,7 +9739,6 @@ export const pokemonData = [
     name_TR: 'Cinccino',
     name_ZHS: '奇诺栗鼠',
     name_ZHT: '奇诺栗鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cinccino.png',
   },
   {
     id: 574,
@@ -10360,7 +9756,6 @@ export const pokemonData = [
     name_TR: 'Gothita',
     name_ZHS: '哥德宝宝',
     name_ZHT: '哥德宝宝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gothita.png',
   },
   {
     id: 575,
@@ -10378,7 +9773,6 @@ export const pokemonData = [
     name_TR: 'Gothorita',
     name_ZHS: '哥德小童',
     name_ZHT: '哥德小童',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gothorita.png',
   },
   {
     id: 576,
@@ -10396,8 +9790,6 @@ export const pokemonData = [
     name_TR: 'Gothitelle',
     name_ZHS: '哥德小姐',
     name_ZHT: '哥德小姐',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/gothitelle.png',
   },
   {
     id: 577,
@@ -10415,7 +9807,6 @@ export const pokemonData = [
     name_TR: 'Solosis',
     name_ZHS: '单卵细胞球',
     name_ZHT: '单卵细胞球',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/solosis.png',
   },
   {
     id: 578,
@@ -10433,7 +9824,6 @@ export const pokemonData = [
     name_TR: 'Duosion',
     name_ZHS: '双卵细胞球',
     name_ZHT: '双卵细胞球',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/duosion.png',
   },
   {
     id: 579,
@@ -10451,7 +9841,6 @@ export const pokemonData = [
     name_TR: 'Reuniclus',
     name_ZHS: '人造细胞卵',
     name_ZHT: '人造细胞卵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/reuniclus.png',
   },
   {
     id: 580,
@@ -10469,7 +9858,6 @@ export const pokemonData = [
     name_TR: 'Ducklett',
     name_ZHS: '鸭宝宝',
     name_ZHT: '鸭宝宝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ducklett.png',
   },
   {
     id: 581,
@@ -10487,7 +9875,6 @@ export const pokemonData = [
     name_TR: 'Swanna',
     name_ZHS: '舞天鹅',
     name_ZHT: '舞天鹅',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/swanna.png',
   },
   {
     id: 582,
@@ -10505,7 +9892,6 @@ export const pokemonData = [
     name_TR: 'Vanillite',
     name_ZHS: '迷你冰',
     name_ZHT: '迷你冰',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/vanillite.png',
   },
   {
     id: 583,
@@ -10523,7 +9909,6 @@ export const pokemonData = [
     name_TR: 'Vanillish',
     name_ZHS: '多多冰',
     name_ZHT: '多多冰',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/vanillish.png',
   },
   {
     id: 584,
@@ -10541,7 +9926,6 @@ export const pokemonData = [
     name_TR: 'Vanilluxe',
     name_ZHS: '双倍多多冰',
     name_ZHT: '双倍多多冰',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/vanilluxe.png',
   },
   {
     id: 585,
@@ -10559,7 +9943,6 @@ export const pokemonData = [
     name_TR: 'Deerling',
     name_ZHS: '四季鹿',
     name_ZHT: '四季鹿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/deerling.png',
   },
   {
     id: 586,
@@ -10577,7 +9960,6 @@ export const pokemonData = [
     name_TR: 'Sawsbuck',
     name_ZHS: '萌芽鹿',
     name_ZHT: '萌芽鹿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sawsbuck.png',
   },
   {
     id: 587,
@@ -10595,7 +9977,6 @@ export const pokemonData = [
     name_TR: 'Emolga',
     name_ZHS: '电飞鼠',
     name_ZHT: '电飞鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/emolga.png',
   },
   {
     id: 588,
@@ -10613,8 +9994,6 @@ export const pokemonData = [
     name_TR: 'Karrablast',
     name_ZHS: '盖盖虫',
     name_ZHT: '盖盖虫',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/karrablast.png',
   },
   {
     id: 589,
@@ -10632,8 +10011,6 @@ export const pokemonData = [
     name_TR: 'Escavalier',
     name_ZHS: '骑士蜗牛',
     name_ZHT: '骑士蜗牛',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/escavalier.png',
   },
   {
     id: 590,
@@ -10651,7 +10028,6 @@ export const pokemonData = [
     name_TR: 'Foongus',
     name_ZHS: '哎呀球菇',
     name_ZHT: '哎呀球菇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/foongus.png',
   },
   {
     id: 591,
@@ -10669,7 +10045,6 @@ export const pokemonData = [
     name_TR: 'Amoonguss',
     name_ZHS: '败露球菇',
     name_ZHT: '败露球菇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/amoonguss.png',
   },
   {
     id: 592,
@@ -10687,7 +10062,6 @@ export const pokemonData = [
     name_TR: 'Frillish',
     name_ZHS: '轻飘飘',
     name_ZHT: '轻飘飘',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/frillish.png',
   },
   {
     id: 593,
@@ -10705,7 +10079,6 @@ export const pokemonData = [
     name_TR: 'Jellicent',
     name_ZHS: '胖嘟嘟',
     name_ZHT: '胖嘟嘟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/jellicent.png',
   },
   {
     id: 594,
@@ -10723,7 +10096,6 @@ export const pokemonData = [
     name_TR: 'Alomomola',
     name_ZHS: '保姆曼波',
     name_ZHT: '保姆曼波',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/alomomola.png',
   },
   {
     id: 595,
@@ -10741,7 +10113,6 @@ export const pokemonData = [
     name_TR: 'Joltik',
     name_ZHS: '电电虫',
     name_ZHT: '电电虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/joltik.png',
   },
   {
     id: 596,
@@ -10759,8 +10130,6 @@ export const pokemonData = [
     name_TR: 'Galvantula',
     name_ZHS: '电蜘蛛',
     name_ZHT: '电蜘蛛',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/galvantula.png',
   },
   {
     id: 597,
@@ -10778,7 +10147,6 @@ export const pokemonData = [
     name_TR: 'Ferroseed',
     name_ZHS: '种子铁球',
     name_ZHT: '种子铁球',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ferroseed.png',
   },
   {
     id: 598,
@@ -10796,8 +10164,6 @@ export const pokemonData = [
     name_TR: 'Ferrothorn',
     name_ZHS: '坚果哑铃',
     name_ZHT: '坚果哑铃',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/ferrothorn.png',
   },
   {
     id: 599,
@@ -10815,7 +10181,6 @@ export const pokemonData = [
     name_TR: 'Klink',
     name_ZHS: '齿轮儿',
     name_ZHT: '齿轮儿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/klink.png',
   },
   {
     id: 600,
@@ -10833,7 +10198,6 @@ export const pokemonData = [
     name_TR: 'Klang',
     name_ZHS: '齿轮组',
     name_ZHT: '齿轮组',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/klang.png',
   },
   {
     id: 601,
@@ -10851,7 +10215,6 @@ export const pokemonData = [
     name_TR: 'Klinklang',
     name_ZHS: '齿轮怪',
     name_ZHT: '齿轮怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/klinklang.png',
   },
   {
     id: 602,
@@ -10869,7 +10232,6 @@ export const pokemonData = [
     name_TR: 'Tynamo',
     name_ZHS: '麻麻小鱼',
     name_ZHT: '麻麻小鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tynamo.png',
   },
   {
     id: 603,
@@ -10887,7 +10249,6 @@ export const pokemonData = [
     name_TR: 'Eelektrik',
     name_ZHS: '麻麻鳗',
     name_ZHT: '麻麻鳗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/eelektrik.png',
   },
   {
     id: 604,
@@ -10905,8 +10266,6 @@ export const pokemonData = [
     name_TR: 'Eelektross',
     name_ZHS: '麻麻鳗鱼王',
     name_ZHT: '麻麻鳗鱼王',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/eelektross.png',
   },
   {
     id: 605,
@@ -10924,7 +10283,6 @@ export const pokemonData = [
     name_TR: 'Elgyem',
     name_ZHS: '小灰怪',
     name_ZHT: '小灰怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/elgyem.png',
   },
   {
     id: 606,
@@ -10942,7 +10300,6 @@ export const pokemonData = [
     name_TR: 'Beheeyem',
     name_ZHS: '大宇怪',
     name_ZHT: '大宇怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/beheeyem.png',
   },
   {
     id: 607,
@@ -10960,7 +10317,6 @@ export const pokemonData = [
     name_TR: 'Litwick',
     name_ZHS: '烛光灵',
     name_ZHT: '烛光灵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/litwick.png',
   },
   {
     id: 608,
@@ -10978,7 +10334,6 @@ export const pokemonData = [
     name_TR: 'Lampent',
     name_ZHS: '灯火幽灵',
     name_ZHT: '灯火幽灵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lampent.png',
   },
   {
     id: 609,
@@ -10996,8 +10351,6 @@ export const pokemonData = [
     name_TR: 'Chandelure',
     name_ZHS: '水晶灯火灵',
     name_ZHT: '水晶灯火灵',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/chandelure.png',
   },
   {
     id: 610,
@@ -11015,7 +10368,6 @@ export const pokemonData = [
     name_TR: 'Axew',
     name_ZHS: '牙牙',
     name_ZHT: '牙牙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/axew.png',
   },
   {
     id: 611,
@@ -11033,7 +10385,6 @@ export const pokemonData = [
     name_TR: 'Fraxure',
     name_ZHS: '斧牙龙',
     name_ZHT: '斧牙龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/fraxure.png',
   },
   {
     id: 612,
@@ -11051,7 +10402,6 @@ export const pokemonData = [
     name_TR: 'Haxorus',
     name_ZHS: '双斧战龙',
     name_ZHT: '双斧战龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/haxorus.png',
   },
   {
     id: 613,
@@ -11069,7 +10419,6 @@ export const pokemonData = [
     name_TR: 'Cubchoo',
     name_ZHS: '喷嚏熊',
     name_ZHT: '喷嚏熊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cubchoo.png',
   },
   {
     id: 614,
@@ -11087,7 +10436,6 @@ export const pokemonData = [
     name_TR: 'Beartic',
     name_ZHS: '冻原熊',
     name_ZHT: '冻原熊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/beartic.png',
   },
   {
     id: 615,
@@ -11105,7 +10453,6 @@ export const pokemonData = [
     name_TR: 'Cryogonal',
     name_ZHS: '几何雪花',
     name_ZHT: '几何雪花',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cryogonal.png',
   },
   {
     id: 616,
@@ -11123,7 +10470,6 @@ export const pokemonData = [
     name_TR: 'Shelmet',
     name_ZHS: '小嘴蜗',
     name_ZHT: '小嘴蜗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shelmet.png',
   },
   {
     id: 617,
@@ -11141,7 +10487,6 @@ export const pokemonData = [
     name_TR: 'Accelgor',
     name_ZHS: '敏捷虫',
     name_ZHT: '敏捷虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/accelgor.png',
   },
   {
     id: 618,
@@ -11159,7 +10504,6 @@ export const pokemonData = [
     name_TR: 'Stunfisk',
     name_ZHS: '泥巴鱼',
     name_ZHT: '泥巴鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/stunfisk.png',
   },
   {
     id: 619,
@@ -11177,7 +10521,6 @@ export const pokemonData = [
     name_TR: 'Mienfoo',
     name_ZHS: '功夫鼬',
     name_ZHT: '功夫鼬',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mienfoo.png',
   },
   {
     id: 620,
@@ -11195,7 +10538,6 @@ export const pokemonData = [
     name_TR: 'Mienshao',
     name_ZHS: '师父鼬',
     name_ZHT: '师父鼬',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mienshao.png',
   },
   {
     id: 621,
@@ -11213,7 +10555,6 @@ export const pokemonData = [
     name_TR: 'Druddigon',
     name_ZHS: '赤面龙',
     name_ZHT: '赤面龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/druddigon.png',
   },
   {
     id: 622,
@@ -11231,7 +10572,6 @@ export const pokemonData = [
     name_TR: 'Golett',
     name_ZHS: '泥偶小人',
     name_ZHT: '泥偶小人',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/golett.png',
   },
   {
     id: 623,
@@ -11249,7 +10589,6 @@ export const pokemonData = [
     name_TR: 'Golurk',
     name_ZHS: '泥偶巨人',
     name_ZHT: '泥偶巨人',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/golurk.png',
   },
   {
     id: 624,
@@ -11267,7 +10606,6 @@ export const pokemonData = [
     name_TR: 'Pawniard',
     name_ZHS: '驹刀小兵',
     name_ZHT: '驹刀小兵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pawniard.png',
   },
   {
     id: 625,
@@ -11285,7 +10623,6 @@ export const pokemonData = [
     name_TR: 'Bisharp',
     name_ZHS: '劈斩司令',
     name_ZHT: '劈斩司令',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bisharp.png',
   },
   {
     id: 626,
@@ -11303,8 +10640,6 @@ export const pokemonData = [
     name_TR: 'Bouffalant',
     name_ZHS: '爆炸头水牛',
     name_ZHT: '爆炸头水牛',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/bouffalant.png',
   },
   {
     id: 627,
@@ -11322,7 +10657,6 @@ export const pokemonData = [
     name_TR: 'Rufflet',
     name_ZHS: '毛头小鹰',
     name_ZHT: '毛头小鹰',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rufflet.png',
   },
   {
     id: 628,
@@ -11340,7 +10674,6 @@ export const pokemonData = [
     name_TR: 'Braviary',
     name_ZHS: '勇士雄鹰',
     name_ZHT: '勇士雄鹰',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/braviary.png',
   },
   {
     id: 629,
@@ -11358,7 +10691,6 @@ export const pokemonData = [
     name_TR: 'Vullaby',
     name_ZHS: '秃鹰丫头',
     name_ZHT: '秃鹰丫头',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/vullaby.png',
   },
   {
     id: 630,
@@ -11376,7 +10708,6 @@ export const pokemonData = [
     name_TR: 'Mandibuzz',
     name_ZHS: '秃鹰娜',
     name_ZHT: '秃鹰娜',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mandibuzz.png',
   },
   {
     id: 631,
@@ -11394,7 +10725,6 @@ export const pokemonData = [
     name_TR: 'Heatmor',
     name_ZHS: '熔蚁兽',
     name_ZHT: '熔蚁兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/heatmor.png',
   },
   {
     id: 632,
@@ -11412,7 +10742,6 @@ export const pokemonData = [
     name_TR: 'Durant',
     name_ZHS: '铁蚁',
     name_ZHT: '铁蚁',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/durant.png',
   },
   {
     id: 633,
@@ -11430,7 +10759,6 @@ export const pokemonData = [
     name_TR: 'Deino',
     name_ZHS: '单首龙',
     name_ZHT: '单首龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/deino.png',
   },
   {
     id: 634,
@@ -11448,7 +10776,6 @@ export const pokemonData = [
     name_TR: 'Zweilous',
     name_ZHS: '双首暴龙',
     name_ZHT: '双首暴龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zweilous.png',
   },
   {
     id: 635,
@@ -11466,7 +10793,6 @@ export const pokemonData = [
     name_TR: 'Hydreigon',
     name_ZHS: '三首恶龙',
     name_ZHT: '三首恶龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hydreigon.png',
   },
   {
     id: 636,
@@ -11484,7 +10810,6 @@ export const pokemonData = [
     name_TR: 'Larvesta',
     name_ZHS: '燃烧虫',
     name_ZHT: '燃烧虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/larvesta.png',
   },
   {
     id: 637,
@@ -11502,7 +10827,6 @@ export const pokemonData = [
     name_TR: 'Volcarona',
     name_ZHS: '火神蛾',
     name_ZHT: '火神蛾',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/volcarona.png',
   },
   {
     id: 638,
@@ -11520,7 +10844,6 @@ export const pokemonData = [
     name_TR: 'Cobalion',
     name_ZHS: '勾帕路翁',
     name_ZHT: '勾帕路翁',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cobalion.png',
   },
   {
     id: 639,
@@ -11538,7 +10861,6 @@ export const pokemonData = [
     name_TR: 'Terrakion',
     name_ZHS: '代拉基翁',
     name_ZHT: '代拉基翁',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/terrakion.png',
   },
   {
     id: 640,
@@ -11556,7 +10878,6 @@ export const pokemonData = [
     name_TR: 'Virizion',
     name_ZHS: '毕力吉翁',
     name_ZHT: '毕力吉翁',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/virizion.png',
   },
   {
     id: 641,
@@ -11574,7 +10895,6 @@ export const pokemonData = [
     name_TR: 'Tornadus',
     name_ZHS: '龙卷云',
     name_ZHT: '龙卷云',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tornadus.png',
   },
   {
     id: 642,
@@ -11592,7 +10912,6 @@ export const pokemonData = [
     name_TR: 'Thundurus',
     name_ZHS: '雷电云',
     name_ZHT: '雷电云',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/thundurus.png',
   },
   {
     id: 643,
@@ -11610,7 +10929,6 @@ export const pokemonData = [
     name_TR: 'Reshiram',
     name_ZHS: '莱希拉姆',
     name_ZHT: '莱希拉姆',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/reshiram.png',
   },
   {
     id: 644,
@@ -11628,7 +10946,6 @@ export const pokemonData = [
     name_TR: 'Zekrom',
     name_ZHS: '捷克罗姆',
     name_ZHT: '捷克罗姆',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zekrom.png',
   },
   {
     id: 645,
@@ -11646,7 +10963,6 @@ export const pokemonData = [
     name_TR: 'Landorus',
     name_ZHS: '土地云',
     name_ZHT: '土地云',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/landorus.png',
   },
   {
     id: 646,
@@ -11664,7 +10980,6 @@ export const pokemonData = [
     name_TR: 'Kyurem',
     name_ZHS: '酋雷姆',
     name_ZHT: '酋雷姆',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kyurem.png',
   },
   {
     id: 647,
@@ -11682,7 +10997,6 @@ export const pokemonData = [
     name_TR: 'Keldeo',
     name_ZHS: '凯路迪欧',
     name_ZHT: '凯路迪欧',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/keldeo.png',
   },
   {
     id: 648,
@@ -11700,7 +11014,6 @@ export const pokemonData = [
     name_TR: 'Meloetta',
     name_ZHS: '美洛耶塔',
     name_ZHT: '美洛耶塔',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/meloetta.png',
   },
   {
     id: 649,
@@ -11718,7 +11031,6 @@ export const pokemonData = [
     name_TR: 'Genesect',
     name_ZHS: '盖诺赛克特',
     name_ZHT: '盖诺赛克特',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/genesect.png',
   },
   {
     id: 650,
@@ -11736,7 +11048,6 @@ export const pokemonData = [
     name_TR: 'Chespin',
     name_ZHS: '哈力栗',
     name_ZHT: '哈力栗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/chespin.png',
   },
   {
     id: 651,
@@ -11754,7 +11065,6 @@ export const pokemonData = [
     name_TR: 'Quilladin',
     name_ZHS: '胖胖哈力',
     name_ZHT: '胖胖哈力',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/quilladin.png',
   },
   {
     id: 652,
@@ -11772,8 +11082,6 @@ export const pokemonData = [
     name_TR: 'Chesnaught',
     name_ZHS: '布里卡隆',
     name_ZHT: '布里卡隆',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/chesnaught.png',
   },
   {
     id: 653,
@@ -11791,7 +11099,6 @@ export const pokemonData = [
     name_TR: 'Fennekin',
     name_ZHS: '火狐狸',
     name_ZHT: '火狐狸',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/fennekin.png',
   },
   {
     id: 654,
@@ -11809,7 +11116,6 @@ export const pokemonData = [
     name_TR: 'Braixen',
     name_ZHS: '长尾火狐',
     name_ZHT: '长尾火狐',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/braixen.png',
   },
   {
     id: 655,
@@ -11827,7 +11133,6 @@ export const pokemonData = [
     name_TR: 'Delphox',
     name_ZHS: '妖火红狐',
     name_ZHT: '妖火红狐',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/delphox.png',
   },
   {
     id: 656,
@@ -11845,7 +11150,6 @@ export const pokemonData = [
     name_TR: 'Froakie',
     name_ZHS: '呱呱泡蛙',
     name_ZHT: '呱呱泡蛙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/froakie.png',
   },
   {
     id: 657,
@@ -11863,7 +11167,6 @@ export const pokemonData = [
     name_TR: 'Frogadier',
     name_ZHS: '呱头蛙',
     name_ZHT: '呱头蛙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/frogadier.png',
   },
   {
     id: 658,
@@ -11881,7 +11184,6 @@ export const pokemonData = [
     name_TR: 'Greninja',
     name_ZHS: '甲贺忍蛙',
     name_ZHT: '甲贺忍蛙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/greninja.png',
   },
   {
     id: 659,
@@ -11899,7 +11201,6 @@ export const pokemonData = [
     name_TR: 'Bunnelby',
     name_ZHS: '掘掘兔',
     name_ZHT: '掘掘兔',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bunnelby.png',
   },
   {
     id: 660,
@@ -11917,7 +11218,6 @@ export const pokemonData = [
     name_TR: 'Diggersby',
     name_ZHS: '掘地兔',
     name_ZHT: '掘地兔',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/diggersby.png',
   },
   {
     id: 661,
@@ -11935,8 +11235,6 @@ export const pokemonData = [
     name_TR: 'Fletchling',
     name_ZHS: '小箭雀',
     name_ZHT: '小箭雀',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/fletchling.png',
   },
   {
     id: 662,
@@ -11954,8 +11252,6 @@ export const pokemonData = [
     name_TR: 'Fletchinder',
     name_ZHS: '火箭雀',
     name_ZHT: '火箭雀',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/fletchinder.png',
   },
   {
     id: 663,
@@ -11973,8 +11269,6 @@ export const pokemonData = [
     name_TR: 'Talonflame',
     name_ZHS: '烈箭鹰',
     name_ZHT: '烈箭鹰',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/talonflame.png',
   },
   {
     id: 664,
@@ -11992,8 +11286,6 @@ export const pokemonData = [
     name_TR: 'Scatterbug',
     name_ZHS: '粉蝶虫',
     name_ZHT: '粉蝶虫',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/scatterbug.png',
   },
   {
     id: 665,
@@ -12011,7 +11303,6 @@ export const pokemonData = [
     name_TR: 'Spewpa',
     name_ZHS: '粉蝶蛹',
     name_ZHT: '粉蝶蛹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/spewpa.png',
   },
   {
     id: 666,
@@ -12029,7 +11320,6 @@ export const pokemonData = [
     name_TR: 'Vivillon',
     name_ZHS: '彩粉蝶',
     name_ZHT: '彩粉蝶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/vivillon.png',
   },
   {
     id: 667,
@@ -12047,7 +11337,6 @@ export const pokemonData = [
     name_TR: 'Litleo',
     name_ZHS: '小狮狮',
     name_ZHT: '小狮狮',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/litleo.png',
   },
   {
     id: 668,
@@ -12065,7 +11354,6 @@ export const pokemonData = [
     name_TR: 'Pyroar',
     name_ZHS: '火炎狮',
     name_ZHT: '火炎狮',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pyroar.png',
   },
   {
     id: 669,
@@ -12083,7 +11371,6 @@ export const pokemonData = [
     name_TR: 'Flabébé',
     name_ZHS: '花蓓蓓',
     name_ZHT: '花蓓蓓',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/flabebe.png',
   },
   {
     id: 670,
@@ -12101,7 +11388,6 @@ export const pokemonData = [
     name_TR: 'Floette',
     name_ZHS: '花叶蒂',
     name_ZHT: '花叶蒂',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/floette.png',
   },
   {
     id: 671,
@@ -12119,7 +11405,6 @@ export const pokemonData = [
     name_TR: 'Florges',
     name_ZHS: '花洁夫人',
     name_ZHT: '花洁夫人',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/florges.png',
   },
   {
     id: 672,
@@ -12137,7 +11422,6 @@ export const pokemonData = [
     name_TR: 'Skiddo',
     name_ZHS: '坐骑小羊',
     name_ZHT: '坐骑小羊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/skiddo.png',
   },
   {
     id: 673,
@@ -12155,7 +11439,6 @@ export const pokemonData = [
     name_TR: 'Gogoat',
     name_ZHS: '坐骑山羊',
     name_ZHT: '坐骑山羊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gogoat.png',
   },
   {
     id: 674,
@@ -12173,7 +11456,6 @@ export const pokemonData = [
     name_TR: 'Pancham',
     name_ZHS: '顽皮熊猫',
     name_ZHT: '顽皮熊猫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pancham.png',
   },
   {
     id: 675,
@@ -12191,7 +11473,6 @@ export const pokemonData = [
     name_TR: 'Pangoro',
     name_ZHS: '霸道熊猫',
     name_ZHT: '霸道熊猫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pangoro.png',
   },
   {
     id: 676,
@@ -12209,7 +11490,6 @@ export const pokemonData = [
     name_TR: 'Furfrou',
     name_ZHS: '多丽米亚',
     name_ZHT: '多丽米亚',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/furfrou.png',
   },
   {
     id: 677,
@@ -12227,7 +11507,6 @@ export const pokemonData = [
     name_TR: 'Espurr',
     name_ZHS: '妙喵',
     name_ZHT: '妙喵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/espurr.png',
   },
   {
     id: 678,
@@ -12245,7 +11524,6 @@ export const pokemonData = [
     name_TR: 'Meowstic',
     name_ZHS: '超能妙喵',
     name_ZHT: '超能妙喵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/meowstic.png',
   },
   {
     id: 679,
@@ -12263,7 +11541,6 @@ export const pokemonData = [
     name_TR: 'Honedge',
     name_ZHS: '独剑鞘',
     name_ZHT: '独剑鞘',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/honedge.png',
   },
   {
     id: 680,
@@ -12281,7 +11558,6 @@ export const pokemonData = [
     name_TR: 'Doublade',
     name_ZHS: '双剑鞘',
     name_ZHT: '双剑鞘',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/doublade.png',
   },
   {
     id: 681,
@@ -12299,7 +11575,6 @@ export const pokemonData = [
     name_TR: 'Aegislash',
     name_ZHS: '坚盾剑怪',
     name_ZHT: '坚盾剑怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/aegislash.png',
   },
   {
     id: 682,
@@ -12317,7 +11592,6 @@ export const pokemonData = [
     name_TR: 'Spritzee',
     name_ZHS: '粉香香',
     name_ZHT: '粉香香',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/spritzee.png',
   },
   {
     id: 683,
@@ -12335,8 +11609,6 @@ export const pokemonData = [
     name_TR: 'Aromatisse',
     name_ZHS: '芳香精',
     name_ZHT: '芳香精',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/aromatisse.png',
   },
   {
     id: 684,
@@ -12354,7 +11626,6 @@ export const pokemonData = [
     name_TR: 'Swirlix',
     name_ZHS: '绵绵泡芙',
     name_ZHT: '绵绵泡芙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/swirlix.png',
   },
   {
     id: 685,
@@ -12372,7 +11643,6 @@ export const pokemonData = [
     name_TR: 'Slurpuff',
     name_ZHS: '胖甜妮',
     name_ZHT: '胖甜妮',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/slurpuff.png',
   },
   {
     id: 686,
@@ -12390,7 +11660,6 @@ export const pokemonData = [
     name_TR: 'Inkay',
     name_ZHS: '好啦鱿',
     name_ZHT: '好啦鱿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/inkay.png',
   },
   {
     id: 687,
@@ -12408,7 +11677,6 @@ export const pokemonData = [
     name_TR: 'Malamar',
     name_ZHS: '乌贼王',
     name_ZHT: '乌贼王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/malamar.png',
   },
   {
     id: 688,
@@ -12426,7 +11694,6 @@ export const pokemonData = [
     name_TR: 'Binacle',
     name_ZHS: '龟脚脚',
     name_ZHT: '龟脚脚',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/binacle.png',
   },
   {
     id: 689,
@@ -12444,8 +11711,6 @@ export const pokemonData = [
     name_TR: 'Barbaracle',
     name_ZHS: '龟足巨铠',
     name_ZHT: '龟足巨铠',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/barbaracle.png',
   },
   {
     id: 690,
@@ -12463,7 +11728,6 @@ export const pokemonData = [
     name_TR: 'Skrelp',
     name_ZHS: '垃垃藻',
     name_ZHT: '垃垃藻',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/skrelp.png',
   },
   {
     id: 691,
@@ -12481,7 +11745,6 @@ export const pokemonData = [
     name_TR: 'Dragalge',
     name_ZHS: '毒藻龙',
     name_ZHT: '毒藻龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dragalge.png',
   },
   {
     id: 692,
@@ -12499,7 +11762,6 @@ export const pokemonData = [
     name_TR: 'Clauncher',
     name_ZHS: '铁臂枪虾',
     name_ZHT: '铁臂枪虾',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/clauncher.png',
   },
   {
     id: 693,
@@ -12517,7 +11779,6 @@ export const pokemonData = [
     name_TR: 'Clawitzer',
     name_ZHS: '钢炮臂虾',
     name_ZHT: '钢炮臂虾',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/clawitzer.png',
   },
   {
     id: 694,
@@ -12535,8 +11796,6 @@ export const pokemonData = [
     name_TR: 'Helioptile',
     name_ZHS: '伞电蜥',
     name_ZHT: '伞电蜥',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/helioptile.png',
   },
   {
     id: 695,
@@ -12554,7 +11813,6 @@ export const pokemonData = [
     name_TR: 'Heliolisk',
     name_ZHS: '光电伞蜥',
     name_ZHT: '光电伞蜥',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/heliolisk.png',
   },
   {
     id: 696,
@@ -12572,7 +11830,6 @@ export const pokemonData = [
     name_TR: 'Tyrunt',
     name_ZHS: '宝宝暴龙',
     name_ZHT: '宝宝暴龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tyrunt.png',
   },
   {
     id: 697,
@@ -12590,7 +11847,6 @@ export const pokemonData = [
     name_TR: 'Tyrantrum',
     name_ZHS: '怪颚龙',
     name_ZHT: '怪颚龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tyrantrum.png',
   },
   {
     id: 698,
@@ -12608,7 +11864,6 @@ export const pokemonData = [
     name_TR: 'Amaura',
     name_ZHS: '冰雪龙',
     name_ZHT: '冰雪龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/amaura.png',
   },
   {
     id: 699,
@@ -12626,7 +11881,6 @@ export const pokemonData = [
     name_TR: 'Aurorus',
     name_ZHS: '冰雪巨龙',
     name_ZHT: '冰雪巨龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/aurorus.png',
   },
   {
     id: 700,
@@ -12644,7 +11898,6 @@ export const pokemonData = [
     name_TR: 'Sylveon',
     name_ZHS: '仙子伊布',
     name_ZHT: '仙子伊布',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sylveon.png',
   },
   {
     id: 701,
@@ -12662,7 +11915,6 @@ export const pokemonData = [
     name_TR: 'Hawlucha',
     name_ZHS: '摔角鹰人',
     name_ZHT: '摔角鹰人',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hawlucha.png',
   },
   {
     id: 702,
@@ -12680,7 +11932,6 @@ export const pokemonData = [
     name_TR: 'Dedenne',
     name_ZHS: '咚咚鼠',
     name_ZHT: '咚咚鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dedenne.png',
   },
   {
     id: 703,
@@ -12698,7 +11949,6 @@ export const pokemonData = [
     name_TR: 'Carbink',
     name_ZHS: '小碎钻',
     name_ZHT: '小碎钻',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/carbink.png',
   },
   {
     id: 704,
@@ -12716,7 +11966,6 @@ export const pokemonData = [
     name_TR: 'Goomy',
     name_ZHS: '黏黏宝',
     name_ZHT: '黏黏宝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/goomy.png',
   },
   {
     id: 705,
@@ -12734,7 +11983,6 @@ export const pokemonData = [
     name_TR: 'Sliggoo',
     name_ZHS: '黏美儿',
     name_ZHT: '黏美儿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sliggoo.png',
   },
   {
     id: 706,
@@ -12752,7 +12000,6 @@ export const pokemonData = [
     name_TR: 'Goodra',
     name_ZHS: '黏美龙',
     name_ZHT: '黏美龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/goodra.png',
   },
   {
     id: 707,
@@ -12770,7 +12017,6 @@ export const pokemonData = [
     name_TR: 'Klefki',
     name_ZHS: '钥圈儿',
     name_ZHT: '钥圈儿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/klefki.png',
   },
   {
     id: 708,
@@ -12788,7 +12034,6 @@ export const pokemonData = [
     name_TR: 'Phantump',
     name_ZHS: '小木灵',
     name_ZHT: '小木灵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/phantump.png',
   },
   {
     id: 709,
@@ -12806,7 +12051,6 @@ export const pokemonData = [
     name_TR: 'Trevenant',
     name_ZHS: '朽木妖',
     name_ZHT: '朽木妖',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/trevenant.png',
   },
   {
     id: 710,
@@ -12824,7 +12068,6 @@ export const pokemonData = [
     name_TR: 'Pumpkaboo',
     name_ZHS: '南瓜精',
     name_ZHT: '南瓜精',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pumpkaboo.png',
   },
   {
     id: 711,
@@ -12842,7 +12085,6 @@ export const pokemonData = [
     name_TR: 'Gourgeist',
     name_ZHS: '南瓜怪人',
     name_ZHT: '南瓜怪人',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gourgeist.png',
   },
   {
     id: 712,
@@ -12860,7 +12102,6 @@ export const pokemonData = [
     name_TR: 'Bergmite',
     name_ZHS: '冰宝',
     name_ZHT: '冰宝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bergmite.png',
   },
   {
     id: 713,
@@ -12878,7 +12119,6 @@ export const pokemonData = [
     name_TR: 'Avalugg',
     name_ZHS: '冰岩怪',
     name_ZHT: '冰岩怪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/avalugg.png',
   },
   {
     id: 714,
@@ -12896,7 +12136,6 @@ export const pokemonData = [
     name_TR: 'Noibat',
     name_ZHS: '嗡蝠',
     name_ZHT: '嗡蝠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/noibat.png',
   },
   {
     id: 715,
@@ -12914,7 +12153,6 @@ export const pokemonData = [
     name_TR: 'Noivern',
     name_ZHS: '音波龙',
     name_ZHT: '音波龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/noivern.png',
   },
   {
     id: 716,
@@ -12932,7 +12170,6 @@ export const pokemonData = [
     name_TR: 'Xerneas',
     name_ZHS: '哲尔尼亚斯',
     name_ZHT: '哲尔尼亚斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/xerneas.png',
   },
   {
     id: 717,
@@ -12950,7 +12187,6 @@ export const pokemonData = [
     name_TR: 'Yveltal',
     name_ZHS: '伊裴尔塔尔',
     name_ZHT: '伊裴尔塔尔',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/yveltal.png',
   },
   {
     id: 718,
@@ -12968,7 +12204,6 @@ export const pokemonData = [
     name_TR: 'Zygarde',
     name_ZHS: '基格尔德',
     name_ZHT: '基格尔德',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zygarde.png',
   },
   {
     id: 719,
@@ -12986,7 +12221,6 @@ export const pokemonData = [
     name_TR: 'Diancie',
     name_ZHS: '蒂安希',
     name_ZHT: '蒂安希',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/diancie.png',
   },
   {
     id: 720,
@@ -13004,7 +12238,6 @@ export const pokemonData = [
     name_TR: 'Hoopa',
     name_ZHS: '胡帕',
     name_ZHT: '胡帕',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hoopa.png',
   },
   {
     id: 721,
@@ -13022,7 +12255,6 @@ export const pokemonData = [
     name_TR: 'Volcanion',
     name_ZHS: '波尔凯尼恩',
     name_ZHT: '波尔凯尼恩',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/volcanion.png',
   },
   {
     id: 722,
@@ -13040,7 +12272,6 @@ export const pokemonData = [
     name_TR: 'Rowlet',
     name_ZHS: '木木枭',
     name_ZHT: '木木枭',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rowlet.png',
   },
   {
     id: 723,
@@ -13058,7 +12289,6 @@ export const pokemonData = [
     name_TR: 'Dartrix',
     name_ZHS: '投羽枭',
     name_ZHT: '投羽枭',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dartrix.png',
   },
   {
     id: 724,
@@ -13076,7 +12306,6 @@ export const pokemonData = [
     name_TR: 'Decidueye',
     name_ZHS: '狙射树枭',
     name_ZHT: '狙射树枭',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/decidueye.png',
   },
   {
     id: 725,
@@ -13094,7 +12323,6 @@ export const pokemonData = [
     name_TR: 'Litten',
     name_ZHS: '火斑喵',
     name_ZHT: '火斑喵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/litten.png',
   },
   {
     id: 726,
@@ -13112,7 +12340,6 @@ export const pokemonData = [
     name_TR: 'Torracat',
     name_ZHS: '炎热喵',
     name_ZHT: '炎热喵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/torracat.png',
   },
   {
     id: 727,
@@ -13130,8 +12357,6 @@ export const pokemonData = [
     name_TR: 'Incineroar',
     name_ZHS: '炽焰咆哮虎',
     name_ZHT: '炽焰咆哮虎',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/incineroar.png',
   },
   {
     id: 728,
@@ -13149,7 +12374,6 @@ export const pokemonData = [
     name_TR: 'Popplio',
     name_ZHS: '球球海狮',
     name_ZHT: '球球海狮',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/popplio.png',
   },
   {
     id: 729,
@@ -13167,7 +12391,6 @@ export const pokemonData = [
     name_TR: 'Brionne',
     name_ZHS: '花漾海狮',
     name_ZHT: '花漾海狮',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/brionne.png',
   },
   {
     id: 730,
@@ -13185,7 +12408,6 @@ export const pokemonData = [
     name_TR: 'Primarina',
     name_ZHS: '西狮海壬',
     name_ZHT: '西狮海壬',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/primarina.png',
   },
   {
     id: 731,
@@ -13203,7 +12425,6 @@ export const pokemonData = [
     name_TR: 'Pikipek',
     name_ZHS: '小笃儿',
     name_ZHT: '小笃儿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pikipek.png',
   },
   {
     id: 732,
@@ -13221,7 +12442,6 @@ export const pokemonData = [
     name_TR: 'Trumbeak',
     name_ZHS: '喇叭啄鸟',
     name_ZHT: '喇叭啄鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/trumbeak.png',
   },
   {
     id: 733,
@@ -13239,7 +12459,6 @@ export const pokemonData = [
     name_TR: 'Toucannon',
     name_ZHS: '铳嘴大鸟',
     name_ZHT: '铳嘴大鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/toucannon.png',
   },
   {
     id: 734,
@@ -13257,7 +12476,6 @@ export const pokemonData = [
     name_TR: 'Yungoos',
     name_ZHS: '猫鼬少',
     name_ZHT: '猫鼬少',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/yungoos.png',
   },
   {
     id: 735,
@@ -13275,7 +12493,6 @@ export const pokemonData = [
     name_TR: 'Gumshoos',
     name_ZHS: '猫鼬探长',
     name_ZHT: '猫鼬探长',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gumshoos.png',
   },
   {
     id: 736,
@@ -13293,7 +12510,6 @@ export const pokemonData = [
     name_TR: 'Grubbin',
     name_ZHS: '强颚鸡母虫',
     name_ZHT: '强颚鸡母虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/grubbin.png',
   },
   {
     id: 737,
@@ -13311,7 +12527,6 @@ export const pokemonData = [
     name_TR: 'Charjabug',
     name_ZHS: '虫电宝',
     name_ZHT: '虫电宝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/charjabug.png',
   },
   {
     id: 738,
@@ -13329,7 +12544,6 @@ export const pokemonData = [
     name_TR: 'Vikavolt',
     name_ZHS: '锹农炮虫',
     name_ZHT: '锹农炮虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/vikavolt.png',
   },
   {
     id: 739,
@@ -13347,8 +12561,6 @@ export const pokemonData = [
     name_TR: 'Crabrawler',
     name_ZHS: '好胜蟹',
     name_ZHT: '好胜蟹',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/crabrawler.png',
   },
   {
     id: 740,
@@ -13366,8 +12578,6 @@ export const pokemonData = [
     name_TR: 'Crabominable',
     name_ZHS: '好胜毛蟹',
     name_ZHT: '好胜毛蟹',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/crabominable.png',
   },
   {
     id: 741,
@@ -13385,7 +12595,6 @@ export const pokemonData = [
     name_TR: 'Oricorio',
     name_ZHS: '花舞鸟',
     name_ZHT: '花舞鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/oricorio.png',
   },
   {
     id: 742,
@@ -13403,7 +12612,6 @@ export const pokemonData = [
     name_TR: 'Cutiefly',
     name_ZHS: '萌虻',
     name_ZHT: '萌虻',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cutiefly.png',
   },
   {
     id: 743,
@@ -13421,7 +12629,6 @@ export const pokemonData = [
     name_TR: 'Ribombee',
     name_ZHS: '蝶结萌虻',
     name_ZHT: '蝶结萌虻',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ribombee.png',
   },
   {
     id: 744,
@@ -13439,7 +12646,6 @@ export const pokemonData = [
     name_TR: 'Rockruff',
     name_ZHS: '岩狗狗',
     name_ZHT: '岩狗狗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rockruff.png',
   },
   {
     id: 745,
@@ -13457,7 +12663,6 @@ export const pokemonData = [
     name_TR: 'Lycanroc',
     name_ZHS: '鬃岩狼人',
     name_ZHT: '鬃岩狼人',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lycanroc.png',
   },
   {
     id: 746,
@@ -13475,8 +12680,6 @@ export const pokemonData = [
     name_TR: 'Wishiwashi',
     name_ZHS: '弱丁鱼',
     name_ZHT: '弱丁鱼',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/wishiwashi.png',
   },
   {
     id: 747,
@@ -13494,7 +12697,6 @@ export const pokemonData = [
     name_TR: 'Mareanie',
     name_ZHS: '好坏星',
     name_ZHT: '好坏星',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mareanie.png',
   },
   {
     id: 748,
@@ -13512,7 +12714,6 @@ export const pokemonData = [
     name_TR: 'Toxapex',
     name_ZHS: '超坏星',
     name_ZHT: '超坏星',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/toxapex.png',
   },
   {
     id: 749,
@@ -13530,7 +12731,6 @@ export const pokemonData = [
     name_TR: 'Mudbray',
     name_ZHS: '泥驴仔',
     name_ZHT: '泥驴仔',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mudbray.png',
   },
   {
     id: 750,
@@ -13548,7 +12748,6 @@ export const pokemonData = [
     name_TR: 'Mudsdale',
     name_ZHS: '重泥挽马',
     name_ZHT: '重泥挽马',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mudsdale.png',
   },
   {
     id: 751,
@@ -13566,7 +12765,6 @@ export const pokemonData = [
     name_TR: 'Dewpider',
     name_ZHS: '滴蛛',
     name_ZHT: '滴蛛',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dewpider.png',
   },
   {
     id: 752,
@@ -13584,7 +12782,6 @@ export const pokemonData = [
     name_TR: 'Araquanid',
     name_ZHS: '滴蛛霸',
     name_ZHT: '滴蛛霸',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/araquanid.png',
   },
   {
     id: 753,
@@ -13602,7 +12799,6 @@ export const pokemonData = [
     name_TR: 'Fomantis',
     name_ZHS: '伪螳草',
     name_ZHT: '伪螳草',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/fomantis.png',
   },
   {
     id: 754,
@@ -13620,7 +12816,6 @@ export const pokemonData = [
     name_TR: 'Lurantis',
     name_ZHS: '兰螳花',
     name_ZHT: '兰螳花',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lurantis.png',
   },
   {
     id: 755,
@@ -13638,7 +12833,6 @@ export const pokemonData = [
     name_TR: 'Morelull',
     name_ZHS: '睡睡菇',
     name_ZHT: '睡睡菇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/morelull.png',
   },
   {
     id: 756,
@@ -13656,7 +12850,6 @@ export const pokemonData = [
     name_TR: 'Shiinotic',
     name_ZHS: '灯罩夜菇',
     name_ZHT: '灯罩夜菇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shiinotic.png',
   },
   {
     id: 757,
@@ -13674,7 +12867,6 @@ export const pokemonData = [
     name_TR: 'Salandit',
     name_ZHS: '夜盗火蜥',
     name_ZHT: '夜盗火蜥',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/salandit.png',
   },
   {
     id: 758,
@@ -13692,7 +12884,6 @@ export const pokemonData = [
     name_TR: 'Salazzle',
     name_ZHS: '焰后蜥',
     name_ZHT: '焰后蜥',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/salazzle.png',
   },
   {
     id: 759,
@@ -13710,7 +12901,6 @@ export const pokemonData = [
     name_TR: 'Stufful',
     name_ZHS: '童偶熊',
     name_ZHT: '童偶熊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/stufful.png',
   },
   {
     id: 760,
@@ -13728,7 +12918,6 @@ export const pokemonData = [
     name_TR: 'Bewear',
     name_ZHS: '穿着熊',
     name_ZHT: '穿着熊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bewear.png',
   },
   {
     id: 761,
@@ -13746,7 +12935,6 @@ export const pokemonData = [
     name_TR: 'Bounsweet',
     name_ZHS: '甜竹竹',
     name_ZHT: '甜竹竹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bounsweet.png',
   },
   {
     id: 762,
@@ -13764,7 +12952,6 @@ export const pokemonData = [
     name_TR: 'Steenee',
     name_ZHS: '甜舞妮',
     name_ZHT: '甜舞妮',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/steenee.png',
   },
   {
     id: 763,
@@ -13782,7 +12969,6 @@ export const pokemonData = [
     name_TR: 'Tsareena',
     name_ZHS: '甜冷美后',
     name_ZHT: '甜冷美后',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tsareena.png',
   },
   {
     id: 764,
@@ -13800,7 +12986,6 @@ export const pokemonData = [
     name_TR: 'Comfey',
     name_ZHS: '花疗环环',
     name_ZHT: '花疗环环',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/comfey.png',
   },
   {
     id: 765,
@@ -13818,7 +13003,6 @@ export const pokemonData = [
     name_TR: 'Oranguru',
     name_ZHS: '智挥猩',
     name_ZHT: '智挥猩',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/oranguru.png',
   },
   {
     id: 766,
@@ -13836,7 +13020,6 @@ export const pokemonData = [
     name_TR: 'Passimian',
     name_ZHS: '投掷猴',
     name_ZHT: '投掷猴',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/passimian.png',
   },
   {
     id: 767,
@@ -13854,7 +13037,6 @@ export const pokemonData = [
     name_TR: 'Wimpod',
     name_ZHS: '胆小虫',
     name_ZHT: '胆小虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wimpod.png',
   },
   {
     id: 768,
@@ -13872,7 +13054,6 @@ export const pokemonData = [
     name_TR: 'Golisopod',
     name_ZHS: '具甲武者',
     name_ZHT: '具甲武者',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/golisopod.png',
   },
   {
     id: 769,
@@ -13890,7 +13071,6 @@ export const pokemonData = [
     name_TR: 'Sandygast',
     name_ZHS: '沙丘娃',
     name_ZHT: '沙丘娃',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sandygast.png',
   },
   {
     id: 770,
@@ -13908,7 +13088,6 @@ export const pokemonData = [
     name_TR: 'Palossand',
     name_ZHS: '噬沙堡爷',
     name_ZHT: '噬沙堡爷',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/palossand.png',
   },
   {
     id: 771,
@@ -13926,7 +13105,6 @@ export const pokemonData = [
     name_TR: 'Pyukumuku',
     name_ZHS: '拳海参',
     name_ZHT: '拳海参',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pyukumuku.png',
   },
   {
     id: 772,
@@ -13944,7 +13122,6 @@ export const pokemonData = [
     name_TR: 'Tür: Sıfır',
     name_ZHS: '属性：空',
     name_ZHT: '属性：空',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/type-null.png',
   },
   {
     id: 773,
@@ -13962,7 +13139,6 @@ export const pokemonData = [
     name_TR: 'Silvally',
     name_ZHS: '银伴战兽',
     name_ZHT: '银伴战兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/silvally.png',
   },
   {
     id: 774,
@@ -13980,7 +13156,6 @@ export const pokemonData = [
     name_TR: 'Minior',
     name_ZHS: '小陨星',
     name_ZHT: '小陨星',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/minior.png',
   },
   {
     id: 775,
@@ -13998,7 +13173,6 @@ export const pokemonData = [
     name_TR: 'Komala',
     name_ZHS: '树枕尾熊',
     name_ZHT: '树枕尾熊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/komala.png',
   },
   {
     id: 776,
@@ -14016,8 +13190,6 @@ export const pokemonData = [
     name_TR: 'Turtonator',
     name_ZHS: '爆焰龟兽',
     name_ZHT: '爆焰龟兽',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/turtonator.png',
   },
   {
     id: 777,
@@ -14035,8 +13207,6 @@ export const pokemonData = [
     name_TR: 'Togedemaru',
     name_ZHS: '托戈德玛尔',
     name_ZHT: '托戈德玛尔',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/togedemaru.png',
   },
   {
     id: 778,
@@ -14054,7 +13224,6 @@ export const pokemonData = [
     name_TR: 'Mimikyu',
     name_ZHS: '谜拟丘',
     name_ZHT: '谜拟丘',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mimikyu.png',
   },
   {
     id: 779,
@@ -14072,7 +13241,6 @@ export const pokemonData = [
     name_TR: 'Bruxish',
     name_ZHS: '磨牙彩皮鱼',
     name_ZHT: '磨牙彩皮鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bruxish.png',
   },
   {
     id: 780,
@@ -14090,7 +13258,6 @@ export const pokemonData = [
     name_TR: 'Drampa',
     name_ZHS: '老翁龙',
     name_ZHT: '老翁龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/drampa.png',
   },
   {
     id: 781,
@@ -14108,7 +13275,6 @@ export const pokemonData = [
     name_TR: 'Dhelmise',
     name_ZHS: '破破舵轮',
     name_ZHT: '破破舵轮',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dhelmise.png',
   },
   {
     id: 782,
@@ -14126,7 +13292,6 @@ export const pokemonData = [
     name_TR: 'Jangmo-o',
     name_ZHS: '心鳞宝',
     name_ZHT: '心鳞宝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/jangmo-o.png',
   },
   {
     id: 783,
@@ -14144,7 +13309,6 @@ export const pokemonData = [
     name_TR: 'Hakamo-o',
     name_ZHS: '鳞甲龙',
     name_ZHT: '鳞甲龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hakamo-o.png',
   },
   {
     id: 784,
@@ -14162,7 +13326,6 @@ export const pokemonData = [
     name_TR: 'Kommo-o',
     name_ZHS: '杖尾鳞甲龙',
     name_ZHT: '杖尾鳞甲龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kommo-o.png',
   },
   {
     id: 785,
@@ -14180,7 +13343,6 @@ export const pokemonData = [
     name_TR: 'Tapu Koko',
     name_ZHS: '卡璞・鸣鸣',
     name_ZHT: '卡璞・鸣鸣',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tapu-koko.png',
   },
   {
     id: 786,
@@ -14198,7 +13360,6 @@ export const pokemonData = [
     name_TR: 'Tapu Lele',
     name_ZHS: '卡璞・蝶蝶',
     name_ZHT: '卡璞・蝶蝶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tapu-lele.png',
   },
   {
     id: 787,
@@ -14216,7 +13377,6 @@ export const pokemonData = [
     name_TR: 'Tapu Bulu',
     name_ZHS: '卡璞・哞哞',
     name_ZHT: '卡璞・哞哞',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tapu-bulu.png',
   },
   {
     id: 788,
@@ -14234,7 +13394,6 @@ export const pokemonData = [
     name_TR: 'Tapu Fini',
     name_ZHS: '卡璞・鳍鳍',
     name_ZHT: '卡璞・鳍鳍',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tapu-fini.png',
   },
   {
     id: 789,
@@ -14252,7 +13411,6 @@ export const pokemonData = [
     name_TR: 'Cosmog',
     name_ZHS: '科斯莫古',
     name_ZHT: '科斯莫古',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cosmog.png',
   },
   {
     id: 790,
@@ -14270,7 +13428,6 @@ export const pokemonData = [
     name_TR: 'Cosmoem',
     name_ZHS: '科斯莫姆',
     name_ZHT: '科斯莫姆',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cosmoem.png',
   },
   {
     id: 791,
@@ -14288,7 +13445,6 @@ export const pokemonData = [
     name_TR: 'Solgaleo',
     name_ZHS: '索尔迦雷欧',
     name_ZHT: '索尔迦雷欧',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/solgaleo.png',
   },
   {
     id: 792,
@@ -14306,7 +13462,6 @@ export const pokemonData = [
     name_TR: 'Lunala',
     name_ZHS: '露奈雅拉',
     name_ZHT: '露奈雅拉',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lunala.png',
   },
   {
     id: 793,
@@ -14324,7 +13479,6 @@ export const pokemonData = [
     name_TR: 'Nihilego',
     name_ZHS: '虚吾伊德',
     name_ZHT: '虚吾伊德',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/nihilego.png',
   },
   {
     id: 794,
@@ -14342,7 +13496,6 @@ export const pokemonData = [
     name_TR: 'Buzzwole',
     name_ZHS: '爆肌蚊',
     name_ZHT: '爆肌蚊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/buzzwole.png',
   },
   {
     id: 795,
@@ -14360,7 +13513,6 @@ export const pokemonData = [
     name_TR: 'Pheromosa',
     name_ZHS: '费洛美螂',
     name_ZHT: '费洛美螂',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pheromosa.png',
   },
   {
     id: 796,
@@ -14378,7 +13530,6 @@ export const pokemonData = [
     name_TR: 'Xurkitree',
     name_ZHS: '电束木',
     name_ZHT: '电束木',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/xurkitree.png',
   },
   {
     id: 797,
@@ -14396,8 +13547,6 @@ export const pokemonData = [
     name_TR: 'Celesteela',
     name_ZHS: '铁火辉夜',
     name_ZHT: '铁火辉夜',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/celesteela.png',
   },
   {
     id: 798,
@@ -14415,7 +13564,6 @@ export const pokemonData = [
     name_TR: 'Kartana',
     name_ZHS: '纸御剑',
     name_ZHT: '纸御剑',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kartana.png',
   },
   {
     id: 799,
@@ -14433,7 +13581,6 @@ export const pokemonData = [
     name_TR: 'Guzzlord',
     name_ZHS: '恶食大王',
     name_ZHT: '恶食大王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/guzzlord.png',
   },
   {
     id: 800,
@@ -14451,7 +13598,6 @@ export const pokemonData = [
     name_TR: 'Necrozma',
     name_ZHS: '奈克洛兹玛',
     name_ZHT: '奈克洛兹玛',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/necrozma.png',
   },
   {
     id: 801,
@@ -14469,7 +13615,6 @@ export const pokemonData = [
     name_TR: 'Magearna',
     name_ZHS: '玛机雅娜',
     name_ZHT: '玛机雅娜',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/magearna.png',
   },
   {
     id: 802,
@@ -14487,7 +13632,6 @@ export const pokemonData = [
     name_TR: 'Marshadow',
     name_ZHS: '玛夏多',
     name_ZHT: '玛夏多',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/marshadow.png',
   },
   {
     id: 803,
@@ -14505,7 +13649,6 @@ export const pokemonData = [
     name_TR: 'Poipole',
     name_ZHS: '毒贝比',
     name_ZHT: '毒贝比',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/poipole.png',
   },
   {
     id: 804,
@@ -14523,7 +13666,6 @@ export const pokemonData = [
     name_TR: 'Naganadel',
     name_ZHS: '四颚针龙',
     name_ZHT: '四颚针龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/naganadel.png',
   },
   {
     id: 805,
@@ -14541,7 +13683,6 @@ export const pokemonData = [
     name_TR: 'Stakataka',
     name_ZHS: '垒磊石',
     name_ZHT: '垒磊石',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/stakataka.png',
   },
   {
     id: 806,
@@ -14559,8 +13700,6 @@ export const pokemonData = [
     name_TR: 'Blacephalon',
     name_ZHS: '砰头小丑',
     name_ZHT: '砰头小丑',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/blacephalon.png',
   },
   {
     id: 807,
@@ -14578,7 +13717,6 @@ export const pokemonData = [
     name_TR: 'Zeraora',
     name_ZHS: '捷拉奥拉',
     name_ZHT: '捷拉奥拉',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zeraora.png',
   },
   {
     id: 808,
@@ -14596,7 +13734,6 @@ export const pokemonData = [
     name_TR: 'Meltan',
     name_ZHS: '美录坦',
     name_ZHT: '美录坦',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/meltan.png',
   },
   {
     id: 809,
@@ -14614,7 +13751,6 @@ export const pokemonData = [
     name_TR: 'Melmetal',
     name_ZHS: '美录梅塔',
     name_ZHT: '美录梅塔',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/melmetal.png',
   },
   {
     id: 810,
@@ -14632,7 +13768,6 @@ export const pokemonData = [
     name_TR: 'Grookey',
     name_ZHS: '敲音猴',
     name_ZHT: '敲音猴',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/grookey.png',
   },
   {
     id: 811,
@@ -14650,7 +13785,6 @@ export const pokemonData = [
     name_TR: 'Thwackey',
     name_ZHS: '啪咚猴',
     name_ZHT: '啪咚猴',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/thwackey.png',
   },
   {
     id: 812,
@@ -14668,7 +13802,6 @@ export const pokemonData = [
     name_TR: 'Rillaboom',
     name_ZHS: '轰擂金刚猩',
     name_ZHT: '轰擂金刚猩',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rillaboom.png',
   },
   {
     id: 813,
@@ -14686,7 +13819,6 @@ export const pokemonData = [
     name_TR: 'Scorbunny',
     name_ZHS: '炎兔儿',
     name_ZHT: '炎兔儿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/scorbunny.png',
   },
   {
     id: 814,
@@ -14704,7 +13836,6 @@ export const pokemonData = [
     name_TR: 'Raboot',
     name_ZHS: '腾蹴小将',
     name_ZHT: '腾蹴小将',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/raboot.png',
   },
   {
     id: 815,
@@ -14722,7 +13853,6 @@ export const pokemonData = [
     name_TR: 'Cinderace',
     name_ZHS: '闪焰王牌',
     name_ZHT: '闪焰王牌',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cinderace.png',
   },
   {
     id: 816,
@@ -14740,7 +13870,6 @@ export const pokemonData = [
     name_TR: 'Sobble',
     name_ZHS: '泪眼蜥',
     name_ZHT: '泪眼蜥',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sobble.png',
   },
   {
     id: 817,
@@ -14758,7 +13887,6 @@ export const pokemonData = [
     name_TR: 'Drizzile',
     name_ZHS: '变涩蜥',
     name_ZHT: '变涩蜥',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/drizzile.png',
   },
   {
     id: 818,
@@ -14776,7 +13904,6 @@ export const pokemonData = [
     name_TR: 'Inteleon',
     name_ZHS: '千面避役',
     name_ZHT: '千面避役',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/inteleon.png',
   },
   {
     id: 819,
@@ -14794,7 +13921,6 @@ export const pokemonData = [
     name_TR: 'Skwovet',
     name_ZHS: '贪心栗鼠',
     name_ZHT: '贪心栗鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/skwovet.png',
   },
   {
     id: 820,
@@ -14812,7 +13938,6 @@ export const pokemonData = [
     name_TR: 'Greedent',
     name_ZHS: '藏饱栗鼠',
     name_ZHT: '藏饱栗鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/greedent.png',
   },
   {
     id: 821,
@@ -14830,7 +13955,6 @@ export const pokemonData = [
     name_TR: 'Rookidee',
     name_ZHS: '稚山雀',
     name_ZHT: '稚山雀',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rookidee.png',
   },
   {
     id: 822,
@@ -14848,8 +13972,6 @@ export const pokemonData = [
     name_TR: 'Corvisquire',
     name_ZHS: '蓝鸦',
     name_ZHT: '蓝鸦',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/corvisquire.png',
   },
   {
     id: 823,
@@ -14867,8 +13989,6 @@ export const pokemonData = [
     name_TR: 'Corviknight',
     name_ZHS: '钢铠鸦',
     name_ZHT: '钢铠鸦',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/corviknight.png',
   },
   {
     id: 824,
@@ -14886,7 +14006,6 @@ export const pokemonData = [
     name_TR: 'Blipbug',
     name_ZHS: '索侦虫',
     name_ZHT: '索侦虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/blipbug.png',
   },
   {
     id: 825,
@@ -14904,7 +14023,6 @@ export const pokemonData = [
     name_TR: 'Dottler',
     name_ZHS: '天罩虫',
     name_ZHT: '天罩虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dottler.png',
   },
   {
     id: 826,
@@ -14922,7 +14040,6 @@ export const pokemonData = [
     name_TR: 'Orbeetle',
     name_ZHS: '以欧路普',
     name_ZHT: '以欧路普',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/orbeetle.png',
   },
   {
     id: 827,
@@ -14940,7 +14057,6 @@ export const pokemonData = [
     name_TR: 'Nickit',
     name_ZHS: '狡小狐',
     name_ZHT: '狡小狐',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/nickit.png',
   },
   {
     id: 828,
@@ -14958,7 +14074,6 @@ export const pokemonData = [
     name_TR: 'Thievul',
     name_ZHS: '猾大狐',
     name_ZHT: '猾大狐',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/thievul.png',
   },
   {
     id: 829,
@@ -14976,8 +14091,6 @@ export const pokemonData = [
     name_TR: 'Gossifleur',
     name_ZHS: '幼棉棉',
     name_ZHT: '幼棉棉',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/gossifleur.png',
   },
   {
     id: 830,
@@ -14995,7 +14108,6 @@ export const pokemonData = [
     name_TR: 'Eldegoss',
     name_ZHS: '白蓬蓬',
     name_ZHT: '白蓬蓬',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/eldegoss.png',
   },
   {
     id: 831,
@@ -15013,7 +14125,6 @@ export const pokemonData = [
     name_TR: 'Wooloo',
     name_ZHS: '毛辫羊',
     name_ZHT: '毛辫羊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wooloo.png',
   },
   {
     id: 832,
@@ -15031,7 +14142,6 @@ export const pokemonData = [
     name_TR: 'Dubwool',
     name_ZHS: '毛毛角羊',
     name_ZHT: '毛毛角羊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dubwool.png',
   },
   {
     id: 833,
@@ -15049,7 +14159,6 @@ export const pokemonData = [
     name_TR: 'Chewtle',
     name_ZHS: '咬咬龟',
     name_ZHT: '咬咬龟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/chewtle.png',
   },
   {
     id: 834,
@@ -15067,7 +14176,6 @@ export const pokemonData = [
     name_TR: 'Drednaw',
     name_ZHS: '暴噬龟',
     name_ZHT: '暴噬龟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/drednaw.png',
   },
   {
     id: 835,
@@ -15085,7 +14193,6 @@ export const pokemonData = [
     name_TR: 'Yamper',
     name_ZHS: '来电汪',
     name_ZHT: '来电汪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/yamper.png',
   },
   {
     id: 836,
@@ -15103,7 +14210,6 @@ export const pokemonData = [
     name_TR: 'Boltund',
     name_ZHS: '逐电犬',
     name_ZHT: '逐电犬',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/boltund.png',
   },
   {
     id: 837,
@@ -15121,7 +14227,6 @@ export const pokemonData = [
     name_TR: 'Rolycoly',
     name_ZHS: '小炭仔',
     name_ZHT: '小炭仔',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rolycoly.png',
   },
   {
     id: 838,
@@ -15139,7 +14244,6 @@ export const pokemonData = [
     name_TR: 'Carkol',
     name_ZHS: '大炭车',
     name_ZHT: '大炭车',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/carkol.png',
   },
   {
     id: 839,
@@ -15157,7 +14261,6 @@ export const pokemonData = [
     name_TR: 'Coalossal',
     name_ZHS: '巨炭山',
     name_ZHT: '巨炭山',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/coalossal.png',
   },
   {
     id: 840,
@@ -15175,7 +14278,6 @@ export const pokemonData = [
     name_TR: 'Applin',
     name_ZHS: '啃果虫',
     name_ZHT: '啃果虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/applin.png',
   },
   {
     id: 841,
@@ -15193,7 +14295,6 @@ export const pokemonData = [
     name_TR: 'Flapple',
     name_ZHS: '苹裹龙',
     name_ZHT: '苹裹龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/flapple.png',
   },
   {
     id: 842,
@@ -15211,7 +14312,6 @@ export const pokemonData = [
     name_TR: 'Appletun',
     name_ZHS: '丰蜜龙',
     name_ZHT: '丰蜜龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/appletun.png',
   },
   {
     id: 843,
@@ -15229,7 +14329,6 @@ export const pokemonData = [
     name_TR: 'Silicobra',
     name_ZHS: '沙包蛇',
     name_ZHT: '沙包蛇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/silicobra.png',
   },
   {
     id: 844,
@@ -15247,8 +14346,6 @@ export const pokemonData = [
     name_TR: 'Sandaconda',
     name_ZHS: '沙螺蟒',
     name_ZHT: '沙螺蟒',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/sandaconda.png',
   },
   {
     id: 845,
@@ -15266,7 +14363,6 @@ export const pokemonData = [
     name_TR: 'Cramorant',
     name_ZHS: '古月鸟',
     name_ZHT: '古月鸟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cramorant.png',
   },
   {
     id: 846,
@@ -15284,7 +14380,6 @@ export const pokemonData = [
     name_TR: 'Arrokuda',
     name_ZHS: '刺梭鱼',
     name_ZHT: '刺梭鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/arrokuda.png',
   },
   {
     id: 847,
@@ -15302,8 +14397,6 @@ export const pokemonData = [
     name_TR: 'Barraskewda',
     name_ZHS: '戽斗尖梭',
     name_ZHT: '戽斗尖梭',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/barraskewda.png',
   },
   {
     id: 848,
@@ -15321,7 +14414,6 @@ export const pokemonData = [
     name_TR: 'Toxel',
     name_ZHS: '电音婴',
     name_ZHT: '电音婴',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/toxel.png',
   },
   {
     id: 849,
@@ -15339,8 +14431,6 @@ export const pokemonData = [
     name_TR: 'Toxtricity',
     name_ZHS: '颤弦蝾螈',
     name_ZHT: '颤弦蝾螈',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/toxtricity.png',
   },
   {
     id: 850,
@@ -15358,8 +14448,6 @@ export const pokemonData = [
     name_TR: 'Sizzlipede',
     name_ZHS: '烧火蚣',
     name_ZHT: '烧火蚣',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/sizzlipede.png',
   },
   {
     id: 851,
@@ -15377,8 +14465,6 @@ export const pokemonData = [
     name_TR: 'Centiskorch',
     name_ZHS: '焚焰蚣',
     name_ZHT: '焚焰蚣',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/centiskorch.png',
   },
   {
     id: 852,
@@ -15396,7 +14482,6 @@ export const pokemonData = [
     name_TR: 'Clobbopus',
     name_ZHS: '拳拳蛸',
     name_ZHT: '拳拳蛸',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/clobbopus.png',
   },
   {
     id: 853,
@@ -15414,7 +14499,6 @@ export const pokemonData = [
     name_TR: 'Grapploct',
     name_ZHS: '八爪武师',
     name_ZHT: '八爪武师',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/grapploct.png',
   },
   {
     id: 854,
@@ -15432,7 +14516,6 @@ export const pokemonData = [
     name_TR: 'Sinistea',
     name_ZHS: '来悲茶',
     name_ZHT: '来悲茶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sinistea.png',
   },
   {
     id: 855,
@@ -15450,8 +14533,6 @@ export const pokemonData = [
     name_TR: 'Polteageist',
     name_ZHS: '怖思壶',
     name_ZHT: '怖思壶',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/polteageist.png',
   },
   {
     id: 856,
@@ -15469,7 +14550,6 @@ export const pokemonData = [
     name_TR: 'Hatenna',
     name_ZHS: '迷布莉姆',
     name_ZHT: '迷布莉姆',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hatenna.png',
   },
   {
     id: 857,
@@ -15487,7 +14567,6 @@ export const pokemonData = [
     name_TR: 'Hattrem',
     name_ZHS: '提布莉姆',
     name_ZHT: '提布莉姆',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hattrem.png',
   },
   {
     id: 858,
@@ -15505,7 +14584,6 @@ export const pokemonData = [
     name_TR: 'Hatterene',
     name_ZHS: '布莉姆温',
     name_ZHT: '布莉姆温',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hatterene.png',
   },
   {
     id: 859,
@@ -15523,7 +14601,6 @@ export const pokemonData = [
     name_TR: 'Impidimp',
     name_ZHS: '捣蛋小妖',
     name_ZHT: '捣蛋小妖',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/impidimp.png',
   },
   {
     id: 860,
@@ -15541,7 +14618,6 @@ export const pokemonData = [
     name_TR: 'Morgrem',
     name_ZHS: '诈唬魔',
     name_ZHT: '诈唬魔',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/morgrem.png',
   },
   {
     id: 861,
@@ -15559,8 +14635,6 @@ export const pokemonData = [
     name_TR: 'Grimmsnarl',
     name_ZHS: '长毛巨魔',
     name_ZHT: '长毛巨魔',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/grimmsnarl.png',
   },
   {
     id: 862,
@@ -15578,7 +14652,6 @@ export const pokemonData = [
     name_TR: 'Obstagoon',
     name_ZHS: '堵拦熊',
     name_ZHT: '堵拦熊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/obstagoon.png',
   },
   {
     id: 863,
@@ -15596,8 +14669,6 @@ export const pokemonData = [
     name_TR: 'Perrserker',
     name_ZHS: '喵头目',
     name_ZHT: '喵头目',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/perrserker.png',
   },
   {
     id: 864,
@@ -15615,7 +14686,6 @@ export const pokemonData = [
     name_TR: 'Cursola',
     name_ZHS: '魔灵珊瑚',
     name_ZHT: '魔灵珊瑚',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cursola.png',
   },
   {
     id: 865,
@@ -15633,7 +14703,6 @@ export const pokemonData = [
     name_TR: "Sirfetch'd",
     name_ZHS: '葱游兵',
     name_ZHT: '葱游兵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sirfetchd.png',
   },
   {
     id: 866,
@@ -15651,7 +14720,6 @@ export const pokemonData = [
     name_TR: 'Mr. Rime',
     name_ZHS: '踏冰人偶',
     name_ZHT: '踏冰人偶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mr-rime.png',
   },
   {
     id: 867,
@@ -15669,7 +14737,6 @@ export const pokemonData = [
     name_TR: 'Runerigus',
     name_ZHS: '迭失板',
     name_ZHT: '迭失板',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/runerigus.png',
   },
   {
     id: 868,
@@ -15687,7 +14754,6 @@ export const pokemonData = [
     name_TR: 'Milcery',
     name_ZHS: '小仙奶',
     name_ZHT: '小仙奶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/milcery.png',
   },
   {
     id: 869,
@@ -15705,7 +14771,6 @@ export const pokemonData = [
     name_TR: 'Alcremie',
     name_ZHS: '霜奶仙',
     name_ZHT: '霜奶仙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/alcremie.png',
   },
   {
     id: 870,
@@ -15723,7 +14788,6 @@ export const pokemonData = [
     name_TR: 'Falinks',
     name_ZHS: '列阵兵',
     name_ZHT: '列阵兵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/falinks.png',
   },
   {
     id: 871,
@@ -15741,8 +14805,6 @@ export const pokemonData = [
     name_TR: 'Pincurchin',
     name_ZHS: '啪嚓海胆',
     name_ZHT: '啪嚓海胆',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/pincurchin.png',
   },
   {
     id: 872,
@@ -15760,7 +14822,6 @@ export const pokemonData = [
     name_TR: 'Snom',
     name_ZHS: '雪吞虫',
     name_ZHT: '雪吞虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/snom.png',
   },
   {
     id: 873,
@@ -15778,7 +14839,6 @@ export const pokemonData = [
     name_TR: 'Frosmoth',
     name_ZHS: '雪绒蛾',
     name_ZHT: '雪绒蛾',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/frosmoth.png',
   },
   {
     id: 874,
@@ -15796,8 +14856,6 @@ export const pokemonData = [
     name_TR: 'Stonjourner',
     name_ZHS: '巨石丁',
     name_ZHT: '巨石丁',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/stonjourner.png',
   },
   {
     id: 875,
@@ -15815,7 +14873,6 @@ export const pokemonData = [
     name_TR: 'Eiscue',
     name_ZHS: '冰砌鹅',
     name_ZHT: '冰砌鹅',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/eiscue.png',
   },
   {
     id: 876,
@@ -15833,7 +14890,6 @@ export const pokemonData = [
     name_TR: 'Indeedee',
     name_ZHS: '爱管侍',
     name_ZHT: '爱管侍',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/indeedee.png',
   },
   {
     id: 877,
@@ -15851,7 +14907,6 @@ export const pokemonData = [
     name_TR: 'Morpeko',
     name_ZHS: '莫鲁贝可',
     name_ZHT: '莫鲁贝可',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/morpeko.png',
   },
   {
     id: 878,
@@ -15869,7 +14924,6 @@ export const pokemonData = [
     name_TR: 'Cufant',
     name_ZHS: '铜象',
     name_ZHT: '铜象',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cufant.png',
   },
   {
     id: 879,
@@ -15887,8 +14941,6 @@ export const pokemonData = [
     name_TR: 'Copperajah',
     name_ZHS: '大王铜象',
     name_ZHT: '大王铜象',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/copperajah.png',
   },
   {
     id: 880,
@@ -15906,7 +14958,6 @@ export const pokemonData = [
     name_TR: 'Dracozolt',
     name_ZHS: '雷鸟龙',
     name_ZHT: '雷鸟龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dracozolt.png',
   },
   {
     id: 881,
@@ -15924,7 +14975,6 @@ export const pokemonData = [
     name_TR: 'Arctozolt',
     name_ZHS: '雷鸟海兽',
     name_ZHT: '雷鸟海兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/arctozolt.png',
   },
   {
     id: 882,
@@ -15942,7 +14992,6 @@ export const pokemonData = [
     name_TR: 'Dracovish',
     name_ZHS: '鳃鱼龙',
     name_ZHT: '鳃鱼龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dracovish.png',
   },
   {
     id: 883,
@@ -15960,7 +15009,6 @@ export const pokemonData = [
     name_TR: 'Arctovish',
     name_ZHS: '鳃鱼海兽',
     name_ZHT: '鳃鱼海兽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/arctovish.png',
   },
   {
     id: 884,
@@ -15978,7 +15026,6 @@ export const pokemonData = [
     name_TR: 'Duraludon',
     name_ZHS: '铝钢龙',
     name_ZHT: '铝钢龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/duraludon.png',
   },
   {
     id: 885,
@@ -15996,7 +15043,6 @@ export const pokemonData = [
     name_TR: 'Dreepy',
     name_ZHS: '多龙梅西亚',
     name_ZHT: '多龙梅西亚',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dreepy.png',
   },
   {
     id: 886,
@@ -16014,7 +15060,6 @@ export const pokemonData = [
     name_TR: 'Drakloak',
     name_ZHS: '多龙奇',
     name_ZHT: '多龙奇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/drakloak.png',
   },
   {
     id: 887,
@@ -16032,7 +15077,6 @@ export const pokemonData = [
     name_TR: 'Dragapult',
     name_ZHS: '多龙巴鲁托',
     name_ZHT: '多龙巴鲁托',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dragapult.png',
   },
   {
     id: 888,
@@ -16050,7 +15094,6 @@ export const pokemonData = [
     name_TR: 'Zacian',
     name_ZHS: '苍响',
     name_ZHT: '苍响',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zacian.png',
   },
   {
     id: 889,
@@ -16068,7 +15111,6 @@ export const pokemonData = [
     name_TR: 'Zamazenta',
     name_ZHS: '藏玛然特',
     name_ZHT: '藏玛然特',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zamazenta.png',
   },
   {
     id: 890,
@@ -16086,7 +15128,6 @@ export const pokemonData = [
     name_TR: 'Eternatus',
     name_ZHS: '无极汰那',
     name_ZHT: '无极汰那',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/eternatus.png',
   },
   {
     id: 891,
@@ -16104,7 +15145,6 @@ export const pokemonData = [
     name_TR: 'Kubfu',
     name_ZHS: '熊徒弟',
     name_ZHT: '熊徒弟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kubfu.png',
   },
   {
     id: 892,
@@ -16122,7 +15162,6 @@ export const pokemonData = [
     name_TR: 'Urshifu',
     name_ZHS: '武道熊师',
     name_ZHT: '武道熊师',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/urshifu.png',
   },
   {
     id: 893,
@@ -16140,7 +15179,6 @@ export const pokemonData = [
     name_TR: 'Zarude',
     name_ZHS: '萨戮德',
     name_ZHT: '萨戮德',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zarude.png',
   },
   {
     id: 894,
@@ -16158,7 +15196,6 @@ export const pokemonData = [
     name_TR: 'Regieleki',
     name_ZHS: '雷吉艾勒奇',
     name_ZHT: '雷吉艾勒奇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/regieleki.png',
   },
   {
     id: 895,
@@ -16176,7 +15213,6 @@ export const pokemonData = [
     name_TR: 'Regidrago',
     name_ZHS: '雷吉铎拉戈',
     name_ZHT: '雷吉铎拉戈',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/regidrago.png',
   },
   {
     id: 896,
@@ -16194,7 +15230,6 @@ export const pokemonData = [
     name_TR: 'Glastrier',
     name_ZHS: '雪暴马',
     name_ZHT: '雪暴马',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/glastrier.png',
   },
   {
     id: 897,
@@ -16212,7 +15247,6 @@ export const pokemonData = [
     name_TR: 'Spectrier',
     name_ZHS: '灵幽马',
     name_ZHT: '灵幽马',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/spectrier.png',
   },
   {
     id: 898,
@@ -16230,7 +15264,6 @@ export const pokemonData = [
     name_TR: 'Calyrex',
     name_ZHS: '蕾冠王',
     name_ZHT: '蕾冠王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/calyrex.png',
   },
   {
     id: 899,
@@ -16248,7 +15281,6 @@ export const pokemonData = [
     name_TR: 'Wyrdeer',
     name_ZHS: '诡角鹿',
     name_ZHT: '诡角鹿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wyrdeer.png',
   },
   {
     id: 900,
@@ -16266,7 +15298,6 @@ export const pokemonData = [
     name_TR: 'Kleavor',
     name_ZHS: '劈斧螳螂',
     name_ZHT: '劈斧螳螂',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kleavor.png',
   },
   {
     id: 901,
@@ -16284,7 +15315,6 @@ export const pokemonData = [
     name_TR: 'Ursaluna',
     name_ZHS: '月月熊',
     name_ZHT: '月月熊',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ursaluna.png',
   },
   {
     id: 902,
@@ -16302,8 +15332,6 @@ export const pokemonData = [
     name_TR: 'Basculegion',
     name_ZHS: '幽尾玄鱼',
     name_ZHT: '幽尾玄鱼',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/basculegion.png',
   },
   {
     id: 903,
@@ -16321,7 +15349,6 @@ export const pokemonData = [
     name_TR: 'Sneasler',
     name_ZHS: '大狃拉',
     name_ZHT: '大狃拉',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sneasler.png',
   },
   {
     id: 904,
@@ -16339,7 +15366,6 @@ export const pokemonData = [
     name_TR: 'Overqwil',
     name_ZHS: '万针鱼',
     name_ZHT: '万针鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/overqwil.png',
   },
   {
     id: 905,
@@ -16357,7 +15383,6 @@ export const pokemonData = [
     name_TR: 'Enamorus',
     name_ZHS: '眷恋云',
     name_ZHT: '眷恋云',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/enamorus.png',
   },
   {
     id: 906,
@@ -16375,8 +15400,6 @@ export const pokemonData = [
     name_TR: 'Sprigatito',
     name_ZHS: '新叶喵',
     name_ZHT: '新叶喵',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/sprigatito.png',
   },
   {
     id: 907,
@@ -16394,7 +15417,6 @@ export const pokemonData = [
     name_TR: 'Floragato',
     name_ZHS: '蒂蕾喵',
     name_ZHT: '蒂蕾喵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/floragato.png',
   },
   {
     id: 908,
@@ -16412,8 +15434,6 @@ export const pokemonData = [
     name_TR: 'Meowscarada',
     name_ZHS: '魔幻假面喵',
     name_ZHT: '魔幻假面喵',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/meowscarada.png',
   },
   {
     id: 909,
@@ -16431,7 +15451,6 @@ export const pokemonData = [
     name_TR: 'Fuecoco',
     name_ZHS: '呆火鳄',
     name_ZHT: '呆火鳄',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/fuecoco.png',
   },
   {
     id: 910,
@@ -16449,7 +15468,6 @@ export const pokemonData = [
     name_TR: 'Crocalor',
     name_ZHS: '炙烫鳄',
     name_ZHT: '炙烫鳄',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/crocalor.png',
   },
   {
     id: 911,
@@ -16467,8 +15485,6 @@ export const pokemonData = [
     name_TR: 'Skeledirge',
     name_ZHS: '骨纹巨声鳄',
     name_ZHT: '骨纹巨声鳄',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/skeledirge.png',
   },
   {
     id: 912,
@@ -16486,7 +15502,6 @@ export const pokemonData = [
     name_TR: 'Quaxly',
     name_ZHS: '润水鸭',
     name_ZHT: '润水鸭',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/quaxly.png',
   },
   {
     id: 913,
@@ -16504,7 +15519,6 @@ export const pokemonData = [
     name_TR: 'Quaxwell',
     name_ZHS: '涌跃鸭',
     name_ZHT: '涌跃鸭',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/quaxwell.png',
   },
   {
     id: 914,
@@ -16522,7 +15536,6 @@ export const pokemonData = [
     name_TR: 'Quaquaval',
     name_ZHS: '狂欢浪舞鸭',
     name_ZHT: '狂欢浪舞鸭',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/quaquaval.png',
   },
   {
     id: 915,
@@ -16540,7 +15553,6 @@ export const pokemonData = [
     name_TR: 'Lechonk',
     name_ZHS: '爱吃豚',
     name_ZHT: '爱吃豚',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lechonk.png',
   },
   {
     id: 916,
@@ -16558,8 +15570,6 @@ export const pokemonData = [
     name_TR: 'Oinkologne',
     name_ZHS: '飘香豚',
     name_ZHT: '飘香豚',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/oinkologne.png',
   },
   {
     id: 917,
@@ -16577,8 +15587,6 @@ export const pokemonData = [
     name_TR: 'Tarountula',
     name_ZHS: '团珠蛛',
     name_ZHT: '团珠蛛',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/tarountula.png',
   },
   {
     id: 918,
@@ -16596,7 +15604,6 @@ export const pokemonData = [
     name_TR: 'Spidops',
     name_ZHS: '操陷蛛',
     name_ZHT: '操陷蛛',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/spidops.png',
   },
   {
     id: 919,
@@ -16614,7 +15621,6 @@ export const pokemonData = [
     name_TR: 'Nymble',
     name_ZHS: '豆蟋蟀',
     name_ZHT: '豆蟋蟀',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/nymble.png',
   },
   {
     id: 920,
@@ -16632,7 +15638,6 @@ export const pokemonData = [
     name_TR: 'Lokix',
     name_ZHS: '烈腿蝗',
     name_ZHT: '烈腿蝗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lokix.png',
   },
   {
     id: 921,
@@ -16650,7 +15655,6 @@ export const pokemonData = [
     name_TR: 'Pawmi',
     name_ZHS: '布拨',
     name_ZHT: '布拨',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pawmi.png',
   },
   {
     id: 922,
@@ -16668,7 +15672,6 @@ export const pokemonData = [
     name_TR: 'Pawmo',
     name_ZHS: '布土拨',
     name_ZHT: '布土拨',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pawmo.png',
   },
   {
     id: 923,
@@ -16686,7 +15689,6 @@ export const pokemonData = [
     name_TR: 'Pawmot',
     name_ZHS: '巴布土拨',
     name_ZHT: '巴布土拨',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pawmot.png',
   },
   {
     id: 924,
@@ -16704,7 +15706,6 @@ export const pokemonData = [
     name_TR: 'Tandemaus',
     name_ZHS: '一对鼠',
     name_ZHT: '一对鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tandemaus.png',
   },
   {
     id: 925,
@@ -16722,7 +15723,6 @@ export const pokemonData = [
     name_TR: 'Maushold',
     name_ZHS: '一家鼠',
     name_ZHT: '一家鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/maushold.png',
   },
   {
     id: 926,
@@ -16740,7 +15740,6 @@ export const pokemonData = [
     name_TR: 'Fidough',
     name_ZHS: '狗仔包',
     name_ZHT: '狗仔包',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/fidough.png',
   },
   {
     id: 927,
@@ -16758,7 +15757,6 @@ export const pokemonData = [
     name_TR: 'Dachsbun',
     name_ZHS: '麻花犬',
     name_ZHT: '麻花犬',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dachsbun.png',
   },
   {
     id: 928,
@@ -16776,7 +15774,6 @@ export const pokemonData = [
     name_TR: 'Smoliv',
     name_ZHS: '迷你芙',
     name_ZHT: '迷你芙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/smoliv.png',
   },
   {
     id: 929,
@@ -16794,7 +15791,6 @@ export const pokemonData = [
     name_TR: 'Dolliv',
     name_ZHS: '奥利纽',
     name_ZHT: '奥利纽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dolliv.png',
   },
   {
     id: 930,
@@ -16812,7 +15808,6 @@ export const pokemonData = [
     name_TR: 'Arboliva',
     name_ZHS: '奥利瓦',
     name_ZHT: '奥利瓦',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/arboliva.png',
   },
   {
     id: 931,
@@ -16830,8 +15825,6 @@ export const pokemonData = [
     name_TR: 'Squawkabilly',
     name_ZHS: '怒鹦哥',
     name_ZHT: '怒鹦哥',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/squawkabilly.png',
   },
   {
     id: 932,
@@ -16849,7 +15842,6 @@ export const pokemonData = [
     name_TR: 'Nacli',
     name_ZHS: '盐石宝',
     name_ZHT: '盐石宝',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/nacli.png',
   },
   {
     id: 933,
@@ -16867,7 +15859,6 @@ export const pokemonData = [
     name_TR: 'Naclstack',
     name_ZHS: '盐石垒',
     name_ZHT: '盐石垒',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/naclstack.png',
   },
   {
     id: 934,
@@ -16885,7 +15876,6 @@ export const pokemonData = [
     name_TR: 'Garganacl',
     name_ZHS: '盐石巨灵',
     name_ZHT: '盐石巨灵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/garganacl.png',
   },
   {
     id: 935,
@@ -16903,7 +15893,6 @@ export const pokemonData = [
     name_TR: 'Charcadet',
     name_ZHS: '炭小侍',
     name_ZHT: '炭小侍',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/charcadet.png',
   },
   {
     id: 936,
@@ -16921,7 +15910,6 @@ export const pokemonData = [
     name_TR: 'Armarouge',
     name_ZHS: '红莲铠骑',
     name_ZHT: '红莲铠骑',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/armarouge.png',
   },
   {
     id: 937,
@@ -16939,7 +15927,6 @@ export const pokemonData = [
     name_TR: 'Ceruledge',
     name_ZHS: '苍炎刃鬼',
     name_ZHT: '苍炎刃鬼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ceruledge.png',
   },
   {
     id: 938,
@@ -16957,7 +15944,6 @@ export const pokemonData = [
     name_TR: 'Tadbulb',
     name_ZHS: '光蚪仔',
     name_ZHT: '光蚪仔',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tadbulb.png',
   },
   {
     id: 939,
@@ -16975,7 +15961,6 @@ export const pokemonData = [
     name_TR: 'Bellibolt',
     name_ZHS: '电肚蛙',
     name_ZHT: '电肚蛙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bellibolt.png',
   },
   {
     id: 940,
@@ -16993,7 +15978,6 @@ export const pokemonData = [
     name_TR: 'Wattrel',
     name_ZHS: '电海燕',
     name_ZHT: '电海燕',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wattrel.png',
   },
   {
     id: 941,
@@ -17011,8 +15995,6 @@ export const pokemonData = [
     name_TR: 'Kilowattrel',
     name_ZHS: '大电海燕',
     name_ZHT: '大电海燕',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/kilowattrel.png',
   },
   {
     id: 942,
@@ -17030,7 +16012,6 @@ export const pokemonData = [
     name_TR: 'Maschiff',
     name_ZHS: '偶叫獒',
     name_ZHT: '偶叫獒',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/maschiff.png',
   },
   {
     id: 943,
@@ -17048,8 +16029,6 @@ export const pokemonData = [
     name_TR: 'Mabosstiff',
     name_ZHS: '獒教父',
     name_ZHT: '獒教父',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/mabosstiff.png',
   },
   {
     id: 944,
@@ -17067,7 +16046,6 @@ export const pokemonData = [
     name_TR: 'Shroodle',
     name_ZHS: '滋汁鼹',
     name_ZHT: '滋汁鼹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shroodle.png',
   },
   {
     id: 945,
@@ -17085,7 +16063,6 @@ export const pokemonData = [
     name_TR: 'Grafaiai',
     name_ZHS: '涂标客',
     name_ZHT: '涂标客',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/grafaiai.png',
   },
   {
     id: 946,
@@ -17103,7 +16080,6 @@ export const pokemonData = [
     name_TR: 'Bramblin',
     name_ZHS: '纳噬草',
     name_ZHT: '纳噬草',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bramblin.png',
   },
   {
     id: 947,
@@ -17121,8 +16097,6 @@ export const pokemonData = [
     name_TR: 'Brambleghast',
     name_ZHS: '怖纳噬草',
     name_ZHT: '怖纳噬草',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/brambleghast.png',
   },
   {
     id: 948,
@@ -17140,7 +16114,6 @@ export const pokemonData = [
     name_TR: 'Toedscool',
     name_ZHS: '原野水母',
     name_ZHT: '原野水母',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/toedscool.png',
   },
   {
     id: 949,
@@ -17158,8 +16131,6 @@ export const pokemonData = [
     name_TR: 'Toedscruel',
     name_ZHS: '陆地水母',
     name_ZHT: '陆地水母',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/toedscruel.png',
   },
   {
     id: 950,
@@ -17177,7 +16148,6 @@ export const pokemonData = [
     name_TR: 'Klawf',
     name_ZHS: '毛崖蟹',
     name_ZHT: '毛崖蟹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/klawf.png',
   },
   {
     id: 951,
@@ -17195,7 +16165,6 @@ export const pokemonData = [
     name_TR: 'Capsakid',
     name_ZHS: '热辣娃',
     name_ZHT: '热辣娃',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/capsakid.png',
   },
   {
     id: 952,
@@ -17213,8 +16182,6 @@ export const pokemonData = [
     name_TR: 'Scovillain',
     name_ZHS: '狠辣椒',
     name_ZHT: '狠辣椒',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/scovillain.png',
   },
   {
     id: 953,
@@ -17232,7 +16199,6 @@ export const pokemonData = [
     name_TR: 'Rellor',
     name_ZHS: '虫滚泥',
     name_ZHT: '虫滚泥',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rellor.png',
   },
   {
     id: 954,
@@ -17250,7 +16216,6 @@ export const pokemonData = [
     name_TR: 'Rabsca',
     name_ZHS: '虫甲圣',
     name_ZHT: '虫甲圣',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rabsca.png',
   },
   {
     id: 955,
@@ -17268,7 +16233,6 @@ export const pokemonData = [
     name_TR: 'Flittle',
     name_ZHS: '飘飘雏',
     name_ZHT: '飘飘雏',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/flittle.png',
   },
   {
     id: 956,
@@ -17286,7 +16250,6 @@ export const pokemonData = [
     name_TR: 'Espathra',
     name_ZHS: '超能艳鸵',
     name_ZHT: '超能艳鸵',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/espathra.png',
   },
   {
     id: 957,
@@ -17304,7 +16267,6 @@ export const pokemonData = [
     name_TR: 'Tinkatink',
     name_ZHS: '小锻匠',
     name_ZHT: '小锻匠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tinkatink.png',
   },
   {
     id: 958,
@@ -17322,7 +16284,6 @@ export const pokemonData = [
     name_TR: 'Tinkatuff',
     name_ZHS: '巧锻匠',
     name_ZHT: '巧锻匠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tinkatuff.png',
   },
   {
     id: 959,
@@ -17340,7 +16301,6 @@ export const pokemonData = [
     name_TR: 'Tinkaton',
     name_ZHS: '巨锻匠',
     name_ZHT: '巨锻匠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tinkaton.png',
   },
   {
     id: 960,
@@ -17358,7 +16318,6 @@ export const pokemonData = [
     name_TR: 'Wiglett',
     name_ZHS: '海地鼠',
     name_ZHT: '海地鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wiglett.png',
   },
   {
     id: 961,
@@ -17376,7 +16335,6 @@ export const pokemonData = [
     name_TR: 'Wugtrio',
     name_ZHS: '三海地鼠',
     name_ZHT: '三海地鼠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wugtrio.png',
   },
   {
     id: 962,
@@ -17394,8 +16352,6 @@ export const pokemonData = [
     name_TR: 'Bombirdier',
     name_ZHS: '下石鸟',
     name_ZHT: '下石鸟',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/bombirdier.png',
   },
   {
     id: 963,
@@ -17413,7 +16369,6 @@ export const pokemonData = [
     name_TR: 'Finizen',
     name_ZHS: '波普海豚',
     name_ZHT: '波普海豚',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/finizen.png',
   },
   {
     id: 964,
@@ -17431,7 +16386,6 @@ export const pokemonData = [
     name_TR: 'Palafin',
     name_ZHS: '海豚侠',
     name_ZHT: '海豚侠',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/palafin.png',
   },
   {
     id: 965,
@@ -17449,7 +16403,6 @@ export const pokemonData = [
     name_TR: 'Varoom',
     name_ZHS: '噗隆隆',
     name_ZHT: '噗隆隆',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/varoom.png',
   },
   {
     id: 966,
@@ -17467,7 +16420,6 @@ export const pokemonData = [
     name_TR: 'Revavroom',
     name_ZHS: '普隆隆姆',
     name_ZHT: '普隆隆姆',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/revavroom.png',
   },
   {
     id: 967,
@@ -17485,7 +16437,6 @@ export const pokemonData = [
     name_TR: 'Cyclizar',
     name_ZHS: '摩托蜥',
     name_ZHT: '摩托蜥',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cyclizar.png',
   },
   {
     id: 968,
@@ -17503,7 +16454,6 @@ export const pokemonData = [
     name_TR: 'Orthworm',
     name_ZHS: '拖拖蚓',
     name_ZHT: '拖拖蚓',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/orthworm.png',
   },
   {
     id: 969,
@@ -17521,7 +16471,6 @@ export const pokemonData = [
     name_TR: 'Glimmet',
     name_ZHS: '晶光芽',
     name_ZHT: '晶光芽',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/glimmet.png',
   },
   {
     id: 970,
@@ -17539,7 +16488,6 @@ export const pokemonData = [
     name_TR: 'Glimmora',
     name_ZHS: '晶光花',
     name_ZHT: '晶光花',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/glimmora.png',
   },
   {
     id: 971,
@@ -17557,7 +16505,6 @@ export const pokemonData = [
     name_TR: 'Greavard',
     name_ZHS: '墓仔狗',
     name_ZHT: '墓仔狗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/greavard.png',
   },
   {
     id: 972,
@@ -17575,8 +16522,6 @@ export const pokemonData = [
     name_TR: 'Houndstone',
     name_ZHS: '墓扬犬',
     name_ZHT: '墓扬犬',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/houndstone.png',
   },
   {
     id: 973,
@@ -17594,7 +16539,6 @@ export const pokemonData = [
     name_TR: 'Flamigo',
     name_ZHS: '缠红鹤',
     name_ZHT: '缠红鹤',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/flamigo.png',
   },
   {
     id: 974,
@@ -17612,7 +16556,6 @@ export const pokemonData = [
     name_TR: 'Cetoddle',
     name_ZHS: '走鲸',
     name_ZHT: '走鲸',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cetoddle.png',
   },
   {
     id: 975,
@@ -17630,7 +16573,6 @@ export const pokemonData = [
     name_TR: 'Cetitan',
     name_ZHS: '浩大鲸',
     name_ZHT: '浩大鲸',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cetitan.png',
   },
   {
     id: 976,
@@ -17648,7 +16590,6 @@ export const pokemonData = [
     name_TR: 'Veluza',
     name_ZHS: '轻身鳕',
     name_ZHT: '轻身鳕',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/veluza.png',
   },
   {
     id: 977,
@@ -17666,7 +16607,6 @@ export const pokemonData = [
     name_TR: 'Dondozo',
     name_ZHS: '吃吼霸',
     name_ZHT: '吃吼霸',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dondozo.png',
   },
   {
     id: 978,
@@ -17684,7 +16624,6 @@ export const pokemonData = [
     name_TR: 'Tatsugiri',
     name_ZHS: '米立龙',
     name_ZHT: '米立龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tatsugiri.png',
   },
   {
     id: 979,
@@ -17702,8 +16641,6 @@ export const pokemonData = [
     name_TR: 'Annihilape',
     name_ZHS: '弃世猴',
     name_ZHT: '弃世猴',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/annihilape.png',
   },
   {
     id: 980,
@@ -17721,7 +16658,6 @@ export const pokemonData = [
     name_TR: 'Clodsire',
     name_ZHS: '土王',
     name_ZHT: '土王',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/clodsire.png',
   },
   {
     id: 981,
@@ -17739,7 +16675,6 @@ export const pokemonData = [
     name_TR: 'Farigiraf',
     name_ZHS: '奇麒麟',
     name_ZHT: '奇麒麟',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/farigiraf.png',
   },
   {
     id: 982,
@@ -17757,8 +16692,6 @@ export const pokemonData = [
     name_TR: 'Dudunsparce',
     name_ZHS: '土龙节节',
     name_ZHT: '土龙节节',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/dudunsparce.png',
   },
   {
     id: 983,
@@ -17776,7 +16709,6 @@ export const pokemonData = [
     name_TR: 'Kingambit',
     name_ZHS: '仆刀将军',
     name_ZHT: '仆刀将军',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kingambit.png',
   },
   {
     id: 984,
@@ -17794,8 +16726,6 @@ export const pokemonData = [
     name_TR: 'İri Diş',
     name_ZHS: '雄伟牙',
     name_ZHT: '雄伟牙',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/great-tusk.png',
   },
   {
     id: 985,
@@ -17813,8 +16743,6 @@ export const pokemonData = [
     name_TR: 'Kuyruklu Çığlık',
     name_ZHS: '吼叫尾',
     name_ZHT: '吼叫尾',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/scream-tail.png',
   },
   {
     id: 986,
@@ -17832,8 +16760,6 @@ export const pokemonData = [
     name_TR: 'Kaba Şapka',
     name_ZHS: '猛恶菇',
     name_ZHT: '猛恶菇',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/brute-bonnet.png',
   },
   {
     id: 987,
@@ -17851,8 +16777,6 @@ export const pokemonData = [
     name_TR: 'Titrek Yele',
     name_ZHS: '振翼发',
     name_ZHT: '振翼发',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/flutter-mane.png',
   },
   {
     id: 988,
@@ -17870,8 +16794,6 @@ export const pokemonData = [
     name_TR: 'Sürüngen Kanat',
     name_ZHS: '爬地翅',
     name_ZHT: '爬地翅',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/slither-wing.png',
   },
   {
     id: 989,
@@ -17889,8 +16811,6 @@ export const pokemonData = [
     name_TR: 'Kuru Şok',
     name_ZHS: '沙铁皮',
     name_ZHT: '沙铁皮',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/sandy-shocks.png',
   },
   {
     id: 990,
@@ -17908,8 +16828,6 @@ export const pokemonData = [
     name_TR: 'Demir Palet',
     name_ZHS: '铁辙迹',
     name_ZHT: '铁辙迹',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/iron-treads.png',
   },
   {
     id: 991,
@@ -17927,8 +16845,6 @@ export const pokemonData = [
     name_TR: 'Demir Kuyruk',
     name_ZHS: '铁包袱',
     name_ZHT: '铁包袱',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/iron-bundle.png',
   },
   {
     id: 992,
@@ -17946,8 +16862,6 @@ export const pokemonData = [
     name_TR: 'Demir Avuç',
     name_ZHS: '铁臂膀',
     name_ZHT: '铁臂膀',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/iron-hands.png',
   },
   {
     id: 993,
@@ -17965,8 +16879,6 @@ export const pokemonData = [
     name_TR: 'Demir Gerdan',
     name_ZHS: '铁脖颈',
     name_ZHT: '铁脖颈',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/iron-jugulis.png',
   },
   {
     id: 994,
@@ -17984,7 +16896,6 @@ export const pokemonData = [
     name_TR: 'Demir Güve',
     name_ZHS: '铁毒蛾',
     name_ZHT: '铁毒蛾',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/iron-moth.png',
   },
   {
     id: 995,
@@ -18002,8 +16913,6 @@ export const pokemonData = [
     name_TR: 'Demir Zırh',
     name_ZHS: '铁荆棘',
     name_ZHT: '铁荆棘',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/iron-thorns.png',
   },
   {
     id: 996,
@@ -18021,7 +16930,6 @@ export const pokemonData = [
     name_TR: 'Frigibax',
     name_ZHS: '凉脊龙',
     name_ZHT: '凉脊龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/frigibax.png',
   },
   {
     id: 997,
@@ -18039,7 +16947,6 @@ export const pokemonData = [
     name_TR: 'Arctibax',
     name_ZHS: '冻脊龙',
     name_ZHT: '冻脊龙',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/arctibax.png',
   },
   {
     id: 998,
@@ -18057,8 +16964,6 @@ export const pokemonData = [
     name_TR: 'Baxcalibur',
     name_ZHS: '戟脊龙',
     name_ZHT: '戟脊龙',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/baxcalibur.png',
   },
   {
     id: 999,
@@ -18076,8 +16981,6 @@ export const pokemonData = [
     name_TR: 'Gimmighoul',
     name_ZHS: '索财灵',
     name_ZHT: '索财灵',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/gimmighoul.png',
   },
   {
     id: 1000,
@@ -18095,7 +16998,6 @@ export const pokemonData = [
     name_TR: 'Gholdengo',
     name_ZHS: '赛富豪',
     name_ZHT: '赛富豪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gholdengo.png',
   },
   {
     id: 1001,
@@ -18113,7 +17015,6 @@ export const pokemonData = [
     name_TR: 'Wo-Chien',
     name_ZHS: '古简蜗',
     name_ZHT: '古简蜗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wo-chien.png',
   },
   {
     id: 1002,
@@ -18131,7 +17032,6 @@ export const pokemonData = [
     name_TR: 'Chien-Pao',
     name_ZHS: '古剑豹',
     name_ZHT: '古剑豹',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/chien-pao.png',
   },
   {
     id: 1003,
@@ -18149,7 +17049,6 @@ export const pokemonData = [
     name_TR: 'Ting-Lu',
     name_ZHS: '古鼎鹿',
     name_ZHT: '古鼎鹿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ting-lu.png',
   },
   {
     id: 1004,
@@ -18167,7 +17066,6 @@ export const pokemonData = [
     name_TR: 'Chi-Yu',
     name_ZHS: '古玉鱼',
     name_ZHT: '古玉鱼',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/chi-yu.png',
   },
   {
     id: 1005,
@@ -18185,8 +17083,6 @@ export const pokemonData = [
     name_TR: 'Kükreyen Hilal',
     name_ZHS: '轰鸣月',
     name_ZHT: '轰鸣月',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/roaring-moon.png',
   },
   {
     id: 1006,
@@ -18204,8 +17100,6 @@ export const pokemonData = [
     name_TR: 'Demir Savaşçı',
     name_ZHS: '铁武者',
     name_ZHT: '铁武者',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/iron-valiant.png',
   },
   {
     id: 1007,
@@ -18223,7 +17117,6 @@ export const pokemonData = [
     name_TR: 'Koraidon',
     name_ZHS: '故勒顿',
     name_ZHT: '故勒顿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/koraidon.png',
   },
   {
     id: 1008,
@@ -18241,7 +17134,6 @@ export const pokemonData = [
     name_TR: 'Miraidon',
     name_ZHS: '密勒顿',
     name_ZHT: '密勒顿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/miraidon.png',
   },
   {
     id: 1009,
@@ -18259,8 +17151,6 @@ export const pokemonData = [
     name_TR: 'Walking Wake',
     name_ZHS: '波荡水',
     name_ZHT: '波荡水',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/walking-wake.png',
   },
   {
     id: 1010,
@@ -18278,8 +17168,6 @@ export const pokemonData = [
     name_TR: 'Iron Leaves',
     name_ZHS: '铁斑叶',
     name_ZHT: '铁斑叶',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/iron-leaves.png',
   },
   {
     id: 1011,
@@ -18297,7 +17185,6 @@ export const pokemonData = [
     name_TR: 'Dipplin',
     name_ZHS: '裹蜜虫',
     name_ZHT: '裹蜜虫',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dipplin.png',
   },
   {
     id: 1012,
@@ -18315,8 +17202,6 @@ export const pokemonData = [
     name_TR: 'Poltchageist',
     name_ZHS: '斯魔茶',
     name_ZHT: '斯魔茶',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/poltchageist.png',
   },
   {
     id: 1013,
@@ -18334,7 +17219,6 @@ export const pokemonData = [
     name_TR: 'Sinistcha',
     name_ZHS: '來悲粗茶',
     name_ZHT: '來悲粗茶',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sinistcha.png',
   },
   {
     id: 1014,
@@ -18352,7 +17236,6 @@ export const pokemonData = [
     name_TR: 'Okidogi',
     name_ZHS: '够赞狗',
     name_ZHT: '够赞狗',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/okidogi.png',
   },
   {
     id: 1015,
@@ -18370,7 +17253,6 @@ export const pokemonData = [
     name_TR: 'Munkidori',
     name_ZHS: '愿增猿',
     name_ZHT: '愿增猿',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/munkidori.png',
   },
   {
     id: 1016,
@@ -18388,8 +17270,6 @@ export const pokemonData = [
     name_TR: 'Fezandipiti',
     name_ZHS: '吉雉鸡',
     name_ZHT: '吉雉鸡',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/fezandipiti.png',
   },
   {
     id: 1017,
@@ -18407,7 +17287,6 @@ export const pokemonData = [
     name_TR: 'Ogerpon',
     name_ZHS: '厄诡椪',
     name_ZHT: '厄诡椪',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ogerpon.png',
   },
   {
     id: 1018,
@@ -18425,8 +17304,6 @@ export const pokemonData = [
     name_TR: 'Archaludon',
     name_ZHS: '铝钢桥龙',
     name_ZHT: '铝钢桥龙',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/archaludon.png',
   },
   {
     id: 1019,
@@ -18444,7 +17321,6 @@ export const pokemonData = [
     name_TR: 'Hydrapple',
     name_ZHS: '蜜集大蛇',
     name_ZHT: '蜜集大蛇',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hydrapple.png',
   },
   {
     id: 1020,
@@ -18462,8 +17338,6 @@ export const pokemonData = [
     name_TR: 'Gouging Fire',
     name_ZHS: '破空焰',
     name_ZHT: '破空焰',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/gouging-fire.png',
   },
   {
     id: 1021,
@@ -18481,8 +17355,6 @@ export const pokemonData = [
     name_TR: 'Raging Bolt',
     name_ZHS: '猛雷鼓',
     name_ZHT: '猛雷鼓',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/raging-bolt.png',
   },
   {
     id: 1022,
@@ -18500,8 +17372,6 @@ export const pokemonData = [
     name_TR: 'Iron Boulder',
     name_ZHS: '铁磐岩',
     name_ZHT: '铁磐岩',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/iron-boulder.png',
   },
   {
     id: 1023,
@@ -18519,8 +17389,6 @@ export const pokemonData = [
     name_TR: 'Iron Crown',
     name_ZHS: '铁头壳',
     name_ZHT: '铁头壳',
-    sprite_image:
-      'https://img.pokemondb.net/sprites/home/normal/iron-crown.png',
   },
   {
     id: 1024,
@@ -18538,7 +17406,6 @@ export const pokemonData = [
     name_TR: 'Terapagos',
     name_ZHS: '太乐巴戈斯',
     name_ZHT: '太乐巴戈斯',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/terapagos.png',
   },
   {
     id: 1025,
@@ -18556,6 +17423,5 @@ export const pokemonData = [
     name_TR: 'Pecharunt',
     name_ZHS: '桃歹郎',
     name_ZHT: '桃歹郎',
-    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pecharunt.png',
   },
 ];

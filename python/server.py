@@ -77,7 +77,7 @@ class PokemonNames():
                     pokemon_data = {
                         "id": i+1,
                         "name_EN": english_name,
-                        "sprite_image": "https://img.pokemondb.net/sprites/home/normal/{}.png".format(english_name_html)
+                        # "sprite_image": "https://img.pokemondb.net/sprites/home/normal/{}.png".format(english_name_html)
                     }
                     ## Ititialize all the names to English since most don't have explicit localizations
                     for language_i in self.languages:

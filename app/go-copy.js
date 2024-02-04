@@ -1,9 +1,9 @@
 'use client';
 
-import { pokemonData } from './lib/pokemon.js';
-import { languageData } from './lib/languages.js';
-import { LeftBorder } from './components/LeftBorder';
-import { RightBorder } from './components/RightBorder';
+import { pokemonData } from './lib/pokemon';
+import { missingPokemon } from './lib/missing-pokemon';
+import { languageData } from './lib/languages';
+import { Borders } from './components/Borders';
 import backButton from '../public/btn-back.webp';
 import Image from 'next/image';
 import copy from 'copy-to-clipboard';
@@ -13,7 +13,6 @@ import { useState, useEffect } from 'react';
 function Pokemon({
   nameEnglish,
   nameForeign,
-  sprite_image,
   pokemonNumber,
   setPopupText,
   setPopupKey,
@@ -24,19 +23,14 @@ function Pokemon({
     setPopupKey((prevID) => prevID + 1);
   }
 
-  // HACK: Invisible Pokemon to fill in the CSS grid
-  const style = pokemonNumber < 0 ? 'hidden' : 'visible';
-
   return (
     <button
       className="pokemon-grid-item"
       onClick={() => handleClick()}
-      style={{ visibility: style }}
       title={`Copy ${nameForeign}`}
     >
       <Image
-        src={`/pokemon-images/${Math.abs(pokemonNumber)}.webp`}
-        // src={sprite_image}
+        src={`/pokemon-images/${pokemonNumber}.webp`}
         alt={'Image of the Pokémon ' + nameEnglish}
         height={256}
         width={256}
@@ -64,31 +58,31 @@ function PokemonGrid({ setPopupText, searchValue, setPopupKey, languageCode }) {
   if (searchValue) {
     if (isNumber(searchValue)) {
       filteredPokemon = pokemonData.filter(
-        (pokemon) => pokemon.id == Number(searchValue) || pokemon.id < 0
+        (pokemon) => pokemon.id == Number(searchValue)
       );
     } else {
       const searchRegex = new RegExp(`^${searchValue.toLowerCase()}.*`);
       filteredPokemon = pokemonData.filter(
-        (pokemon) =>
-          pokemon.name_EN.toLowerCase().match(searchRegex) != null ||
-          pokemon.id < 0
+        (pokemon) => pokemon.name_EN.toLowerCase().match(searchRegex) != null
       );
     }
   }
 
-  let pokemonList = filteredPokemon.map((pokemon) => {
+  const pokemonList = filteredPokemon.map((pokemon) => {
     const nameForeign = pokemon[`name_${languageCode}`];
-    return (
-      <Pokemon
-        key={pokemon.id}
-        nameEnglish={pokemon.name_EN}
-        nameForeign={nameForeign}
-        sprite_image={pokemon.sprite_image}
-        pokemonNumber={pokemon.id}
-        setPopupText={setPopupText}
-        setPopupKey={setPopupKey}
-      />
-    );
+    // Don't show Pokemon that aren't in GO yet (Spoilers)
+    if (!missingPokemon.includes(pokemon.id)) {
+      return (
+        <Pokemon
+          key={pokemon.id}
+          nameEnglish={pokemon.name_EN}
+          nameForeign={nameForeign}
+          pokemonNumber={pokemon.id}
+          setPopupText={setPopupText}
+          setPopupKey={setPopupKey}
+        />
+      );
+    }
   });
 
   return (
@@ -302,8 +296,7 @@ export default function FilterablePokedex() {
 
   return (
     <>
-      <LeftBorder />
-      <RightBorder />
+      <Borders />
       <LanguageSelection
         setLanguageCode={setLanguageCode}
         isMainVisible={isMainVisible}
