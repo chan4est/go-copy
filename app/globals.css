@@ -57,7 +57,7 @@ button:hover {
 }
 
 .language-chosen-btn {
-  background-image: url('../public/btn-dropdown.png');
+  background-image: url('../public/btn-dropdown.webp');
   background-position: 95%;
   background-repeat: no-repeat;
   background-size: 15px;
@@ -114,7 +114,7 @@ button:hover {
 
 .search-input {
   background-color: #e7f2df;
-  background-image: url('../public/search.png');
+  background-image: url('../public/icon-search.webp');
   background-position: 35% 50%;
   background-repeat: no-repeat;
   background-size: 20px;

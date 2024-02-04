@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { LeftBorder } from './components/LeftBorder';
 import { RightBorder } from './components/RightBorder';
-import questionMark from '../public/unown-qm.png';
+import questionMark from '../public/201-qm.webp';
 import style from './styles/error.css';
 
 export const metadata = {

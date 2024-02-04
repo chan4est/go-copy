@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import rightBorder from '../../public/right-border.jpg';
+import rightBorder from '../../public/border-right.webp';
 import styles from './Border.module.css';
 
 export function RightBorder() {

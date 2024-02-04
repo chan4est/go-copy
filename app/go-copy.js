@@ -4,7 +4,7 @@ import { pokemonData } from './lib/pokemon.js';
 import { languageData } from './lib/languages.js';
 import { LeftBorder } from './components/LeftBorder';
 import { RightBorder } from './components/RightBorder';
-import backButton from '../public/btn-back.png';
+import backButton from '../public/btn-back.webp';
 import Image from 'next/image';
 import copy from 'copy-to-clipboard';
 
@@ -124,10 +124,10 @@ function SearchBar({ popupText, popupKey, setSearchValue }) {
           type="text"
           placeholder="Search"
           onChange={(e) => setSearchValue(e.target.value)}
-          autocomplete="off"
-          autocorrect="off"
-          autocapitalize="off"
-          spellcheck="false"
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck="false"
         />
       </div>
     </div>
