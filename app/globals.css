@@ -9,9 +9,9 @@ body {
 body {
   background-color: #f8fff7;
   color: #4c6f72;
-  display: flex; /* might not be needed */
+  display: flex;
   font-family: 'Lato', sans-serif;
-  justify-content: center; /* might not be needed */
+  justify-content: center;
 }
 
 button {
@@ -108,15 +108,34 @@ button:hover {
   grid-row: 1;
   width: 770px;
   width: clamp(320px, 100vw, 770px);
+}
 
-  /*  */
+.search-icon {
+  left: calc(50% - 3.43rem);
+  position: absolute;
+  top: calc(50% - 5px);
+}
+
+.search-icon-translated {
+  animation: move-left 0.5s;
+  left: 10%;
+  position: absolute;
+  top: calc(50% - 5px);
+}
+
+@keyframes move-left {
+  0% {
+    left: calc(50% - 3.43rem);
+    top: calc(50% - 5px);
+  }
+  100% {
+    left: 10%;
+    top: calc(50% - 5px);
+  }
 }
 
 .search-input {
   background-color: #e7f2df;
-  background-image: url('../public/icon-search.webp');
-  background-position: 35% 50%;
-  background-repeat: no-repeat;
   background-size: 20px;
   border: none;
   border-radius: 25px;
@@ -125,7 +144,9 @@ button:hover {
   font-size: 1.05rem;
   height: 45px;
   text-align: center;
-  width: 85%;
+  width: 65%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .search-input::placeholder {

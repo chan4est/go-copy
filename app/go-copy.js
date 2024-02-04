@@ -8,7 +8,7 @@ import backButton from '../public/btn-back.webp';
 import Image from 'next/image';
 import copy from 'copy-to-clipboard';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function Pokemon({
   nameEnglish,
@@ -106,6 +106,19 @@ function CopyPopup({ popupText, popupKey }) {
 }
 
 function SearchBar({ popupText, popupKey, setSearchValue }) {
+  const inputRef = useRef(null);
+  const [isFocused, setIsFocused] = useState(false);
+  const [hasText, setHasText] = useState(false);
+
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
+    setHasText(inputRef.current.value.trim() !== ''); // Check if the input has text
+  };
+
   return (
     <div className="searchbar-container">
       <CopyPopup popupText={popupText} popupKey={popupKey} />
@@ -122,6 +135,20 @@ function SearchBar({ popupText, popupKey, setSearchValue }) {
           autoCorrect="off"
           autoCapitalize="off"
           spellCheck="false"
+          onBlur={handleBlur}
+          onFocus={handleFocus}
+          ref={inputRef}
+        />
+        <Image
+          src={`/icon-search.webp`}
+          className={`${
+            isFocused || hasText ? 'search-icon-translated' : 'search-icon'
+          }`}
+          alt={''}
+          height={20}
+          width={20}
+          quality={100}
+          unoptimized={true}
         />
       </div>
     </div>
