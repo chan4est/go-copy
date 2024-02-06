@@ -105,12 +105,19 @@ function CopyPopup({ popupText, popupKey }) {
   );
 }
 
-function SearchBar({ popupText, popupKey, setSearchValue }) {
+function SearchBar({ popupText, popupKey, setSearchValue, screenWasChanged }) {
   const [wasFocused, setWasFocused] = useState(false);
 
   const handleFocus = () => {
     setWasFocused(true);
   };
+
+  let className = 'search-icon';
+  if (screenWasChanged) {
+    className = 'search-icon-left';
+  } else if (wasFocused) {
+    className = 'search-icon-translated';
+  }
 
   return (
     <div className="searchbar-container">
@@ -132,7 +139,7 @@ function SearchBar({ popupText, popupKey, setSearchValue }) {
         />
         <Image
           src={`/icon-search.webp`}
-          className={`${wasFocused ? 'search-icon-translated' : 'search-icon'}`}
+          className={className}
           alt={''}
           height={20}
           width={20}
@@ -144,11 +151,18 @@ function SearchBar({ popupText, popupKey, setSearchValue }) {
   );
 }
 
-function InstructionsBar({ languageCode, setIsMainVisible, setPopupText }) {
+function InstructionsBar({
+  languageCode,
+  setIsMainVisible,
+  setPopupText,
+  setScreenWasChanged,
+}) {
   function handleClick() {
     setIsMainVisible(false);
     // Clear so popup doesn't happen after language selection
     setPopupText(null);
+    // Set flag for screen changing so search animation doesn't play again
+    setScreenWasChanged(true);
   }
 
   return (
@@ -282,6 +296,7 @@ function MainContent({ languageCode, isMainVisible, setIsMainVisible }) {
   const [popupText, setPopupText] = useState(null);
   const [popupKey, setPopupKey] = useState(0);
   const [searchValue, setSearchValue] = useState(null);
+  const [screenWasChanged, setScreenWasChanged] = useState(false);
 
   return (
     <div style={{ display: isMainVisible ? '' : 'none' }}>
@@ -290,11 +305,13 @@ function MainContent({ languageCode, isMainVisible, setIsMainVisible }) {
         languageCode={languageCode}
         setIsMainVisible={setIsMainVisible}
         setPopupText={setPopupText}
+        setScreenWasChanged={setScreenWasChanged}
       />
       <SearchBar
         popupText={popupText}
         popupKey={popupKey}
         setSearchValue={setSearchValue}
+        screenWasChanged={screenWasChanged}
       />
       <PokemonGrid
         setPopupText={setPopupText}

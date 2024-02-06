@@ -134,6 +134,12 @@ button:hover {
   }
 }
 
+.search-icon-left {
+  left: 10%;
+  position: absolute;
+  top: calc(50% - 5px);
+}
+
 .search-input {
   background-color: #e7f2df;
   background-size: 20px;
