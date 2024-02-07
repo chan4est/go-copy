@@ -253,9 +253,10 @@ function TutorialImage({ imagePath, width, height }) {
     <Image
       src={imagePath}
       alt={''}
-      width={width / 4.25}
-      height={height / 4.25}
+      width={width}
+      height={height}
       quality={100}
+      unoptimized={true}
     />
   );
 }
@@ -273,16 +274,16 @@ function Tutorial({ screenSelection, setScreenSelection }) {
           <div className="">
             <TutorialImage
               imagePath={'/tutorial/tut1.webp'}
-              width={1378 / 2}
-              height={2250 / 2}
+              width={162}
+              height={265}
             />
             <p className="tipText">Filter by name...</p>
           </div>
           <div className="">
             <TutorialImage
               imagePath={'/tutorial/tut2.webp'}
-              width={1378 / 2}
-              height={2250 / 2}
+              width={162}
+              height={265}
               tipText={'or dex number!'}
             />
             <p className="tipText">or dex number!</p>
@@ -290,8 +291,8 @@ function Tutorial({ screenSelection, setScreenSelection }) {
           <div className="grid-item ">
             <TutorialImage
               imagePath={'/tutorial/tut3.webp'}
-              width={1702 / 2}
-              height={2297 / 2}
+              width={162}
+              height={215}
             />
             <p className="tipText">
               Scroll quickly <br></br>using your <br></br>browser&#39;s{' '}
@@ -306,26 +307,26 @@ function Tutorial({ screenSelection, setScreenSelection }) {
         </p>
         <TutorialImage
           imagePath={'/tutorial/tut4.webp'}
-          width={1324}
-          height={2262}
+          width={326}
+          height={556}
         />
         <p>3.) Switch apps to Pokémon GO.</p>
         <TutorialImage
           imagePath={'/tutorial/tut5.webp'}
-          width={1376}
-          height={2240}
+          width={326}
+          height={531}
         />
         <p>4.) Paste in your new nickname.</p>
         <TutorialImage
           imagePath={'/tutorial/tut6.webp'}
-          width={1376}
-          height={1858}
+          width={326}
+          height={440}
         />
         <p>Done!</p>
         <TutorialImage
           imagePath={'/tutorial/tut7.webp'}
-          width={1376}
-          height={1700}
+          width={326}
+          height={403}
         />
         <p>
           TIP! You can choose other nicknaming <br></br>languages from the
@@ -333,8 +334,8 @@ function Tutorial({ screenSelection, setScreenSelection }) {
         </p>
         <TutorialImage
           imagePath={'/tutorial/tut8.webp'}
-          width={1576 / 1.25}
-          height={2102 / 1.25}
+          width={326}
+          height={435}
         />
       </div>
     </div>
