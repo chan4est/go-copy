@@ -4,6 +4,7 @@ body {
   margin: 0;
   overflow-x: clip;
   padding: 0;
+  user-select: none;
 }
 
 body {
@@ -77,6 +78,7 @@ button:hover {
   font-size: 1.25rem;
   padding-bottom: 30px;
   padding-top: 1.5rem;
+  pointer-events: none;
   text-align: center;
 }
 

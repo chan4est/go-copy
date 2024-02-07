@@ -253,8 +253,8 @@ function TutorialImage({ imagePath, width, height }) {
     <Image
       src={imagePath}
       alt={''}
-      width={width / 4}
-      height={height / 4}
+      width={width / 4.25}
+      height={height / 4.25}
       quality={100}
     />
   );
@@ -333,8 +333,8 @@ function Tutorial({ screenSelection, setScreenSelection }) {
         </p>
         <TutorialImage
           imagePath={'/tutorial/tut8.webp'}
-          width={1576}
-          height={2102}
+          width={1576 / 1.25}
+          height={2102 / 1.25}
         />
       </div>
     </div>
