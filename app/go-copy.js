@@ -113,11 +113,11 @@ function SearchBar({ popupText, popupKey, setSearchValue, screenWasChanged }) {
     setWasFocused(true);
   };
 
-  let className = 'search-icon';
+  let backgroundClassName = '';
   if (screenWasChanged && wasFocused) {
-    className = 'search-icon-left';
+    backgroundClassName = 'search-input-background-left';
   } else if (wasFocused) {
-    className = 'search-icon-translated';
+    backgroundClassName = 'search-input-background-animation';
   }
 
   return (
@@ -129,7 +129,7 @@ function SearchBar({ popupText, popupKey, setSearchValue, screenWasChanged }) {
           title="Search by a Pokémon's English name or by their dex number"
         >
           <input
-            className="search-input"
+            className={`search-input ${backgroundClassName}`}
             type="text"
             placeholder="Search"
             onChange={(e) => setSearchValue(e.target.value)}
@@ -138,15 +138,6 @@ function SearchBar({ popupText, popupKey, setSearchValue, screenWasChanged }) {
             autoCapitalize="off"
             spellCheck="false"
             onFocus={handleFocus}
-          />
-          <Image
-            src={`/icon-search.webp`}
-            className={className}
-            alt={''}
-            height={20}
-            width={20}
-            quality={100}
-            unoptimized={true}
           />
         </div>
       </div>

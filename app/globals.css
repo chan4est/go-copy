@@ -16,21 +16,24 @@ body {
 }
 
 footer {
-  text-align: center;
+  width: 100vw;
+}
+
+.footer-container {
+  background-color: #e7f2df;
   padding-bottom: 16px;
   padding-left: 5vw;
   padding-right: 5vw;
   padding-top: 16px;
-  background-color: #e7f2df;
-  width: 100vw;
+  text-align: center;
 }
 
-footer > p {
+.footer-container > p {
   font-size: x-small;
   line-height: 16px;
 }
 
-footer > a,
+.footer-container > a,
 a:visited,
 a:hover,
 a:active {
@@ -122,10 +125,10 @@ button:hover {
 }
 
 .tutorial-container-s1 {
+  column-gap: 16px;
   display: grid;
   grid-auto-rows: auto;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 16px;
 }
 
 .grid-item {
@@ -184,8 +187,11 @@ button:hover {
 }
 
 .searchbar-container-container {
+  align-items: center;
   display: flex;
   justify-content: center;
+  position: sticky;
+  top: 0;
 }
 
 .searchbar-container {
@@ -193,51 +199,22 @@ button:hover {
   display: grid;
   grid-template-columns: 100%;
   padding-top: 10px;
-  position: sticky;
   text-align: center;
-  top: 0;
+  width: clamp(320px, 100vw, 770px);
 }
 
 .searchbar {
   align-self: center;
   grid-column: 1;
   grid-row: 1;
-  width: 770px;
-  width: clamp(320px, 100vw, 770px);
-}
-
-.search-icon {
-  left: calc(50% - 3.43rem);
-  position: absolute;
-  top: calc(50% - 5px);
-}
-
-.search-icon-translated {
-  animation: move-left 0.15s;
-  left: 10%;
-  position: absolute;
-  top: calc(50% - 5px);
-}
-
-@keyframes move-left {
-  0% {
-    left: calc(50% - 3.43rem);
-    top: calc(50% - 5px);
-  }
-  100% {
-    left: 10%;
-    top: calc(50% - 5px);
-  }
-}
-
-.search-icon-left {
-  left: 10%;
-  position: absolute;
-  top: calc(50% - 5px);
 }
 
 .search-input {
   background-color: #e7f2df;
+  background-image: url('../public/icon-search.webp');
+  background-position: calc(50% - 3.43rem);
+  background-repeat: no-repeat;
+  background-size: 20px;
   background-size: 20px;
   border: none;
   border-radius: 25px;
@@ -249,6 +226,24 @@ button:hover {
   padding-right: 10%;
   text-align: center;
   width: 65%;
+}
+
+.search-input-background-animation {
+  animation: move-left 0.15s;
+  background-position: 3%;
+}
+
+@keyframes move-left {
+  0% {
+    background-position: calc(50% - 3.43rem);
+  }
+  100% {
+    background-position: 3%;
+  }
+}
+
+.search-input-background-left {
+  background-position: 3%;
 }
 
 .search-input::placeholder {
