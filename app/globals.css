@@ -30,9 +30,35 @@ button:hover {
   background-color: rgba(183, 240, 155, 0.35);
 }
 
+.help-btn {
+  border-radius: 50px;
+  bottom: 2%;
+  height: 70px;
+  padding: 0;
+  position: fixed;
+  right: 5%;
+  transform: translateX(-5%);
+  width: 70px;
+  z-index: 3;
+}
+
+.back-btn {
+  border-radius: 50px;
+  height: 50px;
+  left: 5%;
+  padding: 0;
+  pointer-events: auto;
+  position: fixed;
+  top: 0.75rem;
+  transform: translateX(5%);
+  transform: rotate(-90deg);
+  width: 50px;
+  z-index: 3;
+}
+
 .scroll-up-btn {
   border-radius: 50px;
-  bottom: 5%;
+  bottom: 3%;
   height: 50px;
   left: 50%;
   padding: 0;
@@ -45,6 +71,42 @@ button:hover {
 .scroll-up-btn:active,
 .scroll-up-btn:hover {
   background-color: rgba(183, 240, 155, 0.7);
+}
+
+.tutorial {
+  font-size: 1.25rem;
+  padding-bottom: 30px;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.tutorial > p {
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+
+.tipText {
+  font-size: 0.9rem;
+  padding-bottom: 10px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: center;
+}
+
+.tutorial-container-s1 {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.grid-item:nth-child(3) {
+  grid-column: span 2;
 }
 
 .instructions {
@@ -149,10 +211,10 @@ button:hover {
   font-family: 'Lato', sans-serif;
   font-size: 1.05rem;
   height: 45px;
-  text-align: center;
-  width: 65%;
   padding-left: 10%;
   padding-right: 10%;
+  text-align: center;
+  width: 65%;
 }
 
 .search-input::placeholder {

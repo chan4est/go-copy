@@ -5,6 +5,7 @@ import { missingPokemon } from './lib/missing-pokemon';
 import { languageData } from './lib/languages';
 import { Borders } from './components/Borders';
 import backButton from '../public/btn-back.webp';
+import questionButton from '../public/btn-question.webp';
 import Image from 'next/image';
 import copy from 'copy-to-clipboard';
 
@@ -113,7 +114,7 @@ function SearchBar({ popupText, popupKey, setSearchValue, screenWasChanged }) {
   };
 
   let className = 'search-icon';
-  if (screenWasChanged) {
+  if (screenWasChanged && wasFocused) {
     className = 'search-icon-left';
   } else if (wasFocused) {
     className = 'search-icon-translated';
@@ -153,12 +154,12 @@ function SearchBar({ popupText, popupKey, setSearchValue, screenWasChanged }) {
 
 function InstructionsBar({
   languageCode,
-  setIsMainVisible,
+  setScreenSelection,
   setPopupText,
   setScreenWasChanged,
 }) {
   function handleClick() {
-    setIsMainVisible(false);
+    setScreenSelection(2);
     // Clear so popup doesn't happen after language selection
     setPopupText(null);
     // Set flag for screen changing so search animation doesn't play again
@@ -186,11 +187,11 @@ function LanguageButton({
   languageCode,
   languageName,
   setLanguageCode,
-  setIsMainVisible,
+  setScreenSelection,
 }) {
   function handleClick() {
     setLanguageCode(languageCode);
-    setIsMainVisible(true);
+    setScreenSelection(0);
   }
 
   function format(languageName) {
@@ -218,8 +219,8 @@ function LanguageButton({
 
 function LanguageSelection({
   setLanguageCode,
-  isMainVisible,
-  setIsMainVisible,
+  screenSelection,
+  setScreenSelection,
 }) {
   const languageList = Object.entries(languageData).map(
     ([languageCode, languageName]) => {
@@ -229,7 +230,7 @@ function LanguageSelection({
           languageCode={languageCode}
           languageName={languageName}
           setLanguageCode={setLanguageCode}
-          setIsMainVisible={setIsMainVisible}
+          setScreenSelection={setScreenSelection}
         />
       );
     }
@@ -237,12 +238,146 @@ function LanguageSelection({
   return (
     <div
       className="language-selection"
-      style={{ display: !isMainVisible ? 'grid' : 'none' }}
+      style={{ display: screenSelection == 2 ? 'grid' : 'none' }}
     >
       <div className="instructions language-instructions ">
         CHOOSE YOUR NICKNAMING LANGUAGE
       </div>
       {languageList}
+    </div>
+  );
+}
+
+function TutorialImage({ imagePath, width, height }) {
+  return (
+    <Image
+      src={imagePath}
+      alt={''}
+      width={width / 4}
+      height={height / 4}
+      quality={100}
+    />
+  );
+}
+
+function Tutorial({ screenSelection, setScreenSelection }) {
+  return (
+    <div style={{ display: screenSelection == 1 ? '' : 'none' }}>
+      <BackButton setScreenSelection={setScreenSelection} />
+      <div className="tutorial">
+        <u>TUTORIAL</u>
+        <p>
+          1.) Search or scroll to the Pokémon <br></br>you want to nickname.
+        </p>
+        <div className="tutorial-container-s1">
+          <div className="">
+            <TutorialImage
+              imagePath={'/tutorial/tut1.webp'}
+              width={1378 / 2}
+              height={2250 / 2}
+            />
+            <p className="tipText">Filter by name...</p>
+          </div>
+          <div className="">
+            <TutorialImage
+              imagePath={'/tutorial/tut2.webp'}
+              width={1378 / 2}
+              height={2250 / 2}
+              tipText={'or dex number!'}
+            />
+            <p className="tipText">or dex number!</p>
+          </div>
+          <div className="grid-item ">
+            <TutorialImage
+              imagePath={'/tutorial/tut3.webp'}
+              width={1702 / 2}
+              height={2297 / 2}
+            />
+            <p className="tipText">
+              Scroll quickly <br></br>using your <br></br>browser&#39;s{' '}
+              <br></br>
+              scroll bar!
+            </p>
+          </div>
+        </div>
+        <p>
+          2.) Tap on the Pokémon to automatically <br></br>put the foreign name
+          into your clipboard.
+        </p>
+        <TutorialImage
+          imagePath={'/tutorial/tut4.webp'}
+          width={1324}
+          height={2262}
+        />
+        <p>3.) Switch apps to Pokémon GO.</p>
+        <TutorialImage
+          imagePath={'/tutorial/tut5.webp'}
+          width={1376}
+          height={2240}
+        />
+        <p>4.) Paste in your new nickname.</p>
+        <TutorialImage
+          imagePath={'/tutorial/tut6.webp'}
+          width={1376}
+          height={1858}
+        />
+        <p>Done!</p>
+        <TutorialImage
+          imagePath={'/tutorial/tut7.webp'}
+          width={1376}
+          height={1700}
+        />
+        <p>
+          TIP! You can choose other nicknaming <br></br>languages from the
+          dropdown menu at <br></br>the top of the screen
+        </p>
+        <TutorialImage
+          imagePath={'/tutorial/tut8.webp'}
+          width={1576}
+          height={2102}
+        />
+      </div>
+    </div>
+  );
+}
+
+function QuestionButton({ setScreenSelection, setScreenWasChanged }) {
+  function handleClick() {
+    setScreenSelection(1);
+    setScreenWasChanged(true);
+  }
+  return (
+    <div>
+      <button onClick={handleClick} className="help-btn" title="Tutorial">
+        <Image
+          src={questionButton}
+          height={70}
+          width={70}
+          alt=""
+          quality={100}
+          unoptimized={true}
+        />
+      </button>
+    </div>
+  );
+}
+
+function BackButton({ setScreenSelection }) {
+  function handleClick() {
+    setScreenSelection(0);
+  }
+  return (
+    <div>
+      <button onClick={handleClick} className="back-btn" title="Exit">
+        <Image
+          src={backButton}
+          height={50}
+          width={50}
+          alt=""
+          quality={100}
+          unoptimized={true}
+        />
+      </button>
     </div>
   );
 }
@@ -285,25 +420,36 @@ function ScrollToTopButton() {
           className="scroll-up-btn"
           title="Go back to the top"
         >
-          <Image src={backButton} height={50} width={50} alt="" />
+          <Image
+            src={backButton}
+            height={50}
+            width={50}
+            alt=""
+            quality={100}
+            unoptimized={true}
+          />
         </button>
       )}
     </div>
   );
 }
 
-function MainContent({ languageCode, isMainVisible, setIsMainVisible }) {
+function MainContent({ languageCode, screenSelection, setScreenSelection }) {
   const [popupText, setPopupText] = useState(null);
   const [popupKey, setPopupKey] = useState(0);
   const [searchValue, setSearchValue] = useState(null);
   const [screenWasChanged, setScreenWasChanged] = useState(false);
 
   return (
-    <div style={{ display: isMainVisible ? '' : 'none' }}>
+    <div style={{ display: screenSelection == 0 ? '' : 'none' }}>
       <ScrollToTopButton />
+      <QuestionButton
+        setScreenSelection={setScreenSelection}
+        setScreenWasChanged={setScreenWasChanged}
+      />
       <InstructionsBar
         languageCode={languageCode}
-        setIsMainVisible={setIsMainVisible}
+        setScreenSelection={setScreenSelection}
         setPopupText={setPopupText}
         setScreenWasChanged={setScreenWasChanged}
       />
@@ -325,20 +471,25 @@ function MainContent({ languageCode, isMainVisible, setIsMainVisible }) {
 
 export default function FilterablePokedex() {
   const [languageCode, setLanguageCode] = useState('JA');
-  const [isMainVisible, setIsMainVisible] = useState(true);
+  // 0 => Main, 1 => Tutorial, 2 => Language Selection
+  const [screenSelection, setScreenSelection] = useState(0);
 
   return (
     <>
       <Borders />
       <LanguageSelection
         setLanguageCode={setLanguageCode}
-        isMainVisible={isMainVisible}
-        setIsMainVisible={setIsMainVisible}
+        screenSelection={screenSelection}
+        setScreenSelection={setScreenSelection}
+      />
+      <Tutorial
+        screenSelection={screenSelection}
+        setScreenSelection={setScreenSelection}
       />
       <MainContent
         languageCode={languageCode}
-        isMainVisible={isMainVisible}
-        setIsMainVisible={setIsMainVisible}
+        screenSelection={screenSelection}
+        setScreenSelection={setScreenSelection}
       />
     </>
   );
