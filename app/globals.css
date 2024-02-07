@@ -15,11 +15,33 @@ body {
   justify-content: center;
 }
 
+footer {
+  text-align: center;
+  padding-bottom: 16px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 16px;
+  background-color: #e7f2df;
+  width: 100vw;
+}
+
+footer > p {
+  font-size: x-small;
+  line-height: 16px;
+}
+
+footer > a,
+a:visited,
+a:hover,
+a:active {
+  color: black;
+}
+
 button {
   background: none;
   border: none;
   border: none;
-  border-radius: 15px;
+  border-radius: 16px;
   color: #4c6f72;
   cursor: pointer;
   font-family: 'Lato', sans-serif;
@@ -78,7 +100,6 @@ button:hover {
   font-size: 1.25rem;
   padding-bottom: 30px;
   padding-top: 1.5rem;
-  pointer-events: none;
   text-align: center;
 }
 
@@ -95,10 +116,16 @@ button:hover {
   text-align: center;
 }
 
+.tutorial-container-s1-container {
+  display: flex;
+  justify-content: center;
+}
+
 .tutorial-container-s1 {
   display: grid;
   grid-auto-rows: auto;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: 16px;
 }
 
 .grid-item {
@@ -114,7 +141,7 @@ button:hover {
 .instructions {
   font-size: 1.05rem;
   line-height: 25px;
-  padding-bottom: 15px;
+  padding-bottom: 16px;
   padding-top: 60px;
   text-align: center;
   word-spacing: 5px;
@@ -124,7 +151,7 @@ button:hover {
   background-image: url('../public/btn-dropdown.webp');
   background-position: 95%;
   background-repeat: no-repeat;
-  background-size: 15px;
+  background-size: 16px;
   border-radius: 3px;
   color: #43a282;
   font-size: 1.05rem;
@@ -154,6 +181,11 @@ button:hover {
 
 .language-option-btn small {
   font-size: 1rem;
+}
+
+.searchbar-container-container {
+  display: flex;
+  justify-content: center;
 }
 
 .searchbar-container {

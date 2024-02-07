@@ -121,32 +121,34 @@ function SearchBar({ popupText, popupKey, setSearchValue, screenWasChanged }) {
   }
 
   return (
-    <div className="searchbar-container">
-      <CopyPopup popupText={popupText} popupKey={popupKey} />
-      <div
-        className="searchbar"
-        title="Search by a Pokémon's English name or by their dex number"
-      >
-        <input
-          className="search-input"
-          type="text"
-          placeholder="Search"
-          onChange={(e) => setSearchValue(e.target.value)}
-          autoComplete="off"
-          autoCorrect="off"
-          autoCapitalize="off"
-          spellCheck="false"
-          onFocus={handleFocus}
-        />
-        <Image
-          src={`/icon-search.webp`}
-          className={className}
-          alt={''}
-          height={20}
-          width={20}
-          quality={100}
-          unoptimized={true}
-        />
+    <div className="searchbar-container-container">
+      <div className="searchbar-container">
+        <CopyPopup popupText={popupText} popupKey={popupKey} />
+        <div
+          className="searchbar"
+          title="Search by a Pokémon's English name or by their dex number"
+        >
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Search"
+            onChange={(e) => setSearchValue(e.target.value)}
+            autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck="false"
+            onFocus={handleFocus}
+          />
+          <Image
+            src={`/icon-search.webp`}
+            className={className}
+            alt={''}
+            height={20}
+            width={20}
+            quality={100}
+            unoptimized={true}
+          />
+        </div>
       </div>
     </div>
   );
@@ -263,46 +265,51 @@ function TutorialImage({ imagePath, width, height }) {
 
 function Tutorial({ screenSelection, setScreenSelection }) {
   return (
-    <div style={{ display: screenSelection == 1 ? '' : 'none' }}>
+    <div
+      id="tutorial-visibility"
+      style={{ display: screenSelection == 1 ? '' : 'none' }}
+    >
       <BackButton setScreenSelection={setScreenSelection} />
       <div className="tutorial">
         <u>TUTORIAL</u>
         <p>
-          1.) Search or scroll to the Pokémon <br></br>you want to nickname.
+          1. Search or scroll to the Pokémon <br></br>you want to nickname.
         </p>
-        <div className="tutorial-container-s1">
-          <div className="">
-            <TutorialImage
-              imagePath={'/tutorial/tut1.webp'}
-              width={162}
-              height={265}
-            />
-            <p className="tipText">Filter by name...</p>
-          </div>
-          <div className="">
-            <TutorialImage
-              imagePath={'/tutorial/tut2.webp'}
-              width={162}
-              height={265}
-              tipText={'or dex number!'}
-            />
-            <p className="tipText">or dex number!</p>
-          </div>
-          <div className="grid-item ">
-            <TutorialImage
-              imagePath={'/tutorial/tut3.webp'}
-              width={162}
-              height={215}
-            />
-            <p className="tipText">
-              Scroll quickly <br></br>using your <br></br>browser&#39;s{' '}
-              <br></br>
-              scroll bar!
-            </p>
+        <div className="tutorial-container-s1-container">
+          <div className="tutorial-container-s1">
+            <div>
+              <TutorialImage
+                imagePath={'/tutorial/tut1.webp'}
+                width={162}
+                height={265}
+              />
+              <p className="tipText">Filter by name...</p>
+            </div>
+            <div>
+              <TutorialImage
+                imagePath={'/tutorial/tut2.webp'}
+                width={162}
+                height={265}
+                tipText={'or dex number!'}
+              />
+              <p className="tipText">or dex number!</p>
+            </div>
+            <div className="grid-item">
+              <TutorialImage
+                imagePath={'/tutorial/tut3.webp'}
+                width={162}
+                height={215}
+              />
+              <p className="tipText">
+                Scroll quickly <br></br>using your <br></br>browser&#39;s{' '}
+                <br></br>
+                scroll bar!
+              </p>
+            </div>
           </div>
         </div>
         <p>
-          2.) Tap on the Pokémon to automatically <br></br>put the foreign name
+          2. Tap on the Pokémon to automatically <br></br>put the foreign name
           into your clipboard.
         </p>
         <TutorialImage
@@ -310,13 +317,13 @@ function Tutorial({ screenSelection, setScreenSelection }) {
           width={326}
           height={556}
         />
-        <p>3.) Switch apps to Pokémon GO.</p>
+        <p>3. Switch apps to Pokémon GO.</p>
         <TutorialImage
           imagePath={'/tutorial/tut5.webp'}
           width={326}
           height={531}
         />
-        <p>4.) Paste in your new nickname.</p>
+        <p>4. Paste in your new nickname.</p>
         <TutorialImage
           imagePath={'/tutorial/tut6.webp'}
           width={326}
@@ -330,7 +337,7 @@ function Tutorial({ screenSelection, setScreenSelection }) {
         />
         <p>
           TIP! You can choose other nicknaming <br></br>languages from the
-          dropdown menu at <br></br>the top of the screen
+          dropdown menu at <br></br>the top of the screen.
         </p>
         <TutorialImage
           imagePath={'/tutorial/tut8.webp'}
@@ -342,13 +349,19 @@ function Tutorial({ screenSelection, setScreenSelection }) {
   );
 }
 
-function QuestionButton({ setScreenSelection, setScreenWasChanged }) {
+function QuestionButton({
+  setPopupText,
+  setScreenSelection,
+  setScreenWasChanged,
+}) {
   function handleClick() {
     setScreenSelection(1);
     setScreenWasChanged(true);
+    // Clear so popup doesn't happen after language selection
+    setPopupText(null);
   }
   return (
-    <div>
+    <div id="question-button">
       <button onClick={handleClick} className="help-btn" title="Tutorial">
         <Image
           src={questionButton}
@@ -368,7 +381,7 @@ function BackButton({ setScreenSelection }) {
     setScreenSelection(0);
   }
   return (
-    <div>
+    <div id="back-button">
       <button onClick={handleClick} className="back-btn" title="Exit">
         <Image
           src={backButton}
@@ -445,6 +458,7 @@ function MainContent({ languageCode, screenSelection, setScreenSelection }) {
     <div style={{ display: screenSelection == 0 ? '' : 'none' }}>
       <ScrollToTopButton />
       <QuestionButton
+        setPopupText={setPopupText}
         setScreenSelection={setScreenSelection}
         setScreenWasChanged={setScreenWasChanged}
       />
