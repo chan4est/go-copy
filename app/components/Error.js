@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { Borders } from './Borders';
+import Borders from './Borders';
+import Footer from './Footer';
 import questionMark from '../../public/201-qm.webp';
 import styles from './Error.module.css';
 

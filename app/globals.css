@@ -15,34 +15,8 @@ body {
   justify-content: center;
 }
 
-footer {
-  width: 100vw;
-}
-
-.footer-container {
-  background-color: #e7f2df;
-  padding-bottom: 16px;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  padding-top: 16px;
-  text-align: center;
-}
-
-.footer-container > p {
-  font-size: x-small;
-  line-height: 16px;
-}
-
-.footer-container > a,
-a:visited,
-a:hover,
-a:active {
-  color: black;
-}
-
 button {
   background: none;
-  border: none;
   border: none;
   border-radius: 16px;
   color: #4c6f72;
@@ -51,47 +25,77 @@ button {
   text-align: center;
 }
 
+button img {
+  pointer-events: none;
+}
+
 button:active,
 button:hover {
   background-color: rgba(183, 240, 155, 0.35);
 }
 
-.help-btn {
+/* Popups */
+
+.modal-content {
+  background-color: #f8fff7;
+  bottom: 0;
+  left: 0;
+  overflow-x: clip;
+  overflow-y: scroll;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 98%;
+  z-index: 5;
+}
+
+.modal-overlay {
+  /* Hides everything including the buttons */
+  background-color: #f8fff7;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+
+.modal-content-100 {
+  width: 100%;
+}
+
+/* Circular Buttons */
+
+.circular-btn {
   border-radius: 50px;
-  bottom: 2%;
-  height: 70px;
   padding: 0;
   position: fixed;
-  right: 5%;
-  transform: translateX(-5%);
-  width: 70px;
   z-index: 3;
 }
 
+.help-btn {
+  bottom: 2%;
+  height: 70px;
+  right: 5%;
+  transform: translateX(-5%);
+  width: 70px;
+}
+
 .back-btn {
-  border-radius: 50px;
   height: 50px;
   left: 5%;
-  padding: 0;
-  pointer-events: auto;
-  position: fixed;
   top: 0.75rem;
   transform: translateX(5%);
   transform: rotate(-90deg);
   width: 50px;
-  z-index: 3;
 }
 
 .scroll-up-btn {
-  border-radius: 50px;
   bottom: 3%;
   height: 50px;
   left: 50%;
-  padding: 0;
-  position: fixed;
   transform: translateX(-50%);
   width: 50px;
-  z-index: 3;
 }
 
 .scroll-up-btn:active,
@@ -99,15 +103,18 @@ button:hover {
   background-color: rgba(183, 240, 155, 0.7);
 }
 
+/* Tutorial Screen */
+
 .tutorial {
   font-size: 1.25rem;
   padding-bottom: 30px;
   padding-top: 1.5rem;
+  pointer-events: none;
   text-align: center;
   width: 100vw;
 }
 
-.tutorial > p {
+.tutorial p {
   padding-bottom: 10px;
   padding-top: 30px;
 }
@@ -120,27 +127,31 @@ button:hover {
   text-align: center;
 }
 
-.tutorial-container-s1-container {
+/* Special styles just for Step 1 */
+
+.tutorial-s1-container {
   display: flex;
   justify-content: center;
 }
 
-.tutorial-container-s1 {
+.tutorial-s1-grid {
   column-gap: 16px;
   display: grid;
   grid-auto-rows: auto;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.grid-item {
+.tutorial-s1-grid-item {
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
-.grid-item:nth-child(3) {
+.tutorial-s1-grid-item:nth-child(3) {
   grid-column: span 2;
 }
+
+/* Instructions Bar */
 
 .instructions {
   font-size: 1.05rem;
@@ -151,7 +162,7 @@ button:hover {
   word-spacing: 5px;
 }
 
-.language-chosen-btn {
+.instructions-lang-change-btn {
   background-image: url('../public/btn-dropdown.webp');
   background-position: 95%;
   background-repeat: no-repeat;
@@ -167,15 +178,17 @@ button:hover {
   word-spacing: 0px;
 }
 
-.language-instructions {
-  padding-bottom: 20px;
-}
+/* Language Selection */
 
-.language-selection {
+.language-selection-grid {
   display: grid;
   justify-content: center;
   padding-bottom: 40px;
   row-gap: 5px;
+}
+
+.language-selection-instructions {
+  padding-bottom: 20px;
 }
 
 .language-option-btn {
@@ -187,7 +200,9 @@ button:hover {
   font-size: 1rem;
 }
 
-.searchbar-container-container {
+/* Search Bar */
+
+.searchbar-container {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -195,7 +210,7 @@ button:hover {
   top: 0;
 }
 
-.searchbar-container {
+.searchbar-grid {
   background-color: #f8fff7;
   display: grid;
   grid-template-columns: 100%;
@@ -289,24 +304,23 @@ button:hover {
   }
 }
 
+/* Pokemon Grid */
+
 .pokemon-en-text {
   font-size: clamp(0.5rem, 4vw, 1rem);
   font-weight: 600;
-  pointer-events: none;
 }
 
 .pokemon-forign-text {
   font-size: clamp(0.35rem, 4vw, 0.85rem);
-  pointer-events: none;
 }
 
 .pokemon-grid img {
   height: auto;
-  pointer-events: none;
   width: clamp(50px, 80%, 150px);
 }
 
-.pokemon-grid-item {
+.pokemon-grid-btn {
   padding-bottom: 5px;
   padding-top: 5px;
 }
@@ -326,36 +340,9 @@ button:hover {
   width: clamp(300px, 85vw, 650px);
 }
 
-/* .ReactModal__Overlay {
-  opacity: 0;
-  transition: opacity 500ms ease-in-out;
-}
-
-.ReactModal__Overlay--after-open {
-  opacity: 1;
-}
-
-.ReactModal__Overlay--before-close {
-  opacity: 0;
-} */
-@keyframes slide-down {
-  from {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-}
-
-@keyframes slide-up {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
+/* Hack to get the Ko-fi button to display properly on mobile */
+.KofiContainer,
+.KofiText,
+.skinny {
+  font-family: 'Lato', sans-serif !important;
 }

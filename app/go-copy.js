@@ -3,44 +3,23 @@
 import { pokemonData } from './lib/pokemon';
 import { missingPokemon } from './lib/missing-pokemon';
 import { languageData } from './lib/languages';
-import { Borders } from './components/Borders';
+import Borders from './components/Borders';
+import Footer from './components/Footer';
 import backButton from '../public/btn-back.webp';
 import questionButton from '../public/btn-question.webp';
-import { useScrollBlock } from './components/useScrollBlock';
 
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
+import { useScrollBlock } from './components/useScrollBlock';
 import copy from 'copy-to-clipboard';
-// import { KofiButton } from 'react-kofi-button';
 import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
 
-Modal.defaultStyles = {
-  overlay: {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    zIndex: 5,
-  },
-  content: {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    background: '#f8fff7',
-    overflowX: 'clip',
-    overflowY: 'scroll',
-    WebkitOverflowScrolling: 'touch',
-    zIndex: 5,
-  },
-};
+// Pokemon Grid
 
-function Pokemon({
+function PokemonButton({
   nameEnglish,
   nameForeign,
   pokemonNumber,
@@ -55,7 +34,7 @@ function Pokemon({
 
   return (
     <button
-      className="pokemon-grid-item"
+      className="pokemon-grid-btn"
       onClick={() => handleClick()}
       title={`Copy ${nameForeign}`}
     >
@@ -103,7 +82,7 @@ function PokemonGrid({ setPopupText, searchValue, setPopupKey, languageCode }) {
     // Don't show Pokemon that aren't in GO yet (Spoilers)
     if (!missingPokemon.includes(pokemon.id)) {
       return (
-        <Pokemon
+        <PokemonButton
           key={pokemon.id}
           nameEnglish={pokemon.name_EN}
           nameForeign={nameForeign}
@@ -121,6 +100,8 @@ function PokemonGrid({ setPopupText, searchValue, setPopupKey, languageCode }) {
     </div>
   );
 }
+
+// Search Bar
 
 function CopyPopup({ popupText, popupKey }) {
   // https://stackoverflow.com/a/63194757/5221437
@@ -150,8 +131,8 @@ function SearchBar({ popupText, popupKey, setSearchValue, screenWasChanged }) {
   }
 
   return (
-    <div className="searchbar-container-container">
-      <div className="searchbar-container">
+    <div className="searchbar-container">
+      <div className="searchbar-grid">
         <CopyPopup popupText={popupText} popupKey={popupKey} />
         <div
           className="searchbar"
@@ -174,12 +155,14 @@ function SearchBar({ popupText, popupKey, setSearchValue, screenWasChanged }) {
   );
 }
 
+// Main Screen Instructions
+
 function InstructionsBar({
   languageCode,
   setPopupText,
   setScreenWasChanged,
   setLanguageModalOpen,
-  blockScroll,
+  blockHomeScroll,
 }) {
   function handleClick() {
     // Clear so popup doesn't happen after language selection
@@ -187,14 +170,15 @@ function InstructionsBar({
     // Set flag for screen changing so search animation doesn't play again
     setScreenWasChanged(true);
     setLanguageModalOpen(true);
-    blockScroll();
+    // Block home scrolling since we're going to the Instructions Screen
+    blockHomeScroll();
   }
 
   return (
     <p className="instructions">
       TAP TO COPY POKE&#769;MON&apos;S
       <button
-        className="language-chosen-btn"
+        className="instructions-lang-change-btn"
         onClick={handleClick}
         title={'Change nicknaming language'}
       >
@@ -207,89 +191,166 @@ function InstructionsBar({
   );
 }
 
-function LanguageButton({
-  languageCode,
-  languageName,
-  setLanguageCode,
-  setLanguageModalOpen,
-  allowScroll,
+// Main Screen Buttons
+
+function QuestionButton({
+  setPopupText,
+  setTutorialModalOpen,
+  blockHomeScroll,
 }) {
   function handleClick() {
-    setLanguageCode(languageCode);
-    setLanguageModalOpen(false);
-    allowScroll();
+    setTutorialModalOpen(true);
+    // Clear so popup doesn't happen after language selection
+    setPopupText(null);
+    // Block home scrolling since we're going to the Tutorial Screen
+    blockHomeScroll();
   }
-
-  function format(languageName) {
-    if (languageName.includes('Chinese')) {
-      const [name, specifier] = languageName.split(' ');
-      return (
-        <>
-          {name} <small> {`${specifier}`} </small>
-        </>
-      );
-    }
-    return <>{languageName}</>;
-  }
-
   return (
-    <button
-      onClick={handleClick}
-      className="language-option-btn"
-      title={`Change nicknaming language to ${languageName}`}
-    >
-      {format(languageName)}
-    </button>
+    <div id="question-button">
+      <button
+        onClick={handleClick}
+        className="circular-btn help-btn"
+        title="Tutorial"
+      >
+        <Image
+          src={questionButton}
+          height={70}
+          width={70}
+          alt=""
+          quality={100}
+          unoptimized={true}
+        />
+      </button>
+    </div>
   );
 }
 
-function LanguageSelection({
-  setLanguageCode,
-  languageModalOpen,
-  setLanguageModalOpen,
-  allowScroll,
-}) {
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-  }
+function ScrollToTopButton() {
+  /* ChatGPT 3.5 */
+  const [isVisible, setIsVisible] = useState(false);
 
-  function closeModal() {
-    setLanguageModalOpen(false);
-  }
-  const languageList = Object.entries(languageData).map(
-    ([languageCode, languageName]) => {
-      return (
-        <LanguageButton
-          key={languageCode}
-          languageCode={languageCode}
-          languageName={languageName}
-          setLanguageCode={setLanguageCode}
-          setLanguageModalOpen={setLanguageModalOpen}
-          allowScroll={allowScroll}
-        />
-      );
-    }
+  // Add a scroll event listener to track the scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      // Check if the user has scrolled down a certain amount
+      const scrollY = window.scrollY;
+      const scrollThreshold = 500; // Adjust this threshold as needed
+      setIsVisible(scrollY > scrollThreshold);
+    };
+
+    // Attach the scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Function to scroll back to the top when the button is clicked
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Add smooth scrolling effect
+    });
+  };
+
+  return (
+    <div id="scroll-to-top-button">
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="circular-btn scroll-up-btn"
+          title="Go back to the top"
+        >
+          <Image
+            src={backButton}
+            height={50}
+            width={50}
+            alt=""
+            quality={100}
+            unoptimized={true}
+          />
+        </button>
+      )}
+    </div>
   );
+}
 
-  let transition = 'modal-content.slide-up';
-  if (!languageModalOpen) {
-    transition = 'modal-content.slide-down';
+// Main Screen
+
+function HomeScreen({
+  languageCode,
+  setLanguageModalOpen,
+  setTutorialModalOpen,
+  blockHomeScroll,
+}) {
+  // Change the text every time a NEW Pokemon is clicked on so the new text is displayed
+  const [popupText, setPopupText] = useState(null);
+  // Change the key every time a Pokemon is clicked on so the notif pops up again
+  const [popupKey, setPopupKey] = useState(0);
+  // Filtering what Pokemon are shown in the grid
+  const [searchValue, setSearchValue] = useState(null);
+  // False = 🔎 icon is in the middle, True = 🔎 icon is on the left
+  const [screenWasChanged, setScreenWasChanged] = useState(false);
+
+  return (
+    <div>
+      <Borders />
+      <ScrollToTopButton />
+      <QuestionButton
+        setPopupText={setPopupText}
+        setTutorialModalOpen={setTutorialModalOpen}
+        blockHomeScroll={blockHomeScroll}
+      />
+      <InstructionsBar
+        languageCode={languageCode}
+        setPopupText={setPopupText}
+        setScreenWasChanged={setScreenWasChanged}
+        setLanguageModalOpen={setLanguageModalOpen}
+        blockHomeScroll={blockHomeScroll}
+      />
+      <SearchBar
+        popupText={popupText}
+        popupKey={popupKey}
+        setSearchValue={setSearchValue}
+        screenWasChanged={screenWasChanged}
+      />
+      <PokemonGrid
+        setPopupText={setPopupText}
+        setPopupKey={setPopupKey}
+        searchValue={searchValue}
+        languageCode={languageCode}
+      />
+      <Footer />
+    </div>
+  );
+}
+
+// Tutorial
+
+function BackButton({ setTutorialModalOpen, allowHomeScroll }) {
+  function handleClick() {
+    setTutorialModalOpen(false);
+    allowHomeScroll();
   }
   return (
-    <Modal
-      isOpen={languageModalOpen}
-      onAfterOpen={afterOpenModal}
-      onRequestClose={closeModal}
-      // preventScroll={true}
-      // closeTimeoutMS={1000}
-    >
-      <div className={`language-selection`}>
-        <div className="instructions language-instructions ">
-          CHOOSE YOUR NICKNAMING LANGUAGE
-        </div>
-        {languageList}
-      </div>
-    </Modal>
+    <div id="back-button">
+      <button
+        onClick={handleClick}
+        className="circular-btn back-btn"
+        title="Home"
+      >
+        <Image
+          src={backButton}
+          height={50}
+          width={50}
+          alt=""
+          quality={100}
+          unoptimized={true}
+        />
+      </button>
+    </div>
   );
 }
 
@@ -306,31 +367,33 @@ function TutorialImage({ imagePath, width, height }) {
   );
 }
 
-function Tutorial({ tutorialModalOpen, setTutorialModalOpen, allowScroll }) {
-  function afterOpenModal() {}
-
-  function closeModal() {
+function TutorialScreen({
+  tutorialModalOpen,
+  setTutorialModalOpen,
+  allowHomeScroll,
+}) {
+  function handleClose() {
     setTutorialModalOpen(false);
   }
   return (
     <Modal
       isOpen={tutorialModalOpen}
-      onAfterOpen={afterOpenModal}
-      onRequestClose={closeModal}
-      // closeTimeoutMS={1000}
+      onRequestClose={handleClose}
+      className="modal-content modal-content-100"
+      overlayClassName="modal-overlay"
     >
       <Borders />
       <BackButton
         setTutorialModalOpen={setTutorialModalOpen}
-        allowScroll={allowScroll}
+        allowHomeScroll={allowHomeScroll}
       />
       <div className="tutorial">
         <u>TUTORIAL</u>
         <p>
           1. Search or scroll to the Pokémon <br></br>you want to nickname.
         </p>
-        <div className="tutorial-container-s1-container">
-          <div className="tutorial-container-s1">
+        <div className="tutorial-s1-container">
+          <div className="tutorial-s1-grid">
             <div>
               <TutorialImage
                 imagePath={'/tutorial/tut1.webp'}
@@ -348,7 +411,7 @@ function Tutorial({ tutorialModalOpen, setTutorialModalOpen, allowScroll }) {
               />
               <p className="tipText">or dex number!</p>
             </div>
-            <div className="grid-item">
+            <div className="tutorial-s1-grid-item">
               <TutorialImage
                 imagePath={'/tutorial/tut3.webp'}
                 width={162}
@@ -404,221 +467,115 @@ function Tutorial({ tutorialModalOpen, setTutorialModalOpen, allowScroll }) {
   );
 }
 
-function QuestionButton({ setPopupText, setTutorialModalOpen, blockScroll }) {
-  function handleClick() {
-    setTutorialModalOpen(true);
-    // Clear so popup doesn't happen after language selection
-    setPopupText(null);
-    blockScroll();
-  }
-  return (
-    <div id="question-button">
-      <button onClick={handleClick} className="help-btn" title="Tutorial">
-        <Image
-          src={questionButton}
-          height={70}
-          width={70}
-          alt=""
-          quality={100}
-          unoptimized={true}
-        />
-      </button>
-    </div>
-  );
-}
+// Language Selection Screen
 
-function BackButton({ setTutorialModalOpen, allowScroll }) {
-  function handleClick() {
-    setTutorialModalOpen(false);
-    allowScroll();
-  }
-  return (
-    <div id="back-button">
-      <button onClick={handleClick} className="back-btn" title="Exit">
-        <Image
-          src={backButton}
-          height={50}
-          width={50}
-          alt=""
-          quality={100}
-          unoptimized={true}
-        />
-      </button>
-    </div>
-  );
-}
-
-// ChatGPT 3.5
-function ScrollToTopButton() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  // Add a scroll event listener to track the scroll position
-  useEffect(() => {
-    const handleScroll = () => {
-      // Check if the user has scrolled down a certain amount
-      const scrollY = window.scrollY;
-      const scrollThreshold = 500; // Adjust this threshold as needed
-      setIsVisible(scrollY > scrollThreshold);
-    };
-
-    // Attach the scroll event listener when the component mounts
-    window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // Function to scroll back to the top when the button is clicked
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth', // Add smooth scrolling effect
-    });
-  };
-
-  return (
-    <div>
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="scroll-up-btn"
-          title="Go back to the top"
-        >
-          <Image
-            src={backButton}
-            height={50}
-            width={50}
-            alt=""
-            quality={100}
-            unoptimized={true}
-          />
-        </button>
-      )}
-    </div>
-  );
-}
-
-function Footer() {
-  let currentDate = new Date();
-  let currentYear = currentDate.getFullYear();
-  return (
-    <footer>
-      <div className="footer-container">
-        <a href="/" title="Home">
-          Home
-        </a>{' '}
-        |{' '}
-        {/* <a href="" title="Privacy Policy">
-    Privacy Policy
-  </a>{' '}
-  |{' '} */}
-        <a href="/about" title="Contact">
-          {' '}
-          Contact
-        </a>
-        <br></br>
-        <br></br>
-        {/* <KofiButton
-          username="chan4est"
-          title="Help me pay for server costs!"
-          label="SUPPORT ME!"
-          preset="skinny"
-          backgroundColor="#4fa283"
-          animation="false"
-        /> */}
-        <br></br>
-        <br></br>
-        <p>
-          {currentYear} © Chandler Forrest. All rights reserved by their
-          respective owners.
-          <br></br>
-          This website is not officially affiliated with Pokémon GO and is
-          intended to fall under Fair Use doctrine, similar to any other
-          informational site such as a wiki.
-          <br></br>
-          Pokémon and its trademarks are © 1995 - {currentYear}{' '}
-          Nintendo/Creatures Inc./GAME FREAK inc.
-          <br></br>
-          All images and names owned and trademarked by Nintendo, Niantic, Inc.,
-          The Pokémon Company, and GAMEFREAK are property of their respective
-          owners.
-        </p>
-      </div>
-    </footer>
-  );
-}
-
-function MainContent({
+function LanguageOptionButton({
   languageCode,
+  languageName,
+  setLanguageCode,
   setLanguageModalOpen,
-  setTutorialModalOpen,
-  blockScroll,
+  allowHomeScroll,
 }) {
-  const [popupText, setPopupText] = useState(null);
-  const [popupKey, setPopupKey] = useState(0);
-  const [searchValue, setSearchValue] = useState(null);
-  const [screenWasChanged, setScreenWasChanged] = useState(false);
+  function handleClick() {
+    setLanguageCode(languageCode);
+    setLanguageModalOpen(false);
+    allowHomeScroll();
+  }
+
+  function format(languageName) {
+    if (languageName.includes('Chinese')) {
+      const [name, specifier] = languageName.split(' ');
+      return (
+        <>
+          {name} <small> {`${specifier}`} </small>
+        </>
+      );
+    }
+    return <>{languageName}</>;
+  }
 
   return (
-    <div>
-      <Borders />
-      <ScrollToTopButton />
-      <QuestionButton
-        setPopupText={setPopupText}
-        setTutorialModalOpen={setTutorialModalOpen}
-        blockScroll={blockScroll}
-      />
-      <InstructionsBar
-        languageCode={languageCode}
-        setPopupText={setPopupText}
-        setScreenWasChanged={setScreenWasChanged}
-        setLanguageModalOpen={setLanguageModalOpen}
-        blockScroll={blockScroll}
-      />
-      <SearchBar
-        popupText={popupText}
-        popupKey={popupKey}
-        setSearchValue={setSearchValue}
-        screenWasChanged={screenWasChanged}
-      />
-      <PokemonGrid
-        setPopupText={setPopupText}
-        setPopupKey={setPopupKey}
-        searchValue={searchValue}
-        languageCode={languageCode}
-      />
-      <Footer />
-    </div>
+    <button
+      onClick={handleClick}
+      className="language-option-btn"
+      title={`Change nicknaming language to ${languageName}`}
+    >
+      {format(languageName)}
+    </button>
   );
 }
 
-export default function FilterablePokedex() {
+function LanguageSelectionScreen({
+  setLanguageCode,
+  languageModalOpen,
+  setLanguageModalOpen,
+  allowHomeScroll,
+}) {
+  function handleClose() {
+    setLanguageModalOpen(false);
+  }
+
+  const languageList = Object.entries(languageData).map(
+    ([languageCode, languageName]) => {
+      return (
+        <LanguageOptionButton
+          key={languageCode}
+          languageCode={languageCode}
+          languageName={languageName}
+          setLanguageCode={setLanguageCode}
+          setLanguageModalOpen={setLanguageModalOpen}
+          allowHomeScroll={allowHomeScroll}
+        />
+      );
+    }
+  );
+
+  return (
+    <Modal
+      isOpen={languageModalOpen}
+      onRequestClose={handleClose}
+      className="modal-content modal-content-100"
+      overlayClassName="modal-overlay"
+    >
+      <Borders />
+      <div className={`language-selection-grid`}>
+        <div className="instructions language-selection-instructions">
+          CHOOSE YOUR NICKNAMING LANGUAGE
+        </div>
+        {languageList}
+      </div>
+      <Footer />
+    </Modal>
+  );
+}
+
+export default function App() {
+  // User's selected nicknaming language. For displaying in the tooltip bar and what's in the Pokemon grid
   const [languageCode, setLanguageCode] = useState('JA');
+  // Keeping track of which non-home screen is open
   const [languageModalOpen, setLanguageModalOpen] = useState(false);
   const [tutorialModalOpen, setTutorialModalOpen] = useState(false);
-
-  const [blockScroll, allowScroll] = useScrollBlock();
+  // So scrolling on a popup screen doesn't effect the Home screen
+  const [blockHomeScroll, allowHomeScroll] = useScrollBlock();
   return (
     <div>
-      <LanguageSelection
+      <LanguageSelectionScreen
         setLanguageCode={setLanguageCode}
         languageModalOpen={languageModalOpen}
         setLanguageModalOpen={setLanguageModalOpen}
-        allowScroll={allowScroll}
+        allowHomeScroll={allowHomeScroll}
       />
-      <Tutorial
+      <TutorialScreen
         tutorialModalOpen={tutorialModalOpen}
         setTutorialModalOpen={setTutorialModalOpen}
-        allowScroll={allowScroll}
+        allowHomeScroll={allowHomeScroll}
       />
-      <MainContent
+      <HomeScreen
         languageCode={languageCode}
         setLanguageModalOpen={setLanguageModalOpen}
         setTutorialModalOpen={setTutorialModalOpen}
-        blockScroll={blockScroll}
-        allowScroll={allowScroll}
+        blockHomeScroll={blockHomeScroll}
+        allowHomeScroll={allowHomeScroll}
       />
     </div>
   );

@@ -3,7 +3,7 @@ import leftBorder from '../../public/border-left.webp';
 import rightBorder from '../../public/border-right.webp';
 import styles from './Borders.module.css';
 
-export function Borders() {
+export default function Borders() {
   return (
     <>
       <Image
