@@ -104,6 +104,7 @@ button:hover {
   padding-bottom: 30px;
   padding-top: 1.5rem;
   text-align: center;
+  width: 100vw;
 }
 
 .tutorial > p {
@@ -323,4 +324,38 @@ button:hover {
   padding-top: 1rem;
   row-gap: 1rem;
   width: clamp(300px, 85vw, 650px);
+}
+
+/* .ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+} */
+@keyframes slide-down {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }

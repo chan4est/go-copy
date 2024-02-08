@@ -6,10 +6,39 @@ import { languageData } from './lib/languages';
 import { Borders } from './components/Borders';
 import backButton from '../public/btn-back.webp';
 import questionButton from '../public/btn-question.webp';
-import Image from 'next/image';
-import copy from 'copy-to-clipboard';
+import { useScrollBlock } from './components/useScrollBlock';
 
-import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+
+import copy from 'copy-to-clipboard';
+// import { KofiButton } from 'react-kofi-button';
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root');
+
+Modal.defaultStyles = {
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 5,
+  },
+  content: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    background: '#f8fff7',
+    overflowX: 'clip',
+    overflowY: 'scroll',
+    WebkitOverflowScrolling: 'touch',
+    zIndex: 5,
+  },
+};
 
 function Pokemon({
   nameEnglish,
@@ -147,16 +176,18 @@ function SearchBar({ popupText, popupKey, setSearchValue, screenWasChanged }) {
 
 function InstructionsBar({
   languageCode,
-  setScreenSelection,
   setPopupText,
   setScreenWasChanged,
+  setLanguageModalOpen,
+  blockScroll,
 }) {
   function handleClick() {
-    setScreenSelection(2);
     // Clear so popup doesn't happen after language selection
     setPopupText(null);
     // Set flag for screen changing so search animation doesn't play again
     setScreenWasChanged(true);
+    setLanguageModalOpen(true);
+    blockScroll();
   }
 
   return (
@@ -180,11 +211,13 @@ function LanguageButton({
   languageCode,
   languageName,
   setLanguageCode,
-  setScreenSelection,
+  setLanguageModalOpen,
+  allowScroll,
 }) {
   function handleClick() {
     setLanguageCode(languageCode);
-    setScreenSelection(0);
+    setLanguageModalOpen(false);
+    allowScroll();
   }
 
   function format(languageName) {
@@ -212,9 +245,17 @@ function LanguageButton({
 
 function LanguageSelection({
   setLanguageCode,
-  screenSelection,
-  setScreenSelection,
+  languageModalOpen,
+  setLanguageModalOpen,
+  allowScroll,
 }) {
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+  }
+
+  function closeModal() {
+    setLanguageModalOpen(false);
+  }
   const languageList = Object.entries(languageData).map(
     ([languageCode, languageName]) => {
       return (
@@ -223,21 +264,32 @@ function LanguageSelection({
           languageCode={languageCode}
           languageName={languageName}
           setLanguageCode={setLanguageCode}
-          setScreenSelection={setScreenSelection}
+          setLanguageModalOpen={setLanguageModalOpen}
+          allowScroll={allowScroll}
         />
       );
     }
   );
+
+  let transition = 'modal-content.slide-up';
+  if (!languageModalOpen) {
+    transition = 'modal-content.slide-down';
+  }
   return (
-    <div
-      className="language-selection"
-      style={{ display: screenSelection == 2 ? 'grid' : 'none' }}
+    <Modal
+      isOpen={languageModalOpen}
+      onAfterOpen={afterOpenModal}
+      onRequestClose={closeModal}
+      // preventScroll={true}
+      // closeTimeoutMS={1000}
     >
-      <div className="instructions language-instructions ">
-        CHOOSE YOUR NICKNAMING LANGUAGE
+      <div className={`language-selection`}>
+        <div className="instructions language-instructions ">
+          CHOOSE YOUR NICKNAMING LANGUAGE
+        </div>
+        {languageList}
       </div>
-      {languageList}
-    </div>
+    </Modal>
   );
 }
 
@@ -254,13 +306,24 @@ function TutorialImage({ imagePath, width, height }) {
   );
 }
 
-function Tutorial({ screenSelection, setScreenSelection }) {
+function Tutorial({ tutorialModalOpen, setTutorialModalOpen, allowScroll }) {
+  function afterOpenModal() {}
+
+  function closeModal() {
+    setTutorialModalOpen(false);
+  }
   return (
-    <div
-      id="tutorial-visibility"
-      style={{ display: screenSelection == 1 ? '' : 'none' }}
+    <Modal
+      isOpen={tutorialModalOpen}
+      onAfterOpen={afterOpenModal}
+      onRequestClose={closeModal}
+      // closeTimeoutMS={1000}
     >
-      <BackButton setScreenSelection={setScreenSelection} />
+      <Borders />
+      <BackButton
+        setTutorialModalOpen={setTutorialModalOpen}
+        allowScroll={allowScroll}
+      />
       <div className="tutorial">
         <u>TUTORIAL</u>
         <p>
@@ -336,20 +399,17 @@ function Tutorial({ screenSelection, setScreenSelection }) {
           height={435}
         />
       </div>
-    </div>
+      <Footer />
+    </Modal>
   );
 }
 
-function QuestionButton({
-  setPopupText,
-  setScreenSelection,
-  setScreenWasChanged,
-}) {
+function QuestionButton({ setPopupText, setTutorialModalOpen, blockScroll }) {
   function handleClick() {
-    setScreenSelection(1);
-    setScreenWasChanged(true);
+    setTutorialModalOpen(true);
     // Clear so popup doesn't happen after language selection
     setPopupText(null);
+    blockScroll();
   }
   return (
     <div id="question-button">
@@ -367,9 +427,10 @@ function QuestionButton({
   );
 }
 
-function BackButton({ setScreenSelection }) {
+function BackButton({ setTutorialModalOpen, allowScroll }) {
   function handleClick() {
-    setScreenSelection(0);
+    setTutorialModalOpen(false);
+    allowScroll();
   }
   return (
     <div id="back-button">
@@ -439,25 +500,82 @@ function ScrollToTopButton() {
   );
 }
 
-function MainContent({ languageCode, screenSelection, setScreenSelection }) {
+function Footer() {
+  let currentDate = new Date();
+  let currentYear = currentDate.getFullYear();
+  return (
+    <footer>
+      <div className="footer-container">
+        <a href="/" title="Home">
+          Home
+        </a>{' '}
+        |{' '}
+        {/* <a href="" title="Privacy Policy">
+    Privacy Policy
+  </a>{' '}
+  |{' '} */}
+        <a href="/about" title="Contact">
+          {' '}
+          Contact
+        </a>
+        <br></br>
+        <br></br>
+        {/* <KofiButton
+          username="chan4est"
+          title="Help me pay for server costs!"
+          label="SUPPORT ME!"
+          preset="skinny"
+          backgroundColor="#4fa283"
+          animation="false"
+        /> */}
+        <br></br>
+        <br></br>
+        <p>
+          {currentYear} © Chandler Forrest. All rights reserved by their
+          respective owners.
+          <br></br>
+          This website is not officially affiliated with Pokémon GO and is
+          intended to fall under Fair Use doctrine, similar to any other
+          informational site such as a wiki.
+          <br></br>
+          Pokémon and its trademarks are © 1995 - {currentYear}{' '}
+          Nintendo/Creatures Inc./GAME FREAK inc.
+          <br></br>
+          All images and names owned and trademarked by Nintendo, Niantic, Inc.,
+          The Pokémon Company, and GAMEFREAK are property of their respective
+          owners.
+        </p>
+      </div>
+    </footer>
+  );
+}
+
+function MainContent({
+  languageCode,
+  setLanguageModalOpen,
+  setTutorialModalOpen,
+  blockScroll,
+}) {
   const [popupText, setPopupText] = useState(null);
   const [popupKey, setPopupKey] = useState(0);
   const [searchValue, setSearchValue] = useState(null);
   const [screenWasChanged, setScreenWasChanged] = useState(false);
 
   return (
-    <div style={{ display: screenSelection == 0 ? '' : 'none' }}>
+    <div>
+      <Borders />
       <ScrollToTopButton />
       <QuestionButton
         setPopupText={setPopupText}
-        setScreenSelection={setScreenSelection}
-        setScreenWasChanged={setScreenWasChanged}
+        setTutorialModalOpen={setTutorialModalOpen}
+        blockScroll={blockScroll}
       />
       <InstructionsBar
         languageCode={languageCode}
-        setScreenSelection={setScreenSelection}
         setPopupText={setPopupText}
         setScreenWasChanged={setScreenWasChanged}
+        setLanguageModalOpen={setLanguageModalOpen}
+        blockScroll={blockScroll}
       />
       <SearchBar
         popupText={popupText}
@@ -471,32 +589,37 @@ function MainContent({ languageCode, screenSelection, setScreenSelection }) {
         searchValue={searchValue}
         languageCode={languageCode}
       />
+      <Footer />
     </div>
   );
 }
 
 export default function FilterablePokedex() {
   const [languageCode, setLanguageCode] = useState('JA');
-  // 0 => Main, 1 => Tutorial, 2 => Language Selection
-  const [screenSelection, setScreenSelection] = useState(0);
+  const [languageModalOpen, setLanguageModalOpen] = useState(false);
+  const [tutorialModalOpen, setTutorialModalOpen] = useState(false);
 
+  const [blockScroll, allowScroll] = useScrollBlock();
   return (
-    <>
-      <Borders />
+    <div>
       <LanguageSelection
         setLanguageCode={setLanguageCode}
-        screenSelection={screenSelection}
-        setScreenSelection={setScreenSelection}
+        languageModalOpen={languageModalOpen}
+        setLanguageModalOpen={setLanguageModalOpen}
+        allowScroll={allowScroll}
       />
       <Tutorial
-        screenSelection={screenSelection}
-        setScreenSelection={setScreenSelection}
+        tutorialModalOpen={tutorialModalOpen}
+        setTutorialModalOpen={setTutorialModalOpen}
+        allowScroll={allowScroll}
       />
       <MainContent
         languageCode={languageCode}
-        screenSelection={screenSelection}
-        setScreenSelection={setScreenSelection}
+        setLanguageModalOpen={setLanguageModalOpen}
+        setTutorialModalOpen={setTutorialModalOpen}
+        blockScroll={blockScroll}
+        allowScroll={allowScroll}
       />
-    </>
+    </div>
   );
 }
