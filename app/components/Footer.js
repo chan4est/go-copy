@@ -1,11 +1,11 @@
 import { KofiButton } from 'react-kofi-button';
 import styles from './Footer.module.css';
 
-export default function Footer() {
+export default function Footer({ footerRef }) {
   let currentDate = new Date();
   let currentYear = currentDate.getFullYear();
   return (
-    <footer className={styles['footer']}>
+    <footer className={styles['footer']} ref={footerRef}>
       <div className={styles['footer-container']}>
         <a href="/" title="Home" className={styles['footer-a']}>
           Home
