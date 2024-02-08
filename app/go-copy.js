@@ -208,8 +208,7 @@ function QuestionButton({
       // Check if the user has scrolled down a certain amount
       const scrollY = window.scrollY;
       const footerOffset =
-        document.body.scrollHeight - window.innerHeight - footerHeight; // Adjust 200 as per your footer's height
-      const scrollThreshold = 500; // Adjust this threshold as needed
+        document.body.scrollHeight - window.innerHeight - footerHeight * 0.85;
 
       // console.log(`scrollY ${scrollY}`);
       // console.log(`footerOffset ${footerOffset}`);
@@ -268,10 +267,13 @@ function ScrollToTopButton({ footerHeight }) {
       // Check if the user has scrolled down a certain amount
       const scrollY = window.scrollY;
       const footerOffset =
-        document.body.scrollHeight - window.innerHeight - footerHeight; // Adjust 200 as per your footer's height
+        document.body.scrollHeight - window.innerHeight - footerHeight * 0.05; // Adjust 200 as per your footer's height
       const scrollThreshold = 500; // Adjust this threshold as needed
 
       // console.log(`scrollY ${scrollY}`);
+      // console.log(`document.body.screenHeight ${document.body.scrollHeight}`);
+      // console.log(`window.innerHeight ${window.innerHeight}`);
+      // console.log(`footerHeight ${footerHeight}`);
       // console.log(`footerOffset ${footerOffset}`);
       // console.log(`isNearFooter ${isNearFooter}`);
 
