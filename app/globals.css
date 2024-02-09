@@ -73,6 +73,11 @@ button:hover {
   z-index: 3;
 }
 
+.circular-btn:active,
+.circular-btn:hover {
+  background-color: rgba(183, 240, 155, 0.7);
+}
+
 .help-btn {
   bottom: 2%;
   height: 70px;
@@ -96,11 +101,6 @@ button:hover {
   left: 50%;
   transform: translateX(-50%);
   width: 50px;
-}
-
-.scroll-up-btn:active,
-.scroll-up-btn:hover {
-  background-color: rgba(183, 240, 155, 0.7);
 }
 
 /* Tutorial Screen */

@@ -164,8 +164,9 @@ function InstructionsBar({
   setLanguageModalOpen,
   blockHomeScroll,
 }) {
-  function handleClick() {
-    // Clear so popup doesn't happen after language selection
+  // Function to open the LanguageSelection Screen when the 🔽 button us clicked
+  function openLanguageSelection() {
+    // Clear so popup text doesn't happen after language selection
     setPopupText(null);
     // Set flag for screen changing so search animation doesn't play again
     setScreenWasChanged(true);
@@ -179,7 +180,7 @@ function InstructionsBar({
       TAP TO COPY POKE&#769;MON&apos;S
       <button
         className="instructions-lang-change-btn"
-        onClick={handleClick}
+        onClick={openLanguageSelection}
         title={'Change nicknaming language'}
       >
         {/* Split for Chinese (Simplified/Tradition) */}
@@ -193,104 +194,57 @@ function InstructionsBar({
 
 // Main Screen Buttons
 
-function QuestionButton({
+function HomeScreenFloatingButtons({
   setPopupText,
   setTutorialModalOpen,
   blockHomeScroll,
-  footerHeight,
+  footerRef,
 }) {
-  /* ChatGPT 3.5 */
+  const [isScrollToTopVisible, setIsScrollToTopVisible] = useState(false);
   const [isNearFooter, setIsNearFooter] = useState(false);
+  const [footerHeight, setFooterHeight] = useState(0);
 
-  // Add a scroll event listener to track the scroll position
+  const scrollThreshold = 500; // Adjust's when the ⬆️ button appears
+  const footerHeightFactor = 0.5; // Adjust's when the ⬆️ button moves and ❓ button disappears
   useEffect(() => {
+    // Add a scroll event listener to track the scroll position
     const handleScroll = () => {
-      // Check if the user has scrolled down a certain amount
+      // How far we've scrolled down
       const scrollY = window.scrollY;
+      // How far we are from the footer
       const footerOffset =
-        document.body.scrollHeight - window.innerHeight - footerHeight * 0.85;
+        document.body.scrollHeight -
+        window.innerHeight -
+        footerHeight * footerHeightFactor;
 
-      // console.log(`scrollY ${scrollY}`);
-      // console.log(`footerOffset ${footerOffset}`);
-      // console.log(`isNearFooter ${isNearFooter}`);
+      // True once we've scrolled down the page enough
+      setIsScrollToTopVisible(scrollY > scrollThreshold);
+      // True once the top of the footer + a little extra (footerHeightFactor) is visible
       setIsNearFooter(scrollY > footerOffset);
     };
 
+    // Add a resize event listener to track the footer's height
+    function handleResize() {
+      if (footerRef.current) {
+        const height = footerRef.current.offsetHeight;
+        setFooterHeight(height);
+      }
+    }
     // Attach the scroll event listener when the component mounts
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener when the component unmounts
+    handleResize(); // Call it initially to get the height
+    // Attach the resize event listener when the component mounts
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listeners when the components unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
     };
-  }, [isNearFooter, footerHeight]);
+  }, [footerRef, footerHeight]);
 
-  function openTutorial() {
-    setTutorialModalOpen(true);
-    // Clear so popup doesn't happen after language selection
-    setPopupText(null);
-    // Block home scrolling since we're going to the Tutorial Screen
-    blockHomeScroll();
-  }
-
-  return (
-    <div id="question-button">
-      {!isNearFooter && (
-        <button
-          onClick={openTutorial}
-          className={'circular-btn help-btn'}
-          title="Tutorial"
-          style={isNearFooter ? footerCSS : {}}
-        >
-          <Image
-            src={questionButton}
-            height={70}
-            width={70}
-            alt=""
-            quality={100}
-            unoptimized={true}
-          />
-        </button>
-      )}
-    </div>
-  );
-}
-
-function ScrollToTopButton({ footerHeight }) {
-  /* ChatGPT 3.5 */
-  const [isVisible, setIsVisible] = useState(false);
-  const [isNearFooter, setIsNearFooter] = useState(false);
-
-  // Add a scroll event listener to track the scroll position
-  useEffect(() => {
-    const handleScroll = () => {
-      // Check if the user has scrolled down a certain amount
-      const scrollY = window.scrollY;
-      const footerOffset =
-        document.body.scrollHeight - window.innerHeight - footerHeight * 0.05; // Adjust 200 as per your footer's height
-      const scrollThreshold = 500; // Adjust this threshold as needed
-
-      // console.log(`scrollY ${scrollY}`);
-      // console.log(`document.body.screenHeight ${document.body.scrollHeight}`);
-      // console.log(`window.innerHeight ${window.innerHeight}`);
-      // console.log(`footerHeight ${footerHeight}`);
-      // console.log(`footerOffset ${footerOffset}`);
-      // console.log(`isNearFooter ${isNearFooter}`);
-
-      setIsVisible(scrollY > scrollThreshold);
-      setIsNearFooter(scrollY > footerOffset);
-    };
-
-    // Attach the scroll event listener when the component mounts
-    window.addEventListener('scroll', handleScroll);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [isNearFooter, footerHeight]);
-
-  // Function to scroll back to the top when the button is clicked
+  // Function to scroll back to the top when the ⬆️ button is clicked
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -298,30 +252,90 @@ function ScrollToTopButton({ footerHeight }) {
     });
   };
 
-  const footerCSS = {
-    bottom: `calc(3% + ${footerHeight}px)`,
-  };
+  // Function to open the Tutorial Sodal when the ❓ button us clicked
+  function openTutorial() {
+    setTutorialModalOpen(true);
+    // Clear so popup text doesn't happen after language selection
+    setPopupText(null);
+    // Block home scrolling since we're going to the Tutorial Screen
+    blockHomeScroll();
+  }
 
   return (
-    <div id="scroll-to-top-button">
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className={`circular-btn scroll-up-btn`}
-          title="Go back to the top"
-          style={isNearFooter ? footerCSS : {}}
-        >
-          <Image
-            src={backButton}
-            height={50}
-            width={50}
-            alt=""
-            quality={100}
-            unoptimized={true}
-          />
-        </button>
-      )}
-    </div>
+    <>
+      <div id="scroll-to-top-button">
+        {isScrollToTopVisible && (
+          <button
+            onClick={scrollToTop}
+            className={`circular-btn scroll-up-btn ${
+              isNearFooter
+                ? 'scroll-up-btn-animation'
+                : 'scroll-down-btn-animation'
+            }`}
+            title="Go back to the top"
+            style={
+              isNearFooter ? { bottom: `calc(3% + ${footerHeight}px)` } : {}
+            }
+          >
+            <Image
+              src={backButton}
+              height={50}
+              width={50}
+              alt=""
+              quality={100}
+              unoptimized={true}
+            />
+          </button>
+        )}
+        <style global jsx>{`
+          .scroll-up-btn-animation {
+            animation: move-up 0.15s;
+            bottom: calc(3% + ${footerHeight}px);
+          }
+
+          @keyframes move-up {
+            0% {
+              bottom: 3%;
+            }
+            100% {
+              bottom: calc(3% + ${footerHeight}px);
+            }
+          }
+
+          .scroll-down-btn-animation {
+            animation: move-down 0.15s;
+            bottom: 3%;
+          }
+
+          @keyframes move-down {
+            0% {
+              bottom: calc(3% + ${footerHeight}px);
+            }
+            100% {
+              bottom: 3%;
+            }
+          }
+        `}</style>
+      </div>
+      <div id="question-button">
+        {!isNearFooter && (
+          <button
+            onClick={openTutorial}
+            className={'circular-btn help-btn'}
+            title="Tutorial"
+          >
+            <Image
+              src={questionButton}
+              height={70}
+              width={70}
+              alt=""
+              quality={100}
+              unoptimized={true}
+            />
+          </button>
+        )}
+      </div>
+    </>
   );
 }
 
@@ -341,33 +355,17 @@ function HomeScreen({
   const [searchValue, setSearchValue] = useState(null);
   // False = 🔎 icon is in the middle, True = 🔎 icon is on the left
   const [screenWasChanged, setScreenWasChanged] = useState(false);
-  // Keeping track of footer height so we can move align the buttons perfectly above it
+  // Keeping track of footer height so we can manipulate the floating buttons
   const footerRef = useRef(null);
-  const [footerHeight, setFooterHeight] = useState(0);
-
-  useEffect(() => {
-    function handleResize() {
-      if (footerRef.current) {
-        const height = footerRef.current.offsetHeight;
-        setFooterHeight(height);
-        console.log(`footer height ${height}`);
-      }
-    }
-
-    handleResize(); // Call it initially to get the height
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [footerRef]);
 
   return (
     <div>
       <Borders />
-      <ScrollToTopButton footerHeight={footerHeight} />
-      <QuestionButton
+      <HomeScreenFloatingButtons
         setPopupText={setPopupText}
         setTutorialModalOpen={setTutorialModalOpen}
         blockHomeScroll={blockHomeScroll}
-        footerHeight={footerHeight}
+        footerRef={footerRef}
       />
       <InstructionsBar
         languageCode={languageCode}
