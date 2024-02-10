@@ -1,26 +1,28 @@
-.error-grid-container {
+.about-grid-container {
   display: flex;
   justify-content: center;
 }
 
-.error-grid {
+.about-grid {
   display: grid;
   padding-bottom: 40px;
   padding-left: 25%;
   padding-right: 25%;
   padding-top: 40px;
-  row-gap: 1.75rem;
+  row-gap: 1.25rem;
   text-align: center;
 }
 
-.question-image {
+.chan-image {
+  border-radius: 50%;
   justify-self: center;
+  overflow: hidden;
   pointer-events: none;
 }
 
-.error-a,
-.error-a:visited,
-.error-a:hover,
-.error-a:active {
+.about-a,
+.about-a:visited,
+.about-a:hover,
+.about-a:active {
   color: black;
 }

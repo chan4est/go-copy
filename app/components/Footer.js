@@ -15,7 +15,7 @@ export default function Footer({ footerRef }) {
           Privacy Policy
         </a>{' '}
         |{' '} */}
-        <a href="/" title="Contact" className={styles['footer-a']}>
+        <a href="/about" title="Contact" className={styles['footer-a']}>
           {' '}
           Contact
         </a>

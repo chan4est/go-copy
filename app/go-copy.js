@@ -199,6 +199,7 @@ function HomeScreenFloatingButtons({
   setTutorialModalOpen,
   blockHomeScroll,
   footerRef,
+  searchValue,
 }) {
   const [isScrollToTopVisible, setIsScrollToTopVisible] = useState(false);
   const [isNearFooter, setIsNearFooter] = useState(false);
@@ -223,6 +224,9 @@ function HomeScreenFloatingButtons({
       setIsNearFooter(scrollY > footerOffset);
     };
 
+    // Attach the scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
     // Add a resize event listener to track the footer's height
     function handleResize() {
       if (footerRef.current) {
@@ -230,8 +234,6 @@ function HomeScreenFloatingButtons({
         setFooterHeight(height);
       }
     }
-    // Attach the scroll event listener when the component mounts
-    window.addEventListener('scroll', handleScroll);
 
     handleResize(); // Call it initially to get the height
     // Attach the resize event listener when the component mounts
@@ -318,7 +320,7 @@ function HomeScreenFloatingButtons({
         `}</style>
       </div>
       <div id="question-button">
-        {!isNearFooter && (
+        {!isNearFooter && !searchValue && (
           <button
             onClick={openTutorial}
             className={'circular-btn help-btn'}
@@ -361,32 +363,37 @@ function HomeScreen({
   return (
     <div>
       <Borders />
-      <HomeScreenFloatingButtons
-        setPopupText={setPopupText}
-        setTutorialModalOpen={setTutorialModalOpen}
-        blockHomeScroll={blockHomeScroll}
-        footerRef={footerRef}
-      />
-      <InstructionsBar
-        languageCode={languageCode}
-        setPopupText={setPopupText}
-        setScreenWasChanged={setScreenWasChanged}
-        setLanguageModalOpen={setLanguageModalOpen}
-        blockHomeScroll={blockHomeScroll}
-      />
-      <SearchBar
-        popupText={popupText}
-        popupKey={popupKey}
-        setSearchValue={setSearchValue}
-        screenWasChanged={screenWasChanged}
-      />
-      <PokemonGrid
-        setPopupText={setPopupText}
-        setPopupKey={setPopupKey}
-        searchValue={searchValue}
-        languageCode={languageCode}
-      />
-      <Footer footerRef={footerRef} />
+      <div className="generic-container">
+        <div className="generic-content">
+          <HomeScreenFloatingButtons
+            setPopupText={setPopupText}
+            setTutorialModalOpen={setTutorialModalOpen}
+            blockHomeScroll={blockHomeScroll}
+            footerRef={footerRef}
+            searchValue={searchValue}
+          />
+          <InstructionsBar
+            languageCode={languageCode}
+            setPopupText={setPopupText}
+            setScreenWasChanged={setScreenWasChanged}
+            setLanguageModalOpen={setLanguageModalOpen}
+            blockHomeScroll={blockHomeScroll}
+          />
+          <SearchBar
+            popupText={popupText}
+            popupKey={popupKey}
+            setSearchValue={setSearchValue}
+            screenWasChanged={screenWasChanged}
+          />
+          <PokemonGrid
+            setPopupText={setPopupText}
+            setPopupKey={setPopupKey}
+            searchValue={searchValue}
+            languageCode={languageCode}
+          />
+        </div>
+        <Footer footerRef={footerRef} />
+      </div>
     </div>
   );
 }
@@ -446,87 +453,91 @@ function TutorialScreen({
       className="modal-content modal-content-100"
       overlayClassName="modal-overlay"
     >
-      <Borders />
-      <BackButton
-        setTutorialModalOpen={setTutorialModalOpen}
-        allowHomeScroll={allowHomeScroll}
-      />
-      <div className="tutorial">
-        <u>TUTORIAL</u>
-        <p>
-          1. Search or scroll to the Pokémon <br></br>you want to nickname.
-        </p>
-        <div className="tutorial-s1-container">
-          <div className="tutorial-s1-grid">
-            <div>
-              <TutorialImage
-                imagePath={'/tutorial/tut1.webp'}
-                width={162}
-                height={265}
-              />
-              <p className="tipText">Filter by name...</p>
+      <div className="generic-container">
+        <div className="generic-content">
+          <Borders />
+          <BackButton
+            setTutorialModalOpen={setTutorialModalOpen}
+            allowHomeScroll={allowHomeScroll}
+          />
+          <div className="tutorial">
+            <u>TUTORIAL</u>
+            <p>
+              1. Search or scroll to the Pokémon <br></br>you want to nickname.
+            </p>
+            <div className="tutorial-s1-container">
+              <div className="tutorial-s1-grid">
+                <div>
+                  <TutorialImage
+                    imagePath={'/tutorial/tut1.webp'}
+                    width={162}
+                    height={265}
+                  />
+                  <p className="tipText">Filter by name...</p>
+                </div>
+                <div>
+                  <TutorialImage
+                    imagePath={'/tutorial/tut2.webp'}
+                    width={162}
+                    height={265}
+                    tipText={'or dex number!'}
+                  />
+                  <p className="tipText">or dex number!</p>
+                </div>
+                <div className="tutorial-s1-grid-item">
+                  <TutorialImage
+                    imagePath={'/tutorial/tut3.webp'}
+                    width={162}
+                    height={215}
+                  />
+                  <p className="tipText">
+                    Scroll quickly <br></br>using your <br></br>browser&#39;s{' '}
+                    <br></br>
+                    scroll bar!
+                  </p>
+                </div>
+              </div>
             </div>
-            <div>
-              <TutorialImage
-                imagePath={'/tutorial/tut2.webp'}
-                width={162}
-                height={265}
-                tipText={'or dex number!'}
-              />
-              <p className="tipText">or dex number!</p>
-            </div>
-            <div className="tutorial-s1-grid-item">
-              <TutorialImage
-                imagePath={'/tutorial/tut3.webp'}
-                width={162}
-                height={215}
-              />
-              <p className="tipText">
-                Scroll quickly <br></br>using your <br></br>browser&#39;s{' '}
-                <br></br>
-                scroll bar!
-              </p>
-            </div>
+            <p>
+              2. Tap on the Pokémon to automatically <br></br>put the foreign
+              name into your clipboard.
+            </p>
+            <TutorialImage
+              imagePath={'/tutorial/tut4.webp'}
+              width={326}
+              height={556}
+            />
+            <p>3. Switch apps to Pokémon GO.</p>
+            <TutorialImage
+              imagePath={'/tutorial/tut5.webp'}
+              width={326}
+              height={531}
+            />
+            <p>4. Paste in your new nickname.</p>
+            <TutorialImage
+              imagePath={'/tutorial/tut6.webp'}
+              width={326}
+              height={440}
+            />
+            <p>Done!</p>
+            <TutorialImage
+              imagePath={'/tutorial/tut7.webp'}
+              width={326}
+              height={403}
+            />
+            <p>
+              TIP! You can choose other nicknaming <br></br>languages from the
+              dropdown menu at <br></br>the top of the screen.
+            </p>
+            <TutorialImage
+              imagePath={'/tutorial/tut8.webp'}
+              width={326}
+              height={435}
+            />
           </div>
         </div>
-        <p>
-          2. Tap on the Pokémon to automatically <br></br>put the foreign name
-          into your clipboard.
-        </p>
-        <TutorialImage
-          imagePath={'/tutorial/tut4.webp'}
-          width={326}
-          height={556}
-        />
-        <p>3. Switch apps to Pokémon GO.</p>
-        <TutorialImage
-          imagePath={'/tutorial/tut5.webp'}
-          width={326}
-          height={531}
-        />
-        <p>4. Paste in your new nickname.</p>
-        <TutorialImage
-          imagePath={'/tutorial/tut6.webp'}
-          width={326}
-          height={440}
-        />
-        <p>Done!</p>
-        <TutorialImage
-          imagePath={'/tutorial/tut7.webp'}
-          width={326}
-          height={403}
-        />
-        <p>
-          TIP! You can choose other nicknaming <br></br>languages from the
-          dropdown menu at <br></br>the top of the screen.
-        </p>
-        <TutorialImage
-          imagePath={'/tutorial/tut8.webp'}
-          width={326}
-          height={435}
-        />
+        <Footer />
       </div>
-      <Footer />
     </Modal>
   );
 }
@@ -601,14 +612,18 @@ function LanguageSelectionScreen({
       className="modal-content modal-content-100"
       overlayClassName="modal-overlay"
     >
-      <Borders />
-      <div className={`language-selection-grid`}>
-        <div className="instructions language-selection-instructions">
-          CHOOSE YOUR NICKNAMING LANGUAGE
+      <div className="generic-container">
+        <Borders />
+        <div className="generic-content">
+          <div className={`language-selection-grid`}>
+            <div className="instructions language-selection-instructions">
+              CHOOSE YOUR NICKNAMING LANGUAGE
+            </div>
+            {languageList}
+          </div>
         </div>
-        {languageList}
+        <Footer />
       </div>
-      <Footer />
     </Modal>
   );
 }

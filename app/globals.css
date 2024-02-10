@@ -34,6 +34,18 @@ button:hover {
   background-color: rgba(183, 240, 155, 0.35);
 }
 
+/* Ensuring the footer is always at the bottom */
+
+.generic-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.generic-content {
+  flex: 1;
+}
+
 /* Popups */
 
 .modal-content {
@@ -50,7 +62,6 @@ button:hover {
 }
 
 .modal-overlay {
-  /* Hides everything including the buttons */
   background-color: #f8fff7;
   bottom: 0;
   left: 0;
@@ -58,6 +69,7 @@ button:hover {
   right: 0;
   top: 0;
   z-index: 5;
+  /* Hides everything including the buttons */
 }
 
 .modal-content-100 {
@@ -106,6 +118,7 @@ button:hover {
 /* Tutorial Screen */
 
 .tutorial {
+  flex: 1;
   font-size: 1.25rem;
   padding-bottom: 30px;
   padding-top: 1.5rem;
@@ -182,6 +195,7 @@ button:hover {
 
 .language-selection-grid {
   display: grid;
+  flex: 1;
   justify-content: center;
   padding-bottom: 40px;
   row-gap: 5px;
