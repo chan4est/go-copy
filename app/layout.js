@@ -1,4 +1,5 @@
 import './globals.css';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata = {
   title: 'GO Copy!',
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" translate="no">
       <body id="root">{children}</body>
+      <GoogleAnalytics gaId="G-HS8XF6LN4Z" />
     </html>
   );
 }

@@ -6,17 +6,19 @@
 .about-grid {
   display: grid;
   padding-bottom: 40px;
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-top: 40px;
-  row-gap: 1.25rem;
+  row-gap: 0.75rem;
   text-align: center;
+  width: clamp(300px, 85vw, 650px);
 }
 
 .chan-image {
   border-radius: 50%;
+  height: auto;
   justify-self: center;
-  overflow: hidden;
+  max-width: 65%;
   pointer-events: none;
 }
 

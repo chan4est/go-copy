@@ -3,7 +3,7 @@ import Borders from '../components/Borders';
 import styles from './about.module.css';
 import chanPhoto from '../../public/me.webp';
 import Image from 'next/image';
-import { KofiButton } from 'react-kofi-button';
+import KofiButton from '../components/KofiButton';
 
 export default function About() {
   return (
@@ -44,22 +44,16 @@ export default function About() {
             </p>
             <br></br>
             <p>
-              If you enjoy using this app, please consider donating on Ko-fi to
-              support me! I developed this website by myself and pay for the
-              server costs out of my own pocket. Any amount goes a long way!
+              If you enjoy using this app, please consider supporting me on
+              Ko-fi! I developed this website myself and pay for the server
+              costs out of my own pocket. Any amount goes a long way!
             </p>
             <br></br>
-            <KofiButton
-              username="chan4est"
-              title="Help me pay for server costs!"
-              label="SUPPORT ME!"
-              backgroundColor="#4fa283"
-              animation="true"
-            />
+            <KofiButton />
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer removeKofiButton={true} />
     </div>
   );
 }

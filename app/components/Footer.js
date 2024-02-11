@@ -1,7 +1,7 @@
-import { KofiButton } from 'react-kofi-button';
 import styles from './Footer.module.css';
+import KofiButton from './KofiButton';
 
-export default function Footer({ footerRef }) {
+export default function Footer({ footerRef, removeKofiButton }) {
   let currentDate = new Date();
   let currentYear = currentDate.getFullYear();
   return (
@@ -21,16 +21,8 @@ export default function Footer({ footerRef }) {
         </a>
         <br></br>
         <br></br>
-        <KofiButton
-          username="chan4est"
-          title="Help me pay for server costs!"
-          label="SUPPORT ME!"
-          preset="skinny"
-          backgroundColor="#4fa283"
-          animation="false"
-        />
-        <br></br>
-        <br></br>
+        {!removeKofiButton && <KofiButton />}
+        {!removeKofiButton && <br></br>}
         <p>
           {currentYear} © Chandler Forrest. All rights reserved by their
           respective owners.
