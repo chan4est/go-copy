@@ -30,6 +30,8 @@ class PokemonNames():
         ]
         self.initialize_list()
     
+
+    ## TODO: Add region_num, type_1, type_2, family_name
     def initialize_list(self) -> None:
         for language in self.languages:
             pokemon_html = requests.get(self.bulbaurl.format(language['name']))

@@ -3,15 +3,23 @@
 import { pokemonData } from './lib/pokemon';
 import { missingPokemon } from './lib/missing-pokemon';
 import { languageData } from './lib/languages';
+
 import Borders from './components/Borders';
 import Footer from './components/Footer';
+import { useScrollBlock } from './components/useScrollBlock';
+
 import backButton from '../public/btn-back.webp';
 import questionButton from '../public/btn-question.webp';
+import sortButton from '../public/btn-number.webp';
+import ascendingButton from '../public/btn-number-down.webp';
+import descendingButton from '../public/btn-number-up.webp';
+import aZButton from '../public/btn-az.webp';
+import zAButton from '../public/btn-za.webp';
+import xButton from '../public/btn-x.webp';
 
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-import { useScrollBlock } from './components/useScrollBlock';
 import copy from 'copy-to-clipboard';
 import Modal from 'react-modal';
 
@@ -52,7 +60,13 @@ function PokemonButton({
   );
 }
 
-function PokemonGrid({ setPopupText, searchValue, setPopupKey, languageCode }) {
+function PokemonGrid({
+  languageCode,
+  sortingOrder,
+  setPopupText,
+  setPopupKey,
+  searchValue,
+}) {
   // https://stackoverflow.com/a/175787/5221437
   function isNumber(str) {
     if (typeof str != 'string') return false; // we only process strings!
@@ -63,35 +77,79 @@ function PokemonGrid({ setPopupText, searchValue, setPopupKey, languageCode }) {
   }
 
   let filteredPokemon = pokemonData;
+  // Remove the missing Pokemon
+  // TODO: Make this happen before the app even starts
+  filteredPokemon = filteredPokemon.filter(
+    (pokemon) =>
+      // Don't show Pokemon that aren't in GO yet (Spoilers)
+      !missingPokemon.includes(pokemon.id)
+  );
+
   // Can search by name or dex number
   if (searchValue) {
     if (isNumber(searchValue)) {
-      filteredPokemon = pokemonData.filter(
+      filteredPokemon = filteredPokemon.filter(
         (pokemon) => pokemon.id == Number(searchValue)
       );
     } else {
       const searchRegex = new RegExp(`^${searchValue.toLowerCase()}.*`);
-      filteredPokemon = pokemonData.filter(
+      filteredPokemon = filteredPokemon.filter(
         (pokemon) => pokemon.name_EN.toLowerCase().match(searchRegex) != null
       );
     }
   }
 
+  // Sort the entire list of Pokemon based on the user selection
+
+  // Numerical highest -> lowest
+  if (sortingOrder == 1) {
+    filteredPokemon.sort(function (a, b) {
+      return b.id - a.id;
+    });
+  }
+  // Alphabetical
+  else if (sortingOrder == 2) {
+    filteredPokemon.sort(function (a, b) {
+      var nameA = a.name_EN;
+      var nameB = b.name_EN;
+
+      if (nameA < nameB) {
+        return -1; // nameA comes before nameB
+      }
+      if (nameA > nameB) {
+        return 1; // nameA comes after nameB
+      }
+      return 0; // names must be equal
+    });
+  }
+  // Reverse alphabetical
+  else if (sortingOrder == 3) {
+    filteredPokemon.sort(function (a, b) {
+      var nameA = a.name_EN;
+      var nameB = b.name_EN;
+
+      if (nameA > nameB) {
+        return -1; // nameA comes after nameB for reverse alphabetical order
+      }
+      if (nameA < nameB) {
+        return 1; // nameA comes before nameB for reverse alphabetical order
+      }
+      return 0; // names must be equal
+    });
+  }
+
   const pokemonList = filteredPokemon.map((pokemon) => {
     const nameForeign = pokemon[`name_${languageCode}`];
-    // Don't show Pokemon that aren't in GO yet (Spoilers)
-    if (!missingPokemon.includes(pokemon.id)) {
-      return (
-        <PokemonButton
-          key={pokemon.id}
-          nameEnglish={pokemon.name_EN}
-          nameForeign={nameForeign}
-          pokemonNumber={pokemon.id}
-          setPopupText={setPopupText}
-          setPopupKey={setPopupKey}
-        />
-      );
-    }
+    return (
+      <PokemonButton
+        key={pokemon.id}
+        nameEnglish={pokemon.name_EN}
+        nameForeign={nameForeign}
+        pokemonNumber={pokemon.id}
+        setPopupText={setPopupText}
+        setPopupKey={setPopupKey}
+      />
+    );
   });
 
   return (
@@ -195,8 +253,10 @@ function InstructionsBar({
 // Main Screen Buttons
 
 function HomeScreenFloatingButtons({
+  sortingOrder,
   setPopupText,
   setTutorialModalOpen,
+  setSortModalOpen,
   blockHomeScroll,
   footerRef,
   searchValue,
@@ -261,6 +321,32 @@ function HomeScreenFloatingButtons({
     setPopupText(null);
     // Block home scrolling since we're going to the Tutorial Screen
     blockHomeScroll();
+  }
+
+  function openSortOptions() {
+    setSortModalOpen(true);
+    // Clear so popup text doesn't happen after language selection
+    setPopupText(null);
+    // Block home scrolling since we're going to the Tutorial Screen
+    blockHomeScroll();
+  }
+
+  let currentSortButton = sortButton;
+  switch (sortingOrder) {
+    case 0:
+      currentSortButton = ascendingButton;
+      break;
+    case 1:
+      currentSortButton = descendingButton;
+      break;
+    case 2:
+      currentSortButton = aZButton;
+      break;
+    case 3:
+      currentSortButton = zAButton;
+      break;
+    default:
+      currentSortButton = sortButton;
   }
 
   return (
@@ -337,6 +423,24 @@ function HomeScreenFloatingButtons({
           </button>
         )}
       </div>
+      <div id="current-sort-option-button">
+        {!isNearFooter && (
+          <button
+            onClick={openSortOptions}
+            className={'circular-btn sort-btn'}
+            title="Sort"
+          >
+            <Image
+              src={currentSortButton}
+              height={70}
+              width={70}
+              alt=""
+              quality={100}
+              unoptimized={true}
+            />
+          </button>
+        )}
+      </div>
     </>
   );
 }
@@ -345,8 +449,10 @@ function HomeScreenFloatingButtons({
 
 function HomeScreen({
   languageCode,
+  sortingOrder,
   setLanguageModalOpen,
   setTutorialModalOpen,
+  setSortModalOpen,
   blockHomeScroll,
 }) {
   // Change the text every time a NEW Pokemon is clicked on so the new text is displayed
@@ -363,11 +469,13 @@ function HomeScreen({
   return (
     <div>
       <Borders />
-      <div className="generic-container">
-        <div className="generic-content">
+      <div className="base-container">
+        <div className="base-content">
           <HomeScreenFloatingButtons
+            sortingOrder={sortingOrder}
             setPopupText={setPopupText}
             setTutorialModalOpen={setTutorialModalOpen}
+            setSortModalOpen={setSortModalOpen}
             blockHomeScroll={blockHomeScroll}
             footerRef={footerRef}
             searchValue={searchValue}
@@ -386,10 +494,11 @@ function HomeScreen({
             screenWasChanged={screenWasChanged}
           />
           <PokemonGrid
+            languageCode={languageCode}
+            sortingOrder={sortingOrder}
             setPopupText={setPopupText}
             setPopupKey={setPopupKey}
             searchValue={searchValue}
-            languageCode={languageCode}
           />
         </div>
         <Footer footerRef={footerRef} />
@@ -398,17 +507,132 @@ function HomeScreen({
   );
 }
 
+// Sort Buttons
+
+function SortOptionButton({
+  setSortingOrder,
+  setTutorialModalOpen,
+  allowHomeScroll,
+  sortingOrderOption,
+  buttonPic,
+  buttonText,
+  buttonTitle,
+}) {
+  function handleSortButtonClick() {
+    setSortingOrder(sortingOrderOption);
+    setTutorialModalOpen(false);
+    allowHomeScroll();
+  }
+  return (
+    <div
+      className="sort-options-btn-container"
+      onClick={handleSortButtonClick}
+      title={buttonTitle}
+    >
+      <span className="sort-options-span">{buttonText}</span>
+      <button
+        onClick={handleSortButtonClick}
+        className={'sort-options-circ-btn'}
+      >
+        <Image
+          src={buttonPic}
+          height={70}
+          width={70}
+          alt=""
+          quality={100}
+          unoptimized={true}
+        />
+      </button>
+    </div>
+  );
+}
+
+// Sort Screen
+function SortOptionScreen({
+  sortingOrder,
+  setSortingOrder,
+  sortModalOpen,
+  setSortModalOpen,
+  allowHomeScroll,
+}) {
+  function handleClose() {
+    setSortModalOpen(false);
+  }
+
+  return (
+    <Modal
+      isOpen={sortModalOpen}
+      onRequestClose={handleClose}
+      className="modal-content modal-content-100"
+      overlayClassName="modal-overlay"
+    >
+      <div className="base-container">
+        <Borders />
+        <div className="base-content sort-options-grid-container">
+          <div className="sort-options-grid">
+            <SortOptionButton
+              setSortingOrder={setSortingOrder}
+              setTutorialModalOpen={setSortModalOpen}
+              allowHomeScroll={allowHomeScroll}
+              sortingOrderOption={0}
+              buttonPic={ascendingButton}
+              buttonText={'NUMBER (ASC.)'}
+              buttonTitle={'Sort by number (ascending)'}
+            />
+            <SortOptionButton
+              setSortingOrder={setSortingOrder}
+              setTutorialModalOpen={setSortModalOpen}
+              allowHomeScroll={allowHomeScroll}
+              sortingOrderOption={1}
+              buttonPic={descendingButton}
+              buttonText={'NUMBER (DESC.)'}
+              title={'Sort by number (descending)'}
+            />
+            <SortOptionButton
+              setSortingOrder={setSortingOrder}
+              setTutorialModalOpen={setSortModalOpen}
+              allowHomeScroll={allowHomeScroll}
+              sortingOrderOption={2}
+              buttonPic={aZButton}
+              buttonText={'NAME (A-Z)'}
+              title={'Sort by name (A-Z)'}
+            />
+            <SortOptionButton
+              setSortingOrder={setSortingOrder}
+              setTutorialModalOpen={setSortModalOpen}
+              allowHomeScroll={allowHomeScroll}
+              sortingOrderOption={3}
+              buttonPic={zAButton}
+              buttonText={'NAME (Z-A)'}
+              title={'Sort by name (Z-A)'}
+            />
+            <SortOptionButton
+              setSortingOrder={setSortingOrder}
+              setTutorialModalOpen={setSortModalOpen}
+              allowHomeScroll={allowHomeScroll}
+              sortingOrderOption={sortingOrder}
+              buttonPic={xButton}
+              buttonText={''}
+              title={'Home'}
+            />
+          </div>
+        </div>
+      </div>
+    </Modal>
+  );
+}
+
 // Tutorial
 
 function BackButton({ setTutorialModalOpen, allowHomeScroll }) {
-  function handleClick() {
+  function handleBackButtonClick() {
     setTutorialModalOpen(false);
     allowHomeScroll();
   }
   return (
     <div id="back-button">
       <button
-        onClick={handleClick}
+        onClick={handleBackButtonClick}
         className="circular-btn back-btn"
         title="Home"
       >
@@ -453,8 +677,8 @@ function TutorialScreen({
       className="modal-content modal-content-100"
       overlayClassName="modal-overlay"
     >
-      <div className="generic-container">
-        <div className="generic-content">
+      <div className="base-container">
+        <div className="base-content">
           <Borders />
           <BackButton
             setTutorialModalOpen={setTutorialModalOpen}
@@ -551,7 +775,7 @@ function LanguageOptionButton({
   setLanguageModalOpen,
   allowHomeScroll,
 }) {
-  function handleClick() {
+  function handleLanguageOptionButtonClick() {
     setLanguageCode(languageCode);
     setLanguageModalOpen(false);
     allowHomeScroll();
@@ -571,7 +795,7 @@ function LanguageOptionButton({
 
   return (
     <button
-      onClick={handleClick}
+      onClick={handleLanguageOptionButtonClick}
       className="language-option-btn"
       title={`Change nicknaming language to ${languageName}`}
     >
@@ -612,15 +836,13 @@ function LanguageSelectionScreen({
       className="modal-content modal-content-100"
       overlayClassName="modal-overlay"
     >
-      <div className="generic-container">
+      <div className="base-container">
         <Borders />
-        <div className="generic-content">
-          <div className={`language-selection-grid`}>
-            <div className="instructions language-selection-instructions">
-              CHOOSE YOUR NICKNAMING LANGUAGE
-            </div>
-            {languageList}
+        <div className="base-content language-selection-grid">
+          <div className="instructions language-selection-instructions">
+            CHOOSE YOUR NICKNAMING LANGUAGE
           </div>
+          {languageList}
         </div>
         <Footer />
       </div>
@@ -631,9 +853,12 @@ function LanguageSelectionScreen({
 export default function App() {
   // User's selected nicknaming language. For displaying in the tooltip bar and what's in the Pokemon grid
   const [languageCode, setLanguageCode] = useState('JA');
+  // 0: Numbers High -> Low, 1: Numbers Low -> High, 2: Name A-Z, 3: Name Z-A
+  const [sortingOrder, setSortingOrder] = useState(0);
   // Keeping track of which non-home screen is open
   const [languageModalOpen, setLanguageModalOpen] = useState(false);
   const [tutorialModalOpen, setTutorialModalOpen] = useState(false);
+  const [sortModalOpen, setSortModalOpen] = useState(false);
   // So scrolling on a popup screen doesn't effect the Home screen
   const [blockHomeScroll, allowHomeScroll] = useScrollBlock();
 
@@ -650,10 +875,19 @@ export default function App() {
         setTutorialModalOpen={setTutorialModalOpen}
         allowHomeScroll={allowHomeScroll}
       />
+      <SortOptionScreen
+        sortingOrder={sortingOrder}
+        setSortingOrder={setSortingOrder}
+        sortModalOpen={sortModalOpen}
+        setSortModalOpen={setSortModalOpen}
+        allowHomeScroll={allowHomeScroll}
+      />
       <HomeScreen
         languageCode={languageCode}
+        sortingOrder={sortingOrder}
         setLanguageModalOpen={setLanguageModalOpen}
         setTutorialModalOpen={setTutorialModalOpen}
+        setSortModalOpen={setSortModalOpen}
         blockHomeScroll={blockHomeScroll}
         allowHomeScroll={allowHomeScroll}
       />

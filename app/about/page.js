@@ -7,8 +7,8 @@ import KofiButton from '../components/KofiButton';
 
 export default function About() {
   return (
-    <div className="generic-container">
-      <div className="generic-content">
+    <div className="base-container">
+      <div className="base-content">
         <Borders />
         <div className={styles['about-grid-container']}>
           <div className={styles['about-grid']}>

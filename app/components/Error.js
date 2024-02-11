@@ -6,8 +6,8 @@ import styles from './Error.module.css';
 
 export default function Error({ errorText }) {
   return (
-    <div className="generic-container">
-      <div className="generic-content">
+    <div className="base-container">
+      <div className="base-content">
         <Borders />
         <div className={styles['error-grid-container']}>
           <div className={styles['error-grid']}>

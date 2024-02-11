@@ -36,13 +36,13 @@ button:hover {
 
 /* Ensuring the footer is always at the bottom */
 
-.generic-container {
+.base-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.generic-content {
+.base-content {
   flex: 1;
 }
 
@@ -73,6 +73,7 @@ button:hover {
   /* Hides everything including the buttons */
 }
 
+/* Hack to make sure elements are aligned properly */
 .modal-content-100 {
   width: 100%;
 }
@@ -93,7 +94,15 @@ button:hover {
 }
 
 .help-btn {
-  bottom: 2%;
+  bottom: calc(2.5vh + 70px);
+  height: 70px;
+  right: 5vw;
+  transform: translateX(-5%);
+  width: 70px;
+}
+
+.sort-btn {
+  bottom: 2vh;
   height: 70px;
   right: 5%;
   transform: translateX(-5%);
@@ -102,8 +111,8 @@ button:hover {
 
 .back-btn {
   height: 50px;
-  left: 5%;
-  top: 0.75rem;
+  left: 5vw;
+  top: 2vh;
   transform: translateX(5%);
   transform: rotate(-90deg);
   width: 50px;
@@ -117,10 +126,49 @@ button:hover {
   width: 50px;
 }
 
+/* Sort Options Screen */
+
+.sort-options-btn-container {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5vw;
+  text-align: right;
+}
+
+.sort-options-span {
+  font-size: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.sort-options-circ-btn {
+  border-radius: 50px;
+  bottom: 10%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  height: 70px;
+  padding: 0;
+  right: 5%;
+  transform: translateX(-5%);
+  width: 70px;
+  z-index: 3;
+}
+
+.sort-options-grid-container {
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 2vh;
+}
+
+.sort-options-grid {
+  display: grid;
+  row-gap: 1rem;
+}
+
 /* Tutorial Screen */
 
 .tutorial {
-  flex: 1;
   font-size: 1.25rem;
   padding-bottom: 30px;
   padding-top: 1.5rem;
@@ -197,7 +245,6 @@ button:hover {
 
 .language-selection-grid {
   display: grid;
-  flex: 1;
   justify-content: center;
   padding-bottom: 40px;
   row-gap: 5px;
@@ -354,11 +401,4 @@ button:hover {
   padding-top: 1rem;
   row-gap: 1rem;
   width: clamp(300px, 85vw, 650px);
-}
-
-/* Hack to get the Ko-fi button to display properly on mobile */
-.KofiContainer,
-.KofiText,
-.skinny {
-  font-family: 'Lato', sans-serif !important;
 }
