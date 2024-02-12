@@ -9,8 +9,8 @@ import Footer from './components/Footer';
 import { useScrollBlock } from './components/useScrollBlock';
 
 import backButton from '../public/btn-back.webp';
+import backButtonRotated from '../public/btn-back-rot.webp';
 import questionButton from '../public/btn-question.webp';
-import sortButton from '../public/btn-number.webp';
 import ascendingButton from '../public/btn-number-down.webp';
 import descendingButton from '../public/btn-number-up.webp';
 import aZButton from '../public/btn-az.webp';
@@ -331,7 +331,7 @@ function HomeScreenFloatingButtons({
     blockHomeScroll();
   }
 
-  let currentSortButton = sortButton;
+  let currentSortButton = ascendingButton;
   switch (sortingOrder) {
     case 0:
       currentSortButton = ascendingButton;
@@ -346,7 +346,7 @@ function HomeScreenFloatingButtons({
       currentSortButton = zAButton;
       break;
     default:
-      currentSortButton = sortButton;
+      currentSortButton = ascendingButton;
   }
 
   return (
@@ -624,7 +624,7 @@ function SortOptionScreen({
 
 // Tutorial
 
-function BackButton({ setTutorialModalOpen, allowHomeScroll }) {
+function TutorialBackButton({ setTutorialModalOpen, allowHomeScroll }) {
   function handleBackButtonClick() {
     setTutorialModalOpen(false);
     allowHomeScroll();
@@ -637,7 +637,7 @@ function BackButton({ setTutorialModalOpen, allowHomeScroll }) {
         title="Home"
       >
         <Image
-          src={backButton}
+          src={backButtonRotated}
           height={50}
           width={50}
           alt=""
@@ -680,7 +680,7 @@ function TutorialScreen({
       <div className="base-container">
         <div className="base-content">
           <Borders />
-          <BackButton
+          <TutorialBackButton
             setTutorialModalOpen={setTutorialModalOpen}
             allowHomeScroll={allowHomeScroll}
           />

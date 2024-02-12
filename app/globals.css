@@ -114,7 +114,6 @@ button:hover {
   left: 5vw;
   top: 2vh;
   transform: translateX(5%);
-  transform: rotate(-90deg);
   width: 50px;
 }
 
