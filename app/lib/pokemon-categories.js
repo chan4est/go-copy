@@ -1,0 +1,16 @@
+export const pokemonCatagories = [
+  'legendary',
+  'legendaries',
+  'mythical',
+  'mythicals',
+  'baby',
+  'babies',
+  'eggsonly',
+  'eggs only',
+  'ultra beast',
+  'ultra beasts',
+  'ultrabeast',
+  'paradox',
+  'paradox pokemon',
+  'paradox pokémon',
+];

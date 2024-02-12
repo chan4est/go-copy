@@ -29,7 +29,53 @@ class PokemonNames():
             {'name': 'Hindi',                   'searchregex': 'lang="hi">(.{1,15}).*',          'code': 'HI'}
         ]
         self.initialize_list()
+
+    def get_pokemon_region(self, dex_number: int) -> int:
+        if (dex_number >= 1 and dex_number <= 151):
+            return "kanto"
+        elif (dex_number >= 152 and dex_number <= 251):
+            return "johto"
+        elif (dex_number >= 252 and dex_number <= 386):
+            return "hoenn"
+        elif (dex_number >= 387 and dex_number <= 493):
+            return "sinnoh"
+        elif (dex_number >= 494 and dex_number <= 649):
+            return "unova"
+        elif (dex_number >= 650 and dex_number <= 721):
+            return "kalos"
+        elif (dex_number >= 722 and dex_number <= 807):
+            return "alola"
+        elif (dex_number >= 810 and dex_number <= 898):
+            return "galar"
+        elif (dex_number >= 899 and dex_number <= 905):
+            return "hisui"
+        elif (dex_number >= 906 and dex_number <= 1025):
+            return "paldea"
+        else:
+            return "unknown"
     
+    ## Tag Pokemon if they're one of the categories based on Pokemon GO's search phrase keywords
+    ## https://leidwesen.github.io/SearchPhrases/
+    def get_pokemon_keyword(self, dex_number: int) -> str:
+        ## Specific catagories of Pokemon
+        legendary_pokemon = [144, 145, 146, 150, 243, 244, 245, 249, 250, 377, 378, 379, 380, 381, 382, 383, 384, 480, 481, 482, 483, 484, 485, 486, 487, 488, 494, 638, 639, 640, 641, 642, 643, 644, 645, 646, 716, 717, 718, 772, 773, 785, 786, 787, 788, 789, 790, 791, 792, 800, 888, 889, 890, 891, 892, 894, 895, 896, 897, 898, 905, 1001, 1002, 1003, 1004, 1007, 1008, 1014, 1015, 1016, 1017, 1024]
+        mythical_pokemon = [151, 251, 385, 386, 489, 490, 491, 492, 493, 647, 648, 649, 719, 720, 721, 801, 802, 807, 808, 809, 893, 1025]
+        baby_pokemon = [172, 173, 174, 175, 236, 238, 239, 240, 298, 360, 406, 433, 438, 439, 440, 446, 447, 458, 848]
+        ultra_beasts = [793, 794, 795, 796, 797, 798, 799, 803, 804, 805, 806]
+        paradox_pokemon = [984, 985, 986, 987, 988, 989, 1005, 1007, 1020, 1021, 990, 991, 992, 993, 994, 995, 1006, 1008, 1010, 1022, 1023]
+
+        if (dex_number in legendary_pokemon):
+            return ['legendary', 'legendaries']
+        elif (dex_number in mythical_pokemon):
+            return ['mythical', 'mythicals']
+        elif (dex_number in baby_pokemon):
+            return ['baby', 'babies', 'eggsonly', 'eggs only']
+        elif (dex_number in ultra_beasts):
+            return ['ultra beast', 'ultra beasts', 'ultrabeast']
+        elif (dex_number in paradox_pokemon):
+            return ['paradox', 'paradox pokemon', 'paradox pokémon']
+        else:
+            return []
 
     ## TODO: Add region_num, type_1, type_2, family_name
     def initialize_list(self) -> None:
@@ -79,6 +125,8 @@ class PokemonNames():
                     pokemon_data = {
                         "id": i+1,
                         "name_EN": english_name,
+                        "region_name": self.get_pokemon_region(i+1),
+                        "keywords": self.get_pokemon_keyword(i+1)
                         # "sprite_image": "https://img.pokemondb.net/sprites/home/normal/{}.png".format(english_name_html)
                     }
                     ## Ititialize all the names to English since most don't have explicit localizations

@@ -1,6 +1,8 @@
 'use client';
 
 import { pokemonData } from './lib/pokemon';
+import { pokemonRegions } from './lib/pokemon-regions';
+import { pokemonCatagories } from './lib/pokemon-categories';
 import { missingPokemon } from './lib/missing-pokemon';
 import { languageData } from './lib/languages';
 
@@ -76,22 +78,35 @@ function PokemonGrid({
     ); // ...and ensure strings of whitespace fail
   }
 
-  let filteredPokemon = pokemonData;
   // Remove the missing Pokemon
   // TODO: Make this happen before the app even starts
-  filteredPokemon = filteredPokemon.filter(
+  let filteredPokemon = pokemonData.filter(
     (pokemon) =>
       // Don't show Pokemon that aren't in GO yet (Spoilers)
       !missingPokemon.includes(pokemon.id)
   );
 
-  // Can search by name or dex number
   if (searchValue) {
+    // Searching by dex number (ex: 150 -> Mewtwo)
     if (isNumber(searchValue)) {
       filteredPokemon = filteredPokemon.filter(
         (pokemon) => pokemon.id == Number(searchValue)
       );
-    } else {
+    }
+    // Searching by region (ex: Hoenn -> Treeko - Jirachi)
+    else if (pokemonRegions.includes(searchValue.toLowerCase())) {
+      filteredPokemon = filteredPokemon.filter(
+        (pokemon) => pokemon.region_name == searchValue.toLowerCase()
+      );
+    }
+    // Search by catagory (ex: Mythicals -> Mew - Pecharunt)
+    else if (pokemonCatagories.includes(searchValue.toLowerCase())) {
+      filteredPokemon = filteredPokemon.filter((pokemon) =>
+        pokemon.keywords.includes(searchValue.toLowerCase())
+      );
+    }
+    // Searching by name (ex: Charm -> Charmander, Charmeleon)
+    else {
       const searchRegex = new RegExp(`^${searchValue.toLowerCase()}.*`);
       filteredPokemon = filteredPokemon.filter(
         (pokemon) => pokemon.name_EN.toLowerCase().match(searchRegex) != null
