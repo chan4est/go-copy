@@ -10,10 +10,12 @@ pokemon_names = None
 class PokemonNames():
     def __init__(self) -> None:
         self.pokemon_arr = []
-        self.bulbaurl = 'https://bulbapedia.bulbagarden.net/wiki/List_of_{}_Pok%C3%A9mon_names'
+        self.pokemon_families = {}
+        self.gen_bulbaurl = 'https://bulbapedia.bulbagarden.net/wiki/List_of_{}_Pok%C3%A9mon_names'
+        self.fam_bulbaurl = 'https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_evolution_family'
         ## Test the REGEX on https://regex101.com/
         self.languages = [
-            {'name': 'English',                 'searchregex': '\\(Pokémon\\)">(.{1,15})<\\/a><',  'code': 'EN'},
+            {'name': 'English',                 'searchregex': '\\(Pokémon\\)">(.{1,15})<\\/a><',   'code': 'EN'},
             {'name': 'Japanese',                'searchregex': 'title="ja:(.{1,15})".*',         'code': 'JA'},
             {'name': 'German',                  'searchregex': 'title="de:(.{1,15})".*',         'code': 'DE'},
             {'name': 'French',                  'searchregex': 'title="fr:(.{1,15})".*',         'code': 'FR'},
@@ -28,9 +30,10 @@ class PokemonNames():
             {'name': 'Thai',                    'searchregex': 'lang="th">(.{1,15}).*',          'code': 'TH'},
             {'name': 'Hindi',                   'searchregex': 'lang="hi">(.{1,15}).*',          'code': 'HI'}
         ]
-        self.initialize_list()
+        self.initialize_pokemon_families()
+        self.initialize_pokemon_list()
 
-    def get_pokemon_region(self, dex_number: int) -> int:
+    def get_pokemon_region(self, dex_number: int) -> str:
         if (dex_number >= 1 and dex_number <= 151):
             return "kanto"
         elif (dex_number >= 152 and dex_number <= 251):
@@ -56,7 +59,7 @@ class PokemonNames():
     
     ## Tag Pokemon if they're one of the categories based on Pokemon GO's search phrase keywords
     ## https://leidwesen.github.io/SearchPhrases/
-    def get_pokemon_keyword(self, dex_number: int) -> str:
+    def get_pokemon_keyword(self, dex_number: int) -> [str]:
         ## Specific catagories of Pokemon
         legendary_pokemon = [144, 145, 146, 150, 243, 244, 245, 249, 250, 377, 378, 379, 380, 381, 382, 383, 384, 480, 481, 482, 483, 484, 485, 486, 487, 488, 494, 638, 639, 640, 641, 642, 643, 644, 645, 646, 716, 717, 718, 772, 773, 785, 786, 787, 788, 789, 790, 791, 792, 800, 888, 889, 890, 891, 892, 894, 895, 896, 897, 898, 905, 1001, 1002, 1003, 1004, 1007, 1008, 1014, 1015, 1016, 1017, 1024]
         mythical_pokemon = [151, 251, 385, 386, 489, 490, 491, 492, 493, 647, 648, 649, 719, 720, 721, 801, 802, 807, 808, 809, 893, 1025]
@@ -76,27 +79,85 @@ class PokemonNames():
             return ['paradox', 'paradox pokemon', 'paradox pokémon']
         else:
             return []
+        
+    def get_pokemon_family(self, english_name: str) -> [str]:
+        return self.pokemon_families[english_name]
 
-    ## TODO: Add region_num, type_1, type_2, family_name
-    def initialize_list(self) -> None:
+    def initialize_pokemon_families(self) -> None:
+        family_html = requests.get(self.fam_bulbaurl)
+        family_html = html.unescape(family_html.text)
+
+        current_pokemon_family = ''
+        current_family_list = []
+
+        for line in family_html.splitlines():
+            pokemon_family = re.findall('>(.{1,15}) family', line)
+            pokemon_name = re.findall('title="(.{1,15}) \\(Pok', line)
+
+            ## While scanning you've found a Pokemon family
+            if pokemon_family:
+                ## You found another family. Add a new entry in the {} for Pokemon -> [family]
+                if current_pokemon_family != '':
+                    for pokemon in current_family_list:
+                        ## Family names inside the array are lowercase for easier searching
+                        self.pokemon_families[pokemon] = [x.lower() for x in list(set(current_family_list))]
+                    current_family_list = []
+                ## Set the Pokemon family for the first family found and all subsequent ones AFTER a reset
+                current_pokemon_family = pokemon_family[0]
+            ## You found a Pokemon in that family a few lines down
+            if pokemon_name:
+               current_family_list.append(pokemon_name[0])
+
+    def initialize_pokemon_list(self) -> None:
         for language in self.languages:
-            pokemon_html = requests.get(self.bulbaurl.format(language['name']))
+            pokemon_html = requests.get(self.gen_bulbaurl.format(language['name']))
             pokemon_html = html.unescape(pokemon_html.text)
-            pokemon_names = []
-            current_number = -1
+            current_language_pokemon_list = []
+
+            current_pokemon_number = -1
+            current_pokemon_name = ''
+            current_pokemon_types = []
+            skip_types = False
+
             for line in pokemon_html.splitlines():
                 pokemon_number = re.findall('monospace">#(\\d*).*', line)
-                individual_pokemon = re.findall(language['searchregex'], line)
+                pokemon_name = re.findall(language['searchregex'], line)
+
+                ## Only do the types regex finds in English. Save on computation
+                pokemon_type = None
+                if language['name'] == 'English':
+                    pokemon_type = re.findall('\\(type\\)" title="(.\\w{1,8}) \\(type\\)', line)
+
+                ## While scanning you've found a Pokemon
                 if pokemon_number:
-                    current_number = pokemon_number[0]
-                if individual_pokemon:
-                    pokemon_names.append({'number': int(current_number), 'name': individual_pokemon[0]})
+                    ## You found another Pokemon. Reset the variables
+                    if current_pokemon_number != -1:
+                        current_language_pokemon_list.append({'number': int(current_pokemon_number), 'name': current_pokemon_name, 'types': current_pokemon_types})
+                        current_pokemon_name = ''
+                        current_pokemon_types = []
+                    ## Set the number for the first Pokemon found and all subsequent ones AFTER a reset
+                    current_pokemon_number = pokemon_number[0]
+                ## You found a name for that Pokemon a few lines down
+                if pokemon_name:
+                    # You're on a new Pokemon. You can capture it's name and types
+                    if current_pokemon_name == '':
+                        current_pokemon_name = pokemon_name[0]
+                        skip_types = False
+                    # You're on the same Pokemon but a different form (Regional, Legendary, etc.) Do not capture it's types
+                    else:
+                        skip_types = True
+                ## Capture the types only for the original form
+                if pokemon_type and not skip_types:
+                    current_pokemon_types.append(pokemon_type[0].lower())
             ## Initialilize dict w/ English data
             if language['name'] == 'English':
-                pokemon_names = list({(item['number'], item['name']): item for item in pokemon_names}.values())
-                for i in range(len(pokemon_names)):
-                    english_name = pokemon_names[i]['name']
-                    ## Lowercase for the images on pokemondb.net
+                for i in range(len(current_language_pokemon_list)):
+                    english_name = current_language_pokemon_list[i]['name']
+                    ## Filter out duplicate types just in case
+                    english_types = list(set(current_language_pokemon_list[i]['types']))
+                    ## Get all the families
+                    english_family = self.get_pokemon_family(english_name)
+                    ## Fixing all the names just to pull the images off pokemondb.net
                     english_name_html = english_name.lower()
                     ## Fix Nidoran ♀
                     if ("♀" in english_name):
@@ -126,8 +187,11 @@ class PokemonNames():
                         "id": i+1,
                         "name_EN": english_name,
                         "region_name": self.get_pokemon_region(i+1),
-                        "keywords": self.get_pokemon_keyword(i+1)
-                        # "sprite_image": "https://img.pokemondb.net/sprites/home/normal/{}.png".format(english_name_html)
+                        "keywords": self.get_pokemon_keyword(i+1),
+                        "types": english_types,
+                        "family": english_family,
+                        "sprite_image": "https://img.pokemondb.net/sprites/home/normal/{}.png".format(english_name_html),
+                        "shiny_sprite_image": "https://img.pokemondb.net/sprites/home/shiny/{}.png".format(english_name_html)
                     }
                     ## Ititialize all the names to English since most don't have explicit localizations
                     for language_i in self.languages:
@@ -135,7 +199,7 @@ class PokemonNames():
                     self.pokemon_arr.append(pokemon_data)
             ## Run through the remaining languages
             else:
-                for pokemon in pokemon_names:
+                for pokemon in current_language_pokemon_list:
                     self.pokemon_arr[pokemon['number']-1]['name_{}'.format(language['code'])] = pokemon['name']
 
 @app.route('/pokemon_names', methods=['GET'])

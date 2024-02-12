@@ -1,10 +1,11 @@
 'use client';
 
-import { pokemonData } from './lib/pokemon';
-import { pokemonRegions } from './lib/pokemon-regions';
-import { pokemonCatagories } from './lib/pokemon-categories';
-import { missingPokemon } from './lib/missing-pokemon';
 import { languageData } from './lib/languages';
+import { missingPokemon } from './lib/missing-pokemon';
+import { pokemonCatagories } from './lib/pokemon-categories';
+import { pokemonRegions } from './lib/pokemon-regions';
+import { pokemonTypes } from './lib/pokemon-types';
+import { pokemonData } from './lib/pokemon';
 
 import Borders from './components/Borders';
 import Footer from './components/Footer';
@@ -91,6 +92,23 @@ function PokemonGrid({
     if (isNumber(searchValue)) {
       filteredPokemon = filteredPokemon.filter(
         (pokemon) => pokemon.id == Number(searchValue)
+      );
+    }
+    // Searching by family (ex: +Pikachu -> Pichu, Pikachu, Raichu)
+    else if (searchValue[0] == '+') {
+      const searchRegex = new RegExp(
+        `^${searchValue.substring(1).toLowerCase()}.*`
+      );
+      filteredPokemon = filteredPokemon.filter((pokemon) =>
+        pokemon.family.some(
+          (familyName) => familyName.match(searchRegex) != null
+        )
+      );
+    }
+    // Searching by type (ex: Dark -> Umbreon, Murkrow, etc..)
+    else if (pokemonTypes.includes(searchValue.toLowerCase())) {
+      filteredPokemon = filteredPokemon.filter((pokemon) =>
+        pokemon.types.includes(searchValue.toLowerCase())
       );
     }
     // Searching by region (ex: Hoenn -> Treeko - Jirachi)
