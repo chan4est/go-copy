@@ -586,7 +586,7 @@ function SortOptionScreen({
               sortingOrderOption={1}
               buttonPic={descendingButton}
               buttonText={'NUMBER (DESC.)'}
-              title={'Sort by number (descending)'}
+              buttonTitle={'Sort by number (descending)'}
             />
             <SortOptionButton
               setSortingOrder={setSortingOrder}
@@ -595,7 +595,7 @@ function SortOptionScreen({
               sortingOrderOption={2}
               buttonPic={aZButton}
               buttonText={'NAME (A-Z)'}
-              title={'Sort by name (A-Z)'}
+              buttonTitle={'Sort by name (A-Z)'}
             />
             <SortOptionButton
               setSortingOrder={setSortingOrder}
@@ -604,7 +604,7 @@ function SortOptionScreen({
               sortingOrderOption={3}
               buttonPic={zAButton}
               buttonText={'NAME (Z-A)'}
-              title={'Sort by name (Z-A)'}
+              buttonTitle={'Sort by name (Z-A)'}
             />
             <SortOptionButton
               setSortingOrder={setSortingOrder}
@@ -613,7 +613,7 @@ function SortOptionScreen({
               sortingOrderOption={sortingOrder}
               buttonPic={xButton}
               buttonText={''}
-              title={'Home'}
+              buttonTitle={'Home'}
             />
           </div>
         </div>

@@ -2,7 +2,7 @@ import './globals.css';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata = {
-  title: 'GO Copy!',
+  title: 'GO Copy | Pokémon GO Nickname Helper',
   description:
     'Nickname your favorite Pokémon in Pokémon GO by tapping and pasting!',
   keywords: ['Pokemon GO', 'Nickname', 'Foreign'],
@@ -15,11 +15,11 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: 'GO Copy!',
+    title: 'GO Copy | Pokémon GO Nickname Helper',
     description:
       'Nickname your favorite Pokémon in Pokémon GO by tapping and pasting!',
     url: 'https://go-copy-production.up.railway.app',
-    siteName: 'GO Copy!',
+    siteName: 'GO Copy',
     image: {
       url: '/opengraph-image.png',
       width: 1200,
