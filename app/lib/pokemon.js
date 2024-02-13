@@ -21,7 +21,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/bulbasaur.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bulbasaur.png',
-    types: ['poison', 'grass'],
+    types: ['grass', 'poison'],
   },
   {
     family: ['ivysaur', 'bulbasaur', 'venusaur'],
@@ -45,7 +45,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/ivysaur.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ivysaur.png',
-    types: ['poison', 'grass'],
+    types: ['grass', 'poison'],
   },
   {
     family: ['ivysaur', 'bulbasaur', 'venusaur'],
@@ -69,10 +69,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/venusaur.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/venusaur.png',
-    types: ['poison', 'grass'],
+    types: ['grass', 'poison'],
   },
   {
-    family: ['charizard', 'charmander', 'charmeleon'],
+    family: ['charmeleon', 'charmander', 'charizard'],
     id: 4,
     keywords: [],
     name_DE: 'Glumanda',
@@ -97,7 +97,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['charizard', 'charmander', 'charmeleon'],
+    family: ['charmeleon', 'charmander', 'charizard'],
     id: 5,
     keywords: [],
     name_DE: 'Glutexo',
@@ -122,7 +122,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['charizard', 'charmander', 'charmeleon'],
+    family: ['charmeleon', 'charmander', 'charizard'],
     id: 6,
     keywords: [],
     name_DE: 'Glurak',
@@ -143,10 +143,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/charizard.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/charizard.png',
-    types: ['fire', 'flying'],
+    types: ['flying', 'fire'],
   },
   {
-    family: ['wartortle', 'blastoise', 'squirtle'],
+    family: ['squirtle', 'wartortle', 'blastoise'],
     id: 7,
     keywords: [],
     name_DE: 'Schiggy',
@@ -170,7 +170,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['wartortle', 'blastoise', 'squirtle'],
+    family: ['squirtle', 'wartortle', 'blastoise'],
     id: 8,
     keywords: [],
     name_DE: 'Schillok',
@@ -194,7 +194,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['wartortle', 'blastoise', 'squirtle'],
+    family: ['squirtle', 'wartortle', 'blastoise'],
     id: 9,
     keywords: [],
     name_DE: 'Turtok',
@@ -291,7 +291,7 @@ export const pokemonData = [
     types: ['bug', 'flying'],
   },
   {
-    family: ['weedle', 'kakuna', 'beedrill'],
+    family: ['weedle', 'beedrill', 'kakuna'],
     id: 13,
     keywords: [],
     name_DE: 'Hornliu',
@@ -312,10 +312,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/weedle.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/weedle.png',
-    types: ['poison', 'bug'],
+    types: ['bug', 'poison'],
   },
   {
-    family: ['weedle', 'kakuna', 'beedrill'],
+    family: ['weedle', 'beedrill', 'kakuna'],
     id: 14,
     keywords: [],
     name_DE: 'Kokuna',
@@ -336,10 +336,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/kakuna.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/kakuna.png',
-    types: ['poison', 'bug'],
+    types: ['bug', 'poison'],
   },
   {
-    family: ['weedle', 'kakuna', 'beedrill'],
+    family: ['weedle', 'beedrill', 'kakuna'],
     id: 15,
     keywords: [],
     name_DE: 'Bibor',
@@ -360,10 +360,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/beedrill.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/beedrill.png',
-    types: ['poison', 'bug'],
+    types: ['bug', 'poison'],
   },
   {
-    family: ['pidgeotto', 'pidgeot', 'pidgey'],
+    family: ['pidgey', 'pidgeotto', 'pidgeot'],
     id: 16,
     keywords: [],
     name_DE: 'Taubsi',
@@ -384,10 +384,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/pidgey.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pidgey.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['pidgeotto', 'pidgeot', 'pidgey'],
+    family: ['pidgey', 'pidgeotto', 'pidgeot'],
     id: 17,
     keywords: [],
     name_DE: 'Tauboga',
@@ -408,10 +408,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/pidgeotto.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pidgeotto.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['pidgeotto', 'pidgeot', 'pidgey'],
+    family: ['pidgey', 'pidgeotto', 'pidgeot'],
     id: 18,
     keywords: [],
     name_DE: 'Tauboss',
@@ -432,7 +432,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/pidgeot.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pidgeot.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
     family: ['raticate', 'rattata'],
@@ -483,7 +483,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['fearow', 'spearow'],
+    family: ['spearow', 'fearow'],
     id: 21,
     keywords: [],
     name_DE: 'Habitak',
@@ -504,10 +504,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/spearow.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/spearow.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['fearow', 'spearow'],
+    family: ['spearow', 'fearow'],
     id: 22,
     keywords: [],
     name_DE: 'Ibitak',
@@ -528,7 +528,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/fearow.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/fearow.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
     family: ['arbok', 'ekans'],
@@ -579,7 +579,7 @@ export const pokemonData = [
     types: ['poison'],
   },
   {
-    family: ['pichu', 'raichu', 'pikachu'],
+    family: ['pichu', 'pikachu', 'raichu'],
     id: 25,
     keywords: [],
     name_DE: 'Pikachu',
@@ -603,7 +603,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['pichu', 'raichu', 'pikachu'],
+    family: ['pichu', 'pikachu', 'raichu'],
     id: 26,
     keywords: [],
     name_DE: 'Raichu',
@@ -627,7 +627,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['sandslash', 'sandshrew'],
+    family: ['sandshrew', 'sandslash'],
     id: 27,
     keywords: [],
     name_DE: 'Sandan',
@@ -651,7 +651,7 @@ export const pokemonData = [
     types: ['ground'],
   },
   {
-    family: ['sandslash', 'sandshrew'],
+    family: ['sandshrew', 'sandslash'],
     id: 28,
     keywords: [],
     name_DE: 'Sandamer',
@@ -676,11 +676,11 @@ export const pokemonData = [
   },
   {
     family: [
+      'nidoran♂',
       'nidorino',
       'nidoking',
       'nidoqueen',
       'nidoran♀',
-      'nidoran♂',
       'nidorina',
     ],
     id: 29,
@@ -707,11 +707,11 @@ export const pokemonData = [
   },
   {
     family: [
+      'nidoran♂',
       'nidorino',
       'nidoking',
       'nidoqueen',
       'nidoran♀',
-      'nidoran♂',
       'nidorina',
     ],
     id: 30,
@@ -738,11 +738,11 @@ export const pokemonData = [
   },
   {
     family: [
+      'nidoran♂',
       'nidorino',
       'nidoking',
       'nidoqueen',
       'nidoran♀',
-      'nidoran♂',
       'nidorina',
     ],
     id: 31,
@@ -769,11 +769,11 @@ export const pokemonData = [
   },
   {
     family: [
+      'nidoran♂',
       'nidorino',
       'nidoking',
       'nidoqueen',
       'nidoran♀',
-      'nidoran♂',
       'nidorina',
     ],
     id: 32,
@@ -800,11 +800,11 @@ export const pokemonData = [
   },
   {
     family: [
+      'nidoran♂',
       'nidorino',
       'nidoking',
       'nidoqueen',
       'nidoran♀',
-      'nidoran♂',
       'nidorina',
     ],
     id: 33,
@@ -831,11 +831,11 @@ export const pokemonData = [
   },
   {
     family: [
+      'nidoran♂',
       'nidorino',
       'nidoking',
       'nidoqueen',
       'nidoran♀',
-      'nidoran♂',
       'nidorina',
     ],
     id: 34,
@@ -861,7 +861,7 @@ export const pokemonData = [
     types: ['ground', 'poison'],
   },
   {
-    family: ['clefable', 'cleffa', 'clefairy'],
+    family: ['clefable', 'clefairy', 'cleffa'],
     id: 35,
     keywords: [],
     name_DE: 'Piepi',
@@ -885,7 +885,7 @@ export const pokemonData = [
     types: ['fairy'],
   },
   {
-    family: ['clefable', 'cleffa', 'clefairy'],
+    family: ['clefable', 'clefairy', 'cleffa'],
     id: 36,
     keywords: [],
     name_DE: 'Pixi',
@@ -909,7 +909,7 @@ export const pokemonData = [
     types: ['fairy'],
   },
   {
-    family: ['vulpix', 'ninetales'],
+    family: ['ninetales', 'vulpix'],
     id: 37,
     keywords: [],
     name_DE: 'Vulpix',
@@ -933,7 +933,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['vulpix', 'ninetales'],
+    family: ['ninetales', 'vulpix'],
     id: 38,
     keywords: [],
     name_DE: 'Vulnona',
@@ -957,7 +957,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['igglybuff', 'wigglytuff', 'jigglypuff'],
+    family: ['jigglypuff', 'wigglytuff', 'igglybuff'],
     id: 39,
     keywords: [],
     name_DE: 'Pummeluff',
@@ -982,7 +982,7 @@ export const pokemonData = [
     types: ['normal', 'fairy'],
   },
   {
-    family: ['igglybuff', 'wigglytuff', 'jigglypuff'],
+    family: ['jigglypuff', 'wigglytuff', 'igglybuff'],
     id: 40,
     keywords: [],
     name_DE: 'Knuddeluff',
@@ -1007,7 +1007,7 @@ export const pokemonData = [
     types: ['normal', 'fairy'],
   },
   {
-    family: ['zubat', 'crobat', 'golbat'],
+    family: ['zubat', 'golbat', 'crobat'],
     id: 41,
     keywords: [],
     name_DE: 'Zubat',
@@ -1031,7 +1031,7 @@ export const pokemonData = [
     types: ['poison', 'flying'],
   },
   {
-    family: ['zubat', 'crobat', 'golbat'],
+    family: ['zubat', 'golbat', 'crobat'],
     id: 42,
     keywords: [],
     name_DE: 'Golbat',
@@ -1055,7 +1055,7 @@ export const pokemonData = [
     types: ['poison', 'flying'],
   },
   {
-    family: ['vileplume', 'bellossom', 'oddish', 'gloom'],
+    family: ['gloom', 'bellossom', 'oddish', 'vileplume'],
     id: 43,
     keywords: [],
     name_DE: 'Myrapla',
@@ -1076,10 +1076,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/oddish.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/oddish.png',
-    types: ['poison', 'grass'],
+    types: ['grass', 'poison'],
   },
   {
-    family: ['vileplume', 'bellossom', 'oddish', 'gloom'],
+    family: ['gloom', 'bellossom', 'oddish', 'vileplume'],
     id: 44,
     keywords: [],
     name_DE: 'Duflor',
@@ -1100,10 +1100,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/gloom.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gloom.png',
-    types: ['poison', 'grass'],
+    types: ['grass', 'poison'],
   },
   {
-    family: ['vileplume', 'bellossom', 'oddish', 'gloom'],
+    family: ['gloom', 'bellossom', 'oddish', 'vileplume'],
     id: 45,
     keywords: [],
     name_DE: 'Giflor',
@@ -1124,10 +1124,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/vileplume.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/vileplume.png',
-    types: ['poison', 'grass'],
+    types: ['grass', 'poison'],
   },
   {
-    family: ['parasect', 'paras'],
+    family: ['paras', 'parasect'],
     id: 46,
     keywords: [],
     name_DE: 'Paras',
@@ -1151,7 +1151,7 @@ export const pokemonData = [
     types: ['grass', 'bug'],
   },
   {
-    family: ['parasect', 'paras'],
+    family: ['paras', 'parasect'],
     id: 47,
     keywords: [],
     name_DE: 'Parasek',
@@ -1175,7 +1175,7 @@ export const pokemonData = [
     types: ['grass', 'bug'],
   },
   {
-    family: ['venomoth', 'venonat'],
+    family: ['venonat', 'venomoth'],
     id: 48,
     keywords: [],
     name_DE: 'Bluzuk',
@@ -1196,10 +1196,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/venonat.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/venonat.png',
-    types: ['poison', 'bug'],
+    types: ['bug', 'poison'],
   },
   {
-    family: ['venomoth', 'venonat'],
+    family: ['venonat', 'venomoth'],
     id: 49,
     keywords: [],
     name_DE: 'Omot',
@@ -1220,10 +1220,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/venomoth.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/venomoth.png',
-    types: ['poison', 'bug'],
+    types: ['bug', 'poison'],
   },
   {
-    family: ['dugtrio', 'diglett'],
+    family: ['diglett', 'dugtrio'],
     id: 50,
     keywords: [],
     name_DE: 'Digda',
@@ -1247,7 +1247,7 @@ export const pokemonData = [
     types: ['ground'],
   },
   {
-    family: ['dugtrio', 'diglett'],
+    family: ['diglett', 'dugtrio'],
     id: 51,
     keywords: [],
     name_DE: 'Digdri',
@@ -1319,7 +1319,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['golduck', 'psyduck'],
+    family: ['psyduck', 'golduck'],
     id: 54,
     keywords: [],
     name_DE: 'Enton',
@@ -1343,7 +1343,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['golduck', 'psyduck'],
+    family: ['psyduck', 'golduck'],
     id: 55,
     keywords: [],
     name_DE: 'Entoron',
@@ -1367,7 +1367,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['mankey', 'primeape', 'annihilape'],
+    family: ['annihilape', 'primeape', 'mankey'],
     id: 56,
     keywords: [],
     name_DE: 'Menki',
@@ -1391,7 +1391,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['mankey', 'primeape', 'annihilape'],
+    family: ['annihilape', 'primeape', 'mankey'],
     id: 57,
     keywords: [],
     name_DE: 'Rasaff',
@@ -1415,7 +1415,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['arcanine', 'growlithe'],
+    family: ['growlithe', 'arcanine'],
     id: 58,
     keywords: [],
     name_DE: 'Fukano',
@@ -1439,7 +1439,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['arcanine', 'growlithe'],
+    family: ['growlithe', 'arcanine'],
     id: 59,
     keywords: [],
     name_DE: 'Arkani',
@@ -1463,7 +1463,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['poliwag', 'poliwrath', 'politoed', 'poliwhirl'],
+    family: ['poliwhirl', 'politoed', 'poliwrath', 'poliwag'],
     id: 60,
     keywords: [],
     name_DE: 'Quapsel',
@@ -1487,7 +1487,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['poliwag', 'poliwrath', 'politoed', 'poliwhirl'],
+    family: ['poliwhirl', 'politoed', 'poliwrath', 'poliwag'],
     id: 61,
     keywords: [],
     name_DE: 'Quaputzi',
@@ -1511,7 +1511,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['poliwag', 'poliwrath', 'politoed', 'poliwhirl'],
+    family: ['poliwhirl', 'politoed', 'poliwrath', 'poliwag'],
     id: 62,
     keywords: [],
     name_DE: 'Quappo',
@@ -1535,7 +1535,7 @@ export const pokemonData = [
     types: ['water', 'fighting'],
   },
   {
-    family: ['alakazam', 'abra', 'kadabra'],
+    family: ['kadabra', 'abra', 'alakazam'],
     id: 63,
     keywords: [],
     name_DE: 'Abra',
@@ -1558,7 +1558,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['alakazam', 'abra', 'kadabra'],
+    family: ['kadabra', 'abra', 'alakazam'],
     id: 64,
     keywords: [],
     name_DE: 'Kadabra',
@@ -1582,7 +1582,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['alakazam', 'abra', 'kadabra'],
+    family: ['kadabra', 'abra', 'alakazam'],
     id: 65,
     keywords: [],
     name_DE: 'Simsala',
@@ -1678,7 +1678,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['bellsprout', 'weepinbell', 'victreebel'],
+    family: ['weepinbell', 'victreebel', 'bellsprout'],
     id: 69,
     keywords: [],
     name_DE: 'Knofensa',
@@ -1700,10 +1700,10 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/bellsprout.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/bellsprout.png',
-    types: ['poison', 'grass'],
+    types: ['grass', 'poison'],
   },
   {
-    family: ['bellsprout', 'weepinbell', 'victreebel'],
+    family: ['weepinbell', 'victreebel', 'bellsprout'],
     id: 70,
     keywords: [],
     name_DE: 'Ultrigaria',
@@ -1725,10 +1725,10 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/weepinbell.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/weepinbell.png',
-    types: ['poison', 'grass'],
+    types: ['grass', 'poison'],
   },
   {
-    family: ['bellsprout', 'weepinbell', 'victreebel'],
+    family: ['weepinbell', 'victreebel', 'bellsprout'],
     id: 71,
     keywords: [],
     name_DE: 'Sarzenia',
@@ -1750,7 +1750,7 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/victreebel.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/victreebel.png',
-    types: ['poison', 'grass'],
+    types: ['grass', 'poison'],
   },
   {
     family: ['tentacool', 'tentacruel'],
@@ -1774,7 +1774,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/tentacool.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tentacool.png',
-    types: ['poison', 'water'],
+    types: ['water', 'poison'],
   },
   {
     family: ['tentacool', 'tentacruel'],
@@ -1799,10 +1799,10 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/tentacruel.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/tentacruel.png',
-    types: ['poison', 'water'],
+    types: ['water', 'poison'],
   },
   {
-    family: ['geodude', 'graveler', 'golem'],
+    family: ['golem', 'graveler', 'geodude'],
     id: 74,
     keywords: [],
     name_DE: 'Kleinstein',
@@ -1826,7 +1826,7 @@ export const pokemonData = [
     types: ['ground', 'rock'],
   },
   {
-    family: ['geodude', 'graveler', 'golem'],
+    family: ['golem', 'graveler', 'geodude'],
     id: 75,
     keywords: [],
     name_DE: 'Georok',
@@ -1850,7 +1850,7 @@ export const pokemonData = [
     types: ['ground', 'rock'],
   },
   {
-    family: ['geodude', 'graveler', 'golem'],
+    family: ['golem', 'graveler', 'geodude'],
     id: 76,
     keywords: [],
     name_DE: 'Geowaz',
@@ -1874,7 +1874,7 @@ export const pokemonData = [
     types: ['ground', 'rock'],
   },
   {
-    family: ['ponyta', 'rapidash'],
+    family: ['rapidash', 'ponyta'],
     id: 77,
     keywords: [],
     name_DE: 'Ponita',
@@ -1898,7 +1898,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['ponyta', 'rapidash'],
+    family: ['rapidash', 'ponyta'],
     id: 78,
     keywords: [],
     name_DE: 'Gallopa',
@@ -1943,7 +1943,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/slowpoke.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/slowpoke.png',
-    types: ['psychic', 'water'],
+    types: ['water', 'psychic'],
   },
   {
     family: ['slowking', 'slowpoke', 'slowbro'],
@@ -1967,10 +1967,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/slowbro.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/slowbro.png',
-    types: ['psychic', 'water'],
+    types: ['water', 'psychic'],
   },
   {
-    family: ['magnezone', 'magnemite', 'magneton'],
+    family: ['magnemite', 'magnezone', 'magneton'],
     id: 81,
     keywords: [],
     name_DE: 'Magnetilo',
@@ -1994,7 +1994,7 @@ export const pokemonData = [
     types: ['electric', 'steel'],
   },
   {
-    family: ['magnezone', 'magnemite', 'magneton'],
+    family: ['magnemite', 'magnezone', 'magneton'],
     id: 82,
     keywords: [],
     name_DE: 'Magneton',
@@ -2039,10 +2039,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/farfetchd.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/farfetchd.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['dodrio', 'doduo'],
+    family: ['doduo', 'dodrio'],
     id: 84,
     keywords: [],
     name_DE: 'Dodu',
@@ -2063,10 +2063,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/doduo.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/doduo.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['dodrio', 'doduo'],
+    family: ['doduo', 'dodrio'],
     id: 85,
     keywords: [],
     name_DE: 'Dodri',
@@ -2087,7 +2087,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/dodrio.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dodrio.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
     family: ['dewgong', 'seel'],
@@ -2137,7 +2137,7 @@ export const pokemonData = [
     types: ['water', 'ice'],
   },
   {
-    family: ['muk', 'grimer'],
+    family: ['grimer', 'muk'],
     id: 88,
     keywords: [],
     name_DE: 'Sleima',
@@ -2161,7 +2161,7 @@ export const pokemonData = [
     types: ['poison'],
   },
   {
-    family: ['muk', 'grimer'],
+    family: ['grimer', 'muk'],
     id: 89,
     keywords: [],
     name_DE: 'Sleimok',
@@ -2184,7 +2184,7 @@ export const pokemonData = [
     types: ['poison'],
   },
   {
-    family: ['shellder', 'cloyster'],
+    family: ['cloyster', 'shellder'],
     id: 90,
     keywords: [],
     name_DE: 'Muschas',
@@ -2208,7 +2208,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['shellder', 'cloyster'],
+    family: ['cloyster', 'shellder'],
     id: 91,
     keywords: [],
     name_DE: 'Austos',
@@ -2232,7 +2232,7 @@ export const pokemonData = [
     types: ['water', 'ice'],
   },
   {
-    family: ['gengar', 'haunter', 'gastly'],
+    family: ['haunter', 'gastly', 'gengar'],
     id: 92,
     keywords: [],
     name_DE: 'Nebulak',
@@ -2256,7 +2256,7 @@ export const pokemonData = [
     types: ['poison', 'ghost'],
   },
   {
-    family: ['gengar', 'haunter', 'gastly'],
+    family: ['haunter', 'gastly', 'gengar'],
     id: 93,
     keywords: [],
     name_DE: 'Alpollo',
@@ -2280,7 +2280,7 @@ export const pokemonData = [
     types: ['poison', 'ghost'],
   },
   {
-    family: ['gengar', 'haunter', 'gastly'],
+    family: ['haunter', 'gastly', 'gengar'],
     id: 94,
     keywords: [],
     name_DE: 'Gengar',
@@ -2304,7 +2304,7 @@ export const pokemonData = [
     types: ['poison', 'ghost'],
   },
   {
-    family: ['steelix', 'onix'],
+    family: ['onix', 'steelix'],
     id: 95,
     keywords: [],
     name_DE: 'Onix',
@@ -2327,7 +2327,7 @@ export const pokemonData = [
     types: ['ground', 'rock'],
   },
   {
-    family: ['drowzee', 'hypno'],
+    family: ['hypno', 'drowzee'],
     id: 96,
     keywords: [],
     name_DE: 'Traumato',
@@ -2351,7 +2351,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['drowzee', 'hypno'],
+    family: ['hypno', 'drowzee'],
     id: 97,
     keywords: [],
     name_DE: 'Hypno',
@@ -2375,7 +2375,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['kingler', 'krabby'],
+    family: ['krabby', 'kingler'],
     id: 98,
     keywords: [],
     name_DE: 'Krabby',
@@ -2399,7 +2399,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['kingler', 'krabby'],
+    family: ['krabby', 'kingler'],
     id: 99,
     keywords: [],
     name_DE: 'Kingler',
@@ -2423,7 +2423,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['voltorb', 'electrode'],
+    family: ['electrode', 'voltorb'],
     id: 100,
     keywords: [],
     name_DE: 'Voltobal',
@@ -2447,7 +2447,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['voltorb', 'electrode'],
+    family: ['electrode', 'voltorb'],
     id: 101,
     keywords: [],
     name_DE: 'Lektrobal',
@@ -2519,7 +2519,7 @@ export const pokemonData = [
     types: ['grass', 'psychic'],
   },
   {
-    family: ['marowak', 'cubone'],
+    family: ['cubone', 'marowak'],
     id: 104,
     keywords: [],
     name_DE: 'Tragosso',
@@ -2543,7 +2543,7 @@ export const pokemonData = [
     types: ['ground'],
   },
   {
-    family: ['marowak', 'cubone'],
+    family: ['cubone', 'marowak'],
     id: 105,
     keywords: [],
     name_DE: 'Knogga',
@@ -2567,7 +2567,7 @@ export const pokemonData = [
     types: ['ground'],
   },
   {
-    family: ['hitmonlee', 'tyrogue', 'hitmonchan', 'hitmontop'],
+    family: ['tyrogue', 'hitmonchan', 'hitmonlee', 'hitmontop'],
     id: 106,
     keywords: [],
     name_DE: 'Kicklee',
@@ -2591,7 +2591,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['hitmonlee', 'tyrogue', 'hitmonchan', 'hitmontop'],
+    family: ['tyrogue', 'hitmonchan', 'hitmonlee', 'hitmontop'],
     id: 107,
     keywords: [],
     name_DE: 'Nockchan',
@@ -2616,7 +2616,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['lickilicky', 'lickitung'],
+    family: ['lickitung', 'lickilicky'],
     id: 108,
     keywords: [],
     name_DE: 'Schlurp',
@@ -2640,7 +2640,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['weezing', 'koffing'],
+    family: ['koffing', 'weezing'],
     id: 109,
     keywords: [],
     name_DE: 'Smogon',
@@ -2664,7 +2664,7 @@ export const pokemonData = [
     types: ['poison'],
   },
   {
-    family: ['weezing', 'koffing'],
+    family: ['koffing', 'weezing'],
     id: 110,
     keywords: [],
     name_DE: 'Smogmog',
@@ -2736,7 +2736,7 @@ export const pokemonData = [
     types: ['ground', 'rock'],
   },
   {
-    family: ['chansey', 'happiny', 'blissey'],
+    family: ['blissey', 'happiny', 'chansey'],
     id: 113,
     keywords: [],
     name_DE: 'Chaneira',
@@ -2809,7 +2809,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['horsea', 'seadra', 'kingdra'],
+    family: ['kingdra', 'seadra', 'horsea'],
     id: 116,
     keywords: [],
     name_DE: 'Seeper',
@@ -2833,7 +2833,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['horsea', 'seadra', 'kingdra'],
+    family: ['kingdra', 'seadra', 'horsea'],
     id: 117,
     keywords: [],
     name_DE: 'Seemon',
@@ -2905,7 +2905,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['staryu', 'starmie'],
+    family: ['starmie', 'staryu'],
     id: 120,
     keywords: [],
     name_DE: 'Sterndu',
@@ -2929,7 +2929,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['staryu', 'starmie'],
+    family: ['starmie', 'staryu'],
     id: 121,
     keywords: [],
     name_DE: 'Starmie',
@@ -2950,10 +2950,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/starmie.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/starmie.png',
-    types: ['psychic', 'water'],
+    types: ['water', 'psychic'],
   },
   {
-    family: ['mr. mime', 'mime jr.', 'mr. rime'],
+    family: ['mr. mime', 'mr. rime', 'mime jr.'],
     id: 122,
     keywords: [],
     name_DE: 'Pantimos',
@@ -2977,7 +2977,7 @@ export const pokemonData = [
     types: ['psychic', 'fairy'],
   },
   {
-    family: ['scizor', 'scyther', 'kleavor'],
+    family: ['scyther', 'scizor', 'kleavor'],
     id: 123,
     keywords: [],
     name_DE: 'Sichlor',
@@ -3001,7 +3001,7 @@ export const pokemonData = [
     types: ['bug', 'flying'],
   },
   {
-    family: ['jynx', 'smoochum'],
+    family: ['smoochum', 'jynx'],
     id: 124,
     keywords: [],
     name_DE: 'Rossana',
@@ -3021,10 +3021,10 @@ export const pokemonData = [
     region_name: 'kanto',
     shiny_sprite_image: 'https://img.pokemondb.net/sprites/home/shiny/jynx.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/jynx.png',
-    types: ['psychic', 'ice'],
+    types: ['ice', 'psychic'],
   },
   {
-    family: ['electivire', 'electabuzz', 'elekid'],
+    family: ['elekid', 'electivire', 'electabuzz'],
     id: 125,
     keywords: [],
     name_DE: 'Elektek',
@@ -3049,7 +3049,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['magmar', 'magby', 'magmortar'],
+    family: ['magmortar', 'magmar', 'magby'],
     id: 126,
     keywords: [],
     name_DE: 'Magmar',
@@ -3218,15 +3218,15 @@ export const pokemonData = [
   },
   {
     family: [
-      'eevee',
-      'jolteon',
-      'umbreon',
-      'glaceon',
+      'espeon',
       'leafeon',
-      'sylveon',
+      'jolteon',
+      'glaceon',
+      'umbreon',
       'vaporeon',
       'flareon',
-      'espeon',
+      'eevee',
+      'sylveon',
     ],
     id: 133,
     keywords: [],
@@ -3252,15 +3252,15 @@ export const pokemonData = [
   },
   {
     family: [
-      'eevee',
-      'jolteon',
-      'umbreon',
-      'glaceon',
+      'espeon',
       'leafeon',
-      'sylveon',
+      'jolteon',
+      'glaceon',
+      'umbreon',
       'vaporeon',
       'flareon',
-      'espeon',
+      'eevee',
+      'sylveon',
     ],
     id: 134,
     keywords: [],
@@ -3286,15 +3286,15 @@ export const pokemonData = [
   },
   {
     family: [
-      'eevee',
-      'jolteon',
-      'umbreon',
-      'glaceon',
+      'espeon',
       'leafeon',
-      'sylveon',
+      'jolteon',
+      'glaceon',
+      'umbreon',
       'vaporeon',
       'flareon',
-      'espeon',
+      'eevee',
+      'sylveon',
     ],
     id: 135,
     keywords: [],
@@ -3320,15 +3320,15 @@ export const pokemonData = [
   },
   {
     family: [
-      'eevee',
-      'jolteon',
-      'umbreon',
-      'glaceon',
+      'espeon',
       'leafeon',
-      'sylveon',
+      'jolteon',
+      'glaceon',
+      'umbreon',
       'vaporeon',
       'flareon',
-      'espeon',
+      'eevee',
+      'sylveon',
     ],
     id: 136,
     keywords: [],
@@ -3353,7 +3353,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['porygon-z', 'porygon2', 'porygon'],
+    family: ['porygon', 'porygon2', 'porygon-z'],
     id: 137,
     keywords: [],
     name_DE: 'Porygon',
@@ -3498,7 +3498,7 @@ export const pokemonData = [
     types: ['flying', 'rock'],
   },
   {
-    family: ['snorlax', 'munchlax'],
+    family: ['munchlax', 'snorlax'],
     id: 143,
     keywords: [],
     name_DE: 'Relaxo',
@@ -3543,7 +3543,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/articuno.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/articuno.png',
-    types: ['flying', 'ice'],
+    types: ['ice', 'flying'],
   },
   {
     family: ['articuno', 'zapdos'],
@@ -3591,7 +3591,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/moltres.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/moltres.png',
-    types: ['fire', 'flying'],
+    types: ['flying', 'fire'],
   },
   {
     family: ['dragonair', 'dratini', 'dragonite'],
@@ -3858,7 +3858,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['feraligatr', 'croconaw', 'totodile'],
+    family: ['totodile', 'croconaw', 'feraligatr'],
     id: 158,
     keywords: [],
     name_DE: 'Karnimani',
@@ -3882,7 +3882,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['feraligatr', 'croconaw', 'totodile'],
+    family: ['totodile', 'croconaw', 'feraligatr'],
     id: 159,
     keywords: [],
     name_DE: 'Tyracroc',
@@ -3906,7 +3906,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['feraligatr', 'croconaw', 'totodile'],
+    family: ['totodile', 'croconaw', 'feraligatr'],
     id: 160,
     keywords: [],
     name_DE: 'Impergator',
@@ -3979,7 +3979,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['hoothoot', 'noctowl'],
+    family: ['noctowl', 'hoothoot'],
     id: 163,
     keywords: [],
     name_DE: 'Hoothoot',
@@ -4000,10 +4000,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/hoothoot.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hoothoot.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['hoothoot', 'noctowl'],
+    family: ['noctowl', 'hoothoot'],
     id: 164,
     keywords: [],
     name_DE: 'Noctuh',
@@ -4024,10 +4024,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/noctowl.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/noctowl.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['ledian', 'ledyba'],
+    family: ['ledyba', 'ledian'],
     id: 165,
     keywords: [],
     name_DE: 'Ledyba',
@@ -4051,7 +4051,7 @@ export const pokemonData = [
     types: ['bug', 'flying'],
   },
   {
-    family: ['ledian', 'ledyba'],
+    family: ['ledyba', 'ledian'],
     id: 166,
     keywords: [],
     name_DE: 'Ledian',
@@ -4096,7 +4096,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/spinarak.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/spinarak.png',
-    types: ['poison', 'bug'],
+    types: ['bug', 'poison'],
   },
   {
     family: ['spinarak', 'ariados'],
@@ -4120,10 +4120,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/ariados.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ariados.png',
-    types: ['poison', 'bug'],
+    types: ['bug', 'poison'],
   },
   {
-    family: ['zubat', 'crobat', 'golbat'],
+    family: ['zubat', 'golbat', 'crobat'],
     id: 169,
     keywords: [],
     name_DE: 'Iksbat',
@@ -4168,7 +4168,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/chinchou.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/chinchou.png',
-    types: ['electric', 'water'],
+    types: ['water', 'electric'],
   },
   {
     family: ['lanturn', 'chinchou'],
@@ -4192,10 +4192,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/lanturn.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lanturn.png',
-    types: ['electric', 'water'],
+    types: ['water', 'electric'],
   },
   {
-    family: ['pichu', 'raichu', 'pikachu'],
+    family: ['pichu', 'pikachu', 'raichu'],
     id: 172,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Pichu',
@@ -4219,7 +4219,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['clefable', 'cleffa', 'clefairy'],
+    family: ['clefable', 'clefairy', 'cleffa'],
     id: 173,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Pii',
@@ -4243,7 +4243,7 @@ export const pokemonData = [
     types: ['fairy'],
   },
   {
-    family: ['igglybuff', 'wigglytuff', 'jigglypuff'],
+    family: ['jigglypuff', 'wigglytuff', 'igglybuff'],
     id: 174,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Fluffeluff',
@@ -4361,7 +4361,7 @@ export const pokemonData = [
     types: ['psychic', 'flying'],
   },
   {
-    family: ['ampharos', 'mareep', 'flaaffy'],
+    family: ['flaaffy', 'mareep', 'ampharos'],
     id: 179,
     keywords: [],
     name_DE: 'Voltilamm',
@@ -4385,7 +4385,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['ampharos', 'mareep', 'flaaffy'],
+    family: ['flaaffy', 'mareep', 'ampharos'],
     id: 180,
     keywords: [],
     name_DE: 'Waaty',
@@ -4409,7 +4409,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['ampharos', 'mareep', 'flaaffy'],
+    family: ['flaaffy', 'mareep', 'ampharos'],
     id: 181,
     keywords: [],
     name_DE: 'Ampharos',
@@ -4433,7 +4433,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['vileplume', 'bellossom', 'oddish', 'gloom'],
+    family: ['gloom', 'bellossom', 'oddish', 'vileplume'],
     id: 182,
     keywords: [],
     name_DE: 'Blubella',
@@ -4457,7 +4457,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['azurill', 'marill', 'azumarill'],
+    family: ['azurill', 'azumarill', 'marill'],
     id: 183,
     keywords: [],
     name_DE: 'Marill',
@@ -4481,7 +4481,7 @@ export const pokemonData = [
     types: ['water', 'fairy'],
   },
   {
-    family: ['azurill', 'marill', 'azumarill'],
+    family: ['azurill', 'azumarill', 'marill'],
     id: 184,
     keywords: [],
     name_DE: 'Azumarill',
@@ -4505,7 +4505,7 @@ export const pokemonData = [
     types: ['water', 'fairy'],
   },
   {
-    family: ['sudowoodo', 'bonsly'],
+    family: ['bonsly', 'sudowoodo'],
     id: 185,
     keywords: [],
     name_DE: 'Mogelbaum',
@@ -4529,7 +4529,7 @@ export const pokemonData = [
     types: ['rock'],
   },
   {
-    family: ['poliwag', 'poliwrath', 'politoed', 'poliwhirl'],
+    family: ['poliwhirl', 'politoed', 'poliwrath', 'poliwag'],
     id: 186,
     keywords: [],
     name_DE: 'Quaxo',
@@ -4553,7 +4553,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['hoppip', 'skiploom', 'jumpluff'],
+    family: ['hoppip', 'jumpluff', 'skiploom'],
     id: 187,
     keywords: [],
     name_DE: 'Hoppspross',
@@ -4577,7 +4577,7 @@ export const pokemonData = [
     types: ['grass', 'flying'],
   },
   {
-    family: ['hoppip', 'skiploom', 'jumpluff'],
+    family: ['hoppip', 'jumpluff', 'skiploom'],
     id: 188,
     keywords: [],
     name_DE: 'Hubelupf',
@@ -4601,7 +4601,7 @@ export const pokemonData = [
     types: ['grass', 'flying'],
   },
   {
-    family: ['hoppip', 'skiploom', 'jumpluff'],
+    family: ['hoppip', 'jumpluff', 'skiploom'],
     id: 189,
     keywords: [],
     name_DE: 'Papungha',
@@ -4697,7 +4697,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['yanma', 'yanmega'],
+    family: ['yanmega', 'yanma'],
     id: 193,
     keywords: [],
     name_DE: 'Yanma',
@@ -4721,7 +4721,7 @@ export const pokemonData = [
     types: ['bug', 'flying'],
   },
   {
-    family: ['quagsire', 'wooper', 'clodsire'],
+    family: ['clodsire', 'quagsire', 'wooper'],
     id: 194,
     keywords: [],
     name_DE: 'Felino',
@@ -4742,10 +4742,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/wooper.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wooper.png',
-    types: ['ground', 'water'],
+    types: ['water', 'ground'],
   },
   {
-    family: ['quagsire', 'wooper', 'clodsire'],
+    family: ['clodsire', 'quagsire', 'wooper'],
     id: 195,
     keywords: [],
     name_DE: 'Morlord',
@@ -4766,19 +4766,19 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/quagsire.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/quagsire.png',
-    types: ['ground', 'water'],
+    types: ['water', 'ground'],
   },
   {
     family: [
-      'eevee',
-      'jolteon',
-      'umbreon',
-      'glaceon',
+      'espeon',
       'leafeon',
-      'sylveon',
+      'jolteon',
+      'glaceon',
+      'umbreon',
       'vaporeon',
       'flareon',
-      'espeon',
+      'eevee',
+      'sylveon',
     ],
     id: 196,
     keywords: [],
@@ -4804,15 +4804,15 @@ export const pokemonData = [
   },
   {
     family: [
-      'eevee',
-      'jolteon',
-      'umbreon',
-      'glaceon',
+      'espeon',
       'leafeon',
-      'sylveon',
+      'jolteon',
+      'glaceon',
+      'umbreon',
       'vaporeon',
       'flareon',
-      'espeon',
+      'eevee',
+      'sylveon',
     ],
     id: 197,
     keywords: [],
@@ -4882,10 +4882,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/slowking.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/slowking.png',
-    types: ['psychic', 'water'],
+    types: ['water', 'psychic'],
   },
   {
-    family: ['unown', 'misdreavus', 'mismagius'],
+    family: ['unown', 'mismagius', 'misdreavus'],
     id: 200,
     keywords: [],
     name_DE: 'Traunfugil',
@@ -4910,7 +4910,7 @@ export const pokemonData = [
     types: ['ghost'],
   },
   {
-    family: ['unown', 'misdreavus', 'mismagius'],
+    family: ['unown', 'mismagius', 'misdreavus'],
     id: 201,
     keywords: [],
     name_DE: 'Icognito',
@@ -4934,7 +4934,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['wynaut', 'wobbuffet'],
+    family: ['wobbuffet', 'wynaut'],
     id: 202,
     keywords: [],
     name_DE: 'Woingenau',
@@ -4958,7 +4958,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['farigiraf', 'girafarig'],
+    family: ['girafarig', 'farigiraf'],
     id: 203,
     keywords: [],
     name_DE: 'Girafarig',
@@ -4979,10 +4979,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/girafarig.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/girafarig.png',
-    types: ['normal', 'psychic'],
+    types: ['psychic', 'normal'],
   },
   {
-    family: ['pineco', 'forretress'],
+    family: ['forretress', 'pineco'],
     id: 204,
     keywords: [],
     name_DE: 'Tannza',
@@ -5006,7 +5006,7 @@ export const pokemonData = [
     types: ['bug'],
   },
   {
-    family: ['pineco', 'forretress'],
+    family: ['forretress', 'pineco'],
     id: 205,
     keywords: [],
     name_DE: 'Forstellka',
@@ -5028,7 +5028,7 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/forretress.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/forretress.png',
-    types: ['steel', 'bug'],
+    types: ['bug', 'steel'],
   },
   {
     family: ['dunsparce', 'dudunsparce'],
@@ -5079,7 +5079,7 @@ export const pokemonData = [
     types: ['ground', 'flying'],
   },
   {
-    family: ['steelix', 'onix'],
+    family: ['onix', 'steelix'],
     id: 208,
     keywords: [],
     name_DE: 'Stahlos',
@@ -5103,7 +5103,7 @@ export const pokemonData = [
     types: ['ground', 'steel'],
   },
   {
-    family: ['granbull', 'snubbull'],
+    family: ['snubbull', 'granbull'],
     id: 209,
     keywords: [],
     name_DE: 'Snubbull',
@@ -5127,7 +5127,7 @@ export const pokemonData = [
     types: ['fairy'],
   },
   {
-    family: ['granbull', 'snubbull'],
+    family: ['snubbull', 'granbull'],
     id: 210,
     keywords: [],
     name_DE: 'Granbull',
@@ -5172,10 +5172,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/qwilfish.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/qwilfish.png',
-    types: ['poison', 'water'],
+    types: ['water', 'poison'],
   },
   {
-    family: ['scizor', 'scyther', 'kleavor'],
+    family: ['scyther', 'scizor', 'kleavor'],
     id: 212,
     keywords: [],
     name_DE: 'Scherox',
@@ -5196,7 +5196,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/scizor.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/scizor.png',
-    types: ['steel', 'bug'],
+    types: ['bug', 'steel'],
   },
   {
     family: ['shuckle'],
@@ -5247,7 +5247,7 @@ export const pokemonData = [
     types: ['bug', 'fighting'],
   },
   {
-    family: ['weavile', 'sneasel', 'sneasler'],
+    family: ['sneasel', 'weavile', 'sneasler'],
     id: 215,
     keywords: [],
     name_DE: 'Sniebel',
@@ -5268,10 +5268,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/sneasel.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sneasel.png',
-    types: ['dark', 'ice'],
+    types: ['ice', 'dark'],
   },
   {
-    family: ['teddiursa', 'ursaluna', 'zigzagoon', 'ursaring'],
+    family: ['zigzagoon', 'ursaluna', 'teddiursa', 'ursaring'],
     id: 216,
     keywords: [],
     name_DE: 'Teddiursa',
@@ -5295,7 +5295,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['teddiursa', 'ursaluna', 'zigzagoon', 'ursaring'],
+    family: ['zigzagoon', 'ursaluna', 'teddiursa', 'ursaring'],
     id: 217,
     keywords: [],
     name_DE: 'Ursaring',
@@ -5388,7 +5388,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/swinub.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/swinub.png',
-    types: ['ground', 'ice'],
+    types: ['ice', 'ground'],
   },
   {
     family: ['swinub', 'piloswine', 'mamoswine'],
@@ -5412,7 +5412,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/piloswine.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/piloswine.png',
-    types: ['ground', 'ice'],
+    types: ['ice', 'ground'],
   },
   {
     family: ['corsola', 'cursola'],
@@ -5439,7 +5439,7 @@ export const pokemonData = [
     types: ['water', 'rock'],
   },
   {
-    family: ['octillery', 'remoraid'],
+    family: ['remoraid', 'octillery'],
     id: 223,
     keywords: [],
     name_DE: 'Remoraid',
@@ -5463,7 +5463,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['octillery', 'remoraid'],
+    family: ['remoraid', 'octillery'],
     id: 224,
     keywords: [],
     name_DE: 'Octillery',
@@ -5508,10 +5508,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/delibird.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/delibird.png',
-    types: ['flying', 'ice'],
+    types: ['ice', 'flying'],
   },
   {
-    family: ['mantyke', 'mantine'],
+    family: ['mantine', 'mantyke'],
     id: 226,
     keywords: [],
     name_DE: 'Mantax',
@@ -5556,10 +5556,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/skarmory.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/skarmory.png',
-    types: ['steel', 'flying'],
+    types: ['flying', 'steel'],
   },
   {
-    family: ['houndour', 'houndoom'],
+    family: ['houndoom', 'houndour'],
     id: 228,
     keywords: [],
     name_DE: 'Hunduster',
@@ -5583,7 +5583,7 @@ export const pokemonData = [
     types: ['dark', 'fire'],
   },
   {
-    family: ['houndour', 'houndoom'],
+    family: ['houndoom', 'houndour'],
     id: 229,
     keywords: [],
     name_DE: 'Hundemon',
@@ -5607,7 +5607,7 @@ export const pokemonData = [
     types: ['dark', 'fire'],
   },
   {
-    family: ['horsea', 'seadra', 'kingdra'],
+    family: ['kingdra', 'seadra', 'horsea'],
     id: 230,
     keywords: [],
     name_DE: 'Seedraking',
@@ -5679,7 +5679,7 @@ export const pokemonData = [
     types: ['ground'],
   },
   {
-    family: ['porygon-z', 'porygon2', 'porygon'],
+    family: ['porygon', 'porygon2', 'porygon-z'],
     id: 233,
     keywords: [],
     name_DE: 'Porygon2',
@@ -5703,7 +5703,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['wyrdeer', 'stantler'],
+    family: ['stantler', 'wyrdeer'],
     id: 234,
     keywords: [],
     name_DE: 'Damhirplex',
@@ -5751,7 +5751,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['hitmonlee', 'tyrogue', 'hitmonchan', 'hitmontop'],
+    family: ['tyrogue', 'hitmonchan', 'hitmonlee', 'hitmontop'],
     id: 236,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Rabauz',
@@ -5775,7 +5775,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['hitmonlee', 'tyrogue', 'hitmonchan', 'hitmontop'],
+    family: ['tyrogue', 'hitmonchan', 'hitmonlee', 'hitmontop'],
     id: 237,
     keywords: [],
     name_DE: 'Kapoera',
@@ -5799,7 +5799,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['jynx', 'smoochum'],
+    family: ['smoochum', 'jynx'],
     id: 238,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Kussilla',
@@ -5820,10 +5820,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/smoochum.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/smoochum.png',
-    types: ['psychic', 'ice'],
+    types: ['ice', 'psychic'],
   },
   {
-    family: ['electivire', 'electabuzz', 'elekid'],
+    family: ['elekid', 'electivire', 'electabuzz'],
     id: 239,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Elekid',
@@ -5847,7 +5847,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['magmar', 'magby', 'magmortar'],
+    family: ['magmortar', 'magmar', 'magby'],
     id: 240,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Magby',
@@ -5895,7 +5895,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['chansey', 'happiny', 'blissey'],
+    family: ['blissey', 'happiny', 'chansey'],
     id: 242,
     keywords: [],
     name_DE: 'Heiteira',
@@ -5991,7 +5991,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['larvitar', 'tyranitar', 'pupitar'],
+    family: ['pupitar', 'larvitar', 'tyranitar'],
     id: 246,
     keywords: [],
     name_DE: 'Larvitar',
@@ -6015,7 +6015,7 @@ export const pokemonData = [
     types: ['ground', 'rock'],
   },
   {
-    family: ['larvitar', 'tyranitar', 'pupitar'],
+    family: ['pupitar', 'larvitar', 'tyranitar'],
     id: 247,
     keywords: [],
     name_DE: 'Pupitar',
@@ -6039,7 +6039,7 @@ export const pokemonData = [
     types: ['ground', 'rock'],
   },
   {
-    family: ['larvitar', 'tyranitar', 'pupitar'],
+    family: ['pupitar', 'larvitar', 'tyranitar'],
     id: 248,
     keywords: [],
     name_DE: 'Despotar',
@@ -6108,7 +6108,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/ho-oh.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ho-oh.png',
-    types: ['fire', 'flying'],
+    types: ['flying', 'fire'],
   },
   {
     family: ['celebi'],
@@ -6135,7 +6135,7 @@ export const pokemonData = [
     types: ['grass', 'psychic'],
   },
   {
-    family: ['sceptile', 'treecko', 'grovyle'],
+    family: ['grovyle', 'sceptile', 'treecko'],
     id: 252,
     keywords: [],
     name_DE: 'Geckarbor',
@@ -6159,7 +6159,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['sceptile', 'treecko', 'grovyle'],
+    family: ['grovyle', 'sceptile', 'treecko'],
     id: 253,
     keywords: [],
     name_DE: 'Reptain',
@@ -6183,7 +6183,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['sceptile', 'treecko', 'grovyle'],
+    family: ['grovyle', 'sceptile', 'treecko'],
     id: 254,
     keywords: [],
     name_DE: 'Gewaldro',
@@ -6252,7 +6252,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/combusken.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/combusken.png',
-    types: ['fire', 'fighting'],
+    types: ['fighting', 'fire'],
   },
   {
     family: ['torchic', 'blaziken', 'combusken'],
@@ -6276,10 +6276,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/blaziken.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/blaziken.png',
-    types: ['fire', 'fighting'],
+    types: ['fighting', 'fire'],
   },
   {
-    family: ['swampert', 'marshtomp', 'mudkip'],
+    family: ['mudkip', 'marshtomp', 'swampert'],
     id: 258,
     keywords: [],
     name_DE: 'Hydropi',
@@ -6303,7 +6303,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['swampert', 'marshtomp', 'mudkip'],
+    family: ['mudkip', 'marshtomp', 'swampert'],
     id: 259,
     keywords: [],
     name_DE: 'Moorabbel',
@@ -6324,10 +6324,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/marshtomp.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/marshtomp.png',
-    types: ['ground', 'water'],
+    types: ['water', 'ground'],
   },
   {
-    family: ['swampert', 'marshtomp', 'mudkip'],
+    family: ['mudkip', 'marshtomp', 'swampert'],
     id: 260,
     keywords: [],
     name_DE: 'Sumpex',
@@ -6348,7 +6348,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/swampert.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/swampert.png',
-    types: ['ground', 'water'],
+    types: ['water', 'ground'],
   },
   {
     family: ['poochyena', 'mightyena'],
@@ -6399,7 +6399,7 @@ export const pokemonData = [
     types: ['dark'],
   },
   {
-    family: ['zigzagoon', 'obstagoon', 'linoone'],
+    family: ['obstagoon', 'zigzagoon', 'linoone'],
     id: 263,
     keywords: [],
     name_DE: 'Zigzachs',
@@ -6423,7 +6423,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['zigzagoon', 'obstagoon', 'linoone'],
+    family: ['obstagoon', 'zigzagoon', 'linoone'],
     id: 264,
     keywords: [],
     name_DE: 'Geradaks',
@@ -6447,7 +6447,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['silcoon', 'dustox', 'cascoon', 'beautifly', 'wurmple'],
+    family: ['wurmple', 'cascoon', 'beautifly', 'silcoon', 'dustox'],
     id: 265,
     keywords: [],
     name_DE: 'Waumpel',
@@ -6471,7 +6471,7 @@ export const pokemonData = [
     types: ['bug'],
   },
   {
-    family: ['silcoon', 'dustox', 'cascoon', 'beautifly', 'wurmple'],
+    family: ['wurmple', 'cascoon', 'beautifly', 'silcoon', 'dustox'],
     id: 266,
     keywords: [],
     name_DE: 'Schaloko',
@@ -6495,7 +6495,7 @@ export const pokemonData = [
     types: ['bug'],
   },
   {
-    family: ['silcoon', 'dustox', 'cascoon', 'beautifly', 'wurmple'],
+    family: ['wurmple', 'cascoon', 'beautifly', 'silcoon', 'dustox'],
     id: 267,
     keywords: [],
     name_DE: 'Papinella',
@@ -6519,7 +6519,7 @@ export const pokemonData = [
     types: ['bug', 'flying'],
   },
   {
-    family: ['silcoon', 'dustox', 'cascoon', 'beautifly', 'wurmple'],
+    family: ['wurmple', 'cascoon', 'beautifly', 'silcoon', 'dustox'],
     id: 268,
     keywords: [],
     name_DE: 'Panekon',
@@ -6543,7 +6543,7 @@ export const pokemonData = [
     types: ['bug'],
   },
   {
-    family: ['silcoon', 'dustox', 'cascoon', 'beautifly', 'wurmple'],
+    family: ['wurmple', 'cascoon', 'beautifly', 'silcoon', 'dustox'],
     id: 269,
     keywords: [],
     name_DE: 'Pudox',
@@ -6564,10 +6564,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/dustox.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dustox.png',
-    types: ['poison', 'bug'],
+    types: ['bug', 'poison'],
   },
   {
-    family: ['lombre', 'ludicolo', 'lotad'],
+    family: ['lombre', 'lotad', 'ludicolo'],
     id: 270,
     keywords: [],
     name_DE: 'Loturzel',
@@ -6588,10 +6588,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/lotad.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lotad.png',
-    types: ['grass', 'water'],
+    types: ['water', 'grass'],
   },
   {
-    family: ['lombre', 'ludicolo', 'lotad'],
+    family: ['lombre', 'lotad', 'ludicolo'],
     id: 271,
     keywords: [],
     name_DE: 'Lombrero',
@@ -6612,10 +6612,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/lombre.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lombre.png',
-    types: ['grass', 'water'],
+    types: ['water', 'grass'],
   },
   {
-    family: ['lombre', 'ludicolo', 'lotad'],
+    family: ['lombre', 'lotad', 'ludicolo'],
     id: 272,
     keywords: [],
     name_DE: 'Kappalores',
@@ -6636,10 +6636,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/ludicolo.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/ludicolo.png',
-    types: ['grass', 'water'],
+    types: ['water', 'grass'],
   },
   {
-    family: ['shiftry', 'seedot', 'nuzleaf'],
+    family: ['shiftry', 'nuzleaf', 'seedot'],
     id: 273,
     keywords: [],
     name_DE: 'Samurzel',
@@ -6663,7 +6663,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['shiftry', 'seedot', 'nuzleaf'],
+    family: ['shiftry', 'nuzleaf', 'seedot'],
     id: 274,
     keywords: [],
     name_DE: 'Blanas',
@@ -6684,10 +6684,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/nuzleaf.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/nuzleaf.png',
-    types: ['dark', 'grass'],
+    types: ['grass', 'dark'],
   },
   {
-    family: ['shiftry', 'seedot', 'nuzleaf'],
+    family: ['shiftry', 'nuzleaf', 'seedot'],
     id: 275,
     keywords: [],
     name_DE: 'Tengulist',
@@ -6708,7 +6708,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/shiftry.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shiftry.png',
-    types: ['dark', 'grass'],
+    types: ['grass', 'dark'],
   },
   {
     family: ['swellow', 'taillow'],
@@ -6732,7 +6732,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/taillow.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/taillow.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
     family: ['swellow', 'taillow'],
@@ -6756,10 +6756,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/swellow.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/swellow.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['wingull', 'pelipper'],
+    family: ['pelipper', 'wingull'],
     id: 278,
     keywords: [],
     name_DE: 'Wingull',
@@ -6783,7 +6783,7 @@ export const pokemonData = [
     types: ['water', 'flying'],
   },
   {
-    family: ['wingull', 'pelipper'],
+    family: ['pelipper', 'wingull'],
     id: 279,
     keywords: [],
     name_DE: 'Pelipper',
@@ -6807,7 +6807,7 @@ export const pokemonData = [
     types: ['water', 'flying'],
   },
   {
-    family: ['kirlia', 'gallade', 'gardevoir', 'ralts'],
+    family: ['kirlia', 'ralts', 'gardevoir', 'gallade'],
     id: 280,
     keywords: [],
     name_DE: 'Trasla',
@@ -6831,7 +6831,7 @@ export const pokemonData = [
     types: ['psychic', 'fairy'],
   },
   {
-    family: ['kirlia', 'gallade', 'gardevoir', 'ralts'],
+    family: ['kirlia', 'ralts', 'gardevoir', 'gallade'],
     id: 281,
     keywords: [],
     name_DE: 'Kirlia',
@@ -6855,7 +6855,7 @@ export const pokemonData = [
     types: ['psychic', 'fairy'],
   },
   {
-    family: ['kirlia', 'gallade', 'gardevoir', 'ralts'],
+    family: ['kirlia', 'ralts', 'gardevoir', 'gallade'],
     id: 282,
     keywords: [],
     name_DE: 'Guardevoir',
@@ -6900,7 +6900,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/surskit.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/surskit.png',
-    types: ['bug', 'water'],
+    types: ['water', 'bug'],
   },
   {
     family: ['masquerain', 'surskit'],
@@ -6928,7 +6928,7 @@ export const pokemonData = [
     types: ['bug', 'flying'],
   },
   {
-    family: ['shroomish', 'breloom'],
+    family: ['breloom', 'shroomish'],
     id: 285,
     keywords: [],
     name_DE: 'Knilz',
@@ -6952,7 +6952,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['shroomish', 'breloom'],
+    family: ['breloom', 'shroomish'],
     id: 286,
     keywords: [],
     name_DE: 'Kapilz',
@@ -6976,7 +6976,7 @@ export const pokemonData = [
     types: ['grass', 'fighting'],
   },
   {
-    family: ['slakoth', 'vigoroth', 'slaking'],
+    family: ['vigoroth', 'slakoth', 'slaking'],
     id: 287,
     keywords: [],
     name_DE: 'Bummelz',
@@ -7000,7 +7000,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['slakoth', 'vigoroth', 'slaking'],
+    family: ['vigoroth', 'slakoth', 'slaking'],
     id: 288,
     keywords: [],
     name_DE: 'Muntier',
@@ -7024,7 +7024,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['slakoth', 'vigoroth', 'slaking'],
+    family: ['vigoroth', 'slakoth', 'slaking'],
     id: 289,
     keywords: [],
     name_DE: 'Letarking',
@@ -7048,7 +7048,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['nincada', 'ninjask', 'shedinja'],
+    family: ['shedinja', 'ninjask', 'nincada'],
     id: 290,
     keywords: [],
     name_DE: 'Nincada',
@@ -7072,7 +7072,7 @@ export const pokemonData = [
     types: ['ground', 'bug'],
   },
   {
-    family: ['nincada', 'ninjask', 'shedinja'],
+    family: ['shedinja', 'ninjask', 'nincada'],
     id: 291,
     keywords: [],
     name_DE: 'Ninjask',
@@ -7096,7 +7096,7 @@ export const pokemonData = [
     types: ['bug', 'flying'],
   },
   {
-    family: ['nincada', 'ninjask', 'shedinja'],
+    family: ['shedinja', 'ninjask', 'nincada'],
     id: 292,
     keywords: [],
     name_DE: 'Ninjatom',
@@ -7120,7 +7120,7 @@ export const pokemonData = [
     types: ['bug', 'ghost'],
   },
   {
-    family: ['exploud', 'loudred', 'whismur'],
+    family: ['whismur', 'loudred', 'exploud'],
     id: 293,
     keywords: [],
     name_DE: 'Flurmel',
@@ -7144,7 +7144,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['exploud', 'loudred', 'whismur'],
+    family: ['whismur', 'loudred', 'exploud'],
     id: 294,
     keywords: [],
     name_DE: 'Krakeelo',
@@ -7168,7 +7168,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['exploud', 'loudred', 'whismur'],
+    family: ['whismur', 'loudred', 'exploud'],
     id: 295,
     keywords: [],
     name_DE: 'Krawumms',
@@ -7192,7 +7192,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['makuhita', 'hariyama'],
+    family: ['hariyama', 'makuhita'],
     id: 296,
     keywords: [],
     name_DE: 'Makuhita',
@@ -7216,7 +7216,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['makuhita', 'hariyama'],
+    family: ['hariyama', 'makuhita'],
     id: 297,
     keywords: [],
     name_DE: 'Hariyama',
@@ -7240,7 +7240,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['azurill', 'marill', 'azumarill'],
+    family: ['azurill', 'azumarill', 'marill'],
     id: 298,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Azurill',
@@ -7264,7 +7264,7 @@ export const pokemonData = [
     types: ['normal', 'fairy'],
   },
   {
-    family: ['probopass', 'nosepass'],
+    family: ['nosepass', 'probopass'],
     id: 299,
     keywords: [],
     name_DE: 'Nasgnet',
@@ -7381,10 +7381,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/mawile.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mawile.png',
-    types: ['steel', 'fairy'],
+    types: ['fairy', 'steel'],
   },
   {
-    family: ['aggron', 'aron', 'lairon'],
+    family: ['aron', 'aggron', 'lairon'],
     id: 304,
     keywords: [],
     name_DE: 'Stollunior',
@@ -7407,7 +7407,7 @@ export const pokemonData = [
     types: ['steel', 'rock'],
   },
   {
-    family: ['aggron', 'aron', 'lairon'],
+    family: ['aron', 'aggron', 'lairon'],
     id: 305,
     keywords: [],
     name_DE: 'Stollrak',
@@ -7431,7 +7431,7 @@ export const pokemonData = [
     types: ['steel', 'rock'],
   },
   {
-    family: ['aggron', 'aron', 'lairon'],
+    family: ['aron', 'aggron', 'lairon'],
     id: 306,
     keywords: [],
     name_DE: 'Stolloss',
@@ -7503,7 +7503,7 @@ export const pokemonData = [
     types: ['psychic', 'fighting'],
   },
   {
-    family: ['manectric', 'electrike'],
+    family: ['electrike', 'manectric'],
     id: 309,
     keywords: [],
     name_DE: 'Frizelbliz',
@@ -7527,7 +7527,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['manectric', 'electrike'],
+    family: ['electrike', 'manectric'],
     id: 310,
     keywords: [],
     name_DE: 'Voltenso',
@@ -7599,7 +7599,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['volbeat', 'illumise'],
+    family: ['illumise', 'volbeat'],
     id: 313,
     keywords: [],
     name_DE: 'Volbeat',
@@ -7623,7 +7623,7 @@ export const pokemonData = [
     types: ['bug'],
   },
   {
-    family: ['volbeat', 'illumise'],
+    family: ['illumise', 'volbeat'],
     id: 314,
     keywords: [],
     name_DE: 'Illumise',
@@ -7668,10 +7668,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/roselia.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/roselia.png',
-    types: ['poison', 'grass'],
+    types: ['grass', 'poison'],
   },
   {
-    family: ['gulpin', 'swalot'],
+    family: ['swalot', 'gulpin'],
     id: 316,
     keywords: [],
     name_DE: 'Schluppuck',
@@ -7695,7 +7695,7 @@ export const pokemonData = [
     types: ['poison'],
   },
   {
-    family: ['gulpin', 'swalot'],
+    family: ['swalot', 'gulpin'],
     id: 317,
     keywords: [],
     name_DE: 'Schlukwech',
@@ -7719,7 +7719,7 @@ export const pokemonData = [
     types: ['poison'],
   },
   {
-    family: ['sharpedo', 'carvanha'],
+    family: ['carvanha', 'sharpedo'],
     id: 318,
     keywords: [],
     name_DE: 'Kanivanha',
@@ -7740,10 +7740,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/carvanha.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/carvanha.png',
-    types: ['dark', 'water'],
+    types: ['water', 'dark'],
   },
   {
-    family: ['sharpedo', 'carvanha'],
+    family: ['carvanha', 'sharpedo'],
     id: 319,
     keywords: [],
     name_DE: 'Tohaido',
@@ -7764,7 +7764,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/sharpedo.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sharpedo.png',
-    types: ['dark', 'water'],
+    types: ['water', 'dark'],
   },
   {
     family: ['wailord', 'wailmer'],
@@ -7887,7 +7887,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['spoink', 'grumpig'],
+    family: ['grumpig', 'spoink'],
     id: 325,
     keywords: [],
     name_DE: 'Spoink',
@@ -7911,7 +7911,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['spoink', 'grumpig'],
+    family: ['grumpig', 'spoink'],
     id: 326,
     keywords: [],
     name_DE: 'Groink',
@@ -7959,7 +7959,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['trapinch', 'flygon', 'vibrava'],
+    family: ['vibrava', 'flygon', 'trapinch'],
     id: 328,
     keywords: [],
     name_DE: 'Knacklion',
@@ -7983,7 +7983,7 @@ export const pokemonData = [
     types: ['ground'],
   },
   {
-    family: ['trapinch', 'flygon', 'vibrava'],
+    family: ['vibrava', 'flygon', 'trapinch'],
     id: 329,
     keywords: [],
     name_DE: 'Vibrava',
@@ -8007,7 +8007,7 @@ export const pokemonData = [
     types: ['ground', 'dragon'],
   },
   {
-    family: ['trapinch', 'flygon', 'vibrava'],
+    family: ['vibrava', 'flygon', 'trapinch'],
     id: 330,
     keywords: [],
     name_DE: 'Libelldra',
@@ -8031,7 +8031,7 @@ export const pokemonData = [
     types: ['ground', 'dragon'],
   },
   {
-    family: ['cacturne', 'cacnea'],
+    family: ['cacnea', 'cacturne'],
     id: 331,
     keywords: [],
     name_DE: 'Tuska',
@@ -8055,7 +8055,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['cacturne', 'cacnea'],
+    family: ['cacnea', 'cacturne'],
     id: 332,
     keywords: [],
     name_DE: 'Noktuska',
@@ -8076,7 +8076,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/cacturne.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cacturne.png',
-    types: ['dark', 'grass'],
+    types: ['grass', 'dark'],
   },
   {
     family: ['swablu', 'altaria'],
@@ -8100,7 +8100,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/swablu.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/swablu.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
     family: ['swablu', 'altaria'],
@@ -8244,7 +8244,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/barboach.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/barboach.png',
-    types: ['ground', 'water'],
+    types: ['water', 'ground'],
   },
   {
     family: ['barboach', 'whiscash'],
@@ -8268,7 +8268,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/whiscash.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/whiscash.png',
-    types: ['ground', 'water'],
+    types: ['water', 'ground'],
   },
   {
     family: ['crawdaunt', 'corphish'],
@@ -8316,10 +8316,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/crawdaunt.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/crawdaunt.png',
-    types: ['dark', 'water'],
+    types: ['water', 'dark'],
   },
   {
-    family: ['baltoy', 'claydol'],
+    family: ['claydol', 'baltoy'],
     id: 343,
     keywords: [],
     name_DE: 'Puppance',
@@ -8343,7 +8343,7 @@ export const pokemonData = [
     types: ['ground', 'psychic'],
   },
   {
-    family: ['baltoy', 'claydol'],
+    family: ['claydol', 'baltoy'],
     id: 344,
     keywords: [],
     name_DE: 'Lepumentas',
@@ -8367,7 +8367,7 @@ export const pokemonData = [
     types: ['ground', 'psychic'],
   },
   {
-    family: ['lileep', 'cradily'],
+    family: ['cradily', 'lileep'],
     id: 345,
     keywords: [],
     name_DE: 'Liliep',
@@ -8391,7 +8391,7 @@ export const pokemonData = [
     types: ['grass', 'rock'],
   },
   {
-    family: ['lileep', 'cradily'],
+    family: ['cradily', 'lileep'],
     id: 346,
     keywords: [],
     name_DE: 'Wielie',
@@ -8559,7 +8559,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['shuppet', 'banette'],
+    family: ['banette', 'shuppet'],
     id: 353,
     keywords: [],
     name_DE: 'Shuppet',
@@ -8583,7 +8583,7 @@ export const pokemonData = [
     types: ['ghost'],
   },
   {
-    family: ['shuppet', 'banette'],
+    family: ['banette', 'shuppet'],
     id: 354,
     keywords: [],
     name_DE: 'Banette',
@@ -8607,7 +8607,7 @@ export const pokemonData = [
     types: ['ghost'],
   },
   {
-    family: ['dusknoir', 'dusclops', 'duskull'],
+    family: ['duskull', 'dusclops', 'dusknoir'],
     id: 355,
     keywords: [],
     name_DE: 'Zwirrlicht',
@@ -8631,7 +8631,7 @@ export const pokemonData = [
     types: ['ghost'],
   },
   {
-    family: ['dusknoir', 'dusclops', 'duskull'],
+    family: ['duskull', 'dusclops', 'dusknoir'],
     id: 356,
     keywords: [],
     name_DE: 'Zwirrklop',
@@ -8679,7 +8679,7 @@ export const pokemonData = [
     types: ['grass', 'flying'],
   },
   {
-    family: ['chingling', 'chimecho'],
+    family: ['chimecho', 'chingling'],
     id: 358,
     keywords: [],
     name_DE: 'Palimpalim',
@@ -8727,7 +8727,7 @@ export const pokemonData = [
     types: ['dark'],
   },
   {
-    family: ['wynaut', 'wobbuffet'],
+    family: ['wobbuffet', 'wynaut'],
     id: 360,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Isso',
@@ -8751,7 +8751,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['froslass', 'snorunt', 'glalie'],
+    family: ['glalie', 'froslass', 'snorunt'],
     id: 361,
     keywords: [],
     name_DE: 'Schneppke',
@@ -8775,7 +8775,7 @@ export const pokemonData = [
     types: ['ice'],
   },
   {
-    family: ['froslass', 'snorunt', 'glalie'],
+    family: ['glalie', 'froslass', 'snorunt'],
     id: 362,
     keywords: [],
     name_DE: 'Firnontor',
@@ -8799,7 +8799,7 @@ export const pokemonData = [
     types: ['ice'],
   },
   {
-    family: ['walrein', 'sealeo', 'spheal'],
+    family: ['sealeo', 'spheal', 'walrein'],
     id: 363,
     keywords: [],
     name_DE: 'Seemops',
@@ -8820,10 +8820,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/spheal.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/spheal.png',
-    types: ['water', 'ice'],
+    types: ['ice', 'water'],
   },
   {
-    family: ['walrein', 'sealeo', 'spheal'],
+    family: ['sealeo', 'spheal', 'walrein'],
     id: 364,
     keywords: [],
     name_DE: 'Seejong',
@@ -8844,10 +8844,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/sealeo.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sealeo.png',
-    types: ['water', 'ice'],
+    types: ['ice', 'water'],
   },
   {
-    family: ['walrein', 'sealeo', 'spheal'],
+    family: ['sealeo', 'spheal', 'walrein'],
     id: 365,
     keywords: [],
     name_DE: 'Walraisa',
@@ -8868,10 +8868,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/walrein.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/walrein.png',
-    types: ['water', 'ice'],
+    types: ['ice', 'water'],
   },
   {
-    family: ['huntail', 'clamperl', 'gorebyss'],
+    family: ['clamperl', 'gorebyss', 'huntail'],
     id: 366,
     keywords: [],
     name_DE: 'Perlu',
@@ -8895,7 +8895,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['huntail', 'clamperl', 'gorebyss'],
+    family: ['clamperl', 'gorebyss', 'huntail'],
     id: 367,
     keywords: [],
     name_DE: 'Aalabyss',
@@ -8919,7 +8919,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['huntail', 'clamperl', 'gorebyss'],
+    family: ['clamperl', 'gorebyss', 'huntail'],
     id: 368,
     keywords: [],
     name_DE: 'Saganabyss',
@@ -8991,7 +8991,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['bagon', 'salamence', 'shelgon'],
+    family: ['salamence', 'bagon', 'shelgon'],
     id: 371,
     keywords: [],
     name_DE: 'Kindwurm',
@@ -9015,7 +9015,7 @@ export const pokemonData = [
     types: ['dragon'],
   },
   {
-    family: ['bagon', 'salamence', 'shelgon'],
+    family: ['salamence', 'bagon', 'shelgon'],
     id: 372,
     keywords: [],
     name_DE: 'Draschel',
@@ -9039,7 +9039,7 @@ export const pokemonData = [
     types: ['dragon'],
   },
   {
-    family: ['bagon', 'salamence', 'shelgon'],
+    family: ['salamence', 'bagon', 'shelgon'],
     id: 373,
     keywords: [],
     name_DE: 'Brutalanda',
@@ -9063,7 +9063,7 @@ export const pokemonData = [
     types: ['flying', 'dragon'],
   },
   {
-    family: ['metang', 'metagross', 'beldum'],
+    family: ['metagross', 'beldum', 'metang'],
     id: 374,
     keywords: [],
     name_DE: 'Tanhel',
@@ -9084,10 +9084,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/beldum.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/beldum.png',
-    types: ['steel', 'psychic'],
+    types: ['psychic', 'steel'],
   },
   {
-    family: ['metang', 'metagross', 'beldum'],
+    family: ['metagross', 'beldum', 'metang'],
     id: 375,
     keywords: [],
     name_DE: 'Metang',
@@ -9108,10 +9108,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/metang.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/metang.png',
-    types: ['steel', 'psychic'],
+    types: ['psychic', 'steel'],
   },
   {
-    family: ['metang', 'metagross', 'beldum'],
+    family: ['metagross', 'beldum', 'metang'],
     id: 376,
     keywords: [],
     name_DE: 'Metagross',
@@ -9132,7 +9132,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/metagross.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/metagross.png',
-    types: ['steel', 'psychic'],
+    types: ['psychic', 'steel'],
   },
   {
     family: ['regirock'],
@@ -9348,7 +9348,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/jirachi.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/jirachi.png',
-    types: ['steel', 'psychic'],
+    types: ['psychic', 'steel'],
   },
   {
     family: ['deoxys', 'jirachi'],
@@ -9447,7 +9447,7 @@ export const pokemonData = [
     types: ['ground', 'grass'],
   },
   {
-    family: ['monferno', 'infernape', 'chimchar'],
+    family: ['chimchar', 'monferno', 'infernape'],
     id: 390,
     keywords: [],
     name_DE: 'Panflam',
@@ -9471,7 +9471,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['monferno', 'infernape', 'chimchar'],
+    family: ['chimchar', 'monferno', 'infernape'],
     id: 391,
     keywords: [],
     name_DE: 'Panpyro',
@@ -9492,10 +9492,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/monferno.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/monferno.png',
-    types: ['fire', 'fighting'],
+    types: ['fighting', 'fire'],
   },
   {
-    family: ['monferno', 'infernape', 'chimchar'],
+    family: ['chimchar', 'monferno', 'infernape'],
     id: 392,
     keywords: [],
     name_DE: 'Panferno',
@@ -9516,10 +9516,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/infernape.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/infernape.png',
-    types: ['fire', 'fighting'],
+    types: ['fighting', 'fire'],
   },
   {
-    family: ['empoleon', 'prinplup', 'piplup'],
+    family: ['piplup', 'empoleon', 'prinplup'],
     id: 393,
     keywords: [],
     name_DE: 'Plinfa',
@@ -9543,7 +9543,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['empoleon', 'prinplup', 'piplup'],
+    family: ['piplup', 'empoleon', 'prinplup'],
     id: 394,
     keywords: [],
     name_DE: 'Pliprin',
@@ -9567,7 +9567,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['empoleon', 'prinplup', 'piplup'],
+    family: ['piplup', 'empoleon', 'prinplup'],
     id: 395,
     keywords: [],
     name_DE: 'Impoleon',
@@ -9588,10 +9588,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/empoleon.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/empoleon.png',
-    types: ['steel', 'water'],
+    types: ['water', 'steel'],
   },
   {
-    family: ['staravia', 'staraptor', 'starly'],
+    family: ['starly', 'staraptor', 'staravia'],
     id: 396,
     keywords: [],
     name_DE: 'Staralili',
@@ -9612,10 +9612,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/starly.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/starly.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['staravia', 'staraptor', 'starly'],
+    family: ['starly', 'staraptor', 'staravia'],
     id: 397,
     keywords: [],
     name_DE: 'Staravia',
@@ -9636,10 +9636,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/staravia.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/staravia.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['staravia', 'staraptor', 'starly'],
+    family: ['starly', 'staraptor', 'staravia'],
     id: 398,
     keywords: [],
     name_DE: 'Staraptor',
@@ -9660,10 +9660,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/staraptor.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/staraptor.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['bidoof', 'bibarel'],
+    family: ['bibarel', 'bidoof'],
     id: 399,
     keywords: [],
     name_DE: 'Bidiza',
@@ -9687,7 +9687,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['bidoof', 'bibarel'],
+    family: ['bibarel', 'bidoof'],
     id: 400,
     keywords: [],
     name_DE: 'Bidifas',
@@ -9708,7 +9708,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/bibarel.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bibarel.png',
-    types: ['normal', 'water'],
+    types: ['water', 'normal'],
   },
   {
     family: ['kricketune', 'kricketot'],
@@ -9760,7 +9760,7 @@ export const pokemonData = [
     types: ['bug'],
   },
   {
-    family: ['shinx', 'luxio', 'luxray'],
+    family: ['luxray', 'luxio', 'shinx'],
     id: 403,
     keywords: [],
     name_DE: 'Sheinux',
@@ -9784,7 +9784,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['shinx', 'luxio', 'luxray'],
+    family: ['luxray', 'luxio', 'shinx'],
     id: 404,
     keywords: [],
     name_DE: 'Luxio',
@@ -9808,7 +9808,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['shinx', 'luxio', 'luxray'],
+    family: ['luxray', 'luxio', 'shinx'],
     id: 405,
     keywords: [],
     name_DE: 'Luxtra',
@@ -9853,7 +9853,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/budew.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/budew.png',
-    types: ['poison', 'grass'],
+    types: ['grass', 'poison'],
   },
   {
     family: ['roselia', 'roserade', 'budew'],
@@ -9877,10 +9877,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/roserade.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/roserade.png',
-    types: ['poison', 'grass'],
+    types: ['grass', 'poison'],
   },
   {
-    family: ['cranidos', 'rampardos'],
+    family: ['rampardos', 'cranidos'],
     id: 408,
     keywords: [],
     name_DE: 'Koknodon',
@@ -9904,7 +9904,7 @@ export const pokemonData = [
     types: ['rock'],
   },
   {
-    family: ['cranidos', 'rampardos'],
+    family: ['rampardos', 'cranidos'],
     id: 409,
     keywords: [],
     name_DE: 'Rameidon',
@@ -9976,7 +9976,7 @@ export const pokemonData = [
     types: ['steel', 'rock'],
   },
   {
-    family: ['wormadam', 'mothim', 'burmy'],
+    family: ['mothim', 'wormadam', 'burmy'],
     id: 412,
     keywords: [],
     name_DE: 'Burmy',
@@ -10000,7 +10000,7 @@ export const pokemonData = [
     types: ['bug'],
   },
   {
-    family: ['wormadam', 'mothim', 'burmy'],
+    family: ['mothim', 'wormadam', 'burmy'],
     id: 413,
     keywords: [],
     name_DE: 'Burmadame',
@@ -10024,7 +10024,7 @@ export const pokemonData = [
     types: ['grass', 'bug'],
   },
   {
-    family: ['wormadam', 'mothim', 'burmy'],
+    family: ['mothim', 'wormadam', 'burmy'],
     id: 414,
     keywords: [],
     name_DE: 'Moterpel',
@@ -10216,7 +10216,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['shellos', 'gastrodon'],
+    family: ['gastrodon', 'shellos'],
     id: 422,
     keywords: [],
     name_DE: 'Schalellos',
@@ -10240,7 +10240,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['shellos', 'gastrodon'],
+    family: ['gastrodon', 'shellos'],
     id: 423,
     keywords: [],
     name_DE: 'Gastrodon',
@@ -10261,7 +10261,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/gastrodon.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/gastrodon.png',
-    types: ['ground', 'water'],
+    types: ['water', 'ground'],
   },
   {
     family: ['ambipom', 'aipom'],
@@ -10309,7 +10309,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/drifloon.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/drifloon.png',
-    types: ['ghost', 'flying'],
+    types: ['flying', 'ghost'],
   },
   {
     family: ['drifblim', 'drifloon'],
@@ -10333,7 +10333,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/drifblim.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/drifblim.png',
-    types: ['ghost', 'flying'],
+    types: ['flying', 'ghost'],
   },
   {
     family: ['buneary', 'lopunny'],
@@ -10384,7 +10384,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['unown', 'misdreavus', 'mismagius'],
+    family: ['unown', 'mismagius', 'misdreavus'],
     id: 429,
     keywords: [],
     name_DE: 'Traunmagil',
@@ -10432,7 +10432,7 @@ export const pokemonData = [
     types: ['dark', 'flying'],
   },
   {
-    family: ['glameow', 'purugly'],
+    family: ['purugly', 'glameow'],
     id: 431,
     keywords: [],
     name_DE: 'Charmian',
@@ -10456,7 +10456,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['glameow', 'purugly'],
+    family: ['purugly', 'glameow'],
     id: 432,
     keywords: [],
     name_DE: 'Shnurgarst',
@@ -10480,7 +10480,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['chingling', 'chimecho'],
+    family: ['chimecho', 'chingling'],
     id: 433,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Klingplim',
@@ -10504,7 +10504,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['stunky', 'skuntank'],
+    family: ['skuntank', 'stunky'],
     id: 434,
     keywords: [],
     name_DE: 'Skunkapuh',
@@ -10528,7 +10528,7 @@ export const pokemonData = [
     types: ['poison', 'dark'],
   },
   {
-    family: ['stunky', 'skuntank'],
+    family: ['skuntank', 'stunky'],
     id: 435,
     keywords: [],
     name_DE: 'Skuntank',
@@ -10552,7 +10552,7 @@ export const pokemonData = [
     types: ['poison', 'dark'],
   },
   {
-    family: ['bronzong', 'bronzor'],
+    family: ['bronzor', 'bronzong'],
     id: 436,
     keywords: [],
     name_DE: 'Bronzel',
@@ -10573,10 +10573,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/bronzor.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bronzor.png',
-    types: ['steel', 'psychic'],
+    types: ['psychic', 'steel'],
   },
   {
-    family: ['bronzong', 'bronzor'],
+    family: ['bronzor', 'bronzong'],
     id: 437,
     keywords: [],
     name_DE: 'Bronzong',
@@ -10597,10 +10597,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/bronzong.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bronzong.png',
-    types: ['steel', 'psychic'],
+    types: ['psychic', 'steel'],
   },
   {
-    family: ['sudowoodo', 'bonsly'],
+    family: ['bonsly', 'sudowoodo'],
     id: 438,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Mobai',
@@ -10624,7 +10624,7 @@ export const pokemonData = [
     types: ['rock'],
   },
   {
-    family: ['mr. mime', 'mime jr.', 'mr. rime'],
+    family: ['mr. mime', 'mr. rime', 'mime jr.'],
     id: 439,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Pantimimi',
@@ -10648,7 +10648,7 @@ export const pokemonData = [
     types: ['psychic', 'fairy'],
   },
   {
-    family: ['chansey', 'happiny', 'blissey'],
+    family: ['blissey', 'happiny', 'chansey'],
     id: 440,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Wonneira',
@@ -10693,7 +10693,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/chatot.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/chatot.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
     family: ['spiritomb'],
@@ -10720,7 +10720,7 @@ export const pokemonData = [
     types: ['dark', 'ghost'],
   },
   {
-    family: ['gible', 'gabite', 'garchomp'],
+    family: ['gabite', 'gible', 'garchomp'],
     id: 443,
     keywords: [],
     name_DE: 'Kaumalat',
@@ -10744,7 +10744,7 @@ export const pokemonData = [
     types: ['ground', 'dragon'],
   },
   {
-    family: ['gible', 'gabite', 'garchomp'],
+    family: ['gabite', 'gible', 'garchomp'],
     id: 444,
     keywords: [],
     name_DE: 'Knarksel',
@@ -10768,7 +10768,7 @@ export const pokemonData = [
     types: ['ground', 'dragon'],
   },
   {
-    family: ['gible', 'gabite', 'garchomp'],
+    family: ['gabite', 'gible', 'garchomp'],
     id: 445,
     keywords: [],
     name_DE: 'Knakrack',
@@ -10792,7 +10792,7 @@ export const pokemonData = [
     types: ['ground', 'dragon'],
   },
   {
-    family: ['snorlax', 'munchlax'],
+    family: ['munchlax', 'snorlax'],
     id: 446,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Mampfaxo',
@@ -10816,7 +10816,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['riolu', 'lucario'],
+    family: ['lucario', 'riolu'],
     id: 447,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Riolu',
@@ -10840,7 +10840,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['riolu', 'lucario'],
+    family: ['lucario', 'riolu'],
     id: 448,
     keywords: [],
     name_DE: 'Lucario',
@@ -10861,7 +10861,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/lucario.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lucario.png',
-    types: ['steel', 'fighting'],
+    types: ['fighting', 'steel'],
   },
   {
     family: ['hippowdon', 'hippopotas'],
@@ -10934,7 +10934,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/skorupi.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/skorupi.png',
-    types: ['poison', 'bug'],
+    types: ['bug', 'poison'],
   },
   {
     family: ['drapion', 'skorupi'],
@@ -10982,7 +10982,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/croagunk.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/croagunk.png',
-    types: ['poison', 'fighting'],
+    types: ['fighting', 'poison'],
   },
   {
     family: ['toxicroak', 'croagunk'],
@@ -11006,7 +11006,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/toxicroak.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/toxicroak.png',
-    types: ['poison', 'fighting'],
+    types: ['fighting', 'poison'],
   },
   {
     family: ['carnivine'],
@@ -11033,7 +11033,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['finneon', 'lumineon'],
+    family: ['lumineon', 'finneon'],
     id: 456,
     keywords: [],
     name_DE: 'Finneon',
@@ -11057,7 +11057,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['finneon', 'lumineon'],
+    family: ['lumineon', 'finneon'],
     id: 457,
     keywords: [],
     name_DE: 'Lumineon',
@@ -11081,7 +11081,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['mantyke', 'mantine'],
+    family: ['mantine', 'mantyke'],
     id: 458,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Mantirps',
@@ -11105,7 +11105,7 @@ export const pokemonData = [
     types: ['water', 'flying'],
   },
   {
-    family: ['snover', 'abomasnow'],
+    family: ['abomasnow', 'snover'],
     id: 459,
     keywords: [],
     name_DE: 'Shnebedeck',
@@ -11126,10 +11126,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/snover.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/snover.png',
-    types: ['grass', 'ice'],
+    types: ['ice', 'grass'],
   },
   {
-    family: ['snover', 'abomasnow'],
+    family: ['abomasnow', 'snover'],
     id: 460,
     keywords: [],
     name_DE: 'Rexblisar',
@@ -11150,10 +11150,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/abomasnow.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/abomasnow.png',
-    types: ['grass', 'ice'],
+    types: ['ice', 'grass'],
   },
   {
-    family: ['weavile', 'sneasel', 'sneasler'],
+    family: ['sneasel', 'weavile', 'sneasler'],
     id: 461,
     keywords: [],
     name_DE: 'Snibunna',
@@ -11174,10 +11174,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/weavile.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/weavile.png',
-    types: ['dark', 'ice'],
+    types: ['ice', 'dark'],
   },
   {
-    family: ['magnezone', 'magnemite', 'magneton'],
+    family: ['magnemite', 'magnezone', 'magneton'],
     id: 462,
     keywords: [],
     name_DE: 'Magnezone',
@@ -11201,7 +11201,7 @@ export const pokemonData = [
     types: ['electric', 'steel'],
   },
   {
-    family: ['lickilicky', 'lickitung'],
+    family: ['lickitung', 'lickilicky'],
     id: 463,
     keywords: [],
     name_DE: 'Schlurplek',
@@ -11274,7 +11274,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['electivire', 'electabuzz', 'elekid'],
+    family: ['elekid', 'electivire', 'electabuzz'],
     id: 466,
     keywords: [],
     name_DE: 'Elevoltek',
@@ -11299,7 +11299,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['magmar', 'magby', 'magmortar'],
+    family: ['magmortar', 'magmar', 'magby'],
     id: 467,
     keywords: [],
     name_DE: 'Magbrant',
@@ -11347,7 +11347,7 @@ export const pokemonData = [
     types: ['flying', 'fairy'],
   },
   {
-    family: ['yanma', 'yanmega'],
+    family: ['yanmega', 'yanma'],
     id: 469,
     keywords: [],
     name_DE: 'Yanmega',
@@ -11372,15 +11372,15 @@ export const pokemonData = [
   },
   {
     family: [
-      'eevee',
-      'jolteon',
-      'umbreon',
-      'glaceon',
+      'espeon',
       'leafeon',
-      'sylveon',
+      'jolteon',
+      'glaceon',
+      'umbreon',
       'vaporeon',
       'flareon',
-      'espeon',
+      'eevee',
+      'sylveon',
     ],
     id: 470,
     keywords: [],
@@ -11406,15 +11406,15 @@ export const pokemonData = [
   },
   {
     family: [
-      'eevee',
-      'jolteon',
-      'umbreon',
-      'glaceon',
+      'espeon',
       'leafeon',
-      'sylveon',
+      'jolteon',
+      'glaceon',
+      'umbreon',
       'vaporeon',
       'flareon',
-      'espeon',
+      'eevee',
+      'sylveon',
     ],
     id: 471,
     keywords: [],
@@ -11484,10 +11484,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/mamoswine.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mamoswine.png',
-    types: ['ground', 'ice'],
+    types: ['ice', 'ground'],
   },
   {
-    family: ['porygon-z', 'porygon2', 'porygon'],
+    family: ['porygon', 'porygon2', 'porygon-z'],
     id: 474,
     keywords: [],
     name_DE: 'Porygon-Z',
@@ -11511,7 +11511,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['kirlia', 'gallade', 'gardevoir', 'ralts'],
+    family: ['kirlia', 'ralts', 'gardevoir', 'gallade'],
     id: 475,
     keywords: [],
     name_DE: 'Galagladi',
@@ -11535,7 +11535,7 @@ export const pokemonData = [
     types: ['psychic', 'fighting'],
   },
   {
-    family: ['probopass', 'nosepass'],
+    family: ['nosepass', 'probopass'],
     id: 476,
     keywords: [],
     name_DE: 'Voluminas',
@@ -11559,7 +11559,7 @@ export const pokemonData = [
     types: ['steel', 'rock'],
   },
   {
-    family: ['dusknoir', 'dusclops', 'duskull'],
+    family: ['duskull', 'dusclops', 'dusknoir'],
     id: 477,
     keywords: [],
     name_DE: 'Zwirrfinst',
@@ -11583,7 +11583,7 @@ export const pokemonData = [
     types: ['ghost'],
   },
   {
-    family: ['froslass', 'snorunt', 'glalie'],
+    family: ['glalie', 'froslass', 'snorunt'],
     id: 478,
     keywords: [],
     name_DE: 'Frosdedje',
@@ -11604,7 +11604,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/froslass.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/froslass.png',
-    types: ['ghost', 'ice'],
+    types: ['ice', 'ghost'],
   },
   {
     family: ['rotom'],
@@ -11771,7 +11771,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/heatran.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/heatran.png',
-    types: ['steel', 'fire'],
+    types: ['fire', 'steel'],
   },
   {
     family: ['regigigas'],
@@ -11819,7 +11819,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/giratina.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/giratina.png',
-    types: ['ghost', 'dragon'],
+    types: ['dragon', 'ghost'],
   },
   {
     family: ['cresselia'],
@@ -11846,7 +11846,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['manaphy', 'phione'],
+    family: ['phione', 'manaphy'],
     id: 489,
     keywords: ['mythical', 'mythicals'],
     name_DE: 'Phione',
@@ -11870,7 +11870,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['manaphy', 'phione'],
+    family: ['phione', 'manaphy'],
     id: 490,
     keywords: ['mythical', 'mythicals'],
     name_DE: 'Manaphy',
@@ -11990,7 +11990,7 @@ export const pokemonData = [
     types: ['psychic', 'fire'],
   },
   {
-    family: ['servine', 'snivy', 'serperior'],
+    family: ['servine', 'serperior', 'snivy'],
     id: 495,
     keywords: [],
     name_DE: 'Serpifeu',
@@ -12014,7 +12014,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['servine', 'snivy', 'serperior'],
+    family: ['servine', 'serperior', 'snivy'],
     id: 496,
     keywords: [],
     name_DE: 'Efoserp',
@@ -12038,7 +12038,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['servine', 'snivy', 'serperior'],
+    family: ['servine', 'serperior', 'snivy'],
     id: 497,
     keywords: [],
     name_DE: 'Serpiroyal',
@@ -12107,7 +12107,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/pignite.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pignite.png',
-    types: ['fire', 'fighting'],
+    types: ['fighting', 'fire'],
   },
   {
     family: ['emboar', 'tepig', 'pignite'],
@@ -12131,10 +12131,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/emboar.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/emboar.png',
-    types: ['fire', 'fighting'],
+    types: ['fighting', 'fire'],
   },
   {
-    family: ['samurott', 'oshawott', 'dewott'],
+    family: ['dewott', 'samurott', 'oshawott'],
     id: 501,
     keywords: [],
     name_DE: 'Ottaro',
@@ -12158,7 +12158,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['samurott', 'oshawott', 'dewott'],
+    family: ['dewott', 'samurott', 'oshawott'],
     id: 502,
     keywords: [],
     name_DE: 'Zwottronin',
@@ -12182,7 +12182,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['samurott', 'oshawott', 'dewott'],
+    family: ['dewott', 'samurott', 'oshawott'],
     id: 503,
     keywords: [],
     name_DE: 'Admurai',
@@ -12374,7 +12374,7 @@ export const pokemonData = [
     types: ['dark'],
   },
   {
-    family: ['pansage', 'simisage'],
+    family: ['simisage', 'pansage'],
     id: 511,
     keywords: [],
     name_DE: 'Vegimak',
@@ -12398,7 +12398,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['pansage', 'simisage'],
+    family: ['simisage', 'pansage'],
     id: 512,
     keywords: [],
     name_DE: 'Vegichita',
@@ -12470,7 +12470,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['panpour', 'simipour'],
+    family: ['simipour', 'panpour'],
     id: 515,
     keywords: [],
     name_DE: 'Sodamak',
@@ -12494,7 +12494,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['panpour', 'simipour'],
+    family: ['simipour', 'panpour'],
     id: 516,
     keywords: [],
     name_DE: 'Sodachita',
@@ -12566,7 +12566,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['tranquill', 'pidove', 'unfezant'],
+    family: ['unfezant', 'tranquill', 'pidove'],
     id: 519,
     keywords: [],
     name_DE: 'Dusselgurr',
@@ -12587,10 +12587,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/pidove.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pidove.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['tranquill', 'pidove', 'unfezant'],
+    family: ['unfezant', 'tranquill', 'pidove'],
     id: 520,
     keywords: [],
     name_DE: 'Navitaub',
@@ -12611,10 +12611,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/tranquill.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tranquill.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['tranquill', 'pidove', 'unfezant'],
+    family: ['unfezant', 'tranquill', 'pidove'],
     id: 521,
     keywords: [],
     name_DE: 'Fasasnob',
@@ -12635,7 +12635,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/unfezant.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/unfezant.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
     family: ['blitzle', 'zebstrika'],
@@ -12686,7 +12686,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['roggenrola', 'gigalith', 'boldore'],
+    family: ['gigalith', 'roggenrola', 'boldore'],
     id: 524,
     keywords: [],
     name_DE: 'Kiesling',
@@ -12711,7 +12711,7 @@ export const pokemonData = [
     types: ['rock'],
   },
   {
-    family: ['roggenrola', 'gigalith', 'boldore'],
+    family: ['gigalith', 'roggenrola', 'boldore'],
     id: 525,
     keywords: [],
     name_DE: 'Sedimantur',
@@ -12735,7 +12735,7 @@ export const pokemonData = [
     types: ['rock'],
   },
   {
-    family: ['roggenrola', 'gigalith', 'boldore'],
+    family: ['gigalith', 'roggenrola', 'boldore'],
     id: 526,
     keywords: [],
     name_DE: 'Brockoloss',
@@ -12879,7 +12879,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['conkeldurr', 'gurdurr', 'timburr'],
+    family: ['gurdurr', 'timburr', 'conkeldurr'],
     id: 532,
     keywords: [],
     name_DE: 'Praktibalk',
@@ -12903,7 +12903,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['conkeldurr', 'gurdurr', 'timburr'],
+    family: ['gurdurr', 'timburr', 'conkeldurr'],
     id: 533,
     keywords: [],
     name_DE: 'Strepoli',
@@ -12927,7 +12927,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['conkeldurr', 'gurdurr', 'timburr'],
+    family: ['gurdurr', 'timburr', 'conkeldurr'],
     id: 534,
     keywords: [],
     name_DE: 'Meistagrif',
@@ -12952,7 +12952,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['seismitoad', 'palpitoad', 'tympole'],
+    family: ['palpitoad', 'seismitoad', 'tympole'],
     id: 535,
     keywords: [],
     name_DE: 'Schallquap',
@@ -12976,7 +12976,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['seismitoad', 'palpitoad', 'tympole'],
+    family: ['palpitoad', 'seismitoad', 'tympole'],
     id: 536,
     keywords: [],
     name_DE: 'Mebrana',
@@ -12997,10 +12997,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/palpitoad.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/palpitoad.png',
-    types: ['ground', 'water'],
+    types: ['water', 'ground'],
   },
   {
-    family: ['seismitoad', 'palpitoad', 'tympole'],
+    family: ['palpitoad', 'seismitoad', 'tympole'],
     id: 537,
     keywords: [],
     name_DE: 'Branawarz',
@@ -13022,7 +13022,7 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/seismitoad.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/seismitoad.png',
-    types: ['ground', 'water'],
+    types: ['water', 'ground'],
   },
   {
     family: ['throh'],
@@ -13072,7 +13072,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['swadloon', 'sewaddle', 'leavanny'],
+    family: ['leavanny', 'swadloon', 'sewaddle'],
     id: 540,
     keywords: [],
     name_DE: 'Strawickl',
@@ -13096,7 +13096,7 @@ export const pokemonData = [
     types: ['grass', 'bug'],
   },
   {
-    family: ['swadloon', 'sewaddle', 'leavanny'],
+    family: ['leavanny', 'swadloon', 'sewaddle'],
     id: 541,
     keywords: [],
     name_DE: 'Folikon',
@@ -13120,7 +13120,7 @@ export const pokemonData = [
     types: ['grass', 'bug'],
   },
   {
-    family: ['swadloon', 'sewaddle', 'leavanny'],
+    family: ['leavanny', 'swadloon', 'sewaddle'],
     id: 542,
     keywords: [],
     name_DE: 'Matrifol',
@@ -13144,7 +13144,7 @@ export const pokemonData = [
     types: ['grass', 'bug'],
   },
   {
-    family: ['whirlipede', 'venipede', 'scolipede'],
+    family: ['venipede', 'scolipede', 'whirlipede'],
     id: 543,
     keywords: [],
     name_DE: 'Toxiped',
@@ -13165,10 +13165,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/venipede.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/venipede.png',
-    types: ['poison', 'bug'],
+    types: ['bug', 'poison'],
   },
   {
-    family: ['whirlipede', 'venipede', 'scolipede'],
+    family: ['venipede', 'scolipede', 'whirlipede'],
     id: 544,
     keywords: [],
     name_DE: 'Rollum',
@@ -13190,10 +13190,10 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/whirlipede.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/whirlipede.png',
-    types: ['poison', 'bug'],
+    types: ['bug', 'poison'],
   },
   {
-    family: ['whirlipede', 'venipede', 'scolipede'],
+    family: ['venipede', 'scolipede', 'whirlipede'],
     id: 545,
     keywords: [],
     name_DE: 'Cerapendra',
@@ -13214,7 +13214,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/scolipede.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/scolipede.png',
-    types: ['poison', 'bug'],
+    types: ['bug', 'poison'],
   },
   {
     family: ['whimsicott', 'cottonee'],
@@ -13266,7 +13266,7 @@ export const pokemonData = [
     types: ['grass', 'fairy'],
   },
   {
-    family: ['petilil', 'lilligant'],
+    family: ['lilligant', 'petilil'],
     id: 548,
     keywords: [],
     name_DE: 'Lilminip',
@@ -13290,7 +13290,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['petilil', 'lilligant'],
+    family: ['lilligant', 'petilil'],
     id: 549,
     keywords: [],
     name_DE: 'Dressella',
@@ -13338,7 +13338,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['krokorok', 'sandile', 'krookodile'],
+    family: ['sandile', 'krokorok', 'krookodile'],
     id: 551,
     keywords: [],
     name_DE: 'Ganovil',
@@ -13362,7 +13362,7 @@ export const pokemonData = [
     types: ['ground', 'dark'],
   },
   {
-    family: ['krokorok', 'sandile', 'krookodile'],
+    family: ['sandile', 'krokorok', 'krookodile'],
     id: 552,
     keywords: [],
     name_DE: 'Rokkaiman',
@@ -13386,7 +13386,7 @@ export const pokemonData = [
     types: ['ground', 'dark'],
   },
   {
-    family: ['krokorok', 'sandile', 'krookodile'],
+    family: ['sandile', 'krokorok', 'krookodile'],
     id: 553,
     keywords: [],
     name_DE: 'Rabigator',
@@ -13411,7 +13411,7 @@ export const pokemonData = [
     types: ['ground', 'dark'],
   },
   {
-    family: ['darmanitan', 'darumaka'],
+    family: ['darumaka', 'darmanitan'],
     id: 554,
     keywords: [],
     name_DE: 'Flampion',
@@ -13435,7 +13435,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['darmanitan', 'darumaka'],
+    family: ['darumaka', 'darmanitan'],
     id: 555,
     keywords: [],
     name_DE: 'Flampivian',
@@ -13532,7 +13532,7 @@ export const pokemonData = [
     types: ['bug', 'rock'],
   },
   {
-    family: ['scraggy', 'scrafty'],
+    family: ['scrafty', 'scraggy'],
     id: 559,
     keywords: [],
     name_DE: 'Zurrokex',
@@ -13553,10 +13553,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/scraggy.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/scraggy.png',
-    types: ['dark', 'fighting'],
+    types: ['fighting', 'dark'],
   },
   {
-    family: ['scraggy', 'scrafty'],
+    family: ['scrafty', 'scraggy'],
     id: 560,
     keywords: [],
     name_DE: 'Irokex',
@@ -13577,7 +13577,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/scrafty.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/scrafty.png',
-    types: ['dark', 'fighting'],
+    types: ['fighting', 'dark'],
   },
   {
     family: ['sigilyph'],
@@ -13604,7 +13604,7 @@ export const pokemonData = [
     types: ['psychic', 'flying'],
   },
   {
-    family: ['cofagrigus', 'runerigus', 'yamask'],
+    family: ['runerigus', 'yamask', 'cofagrigus'],
     id: 562,
     keywords: [],
     name_DE: 'Makabaja',
@@ -13628,7 +13628,7 @@ export const pokemonData = [
     types: ['ghost'],
   },
   {
-    family: ['cofagrigus', 'runerigus', 'yamask'],
+    family: ['runerigus', 'yamask', 'cofagrigus'],
     id: 563,
     keywords: [],
     name_DE: 'Echnatoll',
@@ -13894,7 +13894,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['gothitelle', 'gothorita', 'gothita'],
+    family: ['gothorita', 'gothitelle', 'gothita'],
     id: 574,
     keywords: [],
     name_DE: 'Mollimorba',
@@ -13918,7 +13918,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['gothitelle', 'gothorita', 'gothita'],
+    family: ['gothorita', 'gothitelle', 'gothita'],
     id: 575,
     keywords: [],
     name_DE: 'Hypnomorba',
@@ -13942,7 +13942,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['gothitelle', 'gothorita', 'gothita'],
+    family: ['gothorita', 'gothitelle', 'gothita'],
     id: 576,
     keywords: [],
     name_DE: 'Morbitesse',
@@ -13967,7 +13967,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['duosion', 'reuniclus', 'solosis'],
+    family: ['solosis', 'duosion', 'reuniclus'],
     id: 577,
     keywords: [],
     name_DE: 'Monozyto',
@@ -13991,7 +13991,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['duosion', 'reuniclus', 'solosis'],
+    family: ['solosis', 'duosion', 'reuniclus'],
     id: 578,
     keywords: [],
     name_DE: 'Mitodos',
@@ -14015,7 +14015,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['duosion', 'reuniclus', 'solosis'],
+    family: ['solosis', 'duosion', 'reuniclus'],
     id: 579,
     keywords: [],
     name_DE: 'Zytomega',
@@ -14087,7 +14087,7 @@ export const pokemonData = [
     types: ['water', 'flying'],
   },
   {
-    family: ['vanilluxe', 'vanillish', 'vanillite'],
+    family: ['vanillite', 'vanilluxe', 'vanillish'],
     id: 582,
     keywords: [],
     name_DE: 'Gelatini',
@@ -14111,7 +14111,7 @@ export const pokemonData = [
     types: ['ice'],
   },
   {
-    family: ['vanilluxe', 'vanillish', 'vanillite'],
+    family: ['vanillite', 'vanilluxe', 'vanillish'],
     id: 583,
     keywords: [],
     name_DE: 'Gelatroppo',
@@ -14135,7 +14135,7 @@ export const pokemonData = [
     types: ['ice'],
   },
   {
-    family: ['vanilluxe', 'vanillish', 'vanillite'],
+    family: ['vanillite', 'vanilluxe', 'vanillish'],
     id: 584,
     keywords: [],
     name_DE: 'Gelatwino',
@@ -14180,7 +14180,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/deerling.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/deerling.png',
-    types: ['normal', 'grass'],
+    types: ['grass', 'normal'],
   },
   {
     family: ['sawsbuck', 'deerling'],
@@ -14204,7 +14204,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/sawsbuck.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sawsbuck.png',
-    types: ['normal', 'grass'],
+    types: ['grass', 'normal'],
   },
   {
     family: ['emolga'],
@@ -14278,10 +14278,10 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/escavalier.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/escavalier.png',
-    types: ['steel', 'bug'],
+    types: ['bug', 'steel'],
   },
   {
-    family: ['amoonguss', 'foongus'],
+    family: ['foongus', 'amoonguss'],
     id: 590,
     keywords: [],
     name_DE: 'Tarnpignon',
@@ -14302,10 +14302,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/foongus.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/foongus.png',
-    types: ['poison', 'grass'],
+    types: ['grass', 'poison'],
   },
   {
-    family: ['amoonguss', 'foongus'],
+    family: ['foongus', 'amoonguss'],
     id: 591,
     keywords: [],
     name_DE: 'Hutsassa',
@@ -14326,10 +14326,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/amoonguss.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/amoonguss.png',
-    types: ['poison', 'grass'],
+    types: ['grass', 'poison'],
   },
   {
-    family: ['jellicent', 'frillish'],
+    family: ['frillish', 'jellicent'],
     id: 592,
     keywords: [],
     name_DE: 'Quabbel',
@@ -14353,7 +14353,7 @@ export const pokemonData = [
     types: ['water', 'ghost'],
   },
   {
-    family: ['jellicent', 'frillish'],
+    family: ['frillish', 'jellicent'],
     id: 593,
     keywords: [],
     name_DE: 'Apoquallyp',
@@ -14401,7 +14401,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['galvantula', 'joltik'],
+    family: ['joltik', 'galvantula'],
     id: 595,
     keywords: [],
     name_DE: 'Wattzapf',
@@ -14425,7 +14425,7 @@ export const pokemonData = [
     types: ['electric', 'bug'],
   },
   {
-    family: ['galvantula', 'joltik'],
+    family: ['joltik', 'galvantula'],
     id: 596,
     keywords: [],
     name_DE: 'Voltula',
@@ -14571,7 +14571,7 @@ export const pokemonData = [
     types: ['steel'],
   },
   {
-    family: ['eelektrik', 'eelektross', 'tynamo'],
+    family: ['tynamo', 'eelektross', 'eelektrik'],
     id: 602,
     keywords: [],
     name_DE: 'Zapplardin',
@@ -14595,7 +14595,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['eelektrik', 'eelektross', 'tynamo'],
+    family: ['tynamo', 'eelektross', 'eelektrik'],
     id: 603,
     keywords: [],
     name_DE: 'Zapplalek',
@@ -14619,7 +14619,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['eelektrik', 'eelektross', 'tynamo'],
+    family: ['tynamo', 'eelektross', 'eelektrik'],
     id: 604,
     keywords: [],
     name_DE: 'Zapplarang',
@@ -14692,7 +14692,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['lampent', 'chandelure', 'litwick'],
+    family: ['lampent', 'litwick', 'chandelure'],
     id: 607,
     keywords: [],
     name_DE: 'Lichtel',
@@ -14716,7 +14716,7 @@ export const pokemonData = [
     types: ['fire', 'ghost'],
   },
   {
-    family: ['lampent', 'chandelure', 'litwick'],
+    family: ['lampent', 'litwick', 'chandelure'],
     id: 608,
     keywords: [],
     name_DE: 'Laternecto',
@@ -14740,7 +14740,7 @@ export const pokemonData = [
     types: ['fire', 'ghost'],
   },
   {
-    family: ['lampent', 'chandelure', 'litwick'],
+    family: ['lampent', 'litwick', 'chandelure'],
     id: 609,
     keywords: [],
     name_DE: 'Skelabra',
@@ -14765,7 +14765,7 @@ export const pokemonData = [
     types: ['fire', 'ghost'],
   },
   {
-    family: ['fraxure', 'axew', 'haxorus'],
+    family: ['fraxure', 'haxorus', 'axew'],
     id: 610,
     keywords: [],
     name_DE: 'Milza',
@@ -14788,7 +14788,7 @@ export const pokemonData = [
     types: ['dragon'],
   },
   {
-    family: ['fraxure', 'axew', 'haxorus'],
+    family: ['fraxure', 'haxorus', 'axew'],
     id: 611,
     keywords: [],
     name_DE: 'Sharfax',
@@ -14812,7 +14812,7 @@ export const pokemonData = [
     types: ['dragon'],
   },
   {
-    family: ['fraxure', 'axew', 'haxorus'],
+    family: ['fraxure', 'haxorus', 'axew'],
     id: 612,
     keywords: [],
     name_DE: 'Maxax',
@@ -14836,7 +14836,7 @@ export const pokemonData = [
     types: ['dragon'],
   },
   {
-    family: ['beartic', 'cubchoo'],
+    family: ['cubchoo', 'beartic'],
     id: 613,
     keywords: [],
     name_DE: 'Petznief',
@@ -14860,7 +14860,7 @@ export const pokemonData = [
     types: ['ice'],
   },
   {
-    family: ['beartic', 'cubchoo'],
+    family: ['cubchoo', 'beartic'],
     id: 614,
     keywords: [],
     name_DE: 'Siberio',
@@ -15052,7 +15052,7 @@ export const pokemonData = [
     types: ['dragon'],
   },
   {
-    family: ['golett', 'golurk'],
+    family: ['golurk', 'golett'],
     id: 622,
     keywords: [],
     name_DE: 'Golbit',
@@ -15076,7 +15076,7 @@ export const pokemonData = [
     types: ['ground', 'ghost'],
   },
   {
-    family: ['golett', 'golurk'],
+    family: ['golurk', 'golett'],
     id: 623,
     keywords: [],
     name_DE: 'Golgantes',
@@ -15100,7 +15100,7 @@ export const pokemonData = [
     types: ['ground', 'ghost'],
   },
   {
-    family: ['pawniard', 'bisharp', 'kingambit'],
+    family: ['bisharp', 'kingambit', 'pawniard'],
     id: 624,
     keywords: [],
     name_DE: 'Gladiantri',
@@ -15124,7 +15124,7 @@ export const pokemonData = [
     types: ['dark', 'steel'],
   },
   {
-    family: ['pawniard', 'bisharp', 'kingambit'],
+    family: ['bisharp', 'kingambit', 'pawniard'],
     id: 625,
     keywords: [],
     name_DE: 'Caesurio',
@@ -15173,7 +15173,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['rufflet', 'braviary'],
+    family: ['braviary', 'rufflet'],
     id: 627,
     keywords: [],
     name_DE: 'Geronimatz',
@@ -15194,10 +15194,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/rufflet.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rufflet.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['rufflet', 'braviary'],
+    family: ['braviary', 'rufflet'],
     id: 628,
     keywords: [],
     name_DE: 'Washakwil',
@@ -15218,10 +15218,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/braviary.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/braviary.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
-    family: ['vullaby', 'mandibuzz'],
+    family: ['mandibuzz', 'vullaby'],
     id: 629,
     keywords: [],
     name_DE: 'Skallyk',
@@ -15245,7 +15245,7 @@ export const pokemonData = [
     types: ['dark', 'flying'],
   },
   {
-    family: ['vullaby', 'mandibuzz'],
+    family: ['mandibuzz', 'vullaby'],
     id: 630,
     keywords: [],
     name_DE: 'Grypheldis',
@@ -15314,10 +15314,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/durant.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/durant.png',
-    types: ['steel', 'bug'],
+    types: ['bug', 'steel'],
   },
   {
-    family: ['deino', 'zweilous', 'hydreigon'],
+    family: ['deino', 'hydreigon', 'zweilous'],
     id: 633,
     keywords: [],
     name_DE: 'Kapuno',
@@ -15341,7 +15341,7 @@ export const pokemonData = [
     types: ['dark', 'dragon'],
   },
   {
-    family: ['deino', 'zweilous', 'hydreigon'],
+    family: ['deino', 'hydreigon', 'zweilous'],
     id: 634,
     keywords: [],
     name_DE: 'Duodino',
@@ -15365,7 +15365,7 @@ export const pokemonData = [
     types: ['dark', 'dragon'],
   },
   {
-    family: ['deino', 'zweilous', 'hydreigon'],
+    family: ['deino', 'hydreigon', 'zweilous'],
     id: 635,
     keywords: [],
     name_DE: 'Trikephalo',
@@ -15389,7 +15389,7 @@ export const pokemonData = [
     types: ['dark', 'dragon'],
   },
   {
-    family: ['volcarona', 'larvesta'],
+    family: ['larvesta', 'volcarona'],
     id: 636,
     keywords: [],
     name_DE: 'Ignivor',
@@ -15413,7 +15413,7 @@ export const pokemonData = [
     types: ['bug', 'fire'],
   },
   {
-    family: ['volcarona', 'larvesta'],
+    family: ['larvesta', 'volcarona'],
     id: 637,
     keywords: [],
     name_DE: 'Ramoth',
@@ -15458,7 +15458,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/cobalion.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/cobalion.png',
-    types: ['steel', 'fighting'],
+    types: ['fighting', 'steel'],
   },
   {
     family: ['terrakion'],
@@ -15698,7 +15698,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/meloetta.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/meloetta.png',
-    types: ['normal', 'psychic'],
+    types: ['psychic', 'normal'],
   },
   {
     family: ['genesect'],
@@ -15722,7 +15722,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/genesect.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/genesect.png',
-    types: ['steel', 'bug'],
+    types: ['bug', 'steel'],
   },
   {
     family: ['chespin', 'quilladin', 'chesnaught'],
@@ -15939,7 +15939,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/greninja.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/greninja.png',
-    types: ['dark', 'water'],
+    types: ['water', 'dark'],
   },
   {
     family: ['diggersby', 'bunnelby'],
@@ -15987,7 +15987,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/diggersby.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/diggersby.png',
-    types: ['normal', 'ground'],
+    types: ['ground', 'normal'],
   },
   {
     family: ['fletchling', 'talonflame', 'fletchinder'],
@@ -16012,7 +16012,7 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/fletchling.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/fletchling.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
     family: ['fletchling', 'talonflame', 'fletchinder'],
@@ -16037,7 +16037,7 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/fletchinder.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/fletchinder.png',
-    types: ['fire', 'flying'],
+    types: ['flying', 'fire'],
   },
   {
     family: ['fletchling', 'talonflame', 'fletchinder'],
@@ -16062,10 +16062,10 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/talonflame.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/talonflame.png',
-    types: ['fire', 'flying'],
+    types: ['flying', 'fire'],
   },
   {
-    family: ['scatterbug', 'spewpa', 'vivillon'],
+    family: ['scatterbug', 'vivillon', 'spewpa'],
     id: 664,
     keywords: [],
     name_DE: 'Purmel',
@@ -16090,7 +16090,7 @@ export const pokemonData = [
     types: ['bug'],
   },
   {
-    family: ['scatterbug', 'spewpa', 'vivillon'],
+    family: ['scatterbug', 'vivillon', 'spewpa'],
     id: 665,
     keywords: [],
     name_DE: 'Puponcho',
@@ -16114,7 +16114,7 @@ export const pokemonData = [
     types: ['bug'],
   },
   {
-    family: ['scatterbug', 'spewpa', 'vivillon'],
+    family: ['scatterbug', 'vivillon', 'spewpa'],
     id: 666,
     keywords: [],
     name_DE: 'Vivillon',
@@ -16186,7 +16186,7 @@ export const pokemonData = [
     types: ['normal', 'fire'],
   },
   {
-    family: ['flabébé', 'florges', 'floette'],
+    family: ['flabébé', 'floette', 'florges'],
     id: 669,
     keywords: [],
     name_DE: 'Flabébé',
@@ -16210,7 +16210,7 @@ export const pokemonData = [
     types: ['fairy'],
   },
   {
-    family: ['flabébé', 'florges', 'floette'],
+    family: ['flabébé', 'floette', 'florges'],
     id: 670,
     keywords: [],
     name_DE: 'Floette',
@@ -16234,7 +16234,7 @@ export const pokemonData = [
     types: ['fairy'],
   },
   {
-    family: ['flabébé', 'florges', 'floette'],
+    family: ['flabébé', 'floette', 'florges'],
     id: 671,
     keywords: [],
     name_DE: 'Florges',
@@ -16351,7 +16351,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/pangoro.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pangoro.png',
-    types: ['dark', 'fighting'],
+    types: ['fighting', 'dark'],
   },
   {
     family: ['furfrou'],
@@ -16378,7 +16378,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['espurr', 'meowstic'],
+    family: ['meowstic', 'espurr'],
     id: 677,
     keywords: [],
     name_DE: 'Psiau',
@@ -16402,7 +16402,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['espurr', 'meowstic'],
+    family: ['meowstic', 'espurr'],
     id: 678,
     keywords: [],
     name_DE: 'Psiaugon',
@@ -16426,7 +16426,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['aegislash', 'doublade', 'honedge'],
+    family: ['doublade', 'honedge', 'aegislash'],
     id: 679,
     keywords: [],
     name_DE: 'Gramokles',
@@ -16450,14 +16450,14 @@ export const pokemonData = [
     types: ['steel', 'ghost'],
   },
   {
-    family: ['aegislash', 'doublade', 'honedge'],
+    family: ['doublade', 'honedge', 'aegislash'],
     id: 680,
     keywords: [],
     name_DE: 'Duokles',
     name_EN: 'Doublade',
     name_ES: 'Doublade',
     name_FR: 'Dimoclès',
-    name_HI: 'डायब्लेड',
+    name_HI: '',
     name_IT: 'Doublade',
     name_JA: 'ニダンギル',
     name_KO: '쌍검킬',
@@ -16474,7 +16474,7 @@ export const pokemonData = [
     types: ['steel', 'ghost'],
   },
   {
-    family: ['aegislash', 'doublade', 'honedge'],
+    family: ['doublade', 'honedge', 'aegislash'],
     id: 681,
     keywords: [],
     name_DE: 'Durengard',
@@ -16498,7 +16498,7 @@ export const pokemonData = [
     types: ['steel', 'ghost'],
   },
   {
-    family: ['spritzee', 'aromatisse'],
+    family: ['aromatisse', 'spritzee'],
     id: 682,
     keywords: [],
     name_DE: 'Parfi',
@@ -16522,7 +16522,7 @@ export const pokemonData = [
     types: ['fairy'],
   },
   {
-    family: ['spritzee', 'aromatisse'],
+    family: ['aromatisse', 'spritzee'],
     id: 683,
     keywords: [],
     name_DE: 'Parfinesse',
@@ -16616,7 +16616,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/inkay.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/inkay.png',
-    types: ['dark', 'psychic'],
+    types: ['psychic', 'dark'],
   },
   {
     family: ['malamar', 'inkay'],
@@ -16640,7 +16640,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/malamar.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/malamar.png',
-    types: ['dark', 'psychic'],
+    types: ['psychic', 'dark'],
   },
   {
     family: ['barbaracle', 'binacle'],
@@ -16692,7 +16692,7 @@ export const pokemonData = [
     types: ['water', 'rock'],
   },
   {
-    family: ['dragalge', 'skrelp'],
+    family: ['skrelp', 'dragalge'],
     id: 690,
     keywords: [],
     name_DE: 'Algitt',
@@ -16713,10 +16713,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/skrelp.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/skrelp.png',
-    types: ['poison', 'water'],
+    types: ['water', 'poison'],
   },
   {
-    family: ['dragalge', 'skrelp'],
+    family: ['skrelp', 'dragalge'],
     id: 691,
     keywords: [],
     name_DE: 'Tandrak',
@@ -16788,7 +16788,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['helioptile', 'heliolisk'],
+    family: ['heliolisk', 'helioptile'],
     id: 694,
     keywords: [],
     name_DE: 'Eguana',
@@ -16810,10 +16810,10 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/helioptile.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/helioptile.png',
-    types: ['normal', 'electric'],
+    types: ['electric', 'normal'],
   },
   {
-    family: ['helioptile', 'heliolisk'],
+    family: ['heliolisk', 'helioptile'],
     id: 695,
     keywords: [],
     name_DE: 'Elezard',
@@ -16834,7 +16834,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/heliolisk.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/heliolisk.png',
-    types: ['normal', 'electric'],
+    types: ['electric', 'normal'],
   },
   {
     family: ['tyrunt', 'tyrantrum'],
@@ -16885,7 +16885,7 @@ export const pokemonData = [
     types: ['dragon', 'rock'],
   },
   {
-    family: ['amaura', 'aurorus'],
+    family: ['aurorus', 'amaura'],
     id: 698,
     keywords: [],
     name_DE: 'Amarino',
@@ -16909,7 +16909,7 @@ export const pokemonData = [
     types: ['ice', 'rock'],
   },
   {
-    family: ['amaura', 'aurorus'],
+    family: ['aurorus', 'amaura'],
     id: 699,
     keywords: [],
     name_DE: 'Amagarga',
@@ -16934,15 +16934,15 @@ export const pokemonData = [
   },
   {
     family: [
-      'eevee',
-      'jolteon',
-      'umbreon',
-      'glaceon',
+      'espeon',
       'leafeon',
-      'sylveon',
+      'jolteon',
+      'glaceon',
+      'umbreon',
       'vaporeon',
       'flareon',
-      'espeon',
+      'eevee',
+      'sylveon',
     ],
     id: 700,
     keywords: [],
@@ -16988,7 +16988,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/hawlucha.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/hawlucha.png',
-    types: ['flying', 'fighting'],
+    types: ['fighting', 'flying'],
   },
   {
     family: ['dedenne'],
@@ -17039,7 +17039,7 @@ export const pokemonData = [
     types: ['fairy', 'rock'],
   },
   {
-    family: ['goodra', 'sliggoo', 'goomy'],
+    family: ['sliggoo', 'goomy', 'goodra'],
     id: 704,
     keywords: [],
     name_DE: 'Viscora',
@@ -17063,7 +17063,7 @@ export const pokemonData = [
     types: ['dragon'],
   },
   {
-    family: ['goodra', 'sliggoo', 'goomy'],
+    family: ['sliggoo', 'goomy', 'goodra'],
     id: 705,
     keywords: [],
     name_DE: 'Viscargot',
@@ -17087,7 +17087,7 @@ export const pokemonData = [
     types: ['dragon'],
   },
   {
-    family: ['goodra', 'sliggoo', 'goomy'],
+    family: ['sliggoo', 'goomy', 'goodra'],
     id: 706,
     keywords: [],
     name_DE: 'Viscogon',
@@ -17132,7 +17132,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/klefki.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/klefki.png',
-    types: ['steel', 'fairy'],
+    types: ['fairy', 'steel'],
   },
   {
     family: ['phantump', 'trevenant'],
@@ -17231,7 +17231,7 @@ export const pokemonData = [
     types: ['grass', 'ghost'],
   },
   {
-    family: ['avalugg', 'bergmite'],
+    family: ['bergmite', 'avalugg'],
     id: 712,
     keywords: [],
     name_DE: 'Arktip',
@@ -17255,7 +17255,7 @@ export const pokemonData = [
     types: ['ice'],
   },
   {
-    family: ['avalugg', 'bergmite'],
+    family: ['bergmite', 'avalugg'],
     id: 713,
     keywords: [],
     name_DE: 'Arktilas',
@@ -17543,7 +17543,7 @@ export const pokemonData = [
     types: ['grass', 'ghost'],
   },
   {
-    family: ['litten', 'incineroar', 'torracat'],
+    family: ['litten', 'torracat', 'incineroar'],
     id: 725,
     keywords: [],
     name_DE: 'Flamiau',
@@ -17567,7 +17567,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['litten', 'incineroar', 'torracat'],
+    family: ['litten', 'torracat', 'incineroar'],
     id: 726,
     keywords: [],
     name_DE: 'Miezunder',
@@ -17591,7 +17591,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['litten', 'incineroar', 'torracat'],
+    family: ['litten', 'torracat', 'incineroar'],
     id: 727,
     keywords: [],
     name_DE: 'Fuegro',
@@ -17616,7 +17616,7 @@ export const pokemonData = [
     types: ['dark', 'fire'],
   },
   {
-    family: ['brionne', 'popplio', 'primarina'],
+    family: ['popplio', 'brionne', 'primarina'],
     id: 728,
     keywords: [],
     name_DE: 'Robball',
@@ -17640,7 +17640,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['brionne', 'popplio', 'primarina'],
+    family: ['popplio', 'brionne', 'primarina'],
     id: 729,
     keywords: [],
     name_DE: 'Marikeck',
@@ -17664,7 +17664,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['brionne', 'popplio', 'primarina'],
+    family: ['popplio', 'brionne', 'primarina'],
     id: 730,
     keywords: [],
     name_DE: 'Primarene',
@@ -17709,7 +17709,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/pikipek.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pikipek.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
     family: ['trumbeak', 'pikipek', 'toucannon'],
@@ -17733,7 +17733,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/trumbeak.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/trumbeak.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
     family: ['trumbeak', 'pikipek', 'toucannon'],
@@ -17757,7 +17757,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/toucannon.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/toucannon.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
     family: ['yungoos', 'gumshoos'],
@@ -17808,7 +17808,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['charjabug', 'grubbin', 'vikavolt'],
+    family: ['vikavolt', 'charjabug', 'grubbin'],
     id: 736,
     keywords: [],
     name_DE: 'Mabula',
@@ -17832,7 +17832,7 @@ export const pokemonData = [
     types: ['bug'],
   },
   {
-    family: ['charjabug', 'grubbin', 'vikavolt'],
+    family: ['vikavolt', 'charjabug', 'grubbin'],
     id: 737,
     keywords: [],
     name_DE: 'Akkup',
@@ -17856,7 +17856,7 @@ export const pokemonData = [
     types: ['electric', 'bug'],
   },
   {
-    family: ['charjabug', 'grubbin', 'vikavolt'],
+    family: ['vikavolt', 'charjabug', 'grubbin'],
     id: 738,
     keywords: [],
     name_DE: 'Donarion',
@@ -17880,7 +17880,7 @@ export const pokemonData = [
     types: ['electric', 'bug'],
   },
   {
-    family: ['crabominable', 'oricorio', 'crabrawler'],
+    family: ['oricorio', 'crabominable', 'crabrawler'],
     id: 739,
     keywords: [],
     name_DE: 'Krabbox',
@@ -17905,7 +17905,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['crabominable', 'oricorio', 'crabrawler'],
+    family: ['oricorio', 'crabominable', 'crabrawler'],
     id: 740,
     keywords: [],
     name_DE: 'Krawell',
@@ -17930,7 +17930,7 @@ export const pokemonData = [
     types: ['ice', 'fighting'],
   },
   {
-    family: ['crabominable', 'oricorio', 'crabrawler'],
+    family: ['oricorio', 'crabominable', 'crabrawler'],
     id: 741,
     keywords: [],
     name_DE: 'Choreogel',
@@ -17951,10 +17951,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/oricorio.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/oricorio.png',
-    types: ['fire', 'flying'],
+    types: ['flying', 'fire'],
   },
   {
-    family: ['cutiefly', 'ribombee'],
+    family: ['ribombee', 'cutiefly'],
     id: 742,
     keywords: [],
     name_DE: 'Wommel',
@@ -17978,7 +17978,7 @@ export const pokemonData = [
     types: ['bug', 'fairy'],
   },
   {
-    family: ['cutiefly', 'ribombee'],
+    family: ['ribombee', 'cutiefly'],
     id: 743,
     keywords: [],
     name_DE: 'Bandelby',
@@ -18002,7 +18002,7 @@ export const pokemonData = [
     types: ['bug', 'fairy'],
   },
   {
-    family: ['rockruff', 'lycanroc'],
+    family: ['lycanroc', 'rockruff'],
     id: 744,
     keywords: [],
     name_DE: 'Wuffels',
@@ -18026,7 +18026,7 @@ export const pokemonData = [
     types: ['rock'],
   },
   {
-    family: ['rockruff', 'lycanroc'],
+    family: ['lycanroc', 'rockruff'],
     id: 745,
     keywords: [],
     name_DE: 'Wolwerock',
@@ -18096,7 +18096,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/mareanie.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mareanie.png',
-    types: ['poison', 'water'],
+    types: ['water', 'poison'],
   },
   {
     family: ['toxapex', 'mareanie'],
@@ -18120,10 +18120,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/toxapex.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/toxapex.png',
-    types: ['poison', 'water'],
+    types: ['water', 'poison'],
   },
   {
-    family: ['mudsdale', 'mudbray'],
+    family: ['mudbray', 'mudsdale'],
     id: 749,
     keywords: [],
     name_DE: 'Pampuli',
@@ -18147,7 +18147,7 @@ export const pokemonData = [
     types: ['ground'],
   },
   {
-    family: ['mudsdale', 'mudbray'],
+    family: ['mudbray', 'mudsdale'],
     id: 750,
     keywords: [],
     name_DE: 'Pampross',
@@ -18171,7 +18171,7 @@ export const pokemonData = [
     types: ['ground'],
   },
   {
-    family: ['dewpider', 'araquanid'],
+    family: ['araquanid', 'dewpider'],
     id: 751,
     keywords: [],
     name_DE: 'Araqua',
@@ -18192,10 +18192,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/dewpider.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dewpider.png',
-    types: ['bug', 'water'],
+    types: ['water', 'bug'],
   },
   {
-    family: ['dewpider', 'araquanid'],
+    family: ['araquanid', 'dewpider'],
     id: 752,
     keywords: [],
     name_DE: 'Aranestro',
@@ -18216,10 +18216,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/araquanid.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/araquanid.png',
-    types: ['bug', 'water'],
+    types: ['water', 'bug'],
   },
   {
-    family: ['fomantis', 'lurantis'],
+    family: ['lurantis', 'fomantis'],
     id: 753,
     keywords: [],
     name_DE: 'Imantis',
@@ -18243,7 +18243,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['fomantis', 'lurantis'],
+    family: ['lurantis', 'fomantis'],
     id: 754,
     keywords: [],
     name_DE: 'Mantidea',
@@ -18267,7 +18267,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['shiinotic', 'morelull'],
+    family: ['morelull', 'shiinotic'],
     id: 755,
     keywords: [],
     name_DE: 'Bubungus',
@@ -18291,7 +18291,7 @@ export const pokemonData = [
     types: ['grass', 'fairy'],
   },
   {
-    family: ['shiinotic', 'morelull'],
+    family: ['morelull', 'shiinotic'],
     id: 756,
     keywords: [],
     name_DE: 'Lamellux',
@@ -18363,7 +18363,7 @@ export const pokemonData = [
     types: ['poison', 'fire'],
   },
   {
-    family: ['stufful', 'bewear'],
+    family: ['bewear', 'stufful'],
     id: 759,
     keywords: [],
     name_DE: 'Velursi',
@@ -18384,10 +18384,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/stufful.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/stufful.png',
-    types: ['normal', 'fighting'],
+    types: ['fighting', 'normal'],
   },
   {
-    family: ['stufful', 'bewear'],
+    family: ['bewear', 'stufful'],
     id: 760,
     keywords: [],
     name_DE: 'Kosturso',
@@ -18408,10 +18408,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/bewear.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bewear.png',
-    types: ['normal', 'fighting'],
+    types: ['fighting', 'normal'],
   },
   {
-    family: ['steenee', 'tsareena', 'bounsweet'],
+    family: ['steenee', 'bounsweet', 'tsareena'],
     id: 761,
     keywords: [],
     name_DE: 'Frubberl',
@@ -18435,7 +18435,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['steenee', 'tsareena', 'bounsweet'],
+    family: ['steenee', 'bounsweet', 'tsareena'],
     id: 762,
     keywords: [],
     name_DE: 'Frubaila',
@@ -18459,7 +18459,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['steenee', 'tsareena', 'bounsweet'],
+    family: ['steenee', 'bounsweet', 'tsareena'],
     id: 763,
     keywords: [],
     name_DE: 'Fruyal',
@@ -18528,7 +18528,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/oranguru.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/oranguru.png',
-    types: ['normal', 'psychic'],
+    types: ['psychic', 'normal'],
   },
   {
     family: ['passimian'],
@@ -18576,7 +18576,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/wimpod.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wimpod.png',
-    types: ['bug', 'water'],
+    types: ['water', 'bug'],
   },
   {
     family: ['golisopod', 'wimpod'],
@@ -18600,10 +18600,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/golisopod.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/golisopod.png',
-    types: ['bug', 'water'],
+    types: ['water', 'bug'],
   },
   {
-    family: ['palossand', 'sandygast'],
+    family: ['sandygast', 'palossand'],
     id: 769,
     keywords: [],
     name_DE: 'Sankabuh',
@@ -18627,7 +18627,7 @@ export const pokemonData = [
     types: ['ground', 'ghost'],
   },
   {
-    family: ['palossand', 'sandygast'],
+    family: ['sandygast', 'palossand'],
     id: 770,
     keywords: [],
     name_DE: 'Colossand',
@@ -18842,7 +18842,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/mimikyu.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mimikyu.png',
-    types: ['ghost', 'fairy'],
+    types: ['fairy', 'ghost'],
   },
   {
     family: ['bruxish'],
@@ -18866,7 +18866,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/bruxish.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/bruxish.png',
-    types: ['psychic', 'water'],
+    types: ['water', 'psychic'],
   },
   {
     family: ['drampa'],
@@ -18917,7 +18917,7 @@ export const pokemonData = [
     types: ['grass', 'ghost'],
   },
   {
-    family: ['kommo-o', 'hakamo-o', 'jangmo-o'],
+    family: ['jangmo-o', 'hakamo-o', 'kommo-o'],
     id: 782,
     keywords: [],
     name_DE: 'Miniras',
@@ -18941,7 +18941,7 @@ export const pokemonData = [
     types: ['dragon'],
   },
   {
-    family: ['kommo-o', 'hakamo-o', 'jangmo-o'],
+    family: ['jangmo-o', 'hakamo-o', 'kommo-o'],
     id: 783,
     keywords: [],
     name_DE: 'Mediras',
@@ -18965,7 +18965,7 @@ export const pokemonData = [
     types: ['fighting', 'dragon'],
   },
   {
-    family: ['kommo-o', 'hakamo-o', 'jangmo-o'],
+    family: ['jangmo-o', 'hakamo-o', 'kommo-o'],
     id: 784,
     keywords: [],
     name_DE: 'Grandiras',
@@ -19085,7 +19085,7 @@ export const pokemonData = [
     types: ['water', 'fairy'],
   },
   {
-    family: ['cosmog', 'cosmoem', 'solgaleo', 'lunala'],
+    family: ['cosmog', 'cosmoem', 'lunala', 'solgaleo'],
     id: 789,
     keywords: ['legendary', 'legendaries'],
     name_DE: 'Cosmog',
@@ -19109,7 +19109,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['cosmog', 'cosmoem', 'solgaleo', 'lunala'],
+    family: ['cosmog', 'cosmoem', 'lunala', 'solgaleo'],
     id: 790,
     keywords: ['legendary', 'legendaries'],
     name_DE: 'Cosmovum',
@@ -19133,7 +19133,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['cosmog', 'cosmoem', 'solgaleo', 'lunala'],
+    family: ['cosmog', 'cosmoem', 'lunala', 'solgaleo'],
     id: 791,
     keywords: ['legendary', 'legendaries'],
     name_DE: 'Solgaleo',
@@ -19154,10 +19154,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/solgaleo.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/solgaleo.png',
-    types: ['steel', 'psychic'],
+    types: ['psychic', 'steel'],
   },
   {
-    family: ['cosmog', 'cosmoem', 'solgaleo', 'lunala'],
+    family: ['cosmog', 'cosmoem', 'lunala', 'solgaleo'],
     id: 792,
     keywords: ['legendary', 'legendaries'],
     name_DE: 'Lunala',
@@ -19299,7 +19299,7 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/celesteela.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/celesteela.png',
-    types: ['steel', 'flying'],
+    types: ['flying', 'steel'],
   },
   {
     family: ['kartana'],
@@ -19395,7 +19395,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/magearna.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/magearna.png',
-    types: ['steel', 'fairy'],
+    types: ['fairy', 'steel'],
   },
   {
     family: ['marshadow'],
@@ -19419,7 +19419,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/marshadow.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/marshadow.png',
-    types: ['ghost', 'fighting'],
+    types: ['fighting', 'ghost'],
   },
   {
     family: ['naganadel', 'poipole'],
@@ -19663,7 +19663,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['scorbunny', 'raboot', 'cinderace'],
+    family: ['cinderace', 'scorbunny', 'raboot'],
     id: 813,
     keywords: [],
     name_DE: 'Hopplo',
@@ -19687,7 +19687,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['scorbunny', 'raboot', 'cinderace'],
+    family: ['cinderace', 'scorbunny', 'raboot'],
     id: 814,
     keywords: [],
     name_DE: 'Kickerlo',
@@ -19711,7 +19711,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['scorbunny', 'raboot', 'cinderace'],
+    family: ['cinderace', 'scorbunny', 'raboot'],
     id: 815,
     keywords: [],
     name_DE: 'Liberlo',
@@ -19735,7 +19735,7 @@ export const pokemonData = [
     types: ['fire'],
   },
   {
-    family: ['sobble', 'inteleon', 'drizzile'],
+    family: ['sobble', 'drizzile', 'inteleon'],
     id: 816,
     keywords: [],
     name_DE: 'Memmeon',
@@ -19759,7 +19759,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['sobble', 'inteleon', 'drizzile'],
+    family: ['sobble', 'drizzile', 'inteleon'],
     id: 817,
     keywords: [],
     name_DE: 'Phlegleon',
@@ -19783,7 +19783,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['sobble', 'inteleon', 'drizzile'],
+    family: ['sobble', 'drizzile', 'inteleon'],
     id: 818,
     keywords: [],
     name_DE: 'Intelleon',
@@ -19807,7 +19807,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['greedent', 'skwovet'],
+    family: ['skwovet', 'greedent'],
     id: 819,
     keywords: [],
     name_DE: 'Raffel',
@@ -19831,7 +19831,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['greedent', 'skwovet'],
+    family: ['skwovet', 'greedent'],
     id: 820,
     keywords: [],
     name_DE: 'Schlaraffel',
@@ -19855,7 +19855,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['corvisquire', 'rookidee', 'corviknight'],
+    family: ['corviknight', 'rookidee', 'corvisquire'],
     id: 821,
     keywords: [],
     name_DE: 'Meikro',
@@ -19879,7 +19879,7 @@ export const pokemonData = [
     types: ['flying'],
   },
   {
-    family: ['corvisquire', 'rookidee', 'corviknight'],
+    family: ['corviknight', 'rookidee', 'corvisquire'],
     id: 822,
     keywords: [],
     name_DE: 'Kranoviz',
@@ -19904,7 +19904,7 @@ export const pokemonData = [
     types: ['flying'],
   },
   {
-    family: ['corvisquire', 'rookidee', 'corviknight'],
+    family: ['corviknight', 'rookidee', 'corvisquire'],
     id: 823,
     keywords: [],
     name_DE: 'Krarmor',
@@ -19926,10 +19926,10 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/corviknight.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/corviknight.png',
-    types: ['steel', 'flying'],
+    types: ['flying', 'steel'],
   },
   {
-    family: ['orbeetle', 'dottler', 'blipbug'],
+    family: ['orbeetle', 'blipbug', 'dottler'],
     id: 824,
     keywords: [],
     name_DE: 'Sensect',
@@ -19953,7 +19953,7 @@ export const pokemonData = [
     types: ['bug'],
   },
   {
-    family: ['orbeetle', 'dottler', 'blipbug'],
+    family: ['orbeetle', 'blipbug', 'dottler'],
     id: 825,
     keywords: [],
     name_DE: 'Keradar',
@@ -19974,10 +19974,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/dottler.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dottler.png',
-    types: ['psychic', 'bug'],
+    types: ['bug', 'psychic'],
   },
   {
-    family: ['orbeetle', 'dottler', 'blipbug'],
+    family: ['orbeetle', 'blipbug', 'dottler'],
     id: 826,
     keywords: [],
     name_DE: 'Maritellit',
@@ -19998,10 +19998,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/orbeetle.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/orbeetle.png',
-    types: ['psychic', 'bug'],
+    types: ['bug', 'psychic'],
   },
   {
-    family: ['nickit', 'thievul'],
+    family: ['thievul', 'nickit'],
     id: 827,
     keywords: [],
     name_DE: 'Kleptifux',
@@ -20025,7 +20025,7 @@ export const pokemonData = [
     types: ['dark'],
   },
   {
-    family: ['nickit', 'thievul'],
+    family: ['thievul', 'nickit'],
     id: 828,
     keywords: [],
     name_DE: 'Gaunux',
@@ -20194,7 +20194,7 @@ export const pokemonData = [
     types: ['water', 'rock'],
   },
   {
-    family: ['yamper', 'boltund'],
+    family: ['boltund', 'yamper'],
     id: 835,
     keywords: [],
     name_DE: 'Voldi',
@@ -20218,7 +20218,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['yamper', 'boltund'],
+    family: ['boltund', 'yamper'],
     id: 836,
     keywords: [],
     name_DE: 'Bellektro',
@@ -20242,7 +20242,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['carkol', 'coalossal', 'rolycoly'],
+    family: ['rolycoly', 'carkol', 'coalossal'],
     id: 837,
     keywords: [],
     name_DE: 'Klonkett',
@@ -20266,7 +20266,7 @@ export const pokemonData = [
     types: ['rock'],
   },
   {
-    family: ['carkol', 'coalossal', 'rolycoly'],
+    family: ['rolycoly', 'carkol', 'coalossal'],
     id: 838,
     keywords: [],
     name_DE: 'Wagong',
@@ -20290,7 +20290,7 @@ export const pokemonData = [
     types: ['fire', 'rock'],
   },
   {
-    family: ['carkol', 'coalossal', 'rolycoly'],
+    family: ['rolycoly', 'carkol', 'coalossal'],
     id: 839,
     keywords: [],
     name_DE: 'Montecarbo',
@@ -20314,7 +20314,7 @@ export const pokemonData = [
     types: ['fire', 'rock'],
   },
   {
-    family: ['appletun', 'applin', 'dipplin', 'flapple', 'hydrapple'],
+    family: ['hydrapple', 'appletun', 'flapple', 'dipplin', 'applin'],
     id: 840,
     keywords: [],
     name_DE: 'Knapfel',
@@ -20338,7 +20338,7 @@ export const pokemonData = [
     types: ['grass', 'dragon'],
   },
   {
-    family: ['appletun', 'applin', 'dipplin', 'flapple', 'hydrapple'],
+    family: ['hydrapple', 'appletun', 'flapple', 'dipplin', 'applin'],
     id: 841,
     keywords: [],
     name_DE: 'Drapfel',
@@ -20362,7 +20362,7 @@ export const pokemonData = [
     types: ['grass', 'dragon'],
   },
   {
-    family: ['appletun', 'applin', 'dipplin', 'flapple', 'hydrapple'],
+    family: ['hydrapple', 'appletun', 'flapple', 'dipplin', 'applin'],
     id: 842,
     keywords: [],
     name_DE: 'Schlapfel',
@@ -20386,7 +20386,7 @@ export const pokemonData = [
     types: ['grass', 'dragon'],
   },
   {
-    family: ['silicobra', 'sandaconda'],
+    family: ['sandaconda', 'silicobra'],
     id: 843,
     keywords: [],
     name_DE: 'Salanga',
@@ -20410,7 +20410,7 @@ export const pokemonData = [
     types: ['ground'],
   },
   {
-    family: ['silicobra', 'sandaconda'],
+    family: ['sandaconda', 'silicobra'],
     id: 844,
     keywords: [],
     name_DE: 'Sanaconda',
@@ -20459,7 +20459,7 @@ export const pokemonData = [
     types: ['water', 'flying'],
   },
   {
-    family: ['arrokuda', 'barraskewda'],
+    family: ['barraskewda', 'arrokuda'],
     id: 846,
     keywords: [],
     name_DE: 'Pikuda',
@@ -20483,7 +20483,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['arrokuda', 'barraskewda'],
+    family: ['barraskewda', 'arrokuda'],
     id: 847,
     keywords: [],
     name_DE: 'Barrakiefa',
@@ -20508,7 +20508,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['toxel', 'toxtricity'],
+    family: ['toxtricity', 'toxel'],
     id: 848,
     keywords: ['baby', 'babies', 'eggsonly', 'eggs only'],
     name_DE: 'Toxel',
@@ -20529,10 +20529,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/toxel.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/toxel.png',
-    types: ['poison', 'electric'],
+    types: ['electric', 'poison'],
   },
   {
-    family: ['toxel', 'toxtricity'],
+    family: ['toxtricity', 'toxel'],
     id: 849,
     keywords: [],
     name_DE: 'Riffex',
@@ -20554,10 +20554,10 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/toxtricity.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/toxtricity.png',
-    types: ['poison', 'electric'],
+    types: ['electric', 'poison'],
   },
   {
-    family: ['sizzlipede', 'centiskorch'],
+    family: ['centiskorch', 'sizzlipede'],
     id: 850,
     keywords: [],
     name_DE: 'Thermopod',
@@ -20582,7 +20582,7 @@ export const pokemonData = [
     types: ['bug', 'fire'],
   },
   {
-    family: ['sizzlipede', 'centiskorch'],
+    family: ['centiskorch', 'sizzlipede'],
     id: 851,
     keywords: [],
     name_DE: 'Infernopod',
@@ -20607,7 +20607,7 @@ export const pokemonData = [
     types: ['bug', 'fire'],
   },
   {
-    family: ['grapploct', 'clobbopus'],
+    family: ['clobbopus', 'grapploct'],
     id: 852,
     keywords: [],
     name_DE: 'Klopptopus',
@@ -20631,7 +20631,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['grapploct', 'clobbopus'],
+    family: ['clobbopus', 'grapploct'],
     id: 853,
     keywords: [],
     name_DE: 'Kaocto',
@@ -20704,7 +20704,7 @@ export const pokemonData = [
     types: ['ghost'],
   },
   {
-    family: ['hatterene', 'hatenna', 'hattrem'],
+    family: ['hatenna', 'hattrem', 'hatterene'],
     id: 856,
     keywords: [],
     name_DE: 'Brimova',
@@ -20728,7 +20728,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['hatterene', 'hatenna', 'hattrem'],
+    family: ['hatenna', 'hattrem', 'hatterene'],
     id: 857,
     keywords: [],
     name_DE: 'Brimano',
@@ -20752,7 +20752,7 @@ export const pokemonData = [
     types: ['psychic'],
   },
   {
-    family: ['hatterene', 'hatenna', 'hattrem'],
+    family: ['hatenna', 'hattrem', 'hatterene'],
     id: 858,
     keywords: [],
     name_DE: 'Silembrim',
@@ -20849,7 +20849,7 @@ export const pokemonData = [
     types: ['dark', 'fairy'],
   },
   {
-    family: ['zigzagoon', 'obstagoon', 'linoone'],
+    family: ['obstagoon', 'zigzagoon', 'linoone'],
     id: 862,
     keywords: [],
     name_DE: 'Barrikadax',
@@ -20870,7 +20870,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/obstagoon.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/obstagoon.png',
-    types: ['normal', 'dark'],
+    types: ['dark', 'normal'],
   },
   {
     family: ['perrserker', 'meowth', 'persian'],
@@ -20946,7 +20946,7 @@ export const pokemonData = [
     types: ['fighting'],
   },
   {
-    family: ['mr. mime', 'mime jr.', 'mr. rime'],
+    family: ['mr. mime', 'mr. rime', 'mime jr.'],
     id: 866,
     keywords: [],
     name_DE: 'Pantifrost',
@@ -20967,10 +20967,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/mr-rime.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/mr-rime.png',
-    types: ['psychic', 'ice'],
+    types: ['ice', 'psychic'],
   },
   {
-    family: ['cofagrigus', 'runerigus', 'yamask'],
+    family: ['runerigus', 'yamask', 'cofagrigus'],
     id: 867,
     keywords: [],
     name_DE: 'Oghnatoll',
@@ -20983,7 +20983,7 @@ export const pokemonData = [
     name_KO: '데스판',
     name_PT: 'Runerigus',
     name_RU: 'Рунеригус',
-    name_TH: 'เดธบาน',
+    name_TH: '',
     name_TR: 'Runerigus',
     name_ZHS: '迭失板',
     name_ZHT: '迭失板',
@@ -20994,7 +20994,7 @@ export const pokemonData = [
     types: ['ground', 'ghost'],
   },
   {
-    family: ['milcery', 'alcremie'],
+    family: ['alcremie', 'milcery'],
     id: 868,
     keywords: [],
     name_DE: 'Hokumil',
@@ -21018,7 +21018,7 @@ export const pokemonData = [
     types: ['fairy'],
   },
   {
-    family: ['milcery', 'alcremie'],
+    family: ['alcremie', 'milcery'],
     id: 869,
     keywords: [],
     name_DE: 'Pokusan',
@@ -21111,7 +21111,7 @@ export const pokemonData = [
     region_name: 'galar',
     shiny_sprite_image: 'https://img.pokemondb.net/sprites/home/shiny/snom.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/snom.png',
-    types: ['bug', 'ice'],
+    types: ['ice', 'bug'],
   },
   {
     family: ['snom', 'frosmoth'],
@@ -21135,7 +21135,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/frosmoth.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/frosmoth.png',
-    types: ['bug', 'ice'],
+    types: ['ice', 'bug'],
   },
   {
     family: ['stonjourner'],
@@ -21208,7 +21208,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/indeedee.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/indeedee.png',
-    types: ['normal', 'psychic'],
+    types: ['psychic', 'normal'],
   },
   {
     family: ['morpeko'],
@@ -21235,7 +21235,7 @@ export const pokemonData = [
     types: ['electric', 'dark'],
   },
   {
-    family: ['copperajah', 'cufant'],
+    family: ['cufant', 'copperajah'],
     id: 878,
     keywords: [],
     name_DE: 'Kupfanti',
@@ -21259,7 +21259,7 @@ export const pokemonData = [
     types: ['steel'],
   },
   {
-    family: ['copperajah', 'cufant'],
+    family: ['cufant', 'copperajah'],
     id: 879,
     keywords: [],
     name_DE: 'Patinaraja',
@@ -21329,7 +21329,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/arctozolt.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/arctozolt.png',
-    types: ['electric', 'ice'],
+    types: ['ice', 'electric'],
   },
   {
     family: ['dracovish'],
@@ -21404,7 +21404,7 @@ export const pokemonData = [
     types: ['steel', 'dragon'],
   },
   {
-    family: ['dreepy', 'drakloak', 'dragapult'],
+    family: ['drakloak', 'dreepy', 'dragapult'],
     id: 885,
     keywords: [],
     name_DE: 'Grolldra',
@@ -21428,7 +21428,7 @@ export const pokemonData = [
     types: ['ghost', 'dragon'],
   },
   {
-    family: ['dreepy', 'drakloak', 'dragapult'],
+    family: ['drakloak', 'dreepy', 'dragapult'],
     id: 886,
     keywords: [],
     name_DE: 'Phandra',
@@ -21452,7 +21452,7 @@ export const pokemonData = [
     types: ['ghost', 'dragon'],
   },
   {
-    family: ['dreepy', 'drakloak', 'dragapult'],
+    family: ['drakloak', 'dreepy', 'dragapult'],
     id: 887,
     keywords: [],
     name_DE: 'Katapuldra',
@@ -21593,7 +21593,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/urshifu.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/urshifu.png',
-    types: ['dark', 'fighting'],
+    types: ['fighting', 'dark'],
   },
   {
     family: ['zarude'],
@@ -21617,7 +21617,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/zarude.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/zarude.png',
-    types: ['dark', 'grass'],
+    types: ['grass', 'dark'],
   },
   {
     family: ['regieleki'],
@@ -21740,7 +21740,7 @@ export const pokemonData = [
     types: ['grass', 'psychic'],
   },
   {
-    family: ['wyrdeer', 'stantler'],
+    family: ['stantler', 'wyrdeer'],
     id: 899,
     keywords: [],
     name_DE: 'Damythir',
@@ -21761,10 +21761,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/wyrdeer.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wyrdeer.png',
-    types: ['normal', 'psychic'],
+    types: ['psychic', 'normal'],
   },
   {
-    family: ['scizor', 'scyther', 'kleavor'],
+    family: ['scyther', 'scizor', 'kleavor'],
     id: 900,
     keywords: [],
     name_DE: 'Axantor',
@@ -21788,7 +21788,7 @@ export const pokemonData = [
     types: ['bug', 'rock'],
   },
   {
-    family: ['teddiursa', 'ursaluna', 'zigzagoon', 'ursaring'],
+    family: ['zigzagoon', 'ursaluna', 'teddiursa', 'ursaring'],
     id: 901,
     keywords: [],
     name_DE: 'Ursaluna',
@@ -21837,7 +21837,7 @@ export const pokemonData = [
     types: ['water', 'ghost'],
   },
   {
-    family: ['weavile', 'sneasel', 'sneasler'],
+    family: ['sneasel', 'weavile', 'sneasler'],
     id: 903,
     keywords: [],
     name_DE: 'Snieboss',
@@ -21858,7 +21858,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/sneasler.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/sneasler.png',
-    types: ['poison', 'fighting'],
+    types: ['fighting', 'poison'],
   },
   {
     family: ['overqwil', 'qwilfish'],
@@ -21909,7 +21909,7 @@ export const pokemonData = [
     types: ['flying', 'fairy'],
   },
   {
-    family: ['floragato', 'sprigatito', 'meowscarada'],
+    family: ['meowscarada', 'sprigatito', 'floragato'],
     id: 906,
     keywords: [],
     name_DE: 'Felori',
@@ -21934,7 +21934,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['floragato', 'sprigatito', 'meowscarada'],
+    family: ['meowscarada', 'sprigatito', 'floragato'],
     id: 907,
     keywords: [],
     name_DE: 'Feliospa',
@@ -21958,7 +21958,7 @@ export const pokemonData = [
     types: ['grass'],
   },
   {
-    family: ['floragato', 'sprigatito', 'meowscarada'],
+    family: ['meowscarada', 'sprigatito', 'floragato'],
     id: 908,
     keywords: [],
     name_DE: 'Maskagato',
@@ -21980,7 +21980,7 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/meowscarada.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/meowscarada.png',
-    types: ['dark', 'grass'],
+    types: ['grass', 'dark'],
   },
   {
     family: ['crocalor', 'skeledirge', 'fuecoco'],
@@ -22226,7 +22226,7 @@ export const pokemonData = [
     types: ['bug'],
   },
   {
-    family: ['nymble', 'lokix'],
+    family: ['lokix', 'nymble'],
     id: 919,
     keywords: [],
     name_DE: 'Micrick',
@@ -22250,7 +22250,7 @@ export const pokemonData = [
     types: ['bug'],
   },
   {
-    family: ['nymble', 'lokix'],
+    family: ['lokix', 'nymble'],
     id: 920,
     keywords: [],
     name_DE: 'Lextremo',
@@ -22271,10 +22271,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/lokix.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/lokix.png',
-    types: ['dark', 'bug'],
+    types: ['bug', 'dark'],
   },
   {
-    family: ['pawmi', 'pawmo', 'pawmot'],
+    family: ['pawmi', 'pawmot', 'pawmo'],
     id: 921,
     keywords: [],
     name_DE: 'Pamo',
@@ -22298,7 +22298,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['pawmi', 'pawmo', 'pawmot'],
+    family: ['pawmi', 'pawmot', 'pawmo'],
     id: 922,
     keywords: [],
     name_DE: 'Pamamo',
@@ -22322,7 +22322,7 @@ export const pokemonData = [
     types: ['electric', 'fighting'],
   },
   {
-    family: ['pawmi', 'pawmo', 'pawmot'],
+    family: ['pawmi', 'pawmot', 'pawmo'],
     id: 923,
     keywords: [],
     name_DE: 'Pamomamo',
@@ -22463,7 +22463,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/smoliv.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/smoliv.png',
-    types: ['normal', 'grass'],
+    types: ['grass', 'normal'],
   },
   {
     family: ['arboliva', 'smoliv', 'dolliv'],
@@ -22487,7 +22487,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/dolliv.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/dolliv.png',
-    types: ['normal', 'grass'],
+    types: ['grass', 'normal'],
   },
   {
     family: ['arboliva', 'smoliv', 'dolliv'],
@@ -22511,7 +22511,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/arboliva.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/arboliva.png',
-    types: ['normal', 'grass'],
+    types: ['grass', 'normal'],
   },
   {
     family: ['squawkabilly'],
@@ -22536,7 +22536,7 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/squawkabilly.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/squawkabilly.png',
-    types: ['normal', 'flying'],
+    types: ['flying', 'normal'],
   },
   {
     family: ['garganacl', 'naclstack', 'nacli'],
@@ -22683,7 +22683,7 @@ export const pokemonData = [
     types: ['fire', 'ghost'],
   },
   {
-    family: ['tadbulb', 'bellibolt'],
+    family: ['bellibolt', 'tadbulb'],
     id: 938,
     keywords: [],
     name_DE: 'Blipp',
@@ -22707,7 +22707,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['tadbulb', 'bellibolt'],
+    family: ['bellibolt', 'tadbulb'],
     id: 939,
     keywords: [],
     name_DE: 'Wampitz',
@@ -22731,7 +22731,7 @@ export const pokemonData = [
     types: ['electric'],
   },
   {
-    family: ['kilowattrel', 'wattrel'],
+    family: ['wattrel', 'kilowattrel'],
     id: 940,
     keywords: [],
     name_DE: 'Voltrel',
@@ -22755,7 +22755,7 @@ export const pokemonData = [
     types: ['electric', 'flying'],
   },
   {
-    family: ['kilowattrel', 'wattrel'],
+    family: ['wattrel', 'kilowattrel'],
     id: 941,
     keywords: [],
     name_DE: 'Voltrean',
@@ -22780,7 +22780,7 @@ export const pokemonData = [
     types: ['electric', 'flying'],
   },
   {
-    family: ['mabosstiff', 'maschiff'],
+    family: ['maschiff', 'mabosstiff'],
     id: 942,
     keywords: [],
     name_DE: 'Mobtiff',
@@ -22804,7 +22804,7 @@ export const pokemonData = [
     types: ['dark'],
   },
   {
-    family: ['mabosstiff', 'maschiff'],
+    family: ['maschiff', 'mabosstiff'],
     id: 943,
     keywords: [],
     name_DE: 'Mastifioso',
@@ -22829,7 +22829,7 @@ export const pokemonData = [
     types: ['dark'],
   },
   {
-    family: ['shroodle', 'grafaiai'],
+    family: ['grafaiai', 'shroodle'],
     id: 944,
     keywords: [],
     name_DE: 'Sproxi',
@@ -22850,10 +22850,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/shroodle.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/shroodle.png',
-    types: ['normal', 'poison'],
+    types: ['poison', 'normal'],
   },
   {
-    family: ['shroodle', 'grafaiai'],
+    family: ['grafaiai', 'shroodle'],
     id: 945,
     keywords: [],
     name_DE: 'Affiti',
@@ -22874,10 +22874,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/grafaiai.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/grafaiai.png',
-    types: ['normal', 'poison'],
+    types: ['poison', 'normal'],
   },
   {
-    family: ['brambleghast', 'bramblin'],
+    family: ['bramblin', 'brambleghast'],
     id: 946,
     keywords: [],
     name_DE: 'Weherba',
@@ -22901,7 +22901,7 @@ export const pokemonData = [
     types: ['grass', 'ghost'],
   },
   {
-    family: ['brambleghast', 'bramblin'],
+    family: ['bramblin', 'brambleghast'],
     id: 947,
     keywords: [],
     name_DE: 'Horrerba',
@@ -22926,7 +22926,7 @@ export const pokemonData = [
     types: ['grass', 'ghost'],
   },
   {
-    family: ['toedscruel', 'toedscool'],
+    family: ['toedscool', 'toedscruel'],
     id: 948,
     keywords: [],
     name_DE: 'Tentagra',
@@ -22950,7 +22950,7 @@ export const pokemonData = [
     types: ['ground', 'grass'],
   },
   {
-    family: ['toedscruel', 'toedscool'],
+    family: ['toedscool', 'toedscruel'],
     id: 949,
     keywords: [],
     name_DE: 'Tenterra',
@@ -23093,7 +23093,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/rabsca.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/rabsca.png',
-    types: ['psychic', 'bug'],
+    types: ['bug', 'psychic'],
   },
   {
     family: ['flittle', 'espathra'],
@@ -23165,7 +23165,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/tinkatink.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tinkatink.png',
-    types: ['steel', 'fairy'],
+    types: ['fairy', 'steel'],
   },
   {
     family: ['tinkatink', 'tinkaton', 'tinkatuff'],
@@ -23189,7 +23189,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/tinkatuff.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tinkatuff.png',
-    types: ['steel', 'fairy'],
+    types: ['fairy', 'steel'],
   },
   {
     family: ['tinkatink', 'tinkaton', 'tinkatuff'],
@@ -23213,10 +23213,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/tinkaton.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/tinkaton.png',
-    types: ['steel', 'fairy'],
+    types: ['fairy', 'steel'],
   },
   {
-    family: ['wiglett', 'wugtrio'],
+    family: ['wugtrio', 'wiglett'],
     id: 960,
     keywords: [],
     name_DE: 'Schligda',
@@ -23240,7 +23240,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['wiglett', 'wugtrio'],
+    family: ['wugtrio', 'wiglett'],
     id: 961,
     keywords: [],
     name_DE: 'Schligdri',
@@ -23289,7 +23289,7 @@ export const pokemonData = [
     types: ['dark', 'flying'],
   },
   {
-    family: ['palafin', 'finizen'],
+    family: ['finizen', 'palafin'],
     id: 963,
     keywords: [],
     name_DE: 'Normifin',
@@ -23313,7 +23313,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['palafin', 'finizen'],
+    family: ['finizen', 'palafin'],
     id: 964,
     keywords: [],
     name_DE: 'Delfinator',
@@ -23337,7 +23337,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['revavroom', 'varoom'],
+    family: ['varoom', 'revavroom'],
     id: 965,
     keywords: [],
     name_DE: 'Knattox',
@@ -23361,7 +23361,7 @@ export const pokemonData = [
     types: ['poison', 'steel'],
   },
   {
-    family: ['revavroom', 'varoom'],
+    family: ['varoom', 'revavroom'],
     id: 966,
     keywords: [],
     name_DE: 'Knattatox',
@@ -23551,10 +23551,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/flamigo.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/flamigo.png',
-    types: ['flying', 'fighting'],
+    types: ['fighting', 'flying'],
   },
   {
-    family: ['cetoddle', 'cetitan'],
+    family: ['cetitan', 'cetoddle'],
     id: 974,
     keywords: [],
     name_DE: 'Flaniwal',
@@ -23578,7 +23578,7 @@ export const pokemonData = [
     types: ['ice'],
   },
   {
-    family: ['cetoddle', 'cetitan'],
+    family: ['cetitan', 'cetoddle'],
     id: 975,
     keywords: [],
     name_DE: 'Kolowal',
@@ -23623,10 +23623,10 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/veluza.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/veluza.png',
-    types: ['psychic', 'water'],
+    types: ['water', 'psychic'],
   },
   {
-    family: ['dondozo', 'tatsugiri'],
+    family: ['tatsugiri', 'dondozo'],
     id: 977,
     keywords: [],
     name_DE: 'Heerashai',
@@ -23650,7 +23650,7 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['dondozo', 'tatsugiri'],
+    family: ['tatsugiri', 'dondozo'],
     id: 978,
     keywords: [],
     name_DE: 'Nigiragi',
@@ -23674,7 +23674,7 @@ export const pokemonData = [
     types: ['water', 'dragon'],
   },
   {
-    family: ['mankey', 'primeape', 'annihilape'],
+    family: ['annihilape', 'primeape', 'mankey'],
     id: 979,
     keywords: [],
     name_DE: 'Epitaff',
@@ -23696,10 +23696,10 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/annihilape.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/annihilape.png',
-    types: ['ghost', 'fighting'],
+    types: ['fighting', 'ghost'],
   },
   {
-    family: ['quagsire', 'wooper', 'clodsire'],
+    family: ['clodsire', 'quagsire', 'wooper'],
     id: 980,
     keywords: [],
     name_DE: 'Suelord',
@@ -23723,7 +23723,7 @@ export const pokemonData = [
     types: ['ground', 'poison'],
   },
   {
-    family: ['farigiraf', 'girafarig'],
+    family: ['girafarig', 'farigiraf'],
     id: 981,
     keywords: [],
     name_DE: 'Farigiraf',
@@ -23744,7 +23744,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/farigiraf.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/farigiraf.png',
-    types: ['normal', 'psychic'],
+    types: ['psychic', 'normal'],
   },
   {
     family: ['dunsparce', 'dudunsparce'],
@@ -23772,7 +23772,7 @@ export const pokemonData = [
     types: ['normal'],
   },
   {
-    family: ['pawniard', 'bisharp', 'kingambit'],
+    family: ['bisharp', 'kingambit', 'pawniard'],
     id: 983,
     keywords: [],
     name_DE: 'Gladimperio',
@@ -23868,7 +23868,7 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/brute-bonnet.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/brute-bonnet.png',
-    types: ['dark', 'grass'],
+    types: ['grass', 'dark'],
   },
   {
     family: ['flutter mane'],
@@ -23893,7 +23893,7 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/flutter-mane.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/flutter-mane.png',
-    types: ['ghost', 'fairy'],
+    types: ['fairy', 'ghost'],
   },
   {
     family: ['slither wing'],
@@ -23993,7 +23993,7 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/iron-bundle.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/iron-bundle.png',
-    types: ['water', 'ice'],
+    types: ['ice', 'water'],
   },
   {
     family: ['iron hands'],
@@ -24095,7 +24095,7 @@ export const pokemonData = [
     types: ['electric', 'rock'],
   },
   {
-    family: ['frigibax', 'arctibax', 'baxcalibur'],
+    family: ['baxcalibur', 'frigibax', 'arctibax'],
     id: 996,
     keywords: [],
     name_DE: 'Frospino',
@@ -24119,7 +24119,7 @@ export const pokemonData = [
     types: ['ice', 'dragon'],
   },
   {
-    family: ['frigibax', 'arctibax', 'baxcalibur'],
+    family: ['baxcalibur', 'frigibax', 'arctibax'],
     id: 997,
     keywords: [],
     name_DE: 'Cryospino',
@@ -24143,7 +24143,7 @@ export const pokemonData = [
     types: ['ice', 'dragon'],
   },
   {
-    family: ['frigibax', 'arctibax', 'baxcalibur'],
+    family: ['baxcalibur', 'frigibax', 'arctibax'],
     id: 998,
     keywords: [],
     name_DE: 'Espinodon',
@@ -24168,7 +24168,7 @@ export const pokemonData = [
     types: ['ice', 'dragon'],
   },
   {
-    family: ['gholdengo', 'gimmighoul'],
+    family: ['gimmighoul', 'gholdengo'],
     id: 999,
     keywords: [],
     name_DE: 'Gierspenst',
@@ -24193,7 +24193,7 @@ export const pokemonData = [
     types: ['ghost'],
   },
   {
-    family: ['gholdengo', 'gimmighoul'],
+    family: ['gimmighoul', 'gholdengo'],
     id: 1000,
     keywords: [],
     name_DE: 'Monetigo',
@@ -24238,7 +24238,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/wo-chien.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/wo-chien.png',
-    types: ['dark', 'grass'],
+    types: ['grass', 'dark'],
   },
   {
     family: ['chien-pao'],
@@ -24262,7 +24262,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/chien-pao.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/chien-pao.png',
-    types: ['dark', 'ice'],
+    types: ['ice', 'dark'],
   },
   {
     family: ['ting-lu'],
@@ -24352,7 +24352,7 @@ export const pokemonData = [
     name_PT: 'Valentia Férrea',
     name_RU: 'Железный Воин',
     name_TH: 'นักรบเหล็ก',
-    name_TR: 'Iron Valiant',
+    name_TR: 'Demir Savaşçı',
     name_ZHS: '铁武者',
     name_ZHT: '铁武者',
     region_name: 'paldea',
@@ -24399,7 +24399,7 @@ export const pokemonData = [
     name_JA: 'ミライドン',
     name_KO: '미라이돈',
     name_PT: 'Miraidon',
-    name_RU: 'Miraidon',
+    name_RU: 'Мирайдон',
     name_TH: 'มิไรดอน',
     name_TR: 'Miraidon',
     name_ZHS: '密勒顿',
@@ -24447,7 +24447,7 @@ export const pokemonData = [
     name_IT: 'Fogliaferrea',
     name_JA: 'テツノイサハ',
     name_KO: '무쇠잎새',
-    name_PT: 'Iron Leaves',
+    name_PT: 'Folhas Férreas',
     name_RU: 'Iron Leaves',
     name_TH: 'ใบด่างเหล็ก',
     name_TR: 'Iron Leaves',
@@ -24461,7 +24461,7 @@ export const pokemonData = [
     types: ['grass', 'psychic'],
   },
   {
-    family: ['appletun', 'applin', 'dipplin', 'flapple', 'hydrapple'],
+    family: ['hydrapple', 'appletun', 'flapple', 'dipplin', 'applin'],
     id: 1011,
     keywords: [],
     name_DE: 'Sirapfel',
@@ -24555,7 +24555,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/okidogi.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/okidogi.png',
-    types: ['poison', 'fighting'],
+    types: ['fighting', 'poison'],
   },
   {
     family: ['munkidori'],
@@ -24579,7 +24579,7 @@ export const pokemonData = [
     shiny_sprite_image:
       'https://img.pokemondb.net/sprites/home/shiny/munkidori.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/munkidori.png',
-    types: ['poison', 'psychic'],
+    types: ['psychic', 'poison'],
   },
   {
     family: ['fezandipiti'],
@@ -24656,7 +24656,7 @@ export const pokemonData = [
     types: ['steel', 'dragon'],
   },
   {
-    family: ['appletun', 'applin', 'dipplin', 'flapple', 'hydrapple'],
+    family: ['hydrapple', 'appletun', 'flapple', 'dipplin', 'applin'],
     id: 1019,
     keywords: [],
     name_DE: 'Hydrapfel',
@@ -24760,10 +24760,10 @@ export const pokemonData = [
     keywords: ['paradox', 'paradox pokemon', 'paradox pokémon'],
     name_DE: 'Eisenhaupt',
     name_EN: 'Iron Crown',
-    name_ES: 'Iron Crown',
+    name_ES: 'Ferrotesta',
     name_FR: 'Chef-de-Fer',
     name_HI: 'Iron Crown',
-    name_IT: 'Iron Crown',
+    name_IT: 'Capoferreo',
     name_JA: 'テツノカシラ',
     name_KO: '무쇠감투',
     name_PT: 'Iron Crown',
@@ -24777,7 +24777,7 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/iron-crown.png',
     sprite_image:
       'https://img.pokemondb.net/sprites/home/normal/iron-crown.png',
-    types: ['steel', 'psychic'],
+    types: ['psychic', 'steel'],
   },
   {
     family: ['terapagos'],
@@ -24802,5 +24802,29 @@ export const pokemonData = [
       'https://img.pokemondb.net/sprites/home/shiny/terapagos.png',
     sprite_image: 'https://img.pokemondb.net/sprites/home/normal/terapagos.png',
     types: ['normal'],
+  },
+  {
+    family: ['pecharunt'],
+    id: 1025,
+    keywords: ['mythical', 'mythicals'],
+    name_DE: 'Infamomo',
+    name_EN: 'Pecharunt',
+    name_ES: 'Pecharunt',
+    name_FR: 'Pêchaminus',
+    name_HI: 'Pecharunt',
+    name_IT: 'Pecharunt',
+    name_JA: 'モモワロウ',
+    name_KO: '복숭악동',
+    name_PT: 'Pecharunt',
+    name_RU: 'Pecharunt',
+    name_TH: 'Pecharunt',
+    name_TR: 'Pecharunt',
+    name_ZHS: '桃歹郎',
+    name_ZHT: '桃歹郎',
+    region_name: 'paldea',
+    shiny_sprite_image:
+      'https://img.pokemondb.net/sprites/home/shiny/pecharunt.png',
+    sprite_image: 'https://img.pokemondb.net/sprites/home/normal/pecharunt.png',
+    types: ['poison', 'ghost'],
   },
 ];

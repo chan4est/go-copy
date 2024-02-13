@@ -69,6 +69,12 @@ function PokemonGrid({
   setPopupText,
   setPopupKey,
   searchValue,
+  pokemonGridVisibility,
+  filterTags,
+  setTutorialModalOpen,
+  setSortModalOpen,
+  blockHomeScroll,
+  footerRef,
 }) {
   // https://stackoverflow.com/a/175787/5221437
   function isNumber(str) {
@@ -134,11 +140,29 @@ function PokemonGrid({
       !missingPokemon.includes(pokemon.id)
   );
 
+  // Make sure the filter search string is accounted for
+  let filterSearchStr = null;
+  if (filterTags.length !== 0) {
+    filterSearchStr = filterTags.join(' & ');
+  }
+
+  // Make a full search string including the user's input + filters
+  let fullSearchStr = null;
   if (searchValue) {
+    if (filterSearchStr) {
+      fullSearchStr = filterSearchStr + ' & ' + searchValue;
+    } else {
+      fullSearchStr = searchValue;
+    }
+  } else if (filterSearchStr) {
+    fullSearchStr = filterSearchStr;
+  }
+
+  if (fullSearchStr) {
     // AND search
-    if (searchValue.includes('&') || searchValue.includes('|')) {
+    if (fullSearchStr.includes('&') || fullSearchStr.includes('|')) {
       // Split each search into different searches
-      const differentSearches = searchValue.split(/[&|]/);
+      const differentSearches = fullSearchStr.split(/[&|]/);
       // Filter through the searches
       for (const i in differentSearches) {
         filteredPokemon = filterThroughPokemon(
@@ -149,7 +173,7 @@ function PokemonGrid({
     }
     // Regular search
     else {
-      filteredPokemon = filterThroughPokemon(filteredPokemon, searchValue);
+      filteredPokemon = filterThroughPokemon(filteredPokemon, fullSearchStr);
     }
   }
 
@@ -207,7 +231,20 @@ function PokemonGrid({
   });
 
   return (
-    <div className="pokemon-grid-container">
+    <div
+      className="pokemon-grid-container"
+      // Make the grid invisible after the Search Bar has been clicked
+      style={!pokemonGridVisibility ? { display: 'none' } : {}}
+    >
+      <HomeScreenFloatingButtons
+        sortingOrder={sortingOrder}
+        setPopupText={setPopupText}
+        setTutorialModalOpen={setTutorialModalOpen}
+        setSortModalOpen={setSortModalOpen}
+        blockHomeScroll={blockHomeScroll}
+        footerRef={footerRef}
+        searchValue={searchValue}
+      />
       <div className="pokemon-grid">{pokemonList}</div>
     </div>
   );
@@ -228,12 +265,71 @@ function CopyPopup({ popupText, popupKey }) {
   );
 }
 
-function SearchBar({ popupText, popupKey, setSearchValue, screenWasChanged }) {
+function SearchBar({
+  popupText,
+  popupKey,
+  setSearchValue,
+  screenWasChanged,
+  setPokemonGridVisibility,
+  filterTags,
+  setFilterTags,
+  searchBackButtonVisibility,
+  setSearchBackButtonVisibility,
+  isDoubleDeckerLayout,
+  setIsDoubleDeckerLayout,
+}) {
   const [wasFocused, setWasFocused] = useState(false);
+  const [hasTextClearButton, setHasTextClearButton] = useState(false);
 
-  const handleFocus = () => {
+  function SearchBackButton() {
+    // Literally clear out everything.
+    function handleSearchBackButtonClick() {
+      setSearchBackButtonVisibility(false);
+      setHasTextClearButton(false);
+      setIsDoubleDeckerLayout(false);
+      setPokemonGridVisibility(true);
+      setSearchValue(null);
+      setFilterTags([]);
+    }
+    return <button onClick={handleSearchBackButtonClick}>BACK TO MAIN</button>;
+  }
+
+  // TODO: Clear the text of the user's input in the DOM
+  // TODO BUG: If user isn't focused on the search and clears text, it brings up the grid again and not the filter options
+  function ClearTextButton() {
+    function handleClearTextButtonClick() {
+      setFilterTags([]);
+      setSearchValue(null);
+      setIsDoubleDeckerLayout(false);
+    }
+    return (
+      <button onClick={handleClearTextButtonClick}>
+        CLEAR FILTERS AND/OR TEXT
+      </button>
+    );
+  }
+
+  function FilterTagBubble({ filterTag }) {
+    function clearFilterTag() {
+      const newFilterTags = filterTags.filter((tag) => tag !== filterTag);
+      console.log(newFilterTags);
+      if (newFilterTags.length == 0) {
+        setIsDoubleDeckerLayout(false);
+      }
+      setFilterTags(newFilterTags);
+    }
+    return <button onClick={clearFilterTag}>{filterTag}</button>;
+  }
+
+  function handleFocus() {
+    // User has chosen at least one filter tag
+    if (filterTags.length > 0) {
+      setIsDoubleDeckerLayout(true);
+    }
+    setSearchBackButtonVisibility(true);
     setWasFocused(true);
-  };
+    setPokemonGridVisibility(false);
+  }
 
   let backgroundClassName = '';
   if (screenWasChanged && wasFocused) {
@@ -241,20 +337,44 @@ function SearchBar({ popupText, popupKey, setSearchValue, screenWasChanged }) {
   } else if (wasFocused) {
     backgroundClassName = 'search-input-background-animation';
   }
-
   return (
     <div className="searchbar-container">
       <div className="searchbar-grid">
         <CopyPopup popupText={popupText} popupKey={popupKey} />
-        <div
-          className="searchbar"
-          title="Search by a Pokémon's English name or by their dex number"
-        >
+        <div className="searchbar" title="Search or filter through Pokémon">
+          {searchBackButtonVisibility && <SearchBackButton />}
+          {filterTags.length > 0 ? <h3>FilterIcon</h3> : ''}
+          {filterTags.length > 0 || hasTextClearButton ? (
+            <ClearTextButton />
+          ) : (
+            ''
+          )}
+          {filterTags.length > 0 ? (
+            <h3>
+              {filterTags.map((filterTag) => (
+                <FilterTagBubble key={filterTag} filterTag={filterTag} />
+              ))}
+            </h3>
+          ) : (
+            ''
+          )}
+          {isDoubleDeckerLayout ? <h3>DOUBLE DECKER</h3> : ''}
           <input
             className={`search-input ${backgroundClassName}`}
             type="text"
             placeholder="Search"
-            onChange={(e) => setSearchValue(e.target.value)}
+            onChange={(e) => {
+              // Put the X if there's search text
+              if (e.target.value.length > 0) {
+                setHasTextClearButton(true);
+                setPokemonGridVisibility(true);
+              }
+              // Take away the X if there's no search or there's no filters
+              else if (e.target.value.length == 0) {
+                setHasTextClearButton(false);
+              }
+              setSearchValue(e.target.value);
+            }}
             autoComplete="off"
             autoCorrect="off"
             autoCapitalize="off"
@@ -499,6 +619,350 @@ function HomeScreenFloatingButtons({
   );
 }
 
+function FilterOptionButton({
+  setPokemonGridVisibility,
+  filterTags,
+  setFilterTags,
+  filterButtonText,
+  setIsDoubleDeckerLayout,
+  searchValue,
+}) {
+  function handleFilterOptionButtonClick() {
+    setPokemonGridVisibility(true);
+    // Add only unique tags
+    if (!filterTags.includes(filterButtonText)) {
+      console.log(filterTags);
+      console.log(filterButtonText);
+      setFilterTags([...filterTags, filterButtonText]);
+    }
+    if (!searchValue) {
+      setIsDoubleDeckerLayout(false);
+    }
+  }
+
+  return (
+    <button onClick={handleFilterOptionButtonClick}>{filterButtonText}</button>
+  );
+}
+
+function FilterOptionsScreen({
+  searchValue,
+  pokemonGridVisibility,
+  setPokemonGridVisibility,
+  filterTags,
+  setFilterTags,
+  setSearchBackButtonVisibility,
+  setIsDoubleDeckerLayout,
+}) {
+  function handleFilterXBtnClick() {
+    setPokemonGridVisibility(true);
+    if (filterTags.length == 0 && !searchValue) {
+      setSearchBackButtonVisibility(false);
+    }
+    if (!searchValue) {
+      setIsDoubleDeckerLayout(false);
+    }
+  }
+
+  return (
+    <div style={pokemonGridVisibility ? { display: 'none' } : {}}>
+      <h1>Special</h1>
+      <div>
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Baby'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Legendary'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Mythical'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Ultra Beast'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Paradox'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+      </div>
+      <h1>Region</h1>
+      <div>
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Kanto'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Johto'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Hoenn'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Sinnoh'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Unova'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Kalos'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Alola'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Galar'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Hisui'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Paldea'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Unknown'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+      </div>
+      <h1>Types</h1>
+      <div>
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Normal'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Fighting'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Flying'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Poison'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Ground'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Rock'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Bug'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Ghost'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Steel'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Steel'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Fire'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Water'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Grass'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Electric'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Psychic'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Ice'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Dragon'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Dark'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Fairy'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+      </div>
+      <div>
+        <h1>EXIT</h1>
+        <button onClick={handleFilterXBtnClick}>EXIT FILTERS</button>
+      </div>
+    </div>
+  );
+}
+
 // Main Screen
 
 function HomeScreen({
@@ -519,21 +983,25 @@ function HomeScreen({
   const [screenWasChanged, setScreenWasChanged] = useState(false);
   // Keeping track of footer height so we can manipulate the floating buttons
   const footerRef = useRef(null);
+  // Show grid by default, after search text input, or after choosing a filter
+  const [pokemonGridVisibility, setPokemonGridVisibility] = useState(true);
+  // Keeping track of what filter tags are in the search
+  const [filterTags, setFilterTags] = useState([]);
+  // TODO BUG: Shouldn't be double decker when it's only tags
+  const [isDoubleDeckerLayout, setIsDoubleDeckerLayout] = useState(false);
+
+  // Keeping track of < button next to Search Bar
+  const [searchBackButtonVisibility, setSearchBackButtonVisibility] =
+    useState(false);
+
+  // SearchBarMode can be derived from other states
+  // 0 -> No text, 1 -> Text only search, 2 -> Filters only search, 3 -> Hybrid w/ filters + text
 
   return (
     <div>
       <Borders />
       <div className="base-container">
         <div className="base-content">
-          <HomeScreenFloatingButtons
-            sortingOrder={sortingOrder}
-            setPopupText={setPopupText}
-            setTutorialModalOpen={setTutorialModalOpen}
-            setSortModalOpen={setSortModalOpen}
-            blockHomeScroll={blockHomeScroll}
-            footerRef={footerRef}
-            searchValue={searchValue}
-          />
           <InstructionsBar
             languageCode={languageCode}
             setPopupText={setPopupText}
@@ -545,7 +1013,23 @@ function HomeScreen({
             popupText={popupText}
             popupKey={popupKey}
             setSearchValue={setSearchValue}
-            screenWasChanged={screenWasChanged}
+            screenWasChanged={screenWasChanged} // TODO: Change the way the 🔎 icon works
+            setPokemonGridVisibility={setPokemonGridVisibility}
+            filterTags={filterTags}
+            setFilterTags={setFilterTags}
+            searchBackButtonVisibility={searchBackButtonVisibility}
+            setSearchBackButtonVisibility={setSearchBackButtonVisibility}
+            isDoubleDeckerLayout={isDoubleDeckerLayout}
+            setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          />
+          <FilterOptionsScreen
+            searchValue={searchValue}
+            pokemonGridVisibility={pokemonGridVisibility}
+            setPokemonGridVisibility={setPokemonGridVisibility}
+            filterTags={filterTags}
+            setFilterTags={setFilterTags}
+            setSearchBackButtonVisibility={setSearchBackButtonVisibility}
+            setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
           />
           <PokemonGrid
             languageCode={languageCode}
@@ -553,9 +1037,15 @@ function HomeScreen({
             setPopupText={setPopupText}
             setPopupKey={setPopupKey}
             searchValue={searchValue}
+            pokemonGridVisibility={pokemonGridVisibility}
+            filterTags={filterTags}
+            setTutorialModalOpen={setTutorialModalOpen}
+            setSortModalOpen={setSortModalOpen}
+            blockHomeScroll={blockHomeScroll}
+            footerRef={footerRef}
           />
         </div>
-        <Footer footerRef={footerRef} />
+        {/* <Footer footerRef={footerRef} /> */}
       </div>
     </div>
   );

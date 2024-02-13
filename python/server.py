@@ -61,8 +61,8 @@ class PokemonNames():
     ## https://leidwesen.github.io/SearchPhrases/
     def get_pokemon_keyword(self, dex_number: int) -> [str]:
         ## Specific catagories of Pokemon
-        legendary_pokemon = [144, 145, 146, 150, 243, 244, 245, 249, 250, 377, 378, 379, 380, 381, 382, 383, 384, 480, 481, 482, 483, 484, 485, 486, 487, 488, 494, 638, 639, 640, 641, 642, 643, 644, 645, 646, 716, 717, 718, 772, 773, 785, 786, 787, 788, 789, 790, 791, 792, 800, 888, 889, 890, 891, 892, 894, 895, 896, 897, 898, 905, 1001, 1002, 1003, 1004, 1007, 1008, 1014, 1015, 1016, 1017, 1024]
-        mythical_pokemon = [151, 251, 385, 386, 489, 490, 491, 492, 493, 647, 648, 649, 719, 720, 721, 801, 802, 807, 808, 809, 893, 1025]
+        legendary_pokemon = [144, 145, 146, 150, 243, 244, 245, 249, 250, 377, 378, 379, 380, 381, 382, 383, 384, 480, 481, 482, 483, 484, 485, 486, 487, 488, 638, 639, 640, 641, 642, 643, 644, 645, 646, 716, 717, 718, 772, 773, 785, 786, 787, 788, 789, 790, 791, 792, 800, 888, 889, 890, 891, 892, 894, 895, 896, 897, 898, 905, 1001, 1002, 1003, 1004, 1007, 1008, 1014, 1015, 1016, 1017, 1024]
+        mythical_pokemon = [151, 251, 385, 386, 489, 490, 491, 492, 493, 494, 647, 648, 649, 719, 720, 721, 801, 802, 807, 808, 809, 893, 1025]
         baby_pokemon = [172, 173, 174, 175, 236, 238, 239, 240, 298, 360, 406, 433, 438, 439, 440, 446, 447, 458, 848]
         ultra_beasts = [793, 794, 795, 796, 797, 798, 799, 803, 804, 805, 806]
         paradox_pokemon = [984, 985, 986, 987, 988, 989, 1005, 1007, 1020, 1021, 990, 991, 992, 993, 994, 995, 1006, 1008, 1010, 1022, 1023]
@@ -149,6 +149,10 @@ class PokemonNames():
                 ## Capture the types only for the original form
                 if pokemon_type and not skip_types:
                     current_pokemon_types.append(pokemon_type[0].lower())
+            
+            ## Hack to make sure the last Pokemon is added in too!
+            current_language_pokemon_list.append({'number': int(current_pokemon_number), 'name': current_pokemon_name, 'types': current_pokemon_types})
+
             ## Initialilize dict w/ English data
             if language['name'] == 'English':
                 for i in range(len(current_language_pokemon_list)):
