@@ -79,6 +79,53 @@ function PokemonGrid({
     ); // ...and ensure strings of whitespace fail
   }
 
+  function filterThroughPokemon(pokemonToFilter, searchValue) {
+    searchValue = searchValue.trim();
+    // Searching by dex number (ex: 150 -> Mewtwo)
+    if (isNumber(searchValue)) {
+      pokemonToFilter = pokemonToFilter.filter(
+        (pokemon) => pokemon.id == Number(searchValue)
+      );
+    }
+    // Searching by family (ex: +Pikachu -> Pichu, Pikachu, Raichu)
+    else if (searchValue[0] == '+') {
+      const searchRegex = new RegExp(
+        `^${searchValue.substring(1).toLowerCase()}.*`
+      );
+      pokemonToFilter = pokemonToFilter.filter((pokemon) =>
+        pokemon.family.some(
+          (familyName) => familyName.match(searchRegex) != null
+        )
+      );
+    }
+    // Searching by type (ex: Dark -> Umbreon, Murkrow, etc..)
+    else if (pokemonTypes.includes(searchValue.toLowerCase())) {
+      pokemonToFilter = pokemonToFilter.filter((pokemon) =>
+        pokemon.types.includes(searchValue.toLowerCase())
+      );
+    }
+    // Searching by region (ex: Hoenn -> Treeko - Jirachi)
+    else if (pokemonRegions.includes(searchValue.toLowerCase())) {
+      pokemonToFilter = pokemonToFilter.filter(
+        (pokemon) => pokemon.region_name == searchValue.toLowerCase()
+      );
+    }
+    // Search by catagory (ex: Mythicals -> Mew - Pecharunt)
+    else if (pokemonCatagories.includes(searchValue.toLowerCase())) {
+      pokemonToFilter = pokemonToFilter.filter((pokemon) =>
+        pokemon.keywords.includes(searchValue.toLowerCase())
+      );
+    }
+    // Searching by name (ex: Charm -> Charmander, Charmeleon)
+    else {
+      const searchRegex = new RegExp(`^${searchValue.toLowerCase()}.*`);
+      pokemonToFilter = pokemonToFilter.filter(
+        (pokemon) => pokemon.name_EN.toLowerCase().match(searchRegex) != null
+      );
+    }
+    return pokemonToFilter;
+  }
+
   // Remove the missing Pokemon
   // TODO: Make this happen before the app even starts
   let filteredPokemon = pokemonData.filter(
@@ -88,47 +135,21 @@ function PokemonGrid({
   );
 
   if (searchValue) {
-    // Searching by dex number (ex: 150 -> Mewtwo)
-    if (isNumber(searchValue)) {
-      filteredPokemon = filteredPokemon.filter(
-        (pokemon) => pokemon.id == Number(searchValue)
-      );
+    // AND search
+    if (searchValue.includes('&') || searchValue.includes('|')) {
+      // Split each search into different searches
+      const differentSearches = searchValue.split(/[&|]/);
+      // Filter through the searches
+      for (const i in differentSearches) {
+        filteredPokemon = filterThroughPokemon(
+          filteredPokemon,
+          differentSearches[i]
+        );
+      }
     }
-    // Searching by family (ex: +Pikachu -> Pichu, Pikachu, Raichu)
-    else if (searchValue[0] == '+') {
-      const searchRegex = new RegExp(
-        `^${searchValue.substring(1).toLowerCase()}.*`
-      );
-      filteredPokemon = filteredPokemon.filter((pokemon) =>
-        pokemon.family.some(
-          (familyName) => familyName.match(searchRegex) != null
-        )
-      );
-    }
-    // Searching by type (ex: Dark -> Umbreon, Murkrow, etc..)
-    else if (pokemonTypes.includes(searchValue.toLowerCase())) {
-      filteredPokemon = filteredPokemon.filter((pokemon) =>
-        pokemon.types.includes(searchValue.toLowerCase())
-      );
-    }
-    // Searching by region (ex: Hoenn -> Treeko - Jirachi)
-    else if (pokemonRegions.includes(searchValue.toLowerCase())) {
-      filteredPokemon = filteredPokemon.filter(
-        (pokemon) => pokemon.region_name == searchValue.toLowerCase()
-      );
-    }
-    // Search by catagory (ex: Mythicals -> Mew - Pecharunt)
-    else if (pokemonCatagories.includes(searchValue.toLowerCase())) {
-      filteredPokemon = filteredPokemon.filter((pokemon) =>
-        pokemon.keywords.includes(searchValue.toLowerCase())
-      );
-    }
-    // Searching by name (ex: Charm -> Charmander, Charmeleon)
+    // Regular search
     else {
-      const searchRegex = new RegExp(`^${searchValue.toLowerCase()}.*`);
-      filteredPokemon = filteredPokemon.filter(
-        (pokemon) => pokemon.name_EN.toLowerCase().match(searchRegex) != null
-      );
+      filteredPokemon = filterThroughPokemon(filteredPokemon, searchValue);
     }
   }
 
