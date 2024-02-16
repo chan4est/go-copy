@@ -63,22 +63,38 @@ class PokemonNames():
         ## Specific catagories of Pokemon
         legendary_pokemon = [144, 145, 146, 150, 243, 244, 245, 249, 250, 377, 378, 379, 380, 381, 382, 383, 384, 480, 481, 482, 483, 484, 485, 486, 487, 488, 638, 639, 640, 641, 642, 643, 644, 645, 646, 716, 717, 718, 772, 773, 785, 786, 787, 788, 789, 790, 791, 792, 800, 888, 889, 890, 891, 892, 894, 895, 896, 897, 898, 905, 1001, 1002, 1003, 1004, 1007, 1008, 1014, 1015, 1016, 1017, 1024]
         mythical_pokemon = [151, 251, 385, 386, 489, 490, 491, 492, 493, 494, 647, 648, 649, 719, 720, 721, 801, 802, 807, 808, 809, 893, 1025]
-        baby_pokemon = [172, 173, 174, 175, 236, 238, 239, 240, 298, 360, 406, 433, 438, 439, 440, 446, 447, 458, 848]
         ultra_beasts = [793, 794, 795, 796, 797, 798, 799, 803, 804, 805, 806]
         paradox_pokemon = [984, 985, 986, 987, 988, 989, 1005, 1007, 1020, 1021, 990, 991, 992, 993, 994, 995, 1006, 1008, 1010, 1022, 1023]
+        starter_pokemon = [1, 2, 3, 4, 5, 6, 7, 8 , 9, 25, 133, 152, 153, 154, 155, 156, 157, 158, 159, 160, 252, 253, 254, 255, 256, 257, 258, 259, 260, 387, 388, 389, 390, 391, 392, 393, 394, 395, 495, 496, 497, 498, 499, 500, 501, 502, 503, 650, 651, 652, 653, 654, 655, 656, 657, 658, 722, 723, 724, 725, 726, 727, 728,  729, 730, 810, 811, 812, 813, 814, 815, 816, 817, 818, 906, 907, 908, 909, 910, 911, 912, 913, 914]
+        baby_pokemon = [172, 173, 174, 175, 236, 238, 239, 240, 298, 360, 406, 433, 438, 439, 440, 446, 447, 458, 848]
+        fossil_pokemon = [138, 139, 140, 141, 142, 345, 346, 347, 348, 408, 409, 410, 564, 565, 566, 567, 696, 697, 698, 699, 880, 881, 882, 883]
+        pseudo_legendary_pokemon = [147, 148, 149, 246, 247, 248, 371, 372, 373, 374, 375, 376, 443, 444, 445, 633, 634, 635, 704, 705, 706, 782, 783, 784, 885, 886, 887, 996, 997, 998]
+        mega_evolution_pokemon = [3, 6, 9, 15, 18, 65, 80, 94, 115, 127, 130, 142, 150, 181, 208, 212, 214, 229, 248, 254, 257, 260, 282, 302, 303, 306, 308, 310, 319, 323, 334, 354, 359, 362, 373, 376, 380, 381, 384, 428, 445, 448, 460, 475, 531, 719]
+        gigantamax_pokemon = [3, 6, 9, 12, 25, 52, 68, 94, 99, 131, 133, 143, 569, 809, 812, 815, 818, 823, 826, 834, 839, 841, 842, 844, 849, 851, 858, 861, 869, 879, 884, 892]
 
+        resulting_tags = []
         if (dex_number in legendary_pokemon):
-            return ['legendary', 'legendaries']
-        elif (dex_number in mythical_pokemon):
-            return ['mythical', 'mythicals']
-        elif (dex_number in baby_pokemon):
-            return ['baby', 'babies', 'eggsonly', 'eggs only']
-        elif (dex_number in ultra_beasts):
-            return ['ultra beast', 'ultra beasts', 'ultrabeast']
-        elif (dex_number in paradox_pokemon):
-            return ['paradox', 'paradox pokemon', 'paradox pokémon']
-        else:
-            return []
+            resulting_tags.extend(['legendary', 'legendaries'])
+        if (dex_number in mythical_pokemon):
+            resulting_tags.extend(['mythical', 'mythicals'])
+        if (dex_number in baby_pokemon):
+            resulting_tags.extend(['baby', 'babies', 'eggsonly', 'eggs only'])
+        if (dex_number in ultra_beasts):
+            resulting_tags.extend(['ultra beast', 'ultra beasts', 'ultrabeast'])
+        if (dex_number in paradox_pokemon):
+            resulting_tags.extend(['paradox', 'paradox pokemon', 'paradox pokémon'])
+        if (dex_number in starter_pokemon):
+            resulting_tags.extend(['starter'])
+        if (dex_number in pseudo_legendary_pokemon):
+            resulting_tags.extend(['psuedo', 'psuedo legendary'])
+        if (dex_number in fossil_pokemon):
+            resulting_tags.extend(['fossil'])
+        if (dex_number in mega_evolution_pokemon):
+            resulting_tags.extend(['mega', 'mega evolution', 'mega evolve'])
+        if (dex_number in gigantamax_pokemon):
+            resulting_tags.extend(['gigantamax'])
+        
+        return resulting_tags
         
     def get_pokemon_family(self, english_name: str) -> [str]:
         return self.pokemon_families[english_name]

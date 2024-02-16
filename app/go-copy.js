@@ -20,6 +20,11 @@ import aZButton from '../public/btn-az.webp';
 import zAButton from '../public/btn-za.webp';
 import xButton from '../public/btn-x.webp';
 
+import filterX from '../public/filter/filter-x.webp';
+import clearX from '../public/filter/clear-x.webp';
+import clearXLine from '../public/filter/clear-x-line.webp';
+import searchBack from '../public/filter/search-back.webp';
+
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
@@ -29,6 +34,142 @@ import Modal from 'react-modal';
 Modal.setAppElement('#root');
 
 // Pokemon Grid
+
+// searchValue: search string input by the user
+//  ex: "kanto & fairy, +bulba, 150-151" ->  all Kanto Fairy types, Bulbasaur line, and Mewtwo + Mew
+// filterTags: array of filters (defined in pokemon-categories.js) that the user has clicked on
+//  ex: ['Legendary', 'Dragon', 'Hoenn', 'Flying'] -> Rayquaza
+// sortingOrder: value 0-3 which determines what order to sort the results
+function searchFilterAndSortPokemon(searchValue, filterTags, sortingOrder) {
+  // https://stackoverflow.com/a/175787/5221437
+  function isNumber(str) {
+    if (typeof str != 'string') return false; // we only process strings!
+    return (
+      !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+      !isNaN(parseFloat(str))
+    ); // ...and ensure strings of whitespace fail
+  }
+
+  function filterNot(pokemonToFilter, pokemonNotWanted) {
+    return pokemonToFilter.filter(
+      (pokemon) => !pokemonNotWanted.includes(pokemon)
+    );
+  }
+
+  function filterThroughPokemon(pokemonToFilter, searchValue, isNegatedSearch) {
+    let resultingFilteredPokemon = [];
+    searchValue = searchValue.trim();
+    // Searching by dex range (ex: 1-151 -> ALL of Kanto)
+    if (searchValue.includes('-')) {
+      const [start, end] = searchValue.split('-');
+      if (isNumber(start) && isNumber(end)) {
+        resultingFilteredPokemon = pokemonToFilter.filter(
+          (pokemon) => pokemon.id >= start && pokemon.id <= end
+        );
+      }
+    }
+    // Searching by dex number (ex: 150 -> Mewtwo)
+    else if (isNumber(searchValue)) {
+      resultingFilteredPokemon = pokemonToFilter.filter(
+        (pokemon) => pokemon.id == Number(searchValue)
+      );
+    }
+    // Searching by family (ex: +Pikachu -> Pichu, Pikachu, Raichu)
+    else if (searchValue[0] == '+') {
+      const searchRegex = new RegExp(
+        `^${searchValue.substring(1).toLowerCase()}.*`
+      );
+      resultingFilteredPokemon = pokemonToFilter.filter((pokemon) =>
+        pokemon.family.some(
+          (familyName) => familyName.match(searchRegex) != null
+        )
+      );
+    }
+    // Searching by type (ex: Dark -> Umbreon, Murkrow, etc..)
+    else if (pokemonTypes.includes(searchValue.toLowerCase())) {
+      resultingFilteredPokemon = pokemonToFilter.filter((pokemon) =>
+        pokemon.types.includes(searchValue.toLowerCase())
+      );
+    }
+    // Searching by region (ex: Hoenn -> Treeko - Jirachi)
+    else if (pokemonRegions.includes(searchValue.toLowerCase())) {
+      resultingFilteredPokemon = pokemonToFilter.filter(
+        (pokemon) => pokemon.region_name == searchValue.toLowerCase()
+      );
+    }
+    // Search by catagory (ex: Mythicals -> Mew - Pecharunt)
+    else if (pokemonCatagories.includes(searchValue.toLowerCase())) {
+      resultingFilteredPokemon = pokemonToFilter.filter((pokemon) =>
+        pokemon.keywords.includes(searchValue.toLowerCase())
+      );
+    }
+    // Searching by name (ex: Charm -> Charmander, Charmeleon)
+    else {
+      const searchRegex = new RegExp(`^${searchValue.toLowerCase()}.*`);
+      resultingFilteredPokemon = pokemonToFilter.filter(
+        (pokemon) => pokemon.name_EN.toLowerCase().match(searchRegex) != null
+      );
+    }
+
+    // Inverse the serch results
+    if (isNegatedSearch) {
+      resultingFilteredPokemon = filterNot(
+        pokemonToFilter,
+        resultingFilteredPokemon
+      );
+    }
+
+    return resultingFilteredPokemon;
+  }
+
+  // Don't show Pokemon that aren't in GO yet (Spoilers)
+  // let remainingPokemon = pokemonData.filter(
+  //   (pokemon) => !missingPokemon.includes(pokemon.id)
+  // );
+
+  let remainingPokemon = pokemonData;
+
+  // Handles NOT, AND, OR, and RANGE
+  let resultingPokemon = [];
+  // OR denotes a seperate search entirely
+  const commaSearchTerms = searchValue.split(/[,:;]/);
+  for (const commaTerm of commaSearchTerms) {
+    // AND denotes a search that keeps filtering down
+    const andSearchTerms = commaTerm.split(/[&|]/);
+    let resultingSearchPokemon = remainingPokemon;
+    for (const andTerm of andSearchTerms) {
+      const searchTerm = andTerm.trim();
+      const isNegatedSearch = searchTerm.includes('!');
+      resultingSearchPokemon = filterThroughPokemon(
+        resultingSearchPokemon,
+        searchTerm.replace('!', ''), // Trim the !. It's captured in the boolean
+        isNegatedSearch
+      );
+    }
+    resultingPokemon = resultingPokemon.concat(resultingSearchPokemon);
+  }
+
+  // Remove duplicates found in OR searches
+  resultingPokemon = [...new Set(resultingPokemon)];
+
+  // Filters are AND searches after all the other filtering is done (tested in POGO)
+  if (filterTags.length > 0) {
+    for (const filter of filterTags) {
+      resultingPokemon = filterThroughPokemon(resultingPokemon, filter, false);
+    }
+  }
+
+  // Sort the entire list based on the user selection
+  const sortingFunctions = {
+    0: (a, b) => a.id - b.id, // Numberical lowest -> highest
+    1: (a, b) => b.id - a.id, // Numerical highest -> lowest
+    2: (a, b) => a.name_EN.localeCompare(b.name_EN), // Alphabetical
+    3: (a, b) => b.name_EN.localeCompare(a.name_EN), // Reverse alphabetical
+  };
+  resultingPokemon.sort(sortingFunctions[sortingOrder]);
+
+  return resultingPokemon;
+}
 
 function PokemonButton({
   nameEnglish,
@@ -76,147 +217,11 @@ function PokemonGrid({
   blockHomeScroll,
   footerRef,
 }) {
-  // https://stackoverflow.com/a/175787/5221437
-  function isNumber(str) {
-    if (typeof str != 'string') return false; // we only process strings!
-    return (
-      !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
-      !isNaN(parseFloat(str))
-    ); // ...and ensure strings of whitespace fail
-  }
-
-  function filterThroughPokemon(pokemonToFilter, searchValue) {
-    searchValue = searchValue.trim();
-    // Searching by dex number (ex: 150 -> Mewtwo)
-    if (isNumber(searchValue)) {
-      pokemonToFilter = pokemonToFilter.filter(
-        (pokemon) => pokemon.id == Number(searchValue)
-      );
-    }
-    // Searching by family (ex: +Pikachu -> Pichu, Pikachu, Raichu)
-    else if (searchValue[0] == '+') {
-      const searchRegex = new RegExp(
-        `^${searchValue.substring(1).toLowerCase()}.*`
-      );
-      pokemonToFilter = pokemonToFilter.filter((pokemon) =>
-        pokemon.family.some(
-          (familyName) => familyName.match(searchRegex) != null
-        )
-      );
-    }
-    // Searching by type (ex: Dark -> Umbreon, Murkrow, etc..)
-    else if (pokemonTypes.includes(searchValue.toLowerCase())) {
-      pokemonToFilter = pokemonToFilter.filter((pokemon) =>
-        pokemon.types.includes(searchValue.toLowerCase())
-      );
-    }
-    // Searching by region (ex: Hoenn -> Treeko - Jirachi)
-    else if (pokemonRegions.includes(searchValue.toLowerCase())) {
-      pokemonToFilter = pokemonToFilter.filter(
-        (pokemon) => pokemon.region_name == searchValue.toLowerCase()
-      );
-    }
-    // Search by catagory (ex: Mythicals -> Mew - Pecharunt)
-    else if (pokemonCatagories.includes(searchValue.toLowerCase())) {
-      pokemonToFilter = pokemonToFilter.filter((pokemon) =>
-        pokemon.keywords.includes(searchValue.toLowerCase())
-      );
-    }
-    // Searching by name (ex: Charm -> Charmander, Charmeleon)
-    else {
-      const searchRegex = new RegExp(`^${searchValue.toLowerCase()}.*`);
-      pokemonToFilter = pokemonToFilter.filter(
-        (pokemon) => pokemon.name_EN.toLowerCase().match(searchRegex) != null
-      );
-    }
-    return pokemonToFilter;
-  }
-
-  // Remove the missing Pokemon
-  // TODO: Make this happen before the app even starts
-  let filteredPokemon = pokemonData.filter(
-    (pokemon) =>
-      // Don't show Pokemon that aren't in GO yet (Spoilers)
-      !missingPokemon.includes(pokemon.id)
-  );
-
-  // Make sure the filter search string is accounted for
-  let filterSearchStr = null;
-  if (filterTags.length !== 0) {
-    filterSearchStr = filterTags.join(' & ');
-  }
-
-  // Make a full search string including the user's input + filters
-  let fullSearchStr = null;
-  if (searchValue) {
-    if (filterSearchStr) {
-      fullSearchStr = filterSearchStr + ' & ' + searchValue;
-    } else {
-      fullSearchStr = searchValue;
-    }
-  } else if (filterSearchStr) {
-    fullSearchStr = filterSearchStr;
-  }
-
-  if (fullSearchStr) {
-    // AND search
-    if (fullSearchStr.includes('&') || fullSearchStr.includes('|')) {
-      // Split each search into different searches
-      const differentSearches = fullSearchStr.split(/[&|]/);
-      // Filter through the searches
-      for (const i in differentSearches) {
-        filteredPokemon = filterThroughPokemon(
-          filteredPokemon,
-          differentSearches[i]
-        );
-      }
-    }
-    // Regular search
-    else {
-      filteredPokemon = filterThroughPokemon(filteredPokemon, fullSearchStr);
-    }
-  }
-
-  // Sort the entire list of Pokemon based on the user selection
-
-  // Numerical highest -> lowest
-  if (sortingOrder == 1) {
-    filteredPokemon.sort(function (a, b) {
-      return b.id - a.id;
-    });
-  }
-  // Alphabetical
-  else if (sortingOrder == 2) {
-    filteredPokemon.sort(function (a, b) {
-      var nameA = a.name_EN;
-      var nameB = b.name_EN;
-
-      if (nameA < nameB) {
-        return -1; // nameA comes before nameB
-      }
-      if (nameA > nameB) {
-        return 1; // nameA comes after nameB
-      }
-      return 0; // names must be equal
-    });
-  }
-  // Reverse alphabetical
-  else if (sortingOrder == 3) {
-    filteredPokemon.sort(function (a, b) {
-      var nameA = a.name_EN;
-      var nameB = b.name_EN;
-
-      if (nameA > nameB) {
-        return -1; // nameA comes after nameB for reverse alphabetical order
-      }
-      if (nameA < nameB) {
-        return 1; // nameA comes before nameB for reverse alphabetical order
-      }
-      return 0; // names must be equal
-    });
-  }
-
-  const pokemonList = filteredPokemon.map((pokemon) => {
+  const pokemonList = searchFilterAndSortPokemon(
+    searchValue,
+    filterTags,
+    sortingOrder
+  ).map((pokemon) => {
     const nameForeign = pokemon[`name_${languageCode}`];
     return (
       <PokemonButton
@@ -268,6 +273,7 @@ function CopyPopup({ popupText, popupKey }) {
 function SearchBar({
   popupText,
   popupKey,
+  searchValue,
   setSearchValue,
   screenWasChanged,
   setPokemonGridVisibility,
@@ -279,46 +285,121 @@ function SearchBar({
   setIsDoubleDeckerLayout,
 }) {
   const [wasFocused, setWasFocused] = useState(false);
-  const [hasTextClearButton, setHasTextClearButton] = useState(false);
+
+  const handleInputChange = (e) => {
+    // Put the X if there's search text
+    if (e.target.value.length > 0) {
+      setPokemonGridVisibility(true);
+    }
+    // Take away the X if there's no search or there's no filters
+    else if (e.target.value.length == 0) {
+      // Make sure the filter screen is still open
+      setPokemonGridVisibility(false);
+    }
+    setSearchValue(e.target.value);
+  };
 
   function SearchBackButton() {
     // Literally clear out everything.
     function handleSearchBackButtonClick() {
       setSearchBackButtonVisibility(false);
-      setHasTextClearButton(false);
       setIsDoubleDeckerLayout(false);
       setPokemonGridVisibility(true);
-      setSearchValue(null);
+      setSearchValue('');
       setFilterTags([]);
     }
-    return <button onClick={handleSearchBackButtonClick}>BACK TO MAIN</button>;
+    return (
+      <div
+        onClick={handleSearchBackButtonClick}
+        className="searchbar-back-btn"
+        title="Clear & Exit"
+      >
+        <Image src={searchBack} width={12} height={22} alt="" quality={100} />
+      </div>
+    );
   }
 
-  // TODO: Clear the text of the user's input in the DOM
-  // TODO BUG: If user isn't focused on the search and clears text, it brings up the grid again and not the filter options
   function ClearTextButton() {
     function handleClearTextButtonClick() {
       setFilterTags([]);
-      setSearchValue(null);
       setIsDoubleDeckerLayout(false);
+      setSearchValue('');
+      setPokemonGridVisibility(false);
     }
     return (
-      <button onClick={handleClearTextButtonClick}>
-        CLEAR FILTERS AND/OR TEXT
-      </button>
+      <div
+        onClick={handleClearTextButtonClick}
+        className="searchbar-clear-search-btn"
+        title="Clear Search"
+      >
+        <Image src={clearXLine} width={32} height={37} alt="" quality={100} />
+      </div>
     );
   }
 
   function FilterTagBubble({ filterTag }) {
-    function clearFilterTag() {
+    function clearFilterTag(event) {
+      // Prevent click event from reaching the underlying bubble
+      event.stopPropagation();
+
       const newFilterTags = filterTags.filter((tag) => tag !== filterTag);
-      console.log(newFilterTags);
+
       if (newFilterTags.length == 0) {
         setIsDoubleDeckerLayout(false);
+        if (searchValue.length > 0) {
+          // There's still text so show the results
+          setPokemonGridVisibility(true);
+        } else {
+          // There's no text and no more tags
+          setPokemonGridVisibility(false);
+        }
       }
       setFilterTags(newFilterTags);
     }
-    return <button onClick={clearFilterTag}>{filterTag}</button>;
+
+    function handleFilterTagClick(event) {
+      // Prevent click event from reaching the underlying scroll bar
+      event.stopPropagation();
+      setPokemonGridVisibility(false);
+      setIsDoubleDeckerLayout(true);
+    }
+
+    return (
+      <div
+        className="filter-tag-bubble"
+        title={`Filtering by ${filterTag}`}
+        onClick={handleFilterTagClick}
+      >
+        {filterTag}{' '}
+        <button
+          onClick={clearFilterTag}
+          className="filter-tag-bubble-x"
+          title="Clear Filter"
+        >
+          <Image src={filterX} width={10} height={10} alt="" quality={100} />
+        </button>
+      </div>
+    );
+  }
+
+  function ScrollingFilterBar() {
+    function handleScrollingFilterBarClick() {
+      setPokemonGridVisibility(false);
+      // If there's no filter bubbles up there's no scroll bar
+      setIsDoubleDeckerLayout(true); // Should always be true.
+    }
+
+    return (
+      <div
+        className="scrolling-filter-bar"
+        onClick={handleScrollingFilterBarClick}
+        title="Search or filter through Pokémon"
+      >
+        {filterTags.map((filterTag) => (
+          <FilterTagBubble key={filterTag} filterTag={filterTag} />
+        ))}
+      </div>
+    );
   }
 
   function handleFocus() {
@@ -337,49 +418,43 @@ function SearchBar({
   } else if (wasFocused) {
     backgroundClassName = 'search-input-background-animation';
   }
+
+  let backgroundImageClassName = 'si-bg-magnifying';
+  if (filterTags.length > 0) {
+    backgroundImageClassName = 'si-bg-filter';
+  }
+
   return (
     <div className="searchbar-container">
       <div className="searchbar-grid">
         <CopyPopup popupText={popupText} popupKey={popupKey} />
-        <div className="searchbar" title="Search or filter through Pokémon">
-          {searchBackButtonVisibility && <SearchBackButton />}
-          {filterTags.length > 0 ? <h3>FilterIcon</h3> : ''}
-          {filterTags.length > 0 || hasTextClearButton ? (
-            <ClearTextButton />
-          ) : (
-            ''
-          )}
-          {filterTags.length > 0 ? (
-            <h3>
-              {filterTags.map((filterTag) => (
-                <FilterTagBubble key={filterTag} filterTag={filterTag} />
-              ))}
-            </h3>
-          ) : (
-            ''
-          )}
-          {isDoubleDeckerLayout ? <h3>DOUBLE DECKER</h3> : ''}
+        {searchBackButtonVisibility && <SearchBackButton />}
+        {(filterTags.length > 0 || searchValue.length > 0) && (
+          <ClearTextButton />
+        )}
+        {filterTags.length > 0 && <ScrollingFilterBar />}
+        <div
+          className={`searchbar ${
+            searchBackButtonVisibility ? 'single-back' : ''
+          } `}
+          title="Search or filter through Pokémon"
+        >
+          {/* {isDoubleDeckerLayout ? <h3>DOUBLE DECKER</h3> : ''} */}
+
           <input
-            className={`search-input ${backgroundClassName}`}
+            className={`search-input si-bg-single ${backgroundClassName} ${backgroundImageClassName}`}
             type="text"
-            placeholder="Search"
-            onChange={(e) => {
-              // Put the X if there's search text
-              if (e.target.value.length > 0) {
-                setHasTextClearButton(true);
-                setPokemonGridVisibility(true);
-              }
-              // Take away the X if there's no search or there's no filters
-              else if (e.target.value.length == 0) {
-                setHasTextClearButton(false);
-              }
-              setSearchValue(e.target.value);
-            }}
+            placeholder={
+              filterTags.length == 0 || isDoubleDeckerLayout ? 'Search' : ''
+            }
+            value={searchValue}
+            onChange={handleInputChange}
             autoComplete="off"
             autoCorrect="off"
             autoCapitalize="off"
             spellCheck="false"
             onFocus={handleFocus}
+            onClick={handleFocus}
           />
         </div>
       </div>
@@ -631,8 +706,6 @@ function FilterOptionButton({
     setPokemonGridVisibility(true);
     // Add only unique tags
     if (!filterTags.includes(filterButtonText)) {
-      console.log(filterTags);
-      console.log(filterButtonText);
       setFilterTags([...filterTags, filterButtonText]);
     }
     if (!searchValue) {
@@ -641,7 +714,12 @@ function FilterOptionButton({
   }
 
   return (
-    <button onClick={handleFilterOptionButtonClick}>{filterButtonText}</button>
+    <button
+      onClick={handleFilterOptionButtonClick}
+      className="filter-option-btn"
+    >
+      {filterButtonText}
+    </button>
   );
 }
 
@@ -665,7 +743,10 @@ function FilterOptionsScreen({
   }
 
   return (
-    <div style={pokemonGridVisibility ? { display: 'none' } : {}}>
+    <div
+      style={pokemonGridVisibility ? { display: 'none' } : {}}
+      className="filter-screen-container"
+    >
       <h1>Special</h1>
       <div>
         <FilterOptionButton
@@ -705,6 +786,46 @@ function FilterOptionsScreen({
           filterTags={filterTags}
           setFilterTags={setFilterTags}
           filterButtonText={'Paradox'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Psuedo'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Starter'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Fossil'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Mega'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Gigantamax'}
           setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
           searchValue={searchValue}
         />
@@ -956,8 +1077,10 @@ function FilterOptionsScreen({
         />
       </div>
       <div>
-        <h1>EXIT</h1>
-        <button onClick={handleFilterXBtnClick}>EXIT FILTERS</button>
+        <h1>Exit</h1>
+        <button onClick={handleFilterXBtnClick} className="filter-option-btn">
+          X
+        </button>
       </div>
     </div>
   );
@@ -978,7 +1101,7 @@ function HomeScreen({
   // Change the key every time a Pokemon is clicked on so the notif pops up again
   const [popupKey, setPopupKey] = useState(0);
   // Filtering what Pokemon are shown in the grid
-  const [searchValue, setSearchValue] = useState(null);
+  const [searchValue, setSearchValue] = useState('');
   // False = 🔎 icon is in the middle, True = 🔎 icon is on the left
   const [screenWasChanged, setScreenWasChanged] = useState(false);
   // Keeping track of footer height so we can manipulate the floating buttons
@@ -1012,6 +1135,7 @@ function HomeScreen({
           <SearchBar
             popupText={popupText}
             popupKey={popupKey}
+            searchValue={searchValue}
             setSearchValue={setSearchValue}
             screenWasChanged={screenWasChanged} // TODO: Change the way the 🔎 icon works
             setPokemonGridVisibility={setPokemonGridVisibility}

@@ -13,4 +13,12 @@ export const pokemonCatagories = [
   'paradox',
   'paradox pokemon',
   'paradox pokémon',
+  'starter',
+  'psuedo legendary',
+  'psuedo',
+  'fossil',
+  'mega',
+  'mega evolution',
+  'mega evolve',
+  'gigantamax',
 ];

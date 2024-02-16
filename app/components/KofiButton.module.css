@@ -56,7 +56,7 @@
   text-align: center;
   text-decoration: none !important;
   text-shadow: 0 1px 1px rgba(34, 34, 34, 0.05);
-  text-wrap: none;
+  /* text-wrap: none; */
   vertical-align: middle;
 }
 

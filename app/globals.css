@@ -287,13 +287,99 @@ button:hover {
   grid-row: 1;
 }
 
+.single-back {
+  align-self: center;
+  justify-self: flex-end;
+  width: 95%;
+}
+
+.searchbar-back-btn {
+  align-items: center;
+  align-self: center;
+  cursor: pointer;
+  display: flex;
+  grid-column: 1;
+  grid-row: 1;
+  height: 45px;
+  justify-content: flex-end;
+  padding-left: 3.5%;
+  padding-right: 1.25rem;
+  width: 5%;
+  z-index: 2;
+}
+
+.searchbar-clear-search-btn {
+  align-self: center;
+  cursor: pointer;
+  grid-column: 1;
+  grid-row: 1;
+  height: 37px;
+  justify-self: flex-end;
+  padding-right: 8.5%;
+  width: 32px;
+  z-index: 4;
+}
+
+.filter-tag-bubble {
+  align-self: center;
+  background-color: #4fa283;
+  border-radius: 50px;
+  color: white;
+  cursor: default;
+  display: inline-block;
+  font-size: medium;
+  margin-left: 120px;
+  margin-left: 5px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  padding-right: 7px;
+  padding-top: 3px;
+  width: fit-content;
+}
+
+.filter-tag-bubble-x {
+  border-radius: 50px;
+  justify-self: center;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.filter-tag-bubble-x:active,
+.filter-tag-bubble-x:hover {
+  /* background-color: */
+}
+
+.scrolling-filter-bar {
+  align-self: center;
+  cursor: text;
+  grid-column: 1;
+  grid-row: 1;
+  height: fit-content;
+  justify-self: center;
+  margin-left: 2.5%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 62.5%;
+  z-index: 3;
+
+  /* Enable horizontal scrolling */
+  /* Hide vertical scrollbar */
+}
+
+/* Hide the scrollbar */
+.scrolling-filter-bar::-webkit-scrollbar {
+  display: none;
+  /* For Chrome, Safari, and Opera */
+}
+
+/* Optional: Hide scrollbar for Firefox */
+.scrolling-filter-bar {
+  scrollbar-width: none;
+  /* For Firefox */
+}
 .search-input {
   background-color: #e7f2df;
-  background-image: url('../public/icon-search.webp');
-  background-position: calc(50% - 3.43rem);
-  background-repeat: no-repeat;
-  background-size: 20px;
-  background-size: 20px;
   border: none;
   border-radius: 25px;
   color: #4c6f72;
@@ -304,6 +390,25 @@ button:hover {
   padding-right: 10%;
   text-align: center;
   width: 65%;
+}
+
+.si-bg-single {
+  background-position: calc(50% - 3.43rem);
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.si-bg-magnifying {
+  background-image: url('../public/icon-search.webp');
+}
+
+.si-bg-filter {
+  background-image: url('../public/filter/filter.webp');
+}
+
+.search-input:focus,
+.search-input:focus {
+  outline: none;
 }
 
 .search-input-background-animation {
@@ -343,7 +448,7 @@ button:hover {
   text-align: center;
   visibility: hidden;
   width: 90%;
-  z-index: 2;
+  z-index: 5;
 }
 
 .popup-animation {
@@ -366,6 +471,25 @@ button:hover {
   }
 }
 
+.filter-screen-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5vw;
+}
+
+.filter-option-btn {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 75px;
+  width: 75px;
+  border-radius: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
 /* Pokemon Grid */
 
 .pokemon-en-text {
@@ -385,6 +509,7 @@ button:hover {
 .pokemon-grid-btn {
   padding-bottom: 5px;
   padding-top: 5px;
+  cursor: copy;
 }
 
 .pokemon-grid-container {
