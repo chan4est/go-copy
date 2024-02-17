@@ -337,6 +337,7 @@ button:hover {
   width: fit-content;
 }
 
+/* TOOD: Center this */
 .filter-tag-bubble-x {
   border-radius: 50px;
   justify-self: center;
@@ -362,22 +363,22 @@ button:hover {
   white-space: nowrap;
   width: 62.5%;
   z-index: 3;
-
-  /* Enable horizontal scrolling */
-  /* Hide vertical scrollbar */
 }
 
 /* Hide the scrollbar */
 .scrolling-filter-bar::-webkit-scrollbar {
   display: none;
+
   /* For Chrome, Safari, and Opera */
 }
 
 /* Optional: Hide scrollbar for Firefox */
 .scrolling-filter-bar {
   scrollbar-width: none;
+
   /* For Firefox */
 }
+
 .search-input {
   background-color: #e7f2df;
   border: none;
@@ -474,20 +475,34 @@ button:hover {
 .filter-screen-container {
   display: flex;
   flex-direction: column;
-  padding-left: 5vw;
+}
+
+.filter-screen-container > h1 {
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+
+.filter-screen-category-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 1rem;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.last {
+  padding-bottom: 7.5rem;
+}
+
+.filter-option-btn-container {
+  text-align: center;
+  font-size: smaller;
 }
 
 .filter-option-btn {
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  height: 75px;
-  width: 75px;
   border-radius: 50px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: black;
+  border-width: 10px;
 }
 
 /* Pokemon Grid */
@@ -507,9 +522,9 @@ button:hover {
 }
 
 .pokemon-grid-btn {
+  cursor: copy;
   padding-bottom: 5px;
   padding-top: 5px;
-  cursor: copy;
 }
 
 .pokemon-grid-container {
