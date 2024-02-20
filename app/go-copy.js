@@ -53,6 +53,11 @@ import paradox from '../public/filter/special/paradox.webp';
 import pseudo from '../public/filter/special/psuedo.webp';
 import starter from '../public/filter/special/starter.webp';
 import ultraBeast from '../public/filter/special/ultra-beast.webp';
+import caterpie from '../public/filter/special/bug.webp';
+import bird from '../public/filter/special/bird.webp';
+import rodent from '../public/filter/special/rodent.webp';
+import pikaclone from '../public/filter/special/pikaclone.webp';
+import regional from '../public/filter/special/regional.webp';
 import alola from '../public/filter/region/alola.webp';
 import galar from '../public/filter/region/galar.webp';
 import hisui from '../public/filter/region/hisui.webp';
@@ -484,9 +489,7 @@ function SearchBar({
           <input
             className={`search-input si-bg-single ${backgroundClassName} ${backgroundImageClassName}`}
             type="text"
-            placeholder={
-              filterTags.length == 0 || isDoubleDeckerLayout ? 'Search' : ''
-            }
+            placeholder={!searchBackButtonVisibility ? 'Search' : ''}
             value={searchValue}
             onChange={handleInputChange}
             autoComplete="off"
@@ -814,25 +817,53 @@ function FilterOptionsScreen({
           setPokemonGridVisibility={setPokemonGridVisibility}
           filterTags={filterTags}
           setFilterTags={setFilterTags}
+          filterButtonText={'Regional Rodent'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+          imagePath={rodent}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Regional Bird'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+          imagePath={bird}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Regional Bug'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+          imagePath={caterpie}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Pikaclone'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+          imagePath={pikaclone}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
           filterButtonText={'Fossil'}
           setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
           searchValue={searchValue}
           imagePath={fossil}
         />
+
         <FilterOptionButton
           setPokemonGridVisibility={setPokemonGridVisibility}
           filterTags={filterTags}
           setFilterTags={setFilterTags}
-          filterButtonText={'Baby'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={baby}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Psuedo'}
+          filterButtonText={'Psuedo Legendary'}
           setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
           searchValue={searchValue}
           imagePath={pseudo}
@@ -859,7 +890,16 @@ function FilterOptionsScreen({
           setPokemonGridVisibility={setPokemonGridVisibility}
           filterTags={filterTags}
           setFilterTags={setFilterTags}
-          filterButtonText={'Mega'}
+          filterButtonText={'Baby'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+          imagePath={baby}
+        />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Can Mega Evolve'}
           setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
           searchValue={searchValue}
           imagePath={mega}
@@ -878,7 +918,7 @@ function FilterOptionsScreen({
           setPokemonGridVisibility={setPokemonGridVisibility}
           filterTags={filterTags}
           setFilterTags={setFilterTags}
-          filterButtonText={'Gigantamax'}
+          filterButtonText={'Can Gigantamax'}
           setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
           searchValue={searchValue}
           imagePath={gmax}
@@ -892,8 +932,17 @@ function FilterOptionsScreen({
           searchValue={searchValue}
           imagePath={paradox}
         />
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={'Region Exclusive'}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+          imagePath={regional}
+        />
       </div>
-      <h1>Region</h1>
+      <h1>Pokémon Region</h1>
       <div className="filter-screen-category-container">
         <FilterOptionButton
           setPokemonGridVisibility={setPokemonGridVisibility}
@@ -1211,8 +1260,7 @@ function HomeScreen({
   const [searchBackButtonVisibility, setSearchBackButtonVisibility] =
     useState(false);
 
-  // SearchBarMode can be derived from other states
-  // 0 -> No text, 1 -> Text only search, 2 -> Filters only search, 3 -> Hybrid w/ filters + text
+  const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
 
   return (
     <div>
@@ -1239,6 +1287,9 @@ function HomeScreen({
             setSearchBackButtonVisibility={setSearchBackButtonVisibility}
             isDoubleDeckerLayout={isDoubleDeckerLayout}
             setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+            isFilterModalOpen={isFilterModalOpen}
+            setIsFilterModalOpen={setIsFilterModalOpen}
+            blockHomeScroll={blockHomeScroll}
           />
           <FilterOptionsScreen
             searchValue={searchValue}
@@ -1248,6 +1299,9 @@ function HomeScreen({
             setFilterTags={setFilterTags}
             setSearchBackButtonVisibility={setSearchBackButtonVisibility}
             setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+            isFilterModalOpen={isFilterModalOpen}
+            setIsFilterModalOpen={setIsFilterModalOpen}
+            blockHomeScroll={blockHomeScroll}
           />
           <PokemonGrid
             languageCode={languageCode}

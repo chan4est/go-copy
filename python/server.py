@@ -71,6 +71,12 @@ class PokemonNames():
         pseudo_legendary_pokemon = [147, 148, 149, 246, 247, 248, 371, 372, 373, 374, 375, 376, 443, 444, 445, 633, 634, 635, 704, 705, 706, 782, 783, 784, 885, 886, 887, 996, 997, 998]
         mega_evolution_pokemon = [3, 6, 9, 15, 18, 65, 80, 94, 115, 127, 130, 142, 150, 181, 208, 212, 214, 229, 248, 254, 257, 260, 282, 302, 303, 306, 308, 310, 319, 323, 334, 354, 359, 362, 373, 376, 380, 381, 384, 428, 445, 448, 460, 475, 531, 719]
         gigantamax_pokemon = [3, 6, 9, 12, 25, 52, 68, 94, 99, 131, 133, 143, 569, 809, 812, 815, 818, 823, 826, 834, 839, 841, 842, 844, 849, 851, 858, 861, 869, 879, 884, 892]
+        early_rodent_pokemon = [19, 20, 161, 162, 263, 264, 399, 400, 504, 505, 659, 660, 734, 735, 819, 820, 915, 916]
+        early_bird_pokemon = [16, 17, 18, 21, 22, 163, 164, 276, 277, 278, 279, 396, 397, 398, 519, 520, 521, 661, 662, 663, 731, 732, 733, 821, 822, 823, 940, 941]
+        early_bug_pokemon = [10, 11, 12, 13, 14, 15, 165, 166, 167, 168, 265, 266, 267, 268, 269, 401, 402, 540, 541, 542, 543, 544, 545, 664, 665, 666, 736, 737, 738, 824, 825, 826, 917, 918, 919, 920]
+        pikaclone_pokemon = [25, 26, 172, 311, 312, 417, 587, 702, 777, 877, 921, 922, 923, 778, ]
+        regional_pokemon = [83, 115, 122, 128, 214, 222, 313,  314, 324, 335, 336, 337, 338, 357, 369, 417, 422, 423, 439, 441, 455, 480, 481, 482, 511, 512, 513, 514, 515, 516, 538 ,539, 550,  556, 561, 626, 631, 632, 669, 670, 671, 676, 701, 707, 741, 764, 797, 798]
+
 
         resulting_tags = []
         if (dex_number in legendary_pokemon):
@@ -84,15 +90,25 @@ class PokemonNames():
         if (dex_number in paradox_pokemon):
             resulting_tags.extend(['paradox', 'paradox pokemon', 'paradox pokémon'])
         if (dex_number in starter_pokemon):
-            resulting_tags.extend(['starter'])
+            resulting_tags.extend(['starter', 'starters'])
         if (dex_number in pseudo_legendary_pokemon):
-            resulting_tags.extend(['psuedo', 'psuedo legendary'])
+            resulting_tags.extend(['psuedo', 'psuedos', 'psuedo legendary'])
         if (dex_number in fossil_pokemon):
-            resulting_tags.extend(['fossil'])
+            resulting_tags.extend(['fossil', 'fossiles'])
         if (dex_number in mega_evolution_pokemon):
-            resulting_tags.extend(['mega', 'mega evolution', 'mega evolve'])
+            resulting_tags.extend(['mega', 'megas', 'mega evolution', 'mega evolve', 'can mega evolve'])
         if (dex_number in gigantamax_pokemon):
-            resulting_tags.extend(['gigantamax'])
+            resulting_tags.extend(['gigantamax', 'can gigantamax'])
+        if (dex_number in early_rodent_pokemon):
+            resulting_tags.extend(['early rodent', 'early game rodent', 'regional rodent', 'early rodents', 'early game rodents', 'regional rodents'])
+        if (dex_number in early_bird_pokemon):
+            resulting_tags.extend(['early bird', 'early game bird', 'regional bird', 'early birds', 'early game birds', 'regional birds'])
+        if (dex_number in early_bug_pokemon):
+            resulting_tags.extend(['early bug', 'early game bug', 'regional bug', 'early bugs', 'early game bugs', 'regional bugs'])
+        if (dex_number in pikaclone_pokemon):
+            resulting_tags.extend(['pikaclone', 'pika clone', 'pikaclones', 'pika clones'])
+        if (dex_number in regional_pokemon):
+            resulting_tags.extend(['regional', 'regionals', 'region exclusive'])
         
         return resulting_tags
         

@@ -218,8 +218,8 @@ button:hover {
 .instructions {
   font-size: 1.05rem;
   line-height: 25px;
-  padding-bottom: 16px;
-  padding-top: 60px;
+  padding-bottom: 6px;
+  padding-top: 36px;
   text-align: center;
   word-spacing: 5px;
 }
@@ -536,7 +536,7 @@ button:hover {
   column-gap: 5%;
   display: grid;
   grid-template-columns: 30% 30% 30%;
-  padding-bottom: 150px;
+  padding-bottom: 175px;
   padding-top: 1rem;
   row-gap: 1rem;
   width: clamp(300px, 85vw, 650px);
