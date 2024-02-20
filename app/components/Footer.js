@@ -1,11 +1,11 @@
 import styles from './Footer.module.css';
 import KofiButton from './KofiButton';
 
-export default function Footer({ footerRef, removeKofiButton }) {
+export default function Footer({ removeKofiButton }) {
   let currentDate = new Date();
   let currentYear = currentDate.getFullYear();
   return (
-    <footer className={styles['footer']} ref={footerRef}>
+    <footer className={styles['footer']}>
       <div className={styles['footer-container']}>
         <a href="/" title="Home" className={styles['footer-a']}>
           Home

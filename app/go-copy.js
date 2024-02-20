@@ -260,7 +260,6 @@ function PokemonGrid({
   setTutorialModalOpen,
   setSortModalOpen,
   blockHomeScroll,
-  footerRef,
 }) {
   const pokemonList = searchFilterAndSortPokemon(
     searchValue,
@@ -292,8 +291,6 @@ function PokemonGrid({
         setTutorialModalOpen={setTutorialModalOpen}
         setSortModalOpen={setSortModalOpen}
         blockHomeScroll={blockHomeScroll}
-        footerRef={footerRef}
-        searchValue={searchValue}
       />
       <div className="pokemon-grid">{pokemonList}</div>
     </div>
@@ -550,53 +547,26 @@ function HomeScreenFloatingButtons({
   setTutorialModalOpen,
   setSortModalOpen,
   blockHomeScroll,
-  footerRef,
-  searchValue,
 }) {
   const [isScrollToTopVisible, setIsScrollToTopVisible] = useState(false);
-  const [isNearFooter, setIsNearFooter] = useState(false);
-  const [footerHeight, setFooterHeight] = useState(0);
 
   const scrollThreshold = 500; // Adjust's when the ⬆️ button appears
-  const footerHeightFactor = 0.5; // Adjust's when the ⬆️ button moves and ❓ button disappears
+  // Add a scroll event listener to track the scroll position
   useEffect(() => {
-    // Add a scroll event listener to track the scroll position
     const handleScroll = () => {
-      // How far we've scrolled down
+      // Check if the user has scrolled down a certain amount
       const scrollY = window.scrollY;
-      // How far we are from the footer
-      const footerOffset =
-        document.body.scrollHeight -
-        window.innerHeight -
-        footerHeight * footerHeightFactor;
-
-      // True once we've scrolled down the page enough
       setIsScrollToTopVisible(scrollY > scrollThreshold);
-      // True once the top of the footer + a little extra (footerHeightFactor) is visible
-      setIsNearFooter(scrollY > footerOffset);
     };
 
     // Attach the scroll event listener when the component mounts
     window.addEventListener('scroll', handleScroll);
 
-    // Add a resize event listener to track the footer's height
-    function handleResize() {
-      if (footerRef.current) {
-        const height = footerRef.current.offsetHeight;
-        setFooterHeight(height);
-      }
-    }
-
-    handleResize(); // Call it initially to get the height
-    // Attach the resize event listener when the component mounts
-    window.addEventListener('resize', handleResize);
-
-    // Clean up the event listeners when the components unmount
+    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
     };
-  }, [footerRef, footerHeight]);
+  }, []);
 
   // Function to scroll back to the top when the ⬆️ button is clicked
   const scrollToTop = () => {
@@ -647,15 +617,8 @@ function HomeScreenFloatingButtons({
         {isScrollToTopVisible && (
           <button
             onClick={scrollToTop}
-            className={`circular-btn scroll-up-btn ${
-              isNearFooter
-                ? 'scroll-up-btn-animation'
-                : 'scroll-down-btn-animation'
-            }`}
+            className={`circular-btn scroll-up-btn`}
             title="Go back to the top"
-            style={
-              isNearFooter ? { bottom: `calc(3% + ${footerHeight}px)` } : {}
-            }
           >
             <Image
               src={backButton}
@@ -667,71 +630,38 @@ function HomeScreenFloatingButtons({
             />
           </button>
         )}
-        <style global jsx>{`
-          .scroll-up-btn-animation {
-            animation: move-up 0.15s;
-            bottom: calc(3% + ${footerHeight}px);
-          }
-
-          @keyframes move-up {
-            0% {
-              bottom: 3%;
-            }
-            100% {
-              bottom: calc(3% + ${footerHeight}px);
-            }
-          }
-
-          .scroll-down-btn-animation {
-            animation: move-down 0.15s;
-            bottom: 3%;
-          }
-
-          @keyframes move-down {
-            0% {
-              bottom: calc(3% + ${footerHeight}px);
-            }
-            100% {
-              bottom: 3%;
-            }
-          }
-        `}</style>
       </div>
       <div id="question-button">
-        {!isNearFooter && !searchValue && (
-          <button
-            onClick={openTutorial}
-            className={'circular-btn help-btn'}
-            title="Tutorial"
-          >
-            <Image
-              src={questionButton}
-              height={70}
-              width={70}
-              alt=""
-              quality={100}
-              unoptimized={true}
-            />
-          </button>
-        )}
+        <button
+          onClick={openTutorial}
+          className={'circular-btn help-btn'}
+          title="Tutorial"
+        >
+          <Image
+            src={questionButton}
+            height={70}
+            width={70}
+            alt=""
+            quality={100}
+            unoptimized={true}
+          />
+        </button>
       </div>
       <div id="current-sort-option-button">
-        {!isNearFooter && (
-          <button
-            onClick={openSortOptions}
-            className={'circular-btn sort-btn'}
-            title="Sort"
-          >
-            <Image
-              src={currentSortButton}
-              height={70}
-              width={70}
-              alt=""
-              quality={100}
-              unoptimized={true}
-            />
-          </button>
-        )}
+        <button
+          onClick={openSortOptions}
+          className={'circular-btn sort-btn'}
+          title="Sort"
+        >
+          <Image
+            src={currentSortButton}
+            height={70}
+            width={70}
+            alt=""
+            quality={100}
+            unoptimized={true}
+          />
+        </button>
       </div>
     </>
   );
@@ -802,7 +732,7 @@ function FilterOptionsScreen({
       style={pokemonGridVisibility ? { display: 'none' } : {}}
       className="filter-screen-container"
     >
-      <h1>Special</h1>
+      <h2>Special</h2>
       <div className="filter-screen-category-container">
         <FilterOptionButton
           setPokemonGridVisibility={setPokemonGridVisibility}
@@ -942,7 +872,7 @@ function FilterOptionsScreen({
           imagePath={regional}
         />
       </div>
-      <h1>Pokémon Region</h1>
+      <h2>Pokémon Region</h2>
       <div className="filter-screen-category-container">
         <FilterOptionButton
           setPokemonGridVisibility={setPokemonGridVisibility}
@@ -1044,7 +974,7 @@ function FilterOptionsScreen({
           imagePath={unknown}
         />
       </div>
-      <h1>Pokémon Type</h1>
+      <h2>Pokémon Type</h2>
       <div className="filter-screen-category-container last">
         <FilterOptionButton
           setPokemonGridVisibility={setPokemonGridVisibility}
@@ -1247,8 +1177,6 @@ function HomeScreen({
   const [searchValue, setSearchValue] = useState('');
   // False = 🔎 icon is in the middle, True = 🔎 icon is on the left
   const [screenWasChanged, setScreenWasChanged] = useState(false);
-  // Keeping track of footer height so we can manipulate the floating buttons
-  const footerRef = useRef(null);
   // Show grid by default, after search text input, or after choosing a filter
   const [pokemonGridVisibility, setPokemonGridVisibility] = useState(true);
   // Keeping track of what filter tags are in the search
@@ -1314,10 +1242,8 @@ function HomeScreen({
             setTutorialModalOpen={setTutorialModalOpen}
             setSortModalOpen={setSortModalOpen}
             blockHomeScroll={blockHomeScroll}
-            footerRef={footerRef}
           />
         </div>
-        {/* <Footer footerRef={footerRef} /> */}
       </div>
     </div>
   );

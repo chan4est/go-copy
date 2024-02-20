@@ -94,7 +94,7 @@ class PokemonNames():
         if (dex_number in pseudo_legendary_pokemon):
             resulting_tags.extend(['psuedo', 'psuedos', 'psuedo legendary'])
         if (dex_number in fossil_pokemon):
-            resulting_tags.extend(['fossil', 'fossiles'])
+            resulting_tags.extend(['fossil', 'fossils'])
         if (dex_number in mega_evolution_pokemon):
             resulting_tags.extend(['mega', 'megas', 'mega evolution', 'mega evolve', 'can mega evolve'])
         if (dex_number in gigantamax_pokemon):

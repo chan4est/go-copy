@@ -328,26 +328,23 @@ button:hover {
   cursor: default;
   display: inline-block;
   font-size: medium;
-  margin-left: 120px;
   margin-left: 5px;
-  padding-bottom: 3px;
   padding-left: 10px;
-  padding-right: 7px;
-  padding-top: 3px;
   width: fit-content;
 }
 
 /* TOOD: Center this */
 .filter-tag-bubble-x {
   border-radius: 50px;
-  justify-self: center;
-  padding-left: 3px;
-  padding-right: 3px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 10px;
+  padding-top: 5px;
 }
 
 .filter-tag-bubble-x:active,
 .filter-tag-bubble-x:hover {
-  /* background-color: */
+  background-color: #4fa283;
 }
 
 .scrolling-filter-bar {
@@ -477,18 +474,18 @@ button:hover {
   flex-direction: column;
 }
 
-.filter-screen-container > h1 {
-  padding-left: 30px;
+.filter-screen-container > h2 {
   padding-bottom: 10px;
+  padding-left: 30px;
 }
 
 .filter-screen-category-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  row-gap: 1rem;
   padding-bottom: 30px;
   padding-left: 30px;
   padding-right: 30px;
+  row-gap: 1rem;
 }
 
 .last {
@@ -496,13 +493,14 @@ button:hover {
 }
 
 .filter-option-btn-container {
-  text-align: center;
   font-size: smaller;
+  text-align: center;
 }
 
-.filter-option-btn {
-  border-radius: 50px;
-  border-width: 10px;
+.filter-option-btn > img {
+  /* TOOD: Fix the width here */
+  width: clamp(50px, 100vw, 75px);
+  height: auto;
 }
 
 /* Pokemon Grid */
