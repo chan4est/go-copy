@@ -414,13 +414,13 @@ function SearchBar({
           onClick={handleFilterTagClick}
         >
           <span className="filter-tag-bubble-span">{filterTag}</span>
-          <button
+          <div
             onClick={clearFilterTag}
             className="filter-tag-bubble-x"
             title="Clear Filter"
           >
             <Image src={filterX} width={9} height={9} alt="" quality={100} />
-          </button>
+          </div>
         </div>
       </div>
     );
@@ -690,20 +690,15 @@ function FilterOptionButton({
   }
 
   return (
-    <div className="filter-option-btn-container">
-      <button
-        onClick={handleFilterOptionButtonClick}
-        className="filter-option-btn"
-      >
-        <Image
-          src={imagePath}
-          alt={filterButtonText}
-          quality={100}
-          unoptimized={true}
-          height={65}
-          widtth={65}
-        />
-      </button>
+    <div className="filter-option-btn" onClick={handleFilterOptionButtonClick}>
+      <Image
+        src={imagePath}
+        alt={filterButtonText}
+        quality={100}
+        unoptimized={true}
+        height={65}
+        width={65}
+      />
       <br></br>
       {filterButtonText}
     </div>
@@ -961,10 +956,7 @@ function SortOptionButton({
       title={buttonTitle}
     >
       <span className="sort-options-span">{buttonText}</span>
-      <button
-        onClick={handleSortButtonClick}
-        className={'sort-options-circ-btn'}
-      >
+      <button className={'sort-options-circ-btn'}>
         <Image
           src={buttonPic}
           height={70}
