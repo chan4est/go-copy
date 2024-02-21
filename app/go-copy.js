@@ -407,19 +407,21 @@ function SearchBar({
     }
 
     return (
-      <div
-        className="filter-tag-bubble"
-        title={`Filtering by ${filterTag}`}
-        onClick={handleFilterTagClick}
-      >
-        {filterTag}{' '}
-        <button
-          onClick={clearFilterTag}
-          className="filter-tag-bubble-x"
-          title="Clear Filter"
+      <div className="filter-tag-bubble-container">
+        <div
+          className="filter-tag-bubble"
+          title={`Filtering by ${filterTag}`}
+          onClick={handleFilterTagClick}
         >
-          <Image src={filterX} width={10} height={10} alt="" quality={100} />
-        </button>
+          <span className="filter-tag-bubble-span">{filterTag}</span>
+          <button
+            onClick={clearFilterTag}
+            className="filter-tag-bubble-x"
+            title="Clear Filter"
+          >
+            <Image src={filterX} width={9} height={9} alt="" quality={100} />
+          </button>
+        </div>
       </div>
     );
   }
