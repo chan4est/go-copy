@@ -727,417 +727,104 @@ function FilterOptionsScreen({
     }
   }
 
+  function mapOutFilterButtons(filterMapping) {
+    return filterMapping.map((entry) => {
+      return (
+        <FilterOptionButton
+          setPokemonGridVisibility={setPokemonGridVisibility}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          filterButtonText={entry.text}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          searchValue={searchValue}
+          imagePath={entry.imagePath}
+          key={entry.text}
+        />
+      );
+    });
+  }
+
+  const specialFilterMappings = [
+    { text: 'Starter', imagePath: starter },
+    { text: 'Regional Rodent', imagePath: rodent },
+    { text: 'Regional Bird', imagePath: bird },
+    { text: 'Regional Bug', imagePath: caterpie },
+    { text: 'Pikaclone', imagePath: pikaclone },
+    { text: 'Fossil', imagePath: fossil },
+    { text: 'Psuedo Legendary', imagePath: pseudo },
+    { text: 'Legendary', imagePath: legendary },
+    { text: 'Mythical', imagePath: mythical },
+    { text: 'Baby', imagePath: baby },
+    { text: 'Can Mega Evolve', imagePath: mega },
+    { text: 'Ultra Beast', imagePath: ultraBeast },
+    { text: 'Can Gigantamax', imagePath: gmax },
+    { text: 'Paradox', imagePath: paradox },
+    { text: 'Region Exclusive', imagePath: regional },
+  ];
+
+  const pokemonRegionMappings = [
+    { text: 'Kanto', imagePath: kanto },
+    { text: 'Johto', imagePath: johto },
+    { text: 'Hoenn', imagePath: hoenn },
+    { text: 'Sinnoh', imagePath: sinnoh },
+    { text: 'Unova', imagePath: unova },
+    { text: 'Kalos', imagePath: kalos },
+    { text: 'Alola', imagePath: alola },
+    { text: 'Galar', imagePath: galar },
+    { text: 'Hisui', imagePath: hisui },
+    { text: 'Paldea', imagePath: paldea },
+    { text: 'Unknown', imagePath: unknown },
+  ];
+
+  const pokemonTypesFilterMappings = [
+    { text: 'Normal', imagePath: normal },
+    { text: 'Fighting', imagePath: fighting },
+    { text: 'Flying', imagePath: flying },
+    { text: 'Poison', imagePath: poison },
+    { text: 'Ground', imagePath: ground },
+    { text: 'Rock', imagePath: rock },
+    { text: 'Bug', imagePath: bug },
+    { text: 'Ghost', imagePath: ghost },
+    { text: 'Steel', imagePath: steel },
+    { text: 'Fire', imagePath: fire },
+    { text: 'Water', imagePath: water },
+    { text: 'Grass', imagePath: grass },
+    { text: 'Electric', imagePath: electric },
+    { text: 'Psychic', imagePath: psychic },
+    { text: 'Ice', imagePath: ice },
+    { text: 'Dragon', imagePath: dragon },
+    { text: 'Dark', imagePath: dark },
+    { text: 'Fairy', imagePath: fairy },
+  ];
+
+  const specialFilterOptionButtons = mapOutFilterButtons(specialFilterMappings);
+  const regionFilterOptionButtons = mapOutFilterButtons(pokemonRegionMappings);
+  const typeFilterOptionButtons = mapOutFilterButtons(
+    pokemonTypesFilterMappings
+  );
+
   return (
     <div
       style={pokemonGridVisibility ? { display: 'none' } : {}}
       className="filter-screen-container"
     >
       <h2>Special</h2>
-      <div className="filter-screen-category-container">
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Starter'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={starter}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Regional Rodent'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={rodent}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Regional Bird'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={bird}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Regional Bug'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={caterpie}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Pikaclone'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={pikaclone}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Fossil'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={fossil}
-        />
-
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Psuedo Legendary'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={pseudo}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Legendary'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={legendary}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Mythical'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={mythical}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Baby'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={baby}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Can Mega Evolve'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={mega}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Ultra Beast'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={ultraBeast}
-        />
-
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Can Gigantamax'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={gmax}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Paradox'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={paradox}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Region Exclusive'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={regional}
-        />
+      <div className="filter-screen-category-grid-container">
+        <div className="filter-screen-category-grid">
+          {specialFilterOptionButtons}
+        </div>
       </div>
       <h2>Pokémon Region</h2>
-      <div className="filter-screen-category-container">
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Kanto'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={kanto}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Johto'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={johto}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Hoenn'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={hoenn}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Sinnoh'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={sinnoh}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Unova'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={unova}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Kalos'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={kalos}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Alola'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={alola}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Galar'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={galar}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Hisui'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={hisui}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Paldea'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={paldea}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Unknown'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={unknown}
-        />
+      <div className="filter-screen-category-grid-container">
+        <div className="filter-screen-category-grid">
+          {regionFilterOptionButtons}
+        </div>
       </div>
       <h2>Pokémon Type</h2>
-      <div className="filter-screen-category-container last">
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Normal'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={normal}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Fighting'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={fighting}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Flying'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={flying}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Poison'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={poison}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Ground'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={ground}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Rock'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={rock}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Bug'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={bug}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Ghost'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={ghost}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Steel'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={steel}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Fire'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={fire}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Water'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={water}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Grass'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={grass}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Electric'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={electric}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Psychic'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={psychic}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Ice'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={ice}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Dragon'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={dragon}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Dark'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={dark}
-        />
-        <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
-          filterTags={filterTags}
-          setFilterTags={setFilterTags}
-          filterButtonText={'Fairy'}
-          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-          searchValue={searchValue}
-          imagePath={fairy}
-        />
+      <div className="filter-screen-category-grid-container">
+        <div className="filter-screen-category-grid">
+          {typeFilterOptionButtons}
+        </div>
       </div>
       <div id="scroll-to-top-button">
         <button
@@ -1302,6 +989,54 @@ function SortOptionScreen({
     setSortModalOpen(false);
   }
 
+  const sortOptionButtonMap = [
+    {
+      sortingOrder: 0,
+      imagePath: ascendingButton,
+      text: 'NUMBER (ASC.)',
+      title: 'Sort by number (ascending)',
+    },
+    {
+      sortingOrder: 1,
+      imagePath: descendingButton,
+      text: 'NUMBER (DESC.)',
+      title: 'Sort by number (descending)',
+    },
+    {
+      sortingOrder: 2,
+      imagePath: aZButton,
+      text: 'NAME (A-Z)',
+      title: 'Sort by name (A-Z)',
+    },
+    {
+      sortingOrder: 3,
+      imagePath: ascendingButton,
+      text: 'NAME (Z-A)',
+      title: 'Sort by name (Z-A)',
+    },
+    {
+      sortingOrder: 1,
+      imagePath: xButton,
+      text: '',
+      title: 'Home',
+    },
+  ];
+
+  const sortOptionButtons = sortOptionButtonMap.map((option) => {
+    return (
+      <SortOptionButton
+        setSortingOrder={setSortingOrder}
+        setTutorialModalOpen={setSortModalOpen}
+        allowHomeScroll={allowHomeScroll}
+        sortingOrderOption={option.sortingOrder}
+        buttonPic={option.imagePath}
+        buttonText={option.text}
+        buttonTitle={option.title}
+        key={option.text}
+      />
+    );
+  });
+
   return (
     <Modal
       isOpen={sortModalOpen}
@@ -1312,53 +1047,7 @@ function SortOptionScreen({
       <div className="base-container">
         <Borders />
         <div className="base-content sort-options-grid-container">
-          <div className="sort-options-grid">
-            <SortOptionButton
-              setSortingOrder={setSortingOrder}
-              setTutorialModalOpen={setSortModalOpen}
-              allowHomeScroll={allowHomeScroll}
-              sortingOrderOption={0}
-              buttonPic={ascendingButton}
-              buttonText={'NUMBER (ASC.)'}
-              buttonTitle={'Sort by number (ascending)'}
-            />
-            <SortOptionButton
-              setSortingOrder={setSortingOrder}
-              setTutorialModalOpen={setSortModalOpen}
-              allowHomeScroll={allowHomeScroll}
-              sortingOrderOption={1}
-              buttonPic={descendingButton}
-              buttonText={'NUMBER (DESC.)'}
-              buttonTitle={'Sort by number (descending)'}
-            />
-            <SortOptionButton
-              setSortingOrder={setSortingOrder}
-              setTutorialModalOpen={setSortModalOpen}
-              allowHomeScroll={allowHomeScroll}
-              sortingOrderOption={2}
-              buttonPic={aZButton}
-              buttonText={'NAME (A-Z)'}
-              buttonTitle={'Sort by name (A-Z)'}
-            />
-            <SortOptionButton
-              setSortingOrder={setSortingOrder}
-              setTutorialModalOpen={setSortModalOpen}
-              allowHomeScroll={allowHomeScroll}
-              sortingOrderOption={3}
-              buttonPic={zAButton}
-              buttonText={'NAME (Z-A)'}
-              buttonTitle={'Sort by name (Z-A)'}
-            />
-            <SortOptionButton
-              setSortingOrder={setSortingOrder}
-              setTutorialModalOpen={setSortModalOpen}
-              allowHomeScroll={allowHomeScroll}
-              sortingOrderOption={sortingOrder}
-              buttonPic={xButton}
-              buttonText={''}
-              buttonTitle={'Home'}
-            />
-          </div>
+          <div className="sort-options-grid">{sortOptionButtons}</div>
         </div>
       </div>
     </Modal>

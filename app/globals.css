@@ -138,7 +138,7 @@ button:hover {
 
 .sort-options-span {
   font-size: 1.25rem;
-  padding-right: 1.25rem;
+  padding-right: 20px;
 }
 
 .sort-options-circ-btn {
@@ -162,7 +162,7 @@ button:hover {
 
 .sort-options-grid {
   display: grid;
-  row-gap: 1rem;
+  row-gap: 16px;
 }
 
 /* Tutorial Screen */
@@ -170,7 +170,7 @@ button:hover {
 .tutorial {
   font-size: 1.25rem;
   padding-bottom: 30px;
-  padding-top: 1.5rem;
+  padding-top: 20px;
   pointer-events: none;
   text-align: center;
   width: 100vw;
@@ -184,8 +184,8 @@ button:hover {
 .tipText {
   font-size: 0.9rem;
   padding-bottom: 10px;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 8px;
+  padding-right: 8px;
   text-align: center;
 }
 
@@ -303,7 +303,7 @@ button:hover {
   height: 45px;
   justify-content: flex-end;
   padding-left: 3.5%;
-  padding-right: 1.25rem;
+  padding-right: 20px;
   width: 5%;
   z-index: 2;
 }
@@ -391,7 +391,7 @@ button:hover {
 }
 
 .si-bg-single {
-  background-position: calc(50% - 3.43rem);
+  background-position: calc(50% - 55px);
   background-repeat: no-repeat;
   background-size: 20px;
 }
@@ -416,7 +416,7 @@ button:hover {
 
 @keyframes move-left {
   0% {
-    background-position: calc(50% - 3.43rem);
+    background-position: calc(50% - 55px);
   }
   100% {
     background-position: 3%;
@@ -472,35 +472,42 @@ button:hover {
 .filter-screen-container {
   display: flex;
   flex-direction: column;
+  padding-bottom: 80px;
+  padding-top: 24px;
 }
 
 .filter-screen-container > h2 {
   padding-bottom: 10px;
-  padding-left: 30px;
+  padding-left: 8%;
 }
 
-.filter-screen-category-container {
+.filter-screen-category-grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-screen-category-grid {
+  column-gap: 2.5%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 18% 18% 18% 18% 18%;
   padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-  row-gap: 1rem;
-}
-
-.last {
-  padding-bottom: 7.5rem;
+  row-gap: 24px;
+  width: clamp(300px, 85vw, 650px);
 }
 
 .filter-option-btn-container {
-  font-size: smaller;
+  font-size: clamp(0.5rem, 2.8vw, 1rem);
   text-align: center;
 }
 
-.filter-option-btn > img {
-  /* TOOD: Fix the width here */
-  width: clamp(50px, 100vw, 75px);
+.filter-option-btn:active,
+.filter-option-btn:hover {
+  background-color: transparent;
+}
+
+.filter-option-btn img {
   height: auto;
+  width: clamp(50px, 80%, 75px);
 }
 
 /* Pokemon Grid */
@@ -535,7 +542,7 @@ button:hover {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   padding-bottom: 175px;
-  padding-top: 1rem;
-  row-gap: 1rem;
+  padding-top: 16px;
+  row-gap: 16px;
   width: clamp(300px, 85vw, 650px);
 }
