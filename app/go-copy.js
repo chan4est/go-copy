@@ -22,7 +22,8 @@ import xButton from '../public/btn-x.webp';
 
 import filterX from '../public/filter/filter-x.webp';
 import clearX from '../public/filter/clear-x.webp';
-import clearXLine from '../public/filter/clear-x-line.webp';
+import clearXLong from '../public/filter/clear-x-long.webp';
+import doubleDeckerLine from '../public/filter/dd-line.webp';
 import searchBack from '../public/filter/search-back.webp';
 
 import bug from '../public/filter/type/bug.webp';
@@ -371,10 +372,18 @@ function SearchBar({
     return (
       <div
         onClick={handleClearTextButtonClick}
-        className="searchbar-clear-search-btn"
+        className={
+          isDoubleDeckerLayout
+            ? 'searchbar-clear-search-btn searchbar-clear-search-btn-dd'
+            : 'searchbar-clear-search-btn'
+        }
         title="Clear Search"
       >
-        <Image src={clearXLine} width={32} height={37} alt="" quality={100} />
+        {isDoubleDeckerLayout ? (
+          <Image src={clearXLong} width={32} height={64} alt="" quality={100} />
+        ) : (
+          <Image src={clearX} width={32} height={40} alt="" quality={100} />
+        )}
       </div>
     );
   }
@@ -435,7 +444,11 @@ function SearchBar({
 
     return (
       <div
-        className="scrolling-filter-bar"
+        className={
+          isDoubleDeckerLayout
+            ? 'scrolling-filter-bar scrolling-filter-bar-dd'
+            : 'scrolling-filter-bar'
+        }
         onClick={handleScrollingFilterBarClick}
         title="Search or filter through Pokémon"
       >
@@ -456,37 +469,62 @@ function SearchBar({
     setPokemonGridVisibility(false);
   }
 
-  let backgroundClassName = '';
+  // Default in the middle
+  let backgroundAnimationClassName = '';
+  // Background stays left even after a screen change
   if (screenWasChanged && wasFocused) {
-    backgroundClassName = 'search-input-background-left';
-  } else if (wasFocused) {
-    backgroundClassName = 'search-input-background-animation';
+    backgroundAnimationClassName = 'search-input-background-left';
+  }
+  // Once the search bar is clicked once, play the animation
+  else if (wasFocused) {
+    backgroundAnimationClassName = 'search-input-background-animation';
   }
 
-  let backgroundImageClassName = 'si-bg-magnifying';
-  if (filterTags.length > 0) {
-    backgroundImageClassName = 'si-bg-filter';
+  let backgroundImageClassName = 'si-bg si-bg-magnifying';
+  if (filterTags.length > 0 && !isDoubleDeckerLayout) {
+    backgroundImageClassName = 'si-bg si-bg-filter';
+  } else if (isDoubleDeckerLayout) {
+    backgroundImageClassName = 'si-bg-dd search-input-background-left-dd';
   }
+
+  let searchInputClassName = isDoubleDeckerLayout
+    ? 'search-input search-input-dd'
+    : 'search-input';
 
   return (
     <div className="searchbar-container">
-      <div className="searchbar-grid">
+      <div
+        className={`searchbar-grid ${
+          isDoubleDeckerLayout ? 'searchbar-grid-dd' : ''
+        }`}
+      >
         <CopyPopup popupText={popupText} popupKey={popupKey} />
+
         {searchBackButtonVisibility && <SearchBackButton />}
         {(filterTags.length > 0 || searchValue.length > 0) && (
           <ClearTextButton />
         )}
+        {isDoubleDeckerLayout && (
+          <div className="search-input-dd-line">
+            <Image
+              src={doubleDeckerLine}
+              width={200}
+              height={1}
+              alt=""
+              quality={100}
+            />
+          </div>
+        )}
         {filterTags.length > 0 && <ScrollingFilterBar />}
+
         <div
           className={`searchbar ${
             searchBackButtonVisibility ? 'single-back' : ''
           } `}
           title="Search or filter through Pokémon"
         >
-          {/* {isDoubleDeckerLayout ? <h3>DOUBLE DECKER</h3> : ''} */}
-
           <input
-            className={`search-input si-bg-single ${backgroundClassName} ${backgroundImageClassName}`}
+            className={`${searchInputClassName} ${backgroundImageClassName} ${backgroundAnimationClassName}`}
             type="text"
             placeholder={!searchBackButtonVisibility ? 'Search' : ''}
             value={searchValue}
@@ -865,7 +903,6 @@ function HomeScreen({
   const [pokemonGridVisibility, setPokemonGridVisibility] = useState(true);
   // Keeping track of what filter tags are in the search
   const [filterTags, setFilterTags] = useState([]);
-  // TODO BUG: Shouldn't be double decker when it's only tags
   const [isDoubleDeckerLayout, setIsDoubleDeckerLayout] = useState(false);
 
   // Keeping track of < button next to Search Bar
