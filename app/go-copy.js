@@ -72,7 +72,7 @@ import unova from '../public/filter/region/unova.webp';
 import unknown from '../public/filter/region/unknown.webp';
 
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import copy from 'copy-to-clipboard';
 import Modal from 'react-modal';
@@ -323,6 +323,7 @@ function SearchBar({
   allowHomeScroll,
   blockHomeScroll,
   setFilterModalOpen,
+  searchRef,
 }) {
   const [wasFocused, setWasFocused] = useState(false);
 
@@ -350,6 +351,7 @@ function SearchBar({
       allowHomeScroll();
       setSearchValue('');
       setFilterTags([]);
+      searchRef.current.blur();
     }
     return (
       <div
@@ -413,10 +415,11 @@ function SearchBar({
 
     function handleFilterTagClick(event) {
       // Prevent click event from reaching the underlying scroll bar
-      event.stopPropagation();
+      // event.stopPropagation();
       setFilterModalOpen(true);
       blockHomeScroll();
       setIsDoubleDeckerLayout(true);
+      searchRef.current.focus();
     }
 
     return (
@@ -544,6 +547,7 @@ function SearchBar({
             spellCheck="false"
             onFocus={handleSearchBarFocus}
             onClick={handleSearchBarClick}
+            ref={searchRef}
           />
         </div>
       </div>
@@ -727,8 +731,10 @@ function FilterOptionButton({
   imagePath,
   allowHomeScroll,
   setFilterModalOpen,
+  searchRef,
 }) {
   function handleFilterOptionButtonClick() {
+    searchRef.current.blur(); // Remove focus from search bar
     console.log(searchValue.length);
     setFilterModalOpen(false);
     allowHomeScroll();
@@ -768,6 +774,7 @@ function FilterOptionsScreen({
   allowHomeScroll,
   filterModalOpen,
   setFilterModalOpen,
+  searchRef,
 }) {
   function handleFilterXBtnClick() {
     setFilterModalOpen(false);
@@ -793,6 +800,7 @@ function FilterOptionsScreen({
           key={entry.text}
           allowHomeScroll={allowHomeScroll}
           setFilterModalOpen={setFilterModalOpen}
+          searchRef={searchRef}
         />
       );
     });
@@ -861,12 +869,17 @@ function FilterOptionsScreen({
     setFilterModalOpen(false);
   }
 
+  function handleFilterScreenClick() {
+    searchRef.current.blur();
+  }
+
   return (
     <Modal
       isOpen={filterModalOpen}
       onRequestClose={handleClose}
       className="modal-content-filters"
       overlayClassName="modal-overlay-filters"
+      onClick={handleFilterScreenClick}
     >
       <div className="filter-screen-container">
         <div className="filter-screen-content">
@@ -932,6 +945,8 @@ function HomeScreen({
   // Show filters whenever user clicks on the search bar (mimicks Pokemon GO)
   const [filterModalOpen, setFilterModalOpen] = useState(false);
 
+  const searchRef = useRef(false);
+
   return (
     <div>
       <InstructionsBar
@@ -957,6 +972,7 @@ function HomeScreen({
         setFilterModalOpen={setFilterModalOpen}
         blockHomeScroll={blockHomeScroll}
         allowHomeScroll={allowHomeScroll}
+        searchRef={searchRef}
       />
       <FilterOptionsScreen
         searchValue={searchValue}
@@ -967,6 +983,7 @@ function HomeScreen({
         filterModalOpen={filterModalOpen}
         setFilterModalOpen={setFilterModalOpen}
         allowHomeScroll={allowHomeScroll}
+        searchRef={searchRef}
       />
       <PokemonGrid
         languageCode={languageCode}
