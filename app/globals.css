@@ -25,7 +25,7 @@ button {
   text-align: center;
 }
 
-button img {
+button > img {
   pointer-events: none;
 }
 
@@ -57,8 +57,15 @@ button:hover {
   position: fixed;
   right: 0;
   top: 0;
-  width: 98%;
-  z-index: 5;
+  width: 100%;
+  z-index: 6;
+  scrollbar-width: none;
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none;
+
+  /* For Chrome, Safari, and Opera */
 }
 
 .modal-overlay {
@@ -68,14 +75,44 @@ button:hover {
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 6;
+
+  /* Hides everything including the buttons */
+}
+
+.modal-content-filters {
+  background-color: #f8fff7;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  overflow-x: clip;
+  overflow-y: scroll;
+  padding-bottom: 20vh;
+  position: fixed;
+  right: 0;
+  top: 185px;
+  width: 100%;
+  z-index: 5;
+  scrollbar-width: none;
+}
+
+.modal-overlay-filters {
+  background-color: #f8fff7;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 185px;
   z-index: 5;
 
   /* Hides everything including the buttons */
 }
 
-/* Hack to make sure elements are aligned properly */
-.modal-content-100 {
-  width: 100%;
+/* Hide the scrollbar */
+.modal-content-filters::-webkit-scrollbar {
+  display: none;
+
+  /* For Chrome, Safari, and Opera */
 }
 
 /* Circular Buttons */
@@ -176,7 +213,7 @@ button:hover {
   width: 100vw;
 }
 
-.tutorial p {
+.tutorial > p {
   padding-bottom: 10px;
   padding-top: 30px;
 }
@@ -386,19 +423,20 @@ button:hover {
 
 .filter-screen-container {
   display: flex;
-  flex-direction: column;
-  padding-bottom: 80px;
-  padding-top: 24px;
-}
-
-.filter-screen-container > h2 {
-  padding-bottom: 10px;
-  padding-left: 8%;
-}
-
-.filter-screen-category-grid-container {
-  display: flex;
   justify-content: center;
+}
+
+.filter-screen-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 275px;
+  width: clamp(300px, 85vw, 650px);
+}
+
+.filter-screen-content > h2 {
+  padding-bottom: 10px;
+  /* padding-left: 8vw; */
 }
 
 .filter-screen-category-grid {
@@ -416,7 +454,7 @@ button:hover {
   text-align: center;
 }
 
-.filter-option-btn img {
+.filter-option-btn > img {
   height: auto;
   width: clamp(50px, 80%, 75px);
 }
@@ -424,8 +462,10 @@ button:hover {
 .searchbar-container {
   align-items: center;
   display: flex;
+  height: 84px;
   justify-content: center;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
 }
 
@@ -509,7 +549,7 @@ button:hover {
 
 .search-input-background-left-dd {
   background-position-x: 3%, 3%;
-  background-position-y: 22.5%, 77.5%;
+  background-position-y: 22.5%, 82.5%;
   background-repeat: no-repeat, no-repeat;
 }
 

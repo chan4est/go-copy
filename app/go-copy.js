@@ -72,7 +72,7 @@ import unova from '../public/filter/region/unova.webp';
 import unknown from '../public/filter/region/unknown.webp';
 
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import copy from 'copy-to-clipboard';
 import Modal from 'react-modal';
@@ -256,7 +256,6 @@ function PokemonGrid({
   setPopupText,
   setPopupKey,
   searchValue,
-  pokemonGridVisibility,
   filterTags,
   setTutorialModalOpen,
   setSortModalOpen,
@@ -281,11 +280,7 @@ function PokemonGrid({
   });
 
   return (
-    <div
-      className="pokemon-grid-container"
-      // Make the grid invisible after the Search Bar has been clicked
-      style={!pokemonGridVisibility ? { display: 'none' } : {}}
-    >
+    <div className="pokemon-grid-container">
       <HomeScreenFloatingButtons
         sortingOrder={sortingOrder}
         setPopupText={setPopupText}
@@ -319,25 +314,29 @@ function SearchBar({
   searchValue,
   setSearchValue,
   screenWasChanged,
-  setPokemonGridVisibility,
   filterTags,
   setFilterTags,
   searchBackButtonVisibility,
   setSearchBackButtonVisibility,
   isDoubleDeckerLayout,
   setIsDoubleDeckerLayout,
+  allowHomeScroll,
+  blockHomeScroll,
+  setFilterModalOpen,
 }) {
   const [wasFocused, setWasFocused] = useState(false);
 
   const handleInputChange = (e) => {
     // Put the X if there's search text
     if (e.target.value.length > 0) {
-      setPokemonGridVisibility(true);
+      setFilterModalOpen(false);
+      allowHomeScroll();
     }
     // Take away the X if there's no search or there's no filters
     else if (e.target.value.length == 0) {
       // Make sure the filter screen is still open
-      setPokemonGridVisibility(false);
+      setFilterModalOpen(true);
+      blockHomeScroll();
     }
     setSearchValue(e.target.value);
   };
@@ -347,7 +346,8 @@ function SearchBar({
     function handleSearchBackButtonClick() {
       setSearchBackButtonVisibility(false);
       setIsDoubleDeckerLayout(false);
-      setPokemonGridVisibility(true);
+      setFilterModalOpen(false);
+      allowHomeScroll();
       setSearchValue('');
       setFilterTags([]);
     }
@@ -367,7 +367,8 @@ function SearchBar({
       setFilterTags([]);
       setIsDoubleDeckerLayout(false);
       setSearchValue('');
-      setPokemonGridVisibility(false);
+      setFilterModalOpen(true);
+      blockHomeScroll();
     }
     return (
       <div
@@ -399,10 +400,12 @@ function SearchBar({
         setIsDoubleDeckerLayout(false);
         if (searchValue.length > 0) {
           // There's still text so show the results
-          setPokemonGridVisibility(true);
+          setFilterModalOpen(false);
+          allowHomeScroll();
         } else {
           // There's no text and no more tags
-          setPokemonGridVisibility(false);
+          setFilterModalOpen(true);
+          blockHomeScroll();
         }
       }
       setFilterTags(newFilterTags);
@@ -411,7 +414,8 @@ function SearchBar({
     function handleFilterTagClick(event) {
       // Prevent click event from reaching the underlying scroll bar
       event.stopPropagation();
-      setPokemonGridVisibility(false);
+      setFilterModalOpen(true);
+      blockHomeScroll();
       setIsDoubleDeckerLayout(true);
     }
 
@@ -437,7 +441,8 @@ function SearchBar({
 
   function ScrollingFilterBar() {
     function handleScrollingFilterBarClick() {
-      setPokemonGridVisibility(false);
+      setFilterModalOpen(true);
+      blockHomeScroll();
       // If there's no filter bubbles up there's no scroll bar
       setIsDoubleDeckerLayout(true); // Should always be true.
     }
@@ -459,14 +464,18 @@ function SearchBar({
     );
   }
 
-  function handleFocus() {
-    // User has chosen at least one filter tag
+  function handleSearchBarClick() {
     if (filterTags.length > 0) {
       setIsDoubleDeckerLayout(true);
     }
     setSearchBackButtonVisibility(true);
+    setFilterModalOpen(true);
+    blockHomeScroll();
+  }
+
+  function handleSearchBarFocus() {
+    // User has chosen at least one filter tag
     setWasFocused(true);
-    setPokemonGridVisibility(false);
   }
 
   // Default in the middle
@@ -533,8 +542,8 @@ function SearchBar({
             autoCorrect="off"
             autoCapitalize="off"
             spellCheck="false"
-            onFocus={handleFocus}
-            onClick={handleFocus}
+            onFocus={handleSearchBarFocus}
+            onClick={handleSearchBarClick}
           />
         </div>
       </div>
@@ -707,22 +716,29 @@ function HomeScreenFloatingButtons({
   );
 }
 
+// Filter Screen
+
 function FilterOptionButton({
-  setPokemonGridVisibility,
   filterTags,
   setFilterTags,
   filterButtonText,
   setIsDoubleDeckerLayout,
   searchValue,
   imagePath,
+  allowHomeScroll,
+  setFilterModalOpen,
 }) {
   function handleFilterOptionButtonClick() {
-    setPokemonGridVisibility(true);
+    console.log(searchValue.length);
+    setFilterModalOpen(false);
+    allowHomeScroll();
     // Add only unique tags
     if (!filterTags.includes(filterButtonText)) {
       setFilterTags([...filterTags, filterButtonText]);
     }
-    if (!searchValue) {
+    if (searchValue.length > 0) {
+      setIsDoubleDeckerLayout(true);
+    } else {
       setIsDoubleDeckerLayout(false);
     }
   }
@@ -745,15 +761,17 @@ function FilterOptionButton({
 
 function FilterOptionsScreen({
   searchValue,
-  pokemonGridVisibility,
-  setPokemonGridVisibility,
   filterTags,
   setFilterTags,
   setSearchBackButtonVisibility,
   setIsDoubleDeckerLayout,
+  allowHomeScroll,
+  filterModalOpen,
+  setFilterModalOpen,
 }) {
   function handleFilterXBtnClick() {
-    setPokemonGridVisibility(true);
+    setFilterModalOpen(false);
+    allowHomeScroll();
     if (filterTags.length == 0 && !searchValue) {
       setSearchBackButtonVisibility(false);
     }
@@ -766,7 +784,6 @@ function FilterOptionsScreen({
     return filterMapping.map((entry) => {
       return (
         <FilterOptionButton
-          setPokemonGridVisibility={setPokemonGridVisibility}
           filterTags={filterTags}
           setFilterTags={setFilterTags}
           filterButtonText={entry.text}
@@ -774,6 +791,8 @@ function FilterOptionsScreen({
           searchValue={searchValue}
           imagePath={entry.imagePath}
           key={entry.text}
+          allowHomeScroll={allowHomeScroll}
+          setFilterModalOpen={setFilterModalOpen}
         />
       );
     });
@@ -838,46 +857,50 @@ function FilterOptionsScreen({
     pokemonTypesFilterMappings
   );
 
+  function handleClose() {
+    setFilterModalOpen(false);
+  }
+
   return (
-    <div
-      style={pokemonGridVisibility ? { display: 'none' } : {}}
-      className="filter-screen-container"
+    <Modal
+      isOpen={filterModalOpen}
+      onRequestClose={handleClose}
+      className="modal-content-filters"
+      overlayClassName="modal-overlay-filters"
     >
-      <h2>Special</h2>
-      <div className="filter-screen-category-grid-container">
-        <div className="filter-screen-category-grid">
-          {specialFilterOptionButtons}
+      <div className="filter-screen-container">
+        <div className="filter-screen-content">
+          <h2>Special</h2>
+          <div className="filter-screen-category-grid">
+            {specialFilterOptionButtons}
+          </div>
+          <h2>Pokémon Region</h2>
+          <div className="filter-screen-category-grid">
+            {regionFilterOptionButtons}
+          </div>
+          <h2>Pokémon Type</h2>
+          <div className="filter-screen-category-grid">
+            {typeFilterOptionButtons}
+          </div>
+          <div id="scroll-to-top-button">
+            <button
+              onClick={handleFilterXBtnClick}
+              className="circular-btn scroll-up-btn"
+              title="Exit"
+            >
+              <Image
+                src={xButton}
+                height={50}
+                width={50}
+                alt=""
+                quality={100}
+                unoptimized={true}
+              />
+            </button>
+          </div>
         </div>
       </div>
-      <h2>Pokémon Region</h2>
-      <div className="filter-screen-category-grid-container">
-        <div className="filter-screen-category-grid">
-          {regionFilterOptionButtons}
-        </div>
-      </div>
-      <h2>Pokémon Type</h2>
-      <div className="filter-screen-category-grid-container">
-        <div className="filter-screen-category-grid">
-          {typeFilterOptionButtons}
-        </div>
-      </div>
-      <div id="scroll-to-top-button">
-        <button
-          onClick={handleFilterXBtnClick}
-          className="circular-btn scroll-up-btn"
-          title="Exit"
-        >
-          <Image
-            src={xButton}
-            height={50}
-            width={50}
-            alt=""
-            quality={100}
-            unoptimized={true}
-          />
-        </button>
-      </div>
-    </div>
+    </Modal>
   );
 }
 
@@ -890,6 +913,7 @@ function HomeScreen({
   setTutorialModalOpen,
   setSortModalOpen,
   blockHomeScroll,
+  allowHomeScroll,
 }) {
   // Change the text every time a NEW Pokemon is clicked on so the new text is displayed
   const [popupText, setPopupText] = useState(null);
@@ -899,73 +923,62 @@ function HomeScreen({
   const [searchValue, setSearchValue] = useState('');
   // False = 🔎 icon is in the middle, True = 🔎 icon is on the left
   const [screenWasChanged, setScreenWasChanged] = useState(false);
-  // Show grid by default, after search text input, or after choosing a filter
-  const [pokemonGridVisibility, setPokemonGridVisibility] = useState(true);
   // Keeping track of what filter tags are in the search
   const [filterTags, setFilterTags] = useState([]);
   const [isDoubleDeckerLayout, setIsDoubleDeckerLayout] = useState(false);
-
   // Keeping track of < button next to Search Bar
   const [searchBackButtonVisibility, setSearchBackButtonVisibility] =
     useState(false);
-
-  const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
+  // Show filters whenever user clicks on the search bar (mimicks Pokemon GO)
+  const [filterModalOpen, setFilterModalOpen] = useState(false);
 
   return (
     <div>
-      <Borders />
-      <div className="base-container">
-        <div className="base-content">
-          <InstructionsBar
-            languageCode={languageCode}
-            setPopupText={setPopupText}
-            setScreenWasChanged={setScreenWasChanged}
-            setLanguageModalOpen={setLanguageModalOpen}
-            blockHomeScroll={blockHomeScroll}
-          />
-          <SearchBar
-            popupText={popupText}
-            popupKey={popupKey}
-            searchValue={searchValue}
-            setSearchValue={setSearchValue}
-            screenWasChanged={screenWasChanged} // TODO: Change the way the 🔎 icon works
-            setPokemonGridVisibility={setPokemonGridVisibility}
-            filterTags={filterTags}
-            setFilterTags={setFilterTags}
-            searchBackButtonVisibility={searchBackButtonVisibility}
-            setSearchBackButtonVisibility={setSearchBackButtonVisibility}
-            isDoubleDeckerLayout={isDoubleDeckerLayout}
-            setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-            isFilterModalOpen={isFilterModalOpen}
-            setIsFilterModalOpen={setIsFilterModalOpen}
-            blockHomeScroll={blockHomeScroll}
-          />
-          <FilterOptionsScreen
-            searchValue={searchValue}
-            pokemonGridVisibility={pokemonGridVisibility}
-            setPokemonGridVisibility={setPokemonGridVisibility}
-            filterTags={filterTags}
-            setFilterTags={setFilterTags}
-            setSearchBackButtonVisibility={setSearchBackButtonVisibility}
-            setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-            isFilterModalOpen={isFilterModalOpen}
-            setIsFilterModalOpen={setIsFilterModalOpen}
-            blockHomeScroll={blockHomeScroll}
-          />
-          <PokemonGrid
-            languageCode={languageCode}
-            sortingOrder={sortingOrder}
-            setPopupText={setPopupText}
-            setPopupKey={setPopupKey}
-            searchValue={searchValue}
-            pokemonGridVisibility={pokemonGridVisibility}
-            filterTags={filterTags}
-            setTutorialModalOpen={setTutorialModalOpen}
-            setSortModalOpen={setSortModalOpen}
-            blockHomeScroll={blockHomeScroll}
-          />
-        </div>
-      </div>
+      <InstructionsBar
+        languageCode={languageCode}
+        setPopupText={setPopupText}
+        setScreenWasChanged={setScreenWasChanged}
+        setLanguageModalOpen={setLanguageModalOpen}
+        blockHomeScroll={blockHomeScroll}
+      />
+      <SearchBar
+        popupText={popupText}
+        popupKey={popupKey}
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+        screenWasChanged={screenWasChanged} // TODO: Change the way the 🔎 icon works
+        filterTags={filterTags}
+        setFilterTags={setFilterTags}
+        searchBackButtonVisibility={searchBackButtonVisibility}
+        setSearchBackButtonVisibility={setSearchBackButtonVisibility}
+        isDoubleDeckerLayout={isDoubleDeckerLayout}
+        setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+        filterModalOpen={filterModalOpen}
+        setFilterModalOpen={setFilterModalOpen}
+        blockHomeScroll={blockHomeScroll}
+        allowHomeScroll={allowHomeScroll}
+      />
+      <FilterOptionsScreen
+        searchValue={searchValue}
+        filterTags={filterTags}
+        setFilterTags={setFilterTags}
+        setSearchBackButtonVisibility={setSearchBackButtonVisibility}
+        setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+        filterModalOpen={filterModalOpen}
+        setFilterModalOpen={setFilterModalOpen}
+        allowHomeScroll={allowHomeScroll}
+      />
+      <PokemonGrid
+        languageCode={languageCode}
+        sortingOrder={sortingOrder}
+        setPopupText={setPopupText}
+        setPopupKey={setPopupKey}
+        searchValue={searchValue}
+        filterTags={filterTags}
+        setTutorialModalOpen={setTutorialModalOpen}
+        setSortModalOpen={setSortModalOpen}
+        blockHomeScroll={blockHomeScroll}
+      />
     </div>
   );
 }
@@ -1076,7 +1089,6 @@ function SortOptionScreen({
       overlayClassName="modal-overlay"
     >
       <div className="base-container">
-        <Borders />
         <div className="base-content sort-options-grid-container">
           <div className="sort-options-grid">{sortOptionButtons}</div>
         </div>
@@ -1142,7 +1154,6 @@ function TutorialScreen({
     >
       <div className="base-container">
         <div className="base-content">
-          <Borders />
           <TutorialBackButton
             setTutorialModalOpen={setTutorialModalOpen}
             allowHomeScroll={allowHomeScroll}
@@ -1300,7 +1311,6 @@ function LanguageSelectionScreen({
       overlayClassName="modal-overlay"
     >
       <div className="base-container">
-        <Borders />
         <div className="base-content language-selection-grid">
           <div className="instructions language-selection-instructions">
             CHOOSE YOUR NICKNAMING LANGUAGE
@@ -1327,6 +1337,7 @@ export default function App() {
 
   return (
     <div>
+      <Borders />
       <LanguageSelectionScreen
         setLanguageCode={setLanguageCode}
         languageModalOpen={languageModalOpen}
