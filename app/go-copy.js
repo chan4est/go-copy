@@ -1241,9 +1241,7 @@ function TutorialScreen({
           />
           <div className="tutorial">
             <u>TUTORIAL</u>
-            <p>
-              1. Search or scroll to the Pokémon <br></br>you want to nickname.
-            </p>
+            <p>1. Find the Pokémon you want to nickname.</p>
             <div className="tutorial-s1-container">
               <div className="tutorial-s1-grid">
                 <div>
@@ -1252,7 +1250,7 @@ function TutorialScreen({
                     width={162}
                     height={265}
                   />
-                  <p className="tipText">Filter by name...</p>
+                  <p className="tipText">Search..</p>
                 </div>
                 <div>
                   <TutorialImage
@@ -1261,7 +1259,7 @@ function TutorialScreen({
                     height={265}
                     tipText={'or dex number!'}
                   />
-                  <p className="tipText">or dex number!</p>
+                  <p className="tipText">or filter!</p>
                 </div>
                 <div className="tutorial-s1-grid-item">
                   <TutorialImage
@@ -1313,6 +1311,11 @@ function TutorialScreen({
               width={326}
               height={435}
             />
+            <p>
+              If you want to know all the possible ways <br></br>to search or
+              filter, please see <br></br>
+              <a href="/search-phrases">Search Phrases</a>
+            </p>
           </div>
         </div>
         <Footer />

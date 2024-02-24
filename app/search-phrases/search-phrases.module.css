@@ -1,0 +1,15 @@
+.grid-container {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  padding-bottom: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 40px;
+  row-gap: 0.75rem;
+  text-align: center;
+  width: clamp(300px, 85vw, 650px);
+}

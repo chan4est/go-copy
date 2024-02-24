@@ -42,6 +42,19 @@ button > img {
   }
 }
 
+table {
+  border-collapse: collapse;
+}
+
+td,
+tr,
+th {
+  /* font-size: smaller; */
+  border: 1px solid black;
+  line-height: 1.4;
+  padding: 10px 10px;
+}
+
 /* Ensuring the footer is always at the bottom */
 
 .base-container {
@@ -220,6 +233,17 @@ button > img {
 .tutorial > p {
   padding-bottom: 10px;
   padding-top: 30px;
+}
+
+.tutorial a {
+  pointer-events: all;
+}
+
+.tutorial a,
+.tutorial a:visited,
+.tutorial a:hover,
+.tutorial a:active {
+  color: black;
 }
 
 .tipText {
