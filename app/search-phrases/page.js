@@ -72,9 +72,9 @@ export default function About() {
                   <td>hoenn</td>
                 </tr>
                 <tr>
-                  <td>&#123;special&#125;</td>
+                  <td>&#123;keyword&#125;</td>
                   <td>
-                    Pokémon that match a special keyword. <br></br>
+                    Pokémon that match a special &#123;keyword&#125;. <br></br>
                     <b>Keywords:</b>{' '}
                     <i>
                       Starter, Regional Rodent, Regional Bird, Regional Bug,

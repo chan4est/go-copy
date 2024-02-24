@@ -492,6 +492,7 @@ function SearchBar({
   setIsDoubleDeckerLayout,
   allowHomeScroll,
   blockHomeScroll,
+  filterModalOpen,
   setFilterModalOpen,
   searchInputRef,
 }) {
@@ -513,12 +514,14 @@ function SearchBar({
   };
 
   function handleSearchBarClick() {
+    setSearchBackButtonVisibility(true);
     if (filterTags.length > 0) {
       setIsDoubleDeckerLayout(true);
     }
-    setSearchBackButtonVisibility(true);
-    setFilterModalOpen(true);
-    blockHomeScroll();
+    if (!filterModalOpen) {
+      setFilterModalOpen(true);
+      blockHomeScroll();
+    }
   }
 
   function handleSearchBarFocus() {
@@ -1312,8 +1315,8 @@ function TutorialScreen({
               height={435}
             />
             <p>
-              If you want to know all the possible ways <br></br>to search or
-              filter, please see <br></br>
+              TIP! If you want to know all the possible<br></br>ways to search
+              or filter, please see <br></br>
               <a href="/search-phrases">Search Phrases</a>
             </p>
           </div>
