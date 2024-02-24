@@ -315,7 +315,6 @@ function SearchBackButton({
   allowHomeScroll,
   setSearchValue,
   setFilterTags,
-  searchInputRef,
 }) {
   // Literally clear out everything.
   function handleSearchBackButtonClick() {
@@ -325,7 +324,6 @@ function SearchBackButton({
     allowHomeScroll();
     setSearchValue('');
     setFilterTags([]);
-    searchInputRef.current.blur();
   }
   return (
     <div
@@ -338,7 +336,7 @@ function SearchBackButton({
   );
 }
 
-function FilterTagBubble({
+function FilterBarBubble({
   filterTag,
   filterTags,
   setFilterTags,
@@ -415,6 +413,7 @@ function ScrollingFilterBar({
     blockHomeScroll();
     // If there's no filter bubbles up there's no scroll bar
     setIsDoubleDeckerLayout(true); // Should always be true.
+    searchInputRef.current.focus();
   }
 
   return (
@@ -428,7 +427,7 @@ function ScrollingFilterBar({
       title="Search or filter through Pokémon"
     >
       {filterTags.map((filterTag) => (
-        <FilterTagBubble
+        <FilterBarBubble
           key={filterTag}
           filterTag={filterTag}
           filterTags={filterTags}
@@ -567,7 +566,6 @@ function SearchBar({
             allowHomeScroll={allowHomeScroll}
             setSearchValue={setSearchValue}
             setFilterTags={setFilterTags}
-            searchInputRef={searchInputRef}
           />
         )}
         {(filterTags.length > 0 || searchValue.length > 0) && (
@@ -807,11 +805,8 @@ function FilterOptionButton({
   imagePath,
   allowHomeScroll,
   setFilterModalOpen,
-  searchInputRef,
 }) {
   function handleFilterOptionButtonClick() {
-    searchInputRef.current.blur(); // Remove focus from search bar
-    // console.log(searchValue.length);
     setFilterModalOpen(false);
     allowHomeScroll();
     // Add only unique tags
@@ -850,7 +845,6 @@ function FilterOptionsScreen({
   allowHomeScroll,
   filterModalOpen,
   setFilterModalOpen,
-  searchInputRef,
 }) {
   function handleFilterXBtnClick() {
     setFilterModalOpen(false);
@@ -876,7 +870,6 @@ function FilterOptionsScreen({
           key={entry.text}
           allowHomeScroll={allowHomeScroll}
           setFilterModalOpen={setFilterModalOpen}
-          searchInputRef={searchInputRef}
         />
       );
     });
@@ -945,17 +938,13 @@ function FilterOptionsScreen({
     setFilterModalOpen(false);
   }
 
-  function handleFilterScreenClick() {
-    searchInputRef.current.blur();
-  }
-
   return (
     <Modal
       isOpen={filterModalOpen}
       onRequestClose={handleClose}
       className="modal-content-filters"
       overlayClassName="modal-overlay-filters"
-      onClick={handleFilterScreenClick}
+      shouldFocusAfterRender={false}
     >
       <div className="filter-screen-container">
         <div className="filter-screen-content">
@@ -1059,7 +1048,6 @@ function HomeScreen({
         filterModalOpen={filterModalOpen}
         setFilterModalOpen={setFilterModalOpen}
         allowHomeScroll={allowHomeScroll}
-        searchInputRef={searchInputRef}
       />
       <PokemonGrid
         languageCode={languageCode}
