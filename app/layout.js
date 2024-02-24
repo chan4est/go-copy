@@ -7,7 +7,7 @@ export const metadata = {
     'Nickname your favorite Pokémon in Pokémon GO by tapping and pasting!',
   keywords: ['Pokemon GO', 'Nickname', 'Foreign'],
   creator: 'Chandler Forrest',
-  metadataBase: new URL('https://go-copy-production.up.railway.app'),
+  metadataBase: new URL('https://www.pokemongocopy.com/'),
   alternates: {
     canonical: '/',
     languages: {
@@ -18,7 +18,7 @@ export const metadata = {
     title: 'GO Copy | Pokémon GO Nicknaming Tool',
     description:
       'Nickname your favorite Pokémon in Pokémon GO by tapping and pasting!',
-    url: 'https://go-copy-production.up.railway.app',
+    url: 'https://www.pokemongocopy.com/',
     siteName: 'GO Copy',
     image: {
       url: '/opengraph-image.png',

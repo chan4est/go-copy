@@ -308,6 +308,177 @@ function CopyPopup({ popupText, popupKey }) {
   );
 }
 
+function SearchBackButton({
+  setSearchBackButtonVisibility,
+  setIsDoubleDeckerLayout,
+  setFilterModalOpen,
+  allowHomeScroll,
+  setSearchValue,
+  setFilterTags,
+  searchInputRef,
+}) {
+  // Literally clear out everything.
+  function handleSearchBackButtonClick() {
+    setSearchBackButtonVisibility(false);
+    setIsDoubleDeckerLayout(false);
+    setFilterModalOpen(false);
+    allowHomeScroll();
+    setSearchValue('');
+    setFilterTags([]);
+    searchInputRef.current.blur();
+  }
+  return (
+    <div
+      onClick={handleSearchBackButtonClick}
+      className="searchbar-back-btn"
+      title="Clear & Exit"
+    >
+      <Image src={searchBack} width={12} height={22} alt="" quality={100} />
+    </div>
+  );
+}
+
+function FilterTagBubble({
+  filterTag,
+  filterTags,
+  setFilterTags,
+  setIsDoubleDeckerLayout,
+  setFilterModalOpen,
+  blockHomeScroll,
+  allowHomeScroll,
+  searchInputRef,
+  searchValue,
+}) {
+  function clearFilterTag(event) {
+    // Prevent click event from reaching the underlying bubble
+    event.stopPropagation();
+
+    const newFilterTags = filterTags.filter((tag) => tag !== filterTag);
+
+    if (newFilterTags.length == 0) {
+      setIsDoubleDeckerLayout(false);
+      if (searchValue.length > 0) {
+        // There's still text so show the results
+        setFilterModalOpen(false);
+        allowHomeScroll();
+      } else {
+        // There's no text and no more tags
+        setFilterModalOpen(true);
+        blockHomeScroll();
+      }
+    }
+    setFilterTags(newFilterTags);
+  }
+
+  function handleFilterTagClick(event) {
+    // Prevent click event from reaching the underlying scroll bar
+    // event.stopPropagation();
+    setFilterModalOpen(true);
+    blockHomeScroll();
+    setIsDoubleDeckerLayout(true);
+    searchInputRef.current.focus();
+  }
+
+  return (
+    <div className="filter-tag-bubble-container">
+      <div
+        className="filter-tag-bubble"
+        title={`Filtering by ${filterTag}`}
+        onClick={handleFilterTagClick}
+      >
+        <span className="filter-tag-bubble-span">{filterTag}</span>
+        <div
+          onClick={clearFilterTag}
+          className="filter-tag-bubble-x"
+          title="Clear Filter"
+        >
+          <Image src={filterX} width={9} height={9} alt="" quality={100} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ScrollingFilterBar({
+  setFilterModalOpen,
+  blockHomeScroll,
+  allowHomeScroll,
+  isDoubleDeckerLayout,
+  setIsDoubleDeckerLayout,
+  filterTags,
+  setFilterTags,
+  searchInputRef,
+  searchValue,
+}) {
+  function handleScrollingFilterBarClick() {
+    setFilterModalOpen(true);
+    blockHomeScroll();
+    // If there's no filter bubbles up there's no scroll bar
+    setIsDoubleDeckerLayout(true); // Should always be true.
+  }
+
+  return (
+    <div
+      className={
+        isDoubleDeckerLayout
+          ? 'scrolling-filter-bar scrolling-filter-bar-dd'
+          : 'scrolling-filter-bar'
+      }
+      onClick={handleScrollingFilterBarClick}
+      title="Search or filter through Pokémon"
+    >
+      {filterTags.map((filterTag) => (
+        <FilterTagBubble
+          key={filterTag}
+          filterTag={filterTag}
+          filterTags={filterTags}
+          setFilterTags={setFilterTags}
+          setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+          setFilterModalOpen={setFilterModalOpen}
+          blockHomeScroll={blockHomeScroll}
+          allowHomeScroll={allowHomeScroll}
+          searchInputRef={searchInputRef}
+          searchValue={searchValue}
+        />
+      ))}
+    </div>
+  );
+}
+
+function ClearTextButton({
+  setFilterTags,
+  isDoubleDeckerLayout,
+  setIsDoubleDeckerLayout,
+  setSearchValue,
+  setFilterModalOpen,
+  blockHomeScroll,
+}) {
+  function handleClearTextButtonClick() {
+    setFilterTags([]);
+    setIsDoubleDeckerLayout(false);
+    setSearchValue('');
+    setFilterModalOpen(true);
+    blockHomeScroll();
+  }
+  return (
+    <div
+      onClick={handleClearTextButtonClick}
+      className={
+        isDoubleDeckerLayout
+          ? 'searchbar-clear-search-btn searchbar-clear-search-btn-dd'
+          : 'searchbar-clear-search-btn'
+      }
+      title="Clear Search"
+    >
+      {isDoubleDeckerLayout ? (
+        <Image src={clearXLong} width={32} height={64} alt="" quality={100} />
+      ) : (
+        <Image src={clearX} width={32} height={40} alt="" quality={100} />
+      )}
+    </div>
+  );
+}
+
 function SearchBar({
   popupText,
   popupKey,
@@ -323,7 +494,7 @@ function SearchBar({
   allowHomeScroll,
   blockHomeScroll,
   setFilterModalOpen,
-  searchRef,
+  searchInputRef,
 }) {
   const [wasFocused, setWasFocused] = useState(false);
 
@@ -342,131 +513,6 @@ function SearchBar({
     setSearchValue(e.target.value);
   };
 
-  function SearchBackButton() {
-    // Literally clear out everything.
-    function handleSearchBackButtonClick() {
-      setSearchBackButtonVisibility(false);
-      setIsDoubleDeckerLayout(false);
-      setFilterModalOpen(false);
-      allowHomeScroll();
-      setSearchValue('');
-      setFilterTags([]);
-      searchRef.current.blur();
-    }
-    return (
-      <div
-        onClick={handleSearchBackButtonClick}
-        className="searchbar-back-btn"
-        title="Clear & Exit"
-      >
-        <Image src={searchBack} width={12} height={22} alt="" quality={100} />
-      </div>
-    );
-  }
-
-  function ClearTextButton() {
-    function handleClearTextButtonClick() {
-      setFilterTags([]);
-      setIsDoubleDeckerLayout(false);
-      setSearchValue('');
-      setFilterModalOpen(true);
-      blockHomeScroll();
-    }
-    return (
-      <div
-        onClick={handleClearTextButtonClick}
-        className={
-          isDoubleDeckerLayout
-            ? 'searchbar-clear-search-btn searchbar-clear-search-btn-dd'
-            : 'searchbar-clear-search-btn'
-        }
-        title="Clear Search"
-      >
-        {isDoubleDeckerLayout ? (
-          <Image src={clearXLong} width={32} height={64} alt="" quality={100} />
-        ) : (
-          <Image src={clearX} width={32} height={40} alt="" quality={100} />
-        )}
-      </div>
-    );
-  }
-
-  function FilterTagBubble({ filterTag }) {
-    function clearFilterTag(event) {
-      // Prevent click event from reaching the underlying bubble
-      event.stopPropagation();
-
-      const newFilterTags = filterTags.filter((tag) => tag !== filterTag);
-
-      if (newFilterTags.length == 0) {
-        setIsDoubleDeckerLayout(false);
-        if (searchValue.length > 0) {
-          // There's still text so show the results
-          setFilterModalOpen(false);
-          allowHomeScroll();
-        } else {
-          // There's no text and no more tags
-          setFilterModalOpen(true);
-          blockHomeScroll();
-        }
-      }
-      setFilterTags(newFilterTags);
-    }
-
-    function handleFilterTagClick(event) {
-      // Prevent click event from reaching the underlying scroll bar
-      // event.stopPropagation();
-      setFilterModalOpen(true);
-      blockHomeScroll();
-      setIsDoubleDeckerLayout(true);
-      searchRef.current.focus();
-    }
-
-    return (
-      <div className="filter-tag-bubble-container">
-        <div
-          className="filter-tag-bubble"
-          title={`Filtering by ${filterTag}`}
-          onClick={handleFilterTagClick}
-        >
-          <span className="filter-tag-bubble-span">{filterTag}</span>
-          <div
-            onClick={clearFilterTag}
-            className="filter-tag-bubble-x"
-            title="Clear Filter"
-          >
-            <Image src={filterX} width={9} height={9} alt="" quality={100} />
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  function ScrollingFilterBar() {
-    function handleScrollingFilterBarClick() {
-      setFilterModalOpen(true);
-      blockHomeScroll();
-      // If there's no filter bubbles up there's no scroll bar
-      setIsDoubleDeckerLayout(true); // Should always be true.
-    }
-
-    return (
-      <div
-        className={
-          isDoubleDeckerLayout
-            ? 'scrolling-filter-bar scrolling-filter-bar-dd'
-            : 'scrolling-filter-bar'
-        }
-        onClick={handleScrollingFilterBarClick}
-        title="Search or filter through Pokémon"
-      >
-        {filterTags.map((filterTag) => (
-          <FilterTagBubble key={filterTag} filterTag={filterTag} />
-        ))}
-      </div>
-    );
-  }
-
   function handleSearchBarClick() {
     if (filterTags.length > 0) {
       setIsDoubleDeckerLayout(true);
@@ -479,6 +525,7 @@ function SearchBar({
   function handleSearchBarFocus() {
     // User has chosen at least one filter tag
     setWasFocused(true);
+    searchInputRef.current.focus();
   }
 
   // Default in the middle
@@ -512,12 +559,29 @@ function SearchBar({
       >
         <CopyPopup popupText={popupText} popupKey={popupKey} />
 
-        {searchBackButtonVisibility && <SearchBackButton />}
+        {searchBackButtonVisibility && (
+          <SearchBackButton
+            setSearchBackButtonVisibility={setSearchBackButtonVisibility}
+            setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+            setFilterModalOpen={setFilterModalOpen}
+            allowHomeScroll={allowHomeScroll}
+            setSearchValue={setSearchValue}
+            setFilterTags={setFilterTags}
+            searchInputRef={searchInputRef}
+          />
+        )}
         {(filterTags.length > 0 || searchValue.length > 0) && (
-          <ClearTextButton />
+          <ClearTextButton
+            setFilterTags={setFilterTags}
+            isDoubleDeckerLayout={isDoubleDeckerLayout}
+            setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+            setSearchValue={setSearchValue}
+            setFilterModalOpen={setFilterModalOpen}
+            blockHomeScroll={blockHomeScroll}
+          />
         )}
         {isDoubleDeckerLayout && (
-          <div className="search-input-dd-line">
+          <div className="search-input-dd-line" onClick={handleSearchBarFocus}>
             <Image
               src={doubleDeckerLine}
               width={200}
@@ -527,7 +591,19 @@ function SearchBar({
             />
           </div>
         )}
-        {filterTags.length > 0 && <ScrollingFilterBar />}
+        {filterTags.length > 0 && (
+          <ScrollingFilterBar
+            setFilterModalOpen={setFilterModalOpen}
+            blockHomeScroll={blockHomeScroll}
+            allowHomeScroll={allowHomeScroll}
+            isDoubleDeckerLayout={isDoubleDeckerLayout}
+            setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
+            filterTags={filterTags}
+            setFilterTags={setFilterTags}
+            searchInputRef={searchInputRef}
+            searchValue={searchValue}
+          />
+        )}
 
         <div
           className={`searchbar ${
@@ -547,7 +623,7 @@ function SearchBar({
             spellCheck="false"
             onFocus={handleSearchBarFocus}
             onClick={handleSearchBarClick}
-            ref={searchRef}
+            ref={searchInputRef}
           />
         </div>
       </div>
@@ -731,11 +807,11 @@ function FilterOptionButton({
   imagePath,
   allowHomeScroll,
   setFilterModalOpen,
-  searchRef,
+  searchInputRef,
 }) {
   function handleFilterOptionButtonClick() {
-    searchRef.current.blur(); // Remove focus from search bar
-    console.log(searchValue.length);
+    searchInputRef.current.blur(); // Remove focus from search bar
+    // console.log(searchValue.length);
     setFilterModalOpen(false);
     allowHomeScroll();
     // Add only unique tags
@@ -774,7 +850,7 @@ function FilterOptionsScreen({
   allowHomeScroll,
   filterModalOpen,
   setFilterModalOpen,
-  searchRef,
+  searchInputRef,
 }) {
   function handleFilterXBtnClick() {
     setFilterModalOpen(false);
@@ -800,7 +876,7 @@ function FilterOptionsScreen({
           key={entry.text}
           allowHomeScroll={allowHomeScroll}
           setFilterModalOpen={setFilterModalOpen}
-          searchRef={searchRef}
+          searchInputRef={searchInputRef}
         />
       );
     });
@@ -870,7 +946,7 @@ function FilterOptionsScreen({
   }
 
   function handleFilterScreenClick() {
-    searchRef.current.blur();
+    searchInputRef.current.blur();
   }
 
   return (
@@ -945,7 +1021,7 @@ function HomeScreen({
   // Show filters whenever user clicks on the search bar (mimicks Pokemon GO)
   const [filterModalOpen, setFilterModalOpen] = useState(false);
 
-  const searchRef = useRef(false);
+  const searchInputRef = useRef(null);
 
   return (
     <div>
@@ -972,7 +1048,7 @@ function HomeScreen({
         setFilterModalOpen={setFilterModalOpen}
         blockHomeScroll={blockHomeScroll}
         allowHomeScroll={allowHomeScroll}
-        searchRef={searchRef}
+        searchInputRef={searchInputRef}
       />
       <FilterOptionsScreen
         searchValue={searchValue}
@@ -983,7 +1059,7 @@ function HomeScreen({
         filterModalOpen={filterModalOpen}
         setFilterModalOpen={setFilterModalOpen}
         allowHomeScroll={allowHomeScroll}
-        searchRef={searchRef}
+        searchInputRef={searchInputRef}
       />
       <PokemonGrid
         languageCode={languageCode}

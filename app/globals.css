@@ -350,6 +350,7 @@ button > img {
   justify-self: center;
   padding-bottom: 28px;
   z-index: 4;
+  cursor: text;
 }
 
 .search-input-dd-line > img {
