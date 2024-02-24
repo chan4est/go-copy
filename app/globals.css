@@ -235,14 +235,14 @@ th {
   padding-top: 30px;
 }
 
-.tutorial a {
+.link {
   pointer-events: all;
 }
 
-.tutorial a,
-.tutorial a:visited,
-.tutorial a:hover,
-.tutorial a:active {
+.link,
+.link:visited,
+.linkhover,
+.link:active {
   color: black;
 }
 

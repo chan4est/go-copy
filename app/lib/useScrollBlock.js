@@ -30,11 +30,14 @@ export function useScrollBlock() {
      */
     html.style.position = 'relative'; /* [1] */
     html.style.overflow = 'hidden'; /* [2] */
+    html.style.height = '100%';
     body.style.position = 'relative'; /* [1] */
     body.style.overflow = 'hidden'; /* [2] */
+    body.style.height = '100%';
     body.style.paddingRight = `${bodyPaddingRight + scrollBarWidth}px`;
 
     scrollBlocked.current = true;
+    body.position = fixed;
   };
 
   const allowScroll = () => {
@@ -42,12 +45,13 @@ export function useScrollBlock() {
 
     html.style.position = '';
     html.style.overflow = '';
+    html.style.height = '';
     body.style.position = '';
     body.style.overflow = '';
     body.style.paddingRight = '';
+    body.style.maxHeight = '';
 
     scrollBlocked.current = false;
   };
-
   return [blockScroll, allowScroll];
 }

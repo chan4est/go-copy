@@ -9,7 +9,7 @@ import { pokemonData } from './lib/pokemon';
 
 import Borders from './components/Borders';
 import Footer from './components/Footer';
-import { useScrollBlock } from './components/useScrollBlock';
+import { useScrollBlock } from './lib/useScrollBlock';
 
 import backButton from '../public/btn-back.webp';
 import backButtonRotated from '../public/btn-back-rot.webp';
@@ -72,6 +72,7 @@ import unova from '../public/filter/region/unova.webp';
 import unknown from '../public/filter/region/unknown.webp';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 import copy from 'copy-to-clipboard';
@@ -492,21 +493,17 @@ function SearchBar({
   setIsDoubleDeckerLayout,
   allowHomeScroll,
   blockHomeScroll,
-  filterModalOpen,
   setFilterModalOpen,
   searchInputRef,
 }) {
   const [wasFocused, setWasFocused] = useState(false);
 
   const handleInputChange = (e) => {
-    // Put the X if there's search text
+    // User typing anything will close filter screen
     if (e.target.value.length > 0) {
       setFilterModalOpen(false);
       allowHomeScroll();
-    }
-    // Take away the X if there's no search or there's no filters
-    else if (e.target.value.length == 0) {
-      // Make sure the filter screen is still open
+    } else {
       setFilterModalOpen(true);
       blockHomeScroll();
     }
@@ -518,16 +515,16 @@ function SearchBar({
     if (filterTags.length > 0) {
       setIsDoubleDeckerLayout(true);
     }
-    if (!filterModalOpen) {
-      setFilterModalOpen(true);
-      blockHomeScroll();
-    }
+    setFilterModalOpen(true);
+    blockHomeScroll();
   }
 
   function handleSearchBarFocus() {
     // User has chosen at least one filter tag
     setWasFocused(true);
     searchInputRef.current.focus();
+    setFilterModalOpen(true);
+    blockHomeScroll();
   }
 
   // Default in the middle
@@ -1036,7 +1033,6 @@ function HomeScreen({
         setSearchBackButtonVisibility={setSearchBackButtonVisibility}
         isDoubleDeckerLayout={isDoubleDeckerLayout}
         setIsDoubleDeckerLayout={setIsDoubleDeckerLayout}
-        filterModalOpen={filterModalOpen}
         setFilterModalOpen={setFilterModalOpen}
         blockHomeScroll={blockHomeScroll}
         allowHomeScroll={allowHomeScroll}
@@ -1317,7 +1313,9 @@ function TutorialScreen({
             <p>
               TIP! If you want to know all the possible<br></br>ways to search
               or filter, please see <br></br>
-              <a href="/search-phrases">Search Phrases</a>
+              <Link href="/search-phrases" className="link">
+                Search Phrases{' '}
+              </Link>
             </p>
           </div>
         </div>

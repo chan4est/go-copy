@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Footer from '../components/Footer';
 import Borders from '../components/Borders';
 import styles from './about.module.css';
@@ -26,20 +27,20 @@ export default function About() {
               My name is Chandler and I&#39;m a software developer from
               California who loves Pokémon! You can find more info about me on
               my website{' '}
-              <a className={styles['about-a']} href="https://chan4est.com">
+              <Link className={styles['about-a']} href="https://chan4est.com">
                 chan4est.com
-              </a>
+              </Link>
               .
             </p>
             <br></br>
             <p>
               If you want to contact me about anything related to GO Copy{' '}
-              <a
+              <Link
                 className={styles['about-a']}
                 href="mailto:chan4est@gmail.com?subject=GO Copy!"
               >
                 please email me
-              </a>
+              </Link>
               . I&#39;ll make sure to respond as quickly as possible.
             </p>
             <br></br>
