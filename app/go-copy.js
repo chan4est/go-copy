@@ -1307,7 +1307,7 @@ function TutorialScreen({
             <TutorialImage
               imagePath={'/tutorial/tut8.webp'}
               width={326}
-              height={435}
+              height={420}
             />
             <p>
               TIP! If you want to know all the possible<br></br>ways to search
