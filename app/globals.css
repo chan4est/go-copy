@@ -50,10 +50,13 @@ td,
 tr,
 th {
   border: 1px solid black;
-  font-size: smaller;
   line-height: 1.4;
   padding: 10px 10px;
-  /*  */
+}
+
+tr td:first-child {
+  width: 1%;
+  white-space: nowrap;
 }
 
 /* Ensuring the footer is always at the bottom */

@@ -37,17 +37,17 @@ export default function About() {
                   <td>150</td>
                 </tr>
                 <tr>
-                  <td>&#123;A&#125; - &#123;B&#125;</td>
+                  <td>&#123;N&#125; - &#123;M&#125;</td>
                   <td>
-                    Pokémon with Pokédex number &#123;A&#125; through
-                    &#123;B&#125;.
+                    All Pokémon with Pokédex number &#123;N&#125; through
+                    &#123;M&#125;.
                   </td>
                   <td>1-151</td>
                 </tr>
                 <tr>
                   <td>&#123;type&#125;</td>
                   <td>
-                    Pokémon with type &#123;type&#125;.
+                    All Pokémon that are &#123;type&#125; type.
                     <br></br>
                     <b>Types:</b>{' '}
                     <i>
@@ -61,7 +61,7 @@ export default function About() {
                 <tr>
                   <td>&#123;region&#125;</td>
                   <td>
-                    Pokémon from the &#123;region&#125; region.
+                    All Pokémon from the &#123;region&#125; region.
                     <br></br>
                     <b>Regions:</b>{' '}
                     <i>
@@ -72,10 +72,11 @@ export default function About() {
                   <td>hoenn</td>
                 </tr>
                 <tr>
-                  <td>&#123;keyword&#125;</td>
+                  <td>&#123;group&#125;</td>
                   <td>
-                    Pokémon that match a special &#123;keyword&#125;. <br></br>
-                    <b>Keywords:</b>{' '}
+                    All Pokémon that belong to a specific &#123;group&#125;.{' '}
+                    <br></br>
+                    <b>Groups:</b>{' '}
                     <i>
                       Starter, Regional Rodent, Regional Bird, Regional Bug,
                       Pikaclone, Fossil, Psuedo Legendary, Legendary, Mythical,
@@ -103,7 +104,7 @@ export default function About() {
                   <td>
                     !<br></br>(NOT)
                   </td>
-                  <td>All Pokémon that do NOT have a property.</td>
+                  <td>All Pokémon that DO NOT match a property.</td>
                   <td>!starter</td>
                 </tr>
               </tbody>
