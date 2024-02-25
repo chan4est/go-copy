@@ -49,10 +49,11 @@ table {
 td,
 tr,
 th {
-  /* font-size: smaller; */
   border: 1px solid black;
+  font-size: smaller;
   line-height: 1.4;
   padding: 10px 10px;
+  /*  */
 }
 
 /* Ensuring the footer is always at the bottom */
@@ -110,7 +111,7 @@ th {
   position: fixed;
   right: 0;
   scrollbar-width: none;
-  top: 185px;
+  top: 172px;
   width: 100%;
   z-index: 5;
 }
@@ -121,7 +122,7 @@ th {
   left: 0;
   position: absolute;
   right: 0;
-  top: 185px;
+  top: 172px;
   z-index: 5;
 }
 
@@ -235,14 +236,14 @@ th {
   padding-top: 30px;
 }
 
-.link {
+.tutorial-a {
   pointer-events: all;
 }
 
-.link,
-.link:visited,
-.linkhover,
-.link:active {
+.tutorial-a,
+.tutorial-a:visited,
+.tutorial-a,
+.tutorial-a:active {
   color: black;
 }
 
@@ -283,7 +284,6 @@ th {
 .instructions {
   font-size: 1.05rem;
   line-height: 25px;
-  padding-bottom: 6px;
   padding-top: 36px;
   text-align: center;
   word-spacing: 5px;
@@ -344,7 +344,7 @@ th {
   grid-row: 1;
   height: 45px;
   justify-content: flex-end;
-  padding-left: 3.5%;
+  padding-left: 2.75%;
   padding-right: 20px;
   width: 5%;
   z-index: 2;
@@ -357,7 +357,7 @@ th {
   grid-row: 1;
   height: 40px;
   justify-self: flex-end;
-  padding-right: 8.5%;
+  padding-right: 5.75%;
   width: 32px;
   z-index: 4;
 }
@@ -368,18 +368,19 @@ th {
 
 .search-input-dd-line {
   align-self: center;
+  cursor: text;
   grid-column: 1;
   grid-row: 1;
   height: 0.25px;
   justify-self: center;
   padding-bottom: 28px;
+  padding-right: 14px;
   z-index: 4;
-  cursor: text;
 }
 
 .search-input-dd-line > img {
   opacity: 25%;
-  width: clamp(190px, 67.5vw, 550px);
+  width: clamp(180px, 68vw, 590px);
 }
 
 .filter-tag-bubble-container {
@@ -423,12 +424,15 @@ th {
   grid-row: 1;
   height: fit-content;
   justify-self: center;
-  margin-left: 2.5%;
+  margin-left: 5%;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
   width: 62.5%;
+  width: clamp(130px, 65vw, 570px);
   z-index: 3;
+
+  /*  */
 }
 
 .scrolling-filter-bar-dd {
@@ -489,19 +493,19 @@ th {
 
 .searchbar-container {
   align-items: center;
+  background-color: #f8fff7;
   display: flex;
-  height: 84px;
   justify-content: center;
+  padding-bottom: 6px;
+  padding-top: 6px;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
 }
 
 .searchbar-grid {
-  background-color: #f8fff7;
   display: grid;
   grid-template-columns: 100%;
-  padding-top: 10px;
   text-align: center;
   width: clamp(320px, 100vw, 770px);
 }
@@ -523,7 +527,7 @@ th {
   padding-left: 10%;
   padding-right: 10%;
   text-align: center;
-  width: 65%;
+  width: 70%;
 }
 
 .search-input-dd {
@@ -655,7 +659,6 @@ th {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   padding-bottom: 175px;
-  padding-top: 16px;
   row-gap: 16px;
   width: clamp(300px, 85vw, 650px);
 }

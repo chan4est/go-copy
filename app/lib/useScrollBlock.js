@@ -37,7 +37,7 @@ export function useScrollBlock() {
     body.style.paddingRight = `${bodyPaddingRight + scrollBarWidth}px`;
 
     scrollBlocked.current = true;
-    body.position = fixed;
+    body.position = 'fixed';
   };
 
   const allowScroll = () => {

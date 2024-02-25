@@ -72,7 +72,6 @@ import unova from '../public/filter/region/unova.webp';
 import unknown from '../public/filter/region/unknown.webp';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 import copy from 'copy-to-clipboard';
@@ -1313,9 +1312,9 @@ function TutorialScreen({
             <p>
               TIP! If you want to know all the possible<br></br>ways to search
               or filter, please see <br></br>
-              <Link href="/search-phrases" className="link">
+              <a href="/search-phrases" className="tutorial-a">
                 Search Phrases{' '}
-              </Link>
+              </a>
             </p>
           </div>
         </div>

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import styles from './Footer.module.css';
 import KofiButton from './KofiButton';
 
@@ -8,18 +7,18 @@ export default function Footer({ removeKofiButton }) {
   return (
     <footer className={styles['footer']}>
       <div className={styles['footer-container']}>
-        <Link href="/" title="Home" className={styles['footer-a']}>
+        <a href="/" title="Home" className={styles['footer-a']}>
           Home
-        </Link>{' '}
+        </a>{' '}
         |{' '}
         {/* <a href="/" title="Privacy Policy" className={styles['footer-a']}>
           Privacy Policy
         </a>{' '}
         |{' '} */}
-        <Link href="/about" title="Contact" className={styles['footer-a']}>
+        <a href="/about" title="Contact" className={styles['footer-a']}>
           {' '}
           Contact
-        </Link>
+        </a>
         <br></br>
         <br></br>
         {!removeKofiButton && <KofiButton />}
