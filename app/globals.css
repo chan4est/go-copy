@@ -25,7 +25,7 @@ button {
   text-align: center;
 }
 
-button > img {
+img {
   pointer-events: none;
 }
 
@@ -492,6 +492,20 @@ tr td:first-child {
 .filter-option-btn > img {
   height: auto;
   width: clamp(50px, 80%, 75px);
+  border-radius: 50px;
+}
+
+@media (hover: hover) {
+  .filter-option-btn-img:active,
+  .filter-option-btn-img:hover {
+    background-color: rgba(183, 240, 155, 0.35);
+  }
+}
+
+@media (hover: none) {
+  .filter-option-btn-img:active {
+    background-color: rgba(183, 240, 155, 0.35);
+  }
 }
 
 .searchbar-container {

@@ -822,6 +822,7 @@ function FilterOptionButton({
   return (
     <div className="filter-option-btn" onClick={handleFilterOptionButtonClick}>
       <Image
+        className="filter-option-btn-img"
         src={imagePath}
         alt={filterButtonText}
         quality={100}
