@@ -326,13 +326,13 @@ function SearchBackButton({
     setFilterTags([]);
   }
   return (
-    <div
+    <button
       onClick={handleSearchBackButtonClick}
       className="searchbar-back-btn"
       title="Clear & Exit"
     >
       <Image src={searchBack} width={12} height={22} alt="" quality={100} />
-    </div>
+    </button>
   );
 }
 
@@ -385,13 +385,13 @@ function FilterBarBubble({
         onClick={handleFilterTagClick}
       >
         <span className="filter-tag-bubble-span">{filterTag}</span>
-        <div
+        <button
           onClick={clearFilterTag}
-          className="filter-tag-bubble-x"
+          className="filter-tag-bubble-btn"
           title="Clear Filter"
         >
           <Image src={filterX} width={9} height={9} alt="" quality={100} />
-        </div>
+        </button>
       </div>
     </div>
   );
@@ -460,7 +460,7 @@ function ClearTextButton({
     blockHomeScroll();
   }
   return (
-    <div
+    <button
       onClick={handleClearTextButtonClick}
       className={
         isDoubleDeckerLayout
@@ -474,7 +474,7 @@ function ClearTextButton({
       ) : (
         <Image src={clearX} width={32} height={40} alt="" quality={100} />
       )}
-    </div>
+    </button>
   );
 }
 
@@ -825,7 +825,6 @@ function FilterOptionButton({
       onClick={handleFilterOptionButtonClick}
     >
       <Image
-        className="filter-option-btn-img"
         src={imagePath}
         alt={filterButtonText}
         quality={100}
@@ -1315,9 +1314,7 @@ function TutorialScreen({
             <p>
               TIP! If you want to know all the possible<br></br>ways to search
               or filter, please see <br></br>
-              <a href="/search-phrases" className="tutorial-a">
-                Search Phrases{' '}
-              </a>
+              <a href="/search-phrases">Search Phrases </a>
             </p>
           </div>
         </div>
