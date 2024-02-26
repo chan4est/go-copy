@@ -830,8 +830,7 @@ function FilterOptionButton({
         height={65}
         width={65}
       />
-      <br></br>
-      {filterButtonText}
+      <p>{filterButtonText}</p>
     </div>
   );
 }
