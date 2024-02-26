@@ -820,7 +820,10 @@ function FilterOptionButton({
   }
 
   return (
-    <div className="filter-option-btn" onClick={handleFilterOptionButtonClick}>
+    <button
+      className="filter-option-btn"
+      onClick={handleFilterOptionButtonClick}
+    >
       <Image
         className="filter-option-btn-img"
         src={imagePath}
@@ -831,7 +834,7 @@ function FilterOptionButton({
         width={65}
       />
       <p>{filterButtonText}</p>
-    </div>
+    </button>
   );
 }
 
