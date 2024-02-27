@@ -507,10 +507,10 @@ tr td:first-child {
   font-size: clamp(0.5rem, 2.8vw, 1rem);
   text-align: center;
   width: 100%;
+  border-radius: 0px;
 }
 
 .filter-option-btn > img {
-  border-radius: 500px;
   height: auto;
   width: clamp(55.75px, 100%, 85px);
 }

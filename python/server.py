@@ -22,8 +22,8 @@ class PokemonNames():
             {'name': 'Spanish',                 'searchregex': 'title="es:(.{1,15})".*',         'code': 'ES'},
             {'name': 'Italian',                 'searchregex': 'title="it:(.{1,15})".*',         'code': 'IT'},
             {'name': 'Korean',                  'searchregex': 'lang="ko">(.{1,15}).*',          'code': 'KO'},
+            {'name': 'Chinese',                 'searchregex': 'lang="zh">(.{1,15})',   'code': 'ZHT'},
             {'name': 'Chinese',                 'searchregex': 'lang="zh">(.{1,15})<',           'code': 'ZHS'},
-            {'name': 'Chinese',                 'searchregex': 'lang="zh">(.{1,15})<',           'code': 'ZHT'},
             {'name': 'Brazilian_Portuguese',    'searchregex': 'lang="br">(.{1,15}).*',          'code': 'PT'},
             {'name': 'Turkish',                 'searchregex': 'lang="tr">(.{1,15}).*',          'code': 'TR'},
             {'name': 'Russian',                 'searchregex': 'lang="ru">(.{1,15}).*',          'code': 'RU'},
@@ -154,7 +154,6 @@ class PokemonNames():
             for line in pokemon_html.splitlines():
                 pokemon_number = re.findall('monospace">#(\\d*).*', line)
                 pokemon_name = re.findall(language['searchregex'], line)
-
                 ## Only do the types regex finds in English. Save on computation
                 pokemon_type = None
                 if language['name'] == 'English':
