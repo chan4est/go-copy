@@ -19,7 +19,6 @@ button {
   background: none;
   border: none;
   border-radius: 16px;
-  /* outline: 0; */
   color: #4c6f72;
   cursor: pointer;
   font-family: 'Lato', sans-serif;
@@ -28,6 +27,12 @@ button {
 
 button > img {
   pointer-events: none;
+}
+
+button:focus,
+button:active {
+  outline: none;
+  background-color: transparent;
 }
 
 /* @media (hover: hover) {
