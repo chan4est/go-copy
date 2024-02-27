@@ -29,7 +29,7 @@ button > img {
   pointer-events: none;
 }
 
-/* @media (hover: hover) {
+@media (hover: hover) {
   button:active,
   button:hover {
     background-color: rgba(183, 240, 155, 0.35);
@@ -40,7 +40,7 @@ button > img {
   button:active {
     background-color: rgba(183, 240, 155, 0.35);
   }
-} */
+}
 
 table {
   border-collapse: collapse;
@@ -350,10 +350,6 @@ tr td:first-child {
   z-index: 2;
 }
 
-.searchbar-back-btn:hover,
-.searchbar-back-btn:active {
-}
-
 .searchbar-clear-search-btn {
   align-self: center;
   border-radius: 2%;
@@ -364,10 +360,6 @@ tr td:first-child {
   margin-right: clamp(22px, 5.75vw, 45px);
   width: 32px;
   z-index: 4;
-}
-
-.searchbar-clear-search-btn:hover,
-.searchbar-clear-search-btn:active {
 }
 
 .searchbar-clear-search-btn-dd {
@@ -422,10 +414,6 @@ tr td:first-child {
   padding-left: 5px;
   padding-right: 10px;
   padding-top: 8px;
-}
-
-.filter-tag-bubble-btn:active,
-.filter-tag-bubble-btn:hover {
 }
 
 .scrolling-filter-bar {
@@ -502,10 +490,6 @@ tr td:first-child {
   font-size: clamp(0.5rem, 2.8vw, 1rem);
   text-align: center;
   width: 100%;
-}
-
-.filter-option-btn:active,
-.filter-option-btn:hover {
 }
 
 .filter-option-btn > img {
