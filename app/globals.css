@@ -352,12 +352,11 @@ tr td:first-child {
 
 .searchbar-back-btn:hover,
 .searchbar-back-btn:active {
-  background-color: transparent;
 }
 
 .searchbar-clear-search-btn {
   align-self: center;
-  border-radius: 0%;
+  border-radius: 2%;
   grid-column: 1;
   grid-row: 1;
   height: 40px;
@@ -369,7 +368,6 @@ tr td:first-child {
 
 .searchbar-clear-search-btn:hover,
 .searchbar-clear-search-btn:active {
-  background-color: transparent;
 }
 
 .searchbar-clear-search-btn-dd {
@@ -428,7 +426,6 @@ tr td:first-child {
 
 .filter-tag-bubble-btn:active,
 .filter-tag-bubble-btn:hover {
-  background-color: transparent;
 }
 
 .scrolling-filter-bar {
@@ -498,7 +495,6 @@ tr td:first-child {
 
 .filter-option-btn {
   align-items: center;
-  background-color: transparent;
   border-radius: 5%;
   cursor: pointer;
   display: flex;
@@ -510,7 +506,6 @@ tr td:first-child {
 
 .filter-option-btn:active,
 .filter-option-btn:hover {
-  background-color: transparent;
 }
 
 .filter-option-btn > img {
