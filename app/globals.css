@@ -468,6 +468,8 @@ tr td:first-child {
   /* For Firefox */
 }
 
+/* Filter Screen */
+
 .filter-screen-container {
   display: flex;
   justify-content: center;
