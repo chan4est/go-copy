@@ -232,7 +232,7 @@ function PokemonButton({
 
   return (
     <button
-      className="pokemon-grid-btn"
+      className="pokemon-grid-btn btn-hover"
       onClick={() => handleClick()}
       title={`Copy ${nameForeign}`}
     >
@@ -652,7 +652,7 @@ function InstructionsBar({
     <p className="instructions">
       TAP TO COPY POKE&#769;MON&apos;S
       <button
-        className="instructions-lang-change-btn"
+        className="instructions-lang-change-btn btn-hover"
         onClick={openLanguageSelection}
         title={'Change nicknaming language'}
       >
@@ -1087,7 +1087,7 @@ function SortOptionButton({
       title={buttonTitle}
     >
       <span className="sort-options-span">{buttonText}</span>
-      <button className={'sort-options-circ-btn'}>
+      <button className={'sort-option-btn circular-btn'}>
         <Image
           src={buttonPic}
           height={70}
@@ -1354,7 +1354,7 @@ function LanguageOptionButton({
   return (
     <button
       onClick={handleLanguageOptionButtonClick}
-      className="language-option-btn"
+      className="language-option-btn btn-hover"
       title={`Change nicknaming language to ${languageName}`}
     >
       {format(languageName)}
