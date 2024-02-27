@@ -1405,7 +1405,6 @@ function LanguageOptionButton({
           {languageName}
           <br></br>
           <small>{'WARNING! Results in a laggy UX.'}</small>
-          <br></br>
           <small>{'Use with caution.'}</small>
         </div>
       );

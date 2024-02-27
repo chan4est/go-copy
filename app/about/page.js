@@ -23,30 +23,39 @@ export default function About() {
             />
             <br></br>
             <p>
-              My name is Chandler and I&#39;m a software developer from
+              {`My name is Chandler and I'm a software developer from
               California who loves Pokémon! You can find more info about me on
-              my website{' '}
+              my website `}
               <a className={styles['about-a']} href="https://chan4est.com">
-                chan4est.com
+                {'chan4est.com'}
               </a>
-              .
+              {'.'}
             </p>
             <br></br>
             <p>
-              If you want to contact me about anything related to GO Copy{' '}
+              {
+                'If you want to contact me about anything related to GO Copy please '
+              }
               <a
                 className={styles['about-a']}
                 href="mailto:chan4est@gmail.com?subject=GO Copy!"
               >
-                please email me
+                {'email me '}
               </a>
-              . I&#39;ll make sure to respond as quickly as possible.
+              {'or '}
+              <a
+                className={styles['about-a']}
+                href="https://www.reddit.com/r/TheSilphRoad/comments/1b10af6/"
+              >
+                {'comment on reddit'}
+              </a>
+              {`. I'll make sure to respond as quickly as possible.`}
             </p>
             <br></br>
             <p>
-              If you enjoy using this app, please consider supporting me on
+              {`If you enjoy using this app, please consider supporting me on
               Ko-fi! I developed this website myself and pay for the server
-              costs out of my own pocket. Any amount goes a long way!
+              costs out of my own pocket. Any amount goes a long way!`}
             </p>
             <br></br>
             <KofiButton />
