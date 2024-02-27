@@ -1327,7 +1327,7 @@ function TutorialScreen({
             />
             <p>
               TIP! You can add a shortcut <br></br> for GO Copy to your Home
-              Screen<br></br> using your device&#39;s &#39;Share&#39; menu.
+              Screen<br></br> using your device&#39;s &ldquo;Share&rdquo; menu.
             </p>
             <TutorialImage
               imagePath={'/tutorial/tut9.webp'}
@@ -1342,7 +1342,7 @@ function TutorialScreen({
             />
             <p>
               TIP! If you want to know all the possible<br></br>ways to search
-              or filter, please see <br></br>
+              or filter, go to <br></br>
               <a href="/search-phrases">Search Phrases </a>
             </p>
           </div>

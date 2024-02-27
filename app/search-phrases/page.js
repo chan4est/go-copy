@@ -10,7 +10,8 @@ export default function About() {
         <div className={styles['grid-container']}>
           <div className={styles['grid']}>
             These are the various search phrases that can be used within the GO
-            Copy search bar.
+            Copy search bar. Searches are done using English terms only unless
+            stated otherwise.
             <table className={styles['sp-table']}>
               <tbody>
                 <tr>
@@ -21,11 +22,12 @@ export default function About() {
                 <tr>
                   <td>&#123;name&#125;</td>
                   <td>
-                    Pokémon with specified &#123;name&#125;.<br></br>*This
-                    search phrase works for all supported langauges.
+                    Pokémon with specified &#123;name&#125;.<br></br>
+                    *Also works when using any foreign &#123;name&#125;.
                   </td>
                   <td>
-                    tyranitar<br></br>バンギラス
+                    tyranitar<br></br>
+                    <b>*</b>despotar
                   </td>
                 </tr>
                 <tr>
