@@ -1312,6 +1312,21 @@ function TutorialScreen({
               height={420}
             />
             <p>
+              TIP! You can add a shortcut <br></br> for GO Copy to your Home
+              Screen<br></br> using your device&#39;s &#39;Share&#39; menu.
+            </p>
+            <TutorialImage
+              imagePath={'/tutorial/tut9.webp'}
+              width={326}
+              height={358}
+            />
+            <p>Easily use GO Copy anytime!</p>
+            <TutorialImage
+              imagePath={'/tutorial/tut10.webp'}
+              width={326}
+              height={259}
+            />
+            <p>
               TIP! If you want to know all the possible<br></br>ways to search
               or filter, please see <br></br>
               <a href="/search-phrases">Search Phrases </a>
