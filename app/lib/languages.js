@@ -13,4 +13,5 @@ export const languageData = {
   RU: 'Russian',
   TH: 'Thai',
   HI: 'Hindi',
+  ALL: 'All Languages',
 };

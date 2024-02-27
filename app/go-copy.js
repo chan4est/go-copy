@@ -275,22 +275,45 @@ function PokemonGrid({
   setSortModalOpen,
   blockHomeScroll,
 }) {
-  const pokemonList = searchFilterAndSortPokemon(
+  const filteredPokemonList = searchFilterAndSortPokemon(
     searchValue,
     filterTags,
     sortingOrder
-  ).map((pokemon) => {
-    const nameForeign = pokemon[`name_${languageCode}`];
-    return (
-      <PokemonButton
-        key={pokemon.id}
-        nameEnglish={pokemon.name_EN}
-        nameForeign={nameForeign}
-        pokemonNumber={pokemon.id}
-        setPopupText={setPopupText}
-        setPopupKey={setPopupKey}
-      />
-    );
+  );
+
+  let shownPokemon = [];
+  filteredPokemonList.forEach((pokemon) => {
+    let currentPokemon = [];
+    // ALL option is LAGGY
+    if (languageCode === 'ALL') {
+      Object.entries(languageData).forEach(([key, value]) => {
+        if (key !== 'ALL') {
+          currentPokemon.push(
+            <PokemonButton
+              key={`${pokemon.id}+${key}`}
+              nameEnglish={pokemon.name_EN}
+              nameForeign={pokemon[`name_${key}`]}
+              pokemonNumber={pokemon.id}
+              setPopupText={setPopupText}
+              setPopupKey={setPopupKey}
+            />
+          );
+        }
+      });
+    } else {
+      const nameForeign = pokemon[`name_${languageCode}`];
+      currentPokemon.push(
+        <PokemonButton
+          key={pokemon.id}
+          nameEnglish={pokemon.name_EN}
+          nameForeign={nameForeign}
+          pokemonNumber={pokemon.id}
+          setPopupText={setPopupText}
+          setPopupKey={setPopupKey}
+        />
+      );
+    }
+    shownPokemon = shownPokemon.concat(currentPokemon);
   });
 
   return (
@@ -302,7 +325,7 @@ function PokemonGrid({
         setSortModalOpen={setSortModalOpen}
         blockHomeScroll={blockHomeScroll}
       />
-      <div className="pokemon-grid">{pokemonList}</div>
+      <div className="pokemon-grid">{shownPokemon}</div>
     </div>
   );
 }
@@ -1375,6 +1398,16 @@ function LanguageOptionButton({
         <>
           {name} <small> {`${specifier}`} </small>
         </>
+      );
+    } else if (languageName.includes('All')) {
+      return (
+        <div className="language-option-btn-all">
+          {languageName}
+          <br></br>
+          <small>{'WARNING! Results in a laggy UX.'}</small>
+          <br></br>
+          <small>{'Use with caution.'}</small>
+        </div>
       );
     }
     return <>{languageName}</>;

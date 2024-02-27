@@ -345,6 +345,12 @@ tr td:first-child {
   font-size: 1rem;
 }
 
+.language-option-btn-all {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Search Bar */
 
 .single-back {
@@ -501,13 +507,13 @@ tr td:first-child {
 
 .filter-option-btn {
   align-items: center;
+  border-radius: 0px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   font-size: clamp(0.5rem, 2.8vw, 1rem);
   text-align: center;
   width: 100%;
-  border-radius: 0px;
 }
 
 .filter-option-btn > img {
