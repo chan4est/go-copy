@@ -153,7 +153,21 @@ function searchFilterAndSortPokemon(searchValue, filterTags, sortingOrder) {
     else {
       const searchRegex = new RegExp(`^${searchValue.toLowerCase()}.*`);
       resultingFilteredPokemon = pokemonToFilter.filter(
-        (pokemon) => pokemon.name_EN.toLowerCase().match(searchRegex) != null
+        (pokemon) =>
+          pokemon.name_EN.toLowerCase().match(searchRegex) != null ||
+          pokemon.name_DE.toLowerCase().match(searchRegex) != null ||
+          pokemon.name_ES.toLowerCase().match(searchRegex) != null ||
+          pokemon.name_FR.toLowerCase().match(searchRegex) != null ||
+          pokemon.name_HI.toLowerCase().match(searchRegex) != null ||
+          pokemon.name_IT.toLowerCase().match(searchRegex) != null ||
+          pokemon.name_JA.toLowerCase().match(searchRegex) != null ||
+          pokemon.name_KO.toLowerCase().match(searchRegex) != null ||
+          pokemon.name_PT.toLowerCase().match(searchRegex) != null ||
+          pokemon.name_RU.toLowerCase().match(searchRegex) != null ||
+          pokemon.name_TH.toLowerCase().match(searchRegex) != null ||
+          pokemon.name_TR.toLowerCase().match(searchRegex) != null ||
+          pokemon.name_ZHS.toLowerCase().match(searchRegex) != null ||
+          pokemon.name_ZHT.toLowerCase().match(searchRegex) != null
       );
     }
 

@@ -20,8 +20,13 @@ export default function About() {
                 </tr>
                 <tr>
                   <td>&#123;name&#125;</td>
-                  <td>Pokémon with specified &#123;name&#125;.</td>
-                  <td>tyranitar</td>
+                  <td>
+                    Pokémon with specified &#123;name&#125;.<br></br>*This
+                    search phrase works for all supported langauges.
+                  </td>
+                  <td>
+                    tyranitar<br></br>バンギラス
+                  </td>
                 </tr>
                 <tr>
                   <td>+&#123;name&#125;</td>
