@@ -30,10 +30,8 @@ button > img {
   pointer-events: none;
 }
 
-button:hover,
 button:focus,
 button:active {
-  outline: none;
   background-color: transparent;
 }
 
