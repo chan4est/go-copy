@@ -32,8 +32,12 @@ button > img {
 button:hover,
 button:focus,
 button:active {
-  outline: none;
-  background-color: transparent;
+  outline: none !important;
+  background-color: transparent !important;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent; /* For WebKit browsers */
 }
 
 /* @media (hover: hover) {
