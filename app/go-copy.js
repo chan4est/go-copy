@@ -232,7 +232,7 @@ function PokemonButton({
 
   return (
     <button
-      className="pokemon-grid-btn"
+      className="pokemon-grid-btn btn-hover"
       onClick={() => handleClick()}
       title={`Copy ${nameForeign}`}
     >
@@ -326,13 +326,13 @@ function SearchBackButton({
     setFilterTags([]);
   }
   return (
-    <div
+    <button
       onClick={handleSearchBackButtonClick}
       className="searchbar-back-btn"
       title="Clear & Exit"
     >
       <Image src={searchBack} width={12} height={22} alt="" quality={100} />
-    </div>
+    </button>
   );
 }
 
@@ -385,13 +385,13 @@ function FilterBarBubble({
         onClick={handleFilterTagClick}
       >
         <span className="filter-tag-bubble-span">{filterTag}</span>
-        <div
+        <button
           onClick={clearFilterTag}
-          className="filter-tag-bubble-x"
+          className="filter-tag-bubble-btn"
           title="Clear Filter"
         >
           <Image src={filterX} width={9} height={9} alt="" quality={100} />
-        </div>
+        </button>
       </div>
     </div>
   );
@@ -460,7 +460,7 @@ function ClearTextButton({
     blockHomeScroll();
   }
   return (
-    <div
+    <button
       onClick={handleClearTextButtonClick}
       className={
         isDoubleDeckerLayout
@@ -474,7 +474,7 @@ function ClearTextButton({
       ) : (
         <Image src={clearX} width={32} height={40} alt="" quality={100} />
       )}
-    </div>
+    </button>
   );
 }
 
@@ -652,7 +652,7 @@ function InstructionsBar({
     <p className="instructions">
       TAP TO COPY POKE&#769;MON&apos;S
       <button
-        className="instructions-lang-change-btn"
+        className="instructions-lang-change-btn btn-hover"
         onClick={openLanguageSelection}
         title={'Change nicknaming language'}
       >
@@ -820,9 +820,11 @@ function FilterOptionButton({
   }
 
   return (
-    <div className="filter-option-btn" onClick={handleFilterOptionButtonClick}>
+    <button
+      className="filter-option-btn"
+      onClick={handleFilterOptionButtonClick}
+    >
       <Image
-        className="filter-option-btn-img"
         src={imagePath}
         alt={filterButtonText}
         quality={100}
@@ -830,9 +832,8 @@ function FilterOptionButton({
         height={65}
         width={65}
       />
-      <br></br>
-      {filterButtonText}
-    </div>
+      <p>{filterButtonText}</p>
+    </button>
   );
 }
 
@@ -1086,7 +1087,7 @@ function SortOptionButton({
       title={buttonTitle}
     >
       <span className="sort-options-span">{buttonText}</span>
-      <button className={'sort-options-circ-btn'}>
+      <button className={'sort-option-btn circular-btn'}>
         <Image
           src={buttonPic}
           height={70}
@@ -1313,9 +1314,7 @@ function TutorialScreen({
             <p>
               TIP! If you want to know all the possible<br></br>ways to search
               or filter, please see <br></br>
-              <a href="/search-phrases" className="tutorial-a">
-                Search Phrases{' '}
-              </a>
+              <a href="/search-phrases">Search Phrases </a>
             </p>
           </div>
         </div>
@@ -1355,7 +1354,7 @@ function LanguageOptionButton({
   return (
     <button
       onClick={handleLanguageOptionButtonClick}
-      className="language-option-btn"
+      className="language-option-btn btn-hover"
       title={`Change nicknaming language to ${languageName}`}
     >
       {format(languageName)}
