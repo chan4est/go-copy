@@ -1332,7 +1332,7 @@ function TutorialScreen({
             <TutorialImage
               imagePath={'/tutorial/tut9.webp'}
               width={326}
-              height={358}
+              height={362}
             />
             <p>Easily use GO Copy anytime!</p>
             <TutorialImage
