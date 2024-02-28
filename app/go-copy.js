@@ -96,12 +96,6 @@ function searchFilterAndSortPokemon(searchValue, filterTags, sortingOrder) {
     ); // ...and ensure strings of whitespace fail
   }
 
-  function filterNot(pokemonToFilter, pokemonNotWanted) {
-    return pokemonToFilter.filter(
-      (pokemon) => !pokemonNotWanted.includes(pokemon)
-    );
-  }
-
   function filterThroughPokemon(pokemonToFilter, searchValue, isNegatedSearch) {
     let resultingFilteredPokemon = [];
     searchValue = searchValue.trim();
@@ -150,36 +144,86 @@ function searchFilterAndSortPokemon(searchValue, filterTags, sortingOrder) {
       );
     }
     // Searching by name (ex: Charm -> Charmander, Charmeleon)
+    // Foreign names are matched too and relevant info pushed 'matched_on' object
     else {
       const searchRegex = new RegExp(`^${searchValue.toLowerCase()}.*`);
-      resultingFilteredPokemon = pokemonToFilter.filter(
-        (pokemon) =>
-          pokemon.name_EN.toLowerCase().match(searchRegex) != null ||
-          pokemon.name_DE.toLowerCase().match(searchRegex) != null ||
-          pokemon.name_ES.toLowerCase().match(searchRegex) != null ||
-          pokemon.name_FR.toLowerCase().match(searchRegex) != null ||
-          pokemon.name_HI.toLowerCase().match(searchRegex) != null ||
-          pokemon.name_IT.toLowerCase().match(searchRegex) != null ||
-          pokemon.name_JA.toLowerCase().match(searchRegex) != null ||
-          pokemon.name_KO.toLowerCase().match(searchRegex) != null ||
-          pokemon.name_PT.toLowerCase().match(searchRegex) != null ||
-          pokemon.name_RU.toLowerCase().match(searchRegex) != null ||
-          pokemon.name_TH.toLowerCase().match(searchRegex) != null ||
-          pokemon.name_TR.toLowerCase().match(searchRegex) != null ||
-          pokemon.name_ZHS.toLowerCase().match(searchRegex) != null ||
-          pokemon.name_ZHT.toLowerCase().match(searchRegex) != null
-      );
+      resultingFilteredPokemon = pokemonToFilter.filter((pokemon) => {
+        for (const [key, value] of Object.entries(languageData)) {
+          if (
+            key !== 'ALL' &&
+            pokemon[`name_${key}`].toLowerCase().match(searchRegex) != null
+          ) {
+            if (key !== 'EN') {
+              pokemon['matched_on'] = {
+                LANG: key,
+                NAME: pokemon[`name_${key}`],
+              };
+            }
+            return pokemon;
+          }
+        }
+      });
     }
 
     // Inverse the search results
     if (isNegatedSearch) {
-      resultingFilteredPokemon = filterNot(
-        pokemonToFilter,
-        resultingFilteredPokemon
+      resultingFilteredPokemon = pokemonToFilter.filter(
+        (pokemon) => !resultingFilteredPokemon.includes(pokemon)
       );
     }
 
     return resultingFilteredPokemon;
+  }
+
+  function runSearchQuery(queryStr, currentPokemon) {
+    function parseQuery(query) {
+      // query = query.replace(/\s/g, ''); // Remove spaces for simplicity
+      query = query.replace(';', ','); // Replace the other or operators for simplicity
+      query = query.replace(':', ','); // Replace the other or operators for simplicity
+      query = query.replace('|', '&'); // Replace the other and operator for simplicity
+      return parseAnd(query);
+    }
+
+    function parseAnd(query) {
+      const parts = query.split('&');
+      if (parts.length === 1) {
+        // No 'and' operator found
+        return parseOr(query);
+      } else {
+        // AND = intersection of all the arrays interesections
+        return parts
+          .map((part) => parseOr(part))
+          .reduce((acc, curr) =>
+            acc.filter((element) => curr.includes(element))
+          );
+      }
+    }
+
+    function parseOr(query) {
+      const parts = query.split(',');
+      if (parts.length === 1) {
+        // No 'or' operator found
+        return parseNot(query);
+      } else {
+        // OR = set of the union of all the arrays
+        return [...new Set(parts.map((part) => parseNot(part)).flat())];
+      }
+    }
+
+    function parseNot(query) {
+      if (query.startsWith('!')) {
+        return parseTerm(query.replace('!', ''), true);
+      } else {
+        return parseTerm(query, false);
+      }
+    }
+
+    function parseTerm(term, isNegated) {
+      // Customize this function to parse individual terms of your search query
+      return filterThroughPokemon(currentPokemon, term, isNegated);
+    }
+
+    return parseQuery(queryStr);
   }
 
   // Don't show Pokemon that aren't in GO yet (Spoilers)
@@ -187,30 +231,15 @@ function searchFilterAndSortPokemon(searchValue, filterTags, sortingOrder) {
   //   (pokemon) => !missingPokemon.includes(pokemon.id)
   // );
 
-  let remainingPokemon = pokemonData;
+  let remainingPokemon = structuredClone(pokemonData);
 
-  // Handles NOT, AND, OR, and RANGE
   let resultingPokemon = [];
-  // OR denotes a seperate search entirely
-  const commaSearchTerms = searchValue.split(/[,:;]/);
-  for (const commaTerm of commaSearchTerms) {
-    // AND denotes a search that keeps filtering down
-    const andSearchTerms = commaTerm.split(/[&|]/);
-    let resultingSearchPokemon = remainingPokemon;
-    for (const andTerm of andSearchTerms) {
-      const searchTerm = andTerm.trim();
-      const isNegatedSearch = searchTerm.includes('!');
-      resultingSearchPokemon = filterThroughPokemon(
-        resultingSearchPokemon,
-        searchTerm.replace('!', ''), // Trim the !. It's captured in the boolean
-        isNegatedSearch
-      );
-    }
-    resultingPokemon = resultingPokemon.concat(resultingSearchPokemon);
+  // If there's weird characters, just cancel the search.
+  // Otherwise it causes the regex searches to crash the UI
+  if (!/[\[\]*()$%^\\?.]/.test(searchValue)) {
+    // Handles NOT, AND, OR, and RANGE
+    resultingPokemon = runSearchQuery(searchValue, remainingPokemon);
   }
-
-  // Remove duplicates found in OR searches
-  resultingPokemon = [...new Set(resultingPokemon)];
 
   // Filters are AND searches after all the other filtering is done (tested in POGO)
   if (filterTags.length > 0) {
@@ -237,6 +266,8 @@ function PokemonButton({
   pokemonNumber,
   setPopupText,
   setPopupKey,
+  languageCode,
+  matchedOnObj,
 }) {
   function handleClick() {
     copy(nameForeign);
@@ -258,8 +289,13 @@ function PokemonButton({
         quality={100}
         unoptimized={true}
       />
-      <div className="pokemon-en-text">{nameEnglish}</div>
+      <div className="pokemon-en-text">
+        {matchedOnObj
+          ? `${matchedOnObj.LANG}: ${matchedOnObj.NAME}`
+          : nameEnglish}
+      </div>
       <div className="pokemon-forign-text">{nameForeign}</div>
+      <div className="pokemon-foreign-id">{languageCode}</div>
     </button>
   );
 }
@@ -296,12 +332,14 @@ function PokemonGrid({
               pokemonNumber={pokemon.id}
               setPopupText={setPopupText}
               setPopupKey={setPopupKey}
+              languageCode={key}
             />
           );
         }
       });
     } else {
       const nameForeign = pokemon[`name_${languageCode}`];
+      const matchedOnObj = pokemon['matched_on'];
       currentPokemon.push(
         <PokemonButton
           key={pokemon.id}
@@ -310,6 +348,7 @@ function PokemonGrid({
           pokemonNumber={pokemon.id}
           setPopupText={setPopupText}
           setPopupKey={setPopupKey}
+          matchedOnObj={matchedOnObj}
         />
       );
     }
