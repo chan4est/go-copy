@@ -12,3 +12,14 @@
 .right-border {
   right: 0;
 }
+
+.new-left-border {
+  min-height: 110vh;
+  position: fixed;
+  background-image: linear-gradient(#b6f09b, #7bd4a8);
+}
+
+.new-right-border {
+  min-height: 110vh;
+  background-image: linear-gradient(#7ed5aa, #44bbb9);
+}
