@@ -22068,7 +22068,7 @@ export const pokemonData = [
   {
     family: ['stonjourner'],
     id: 874,
-    keywords: [],
+    keywords: ['regional'],
     name_DE: 'Humanolith',
     name_EN: 'Stonjourner',
     name_ES: 'Stonjourner',
