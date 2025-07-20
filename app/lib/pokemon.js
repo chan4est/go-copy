@@ -22068,7 +22068,11 @@ export const pokemonData = [
   {
     family: ['stonjourner'],
     id: 874,
-    keywords: ['regional'],
+    keywords: [
+      'regional',
+      'regionals',
+      'region exclusive',
+    ],
     name_DE: 'Humanolith',
     name_EN: 'Stonjourner',
     name_ES: 'Stonjourner',
@@ -24610,9 +24614,9 @@ export const pokemonData = [
     types: ['water', 'psychic'],
   },
   {
-    family: ['dondozo', 'tatsugiri'],
+    family: ['dondozo'],
     id: 977,
-    keywords: [],
+    keywords: ['regional'],
     name_DE: 'Heerashai',
     name_EN: 'Dondozo',
     name_ES: 'Dondozo',
@@ -24634,9 +24638,13 @@ export const pokemonData = [
     types: ['water'],
   },
   {
-    family: ['dondozo', 'tatsugiri'],
+    family: ['tatsugiri'],
     id: 978,
-    keywords: [],
+    keywords: [
+      'regional',
+      'regionals',
+      'region exclusive',
+    ],
     name_DE: 'Nigiragi',
     name_EN: 'Tatsugiri',
     name_ES: 'Tatsugiri',
