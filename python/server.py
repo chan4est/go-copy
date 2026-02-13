@@ -12,7 +12,8 @@ class PokemonNames():
         self.pokemon_arr = []
         self.pokemon_families = {}
         self.gen_bulbaurl = 'https://bulbapedia.bulbagarden.net/wiki/List_of_{}_Pok%C3%A9mon_names'
-        self.fam_bulbaurl = 'https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_evolution_family'
+        # TODO: Wait until the 'family' text is fixed
+        self.fam_bulbaurl = 'https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_evolutionary_line'
         ## Test the REGEX on https://regex101.com/
         self.languages = [
             {'name': 'English',                 'searchregex': '\\(Pokémon\\)">(.{1,15})<\\/a><',   'code': 'EN'},
@@ -70,13 +71,14 @@ class PokemonNames():
         fossil_pokemon = [138, 139, 140, 141, 142, 345, 346, 347, 348, 408, 409, 410, 564, 565, 566, 567, 696, 697, 698, 699, 880, 881, 882, 883]
         pseudo_legendary_pokemon = [147, 148, 149, 246, 247, 248, 371, 372, 373, 374, 375, 376, 443, 444, 445, 633, 634, 635, 704, 705, 706, 782, 783, 784, 885, 886, 887, 996, 997, 998]
         mega_evolution_pokemon = [3, 6, 9, 15, 18, 65, 80, 94, 115, 127, 130, 142, 150, 181, 208, 212, 214, 229, 248, 254, 257, 260, 282, 302, 303, 306, 308, 310, 319, 323, 334, 354, 359, 362, 373, 376, 380, 381, 384, 428, 445, 448, 460, 475, 531, 719]
+        za_mega_evolution_pokemon = [26, 36, 71, 121, 149, 154, 160, 227, 358, 398, 478, 485, 491, 500, 530, 545, 560, 604, 609, 623, 652, 655, 658, 668, 670, 678, 687, 689, 691, 701, 718, 740, 768, 780, 801, 807, 870, 952, 970, 978, 998]
         gigantamax_pokemon = [3, 6, 9, 12, 25, 52, 68, 94, 99, 131, 133, 143, 569, 809, 812, 815, 818, 823, 826, 834, 839, 841, 842, 844, 849, 851, 858, 861, 869, 879, 884, 892]
         early_rodent_pokemon = [19, 20, 161, 162, 263, 264, 399, 400, 504, 505, 659, 660, 734, 735, 819, 820, 915, 916]
         early_bird_pokemon = [16, 17, 18, 21, 22, 163, 164, 276, 277, 278, 279, 396, 397, 398, 519, 520, 521, 661, 662, 663, 731, 732, 733, 821, 822, 823, 940, 941]
         early_bug_pokemon = [10, 11, 12, 13, 14, 15, 165, 166, 167, 168, 265, 266, 267, 268, 269, 401, 402, 540, 541, 542, 543, 544, 545, 664, 665, 666, 736, 737, 738, 824, 825, 826, 917, 918, 919, 920]
         pikaclone_pokemon = [25, 26, 172, 311, 312, 417, 587, 702, 777, 877, 921, 922, 923, 778, ]
         # https://www.serebii.net/pokemongo/exclusives.shtml
-        regional_pokemon = [83, 115, 122, 128, 214, 222, 313,  314, 324, 335, 336, 337, 338, 357, 369, 417, 422, 423, 439, 441, 455, 480, 481, 482, 511, 512, 513, 514, 515, 516, 538 ,539, 550,  556, 561, 626, 631, 632, 669, 670, 671, 676, 701, 707, 741, 764, 797, 798, 805, 806]
+        regional_pokemon = [83, 115, 122, 128, 214, 222, 313,  314, 324, 335, 336, 337, 338, 357, 369, 417, 422, 423, 439, 441, 455, 480, 481, 482, 511, 512, 513, 514, 515, 516, 538 ,539, 550,  556, 561, 626, 631, 632, 669, 670, 671, 676, 701, 707, 741, 764, 797, 798, 805, 806, 978]
 
 
         resulting_tags = []
@@ -97,6 +99,8 @@ class PokemonNames():
         if (dex_number in fossil_pokemon):
             resulting_tags.extend(['fossil', 'fossils'])
         if (dex_number in mega_evolution_pokemon):
+            resulting_tags.extend(['mega', 'megas', 'mega evolution', 'mega evolve', 'can mega evolve'])
+        if (dex_number in za_mega_evolution_pokemon):
             resulting_tags.extend(['mega', 'megas', 'mega evolution', 'mega evolve', 'can mega evolve'])
         if (dex_number in gigantamax_pokemon):
             resulting_tags.extend(['gigantamax', 'can gigantamax'])
@@ -124,7 +128,7 @@ class PokemonNames():
         current_family_list = []
 
         for line in family_html.splitlines():
-            pokemon_family = re.findall('>(.{1,15}) family', line)
+            pokemon_family = re.findall('>(.{1,15}) line', line)
             pokemon_name = re.findall('title="(.{1,15}) \\(Pok', line)
 
             ## While scanning you've found a Pokemon family
