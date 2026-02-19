@@ -329,7 +329,7 @@ function PokemonGrid({
               key={`${pokemon.form_id}+${key}`}
               nameEnglish={pokemon.name_EN}
               nameForeign={pokemon[`name_${key}`]}
-              pokemonNumber={pokemon.nat_dex_number}
+              pokemonNumber={pokemon.form_id}
               setPopupText={setPopupText}
               setPopupKey={setPopupKey}
               languageCode={key}
@@ -342,10 +342,10 @@ function PokemonGrid({
       const matchedOnObj = pokemon['matched_on'];
       currentPokemon.push(
         <PokemonButton
-          key={pokemon.id}
+          key={pokemon.form_id}
           nameEnglish={pokemon.name_EN}
           nameForeign={nameForeign}
-          pokemonNumber={pokemon.nat_dex_number}
+          pokemonNumber={pokemon.form_id}
           setPopupText={setPopupText}
           setPopupKey={setPopupKey}
           matchedOnObj={matchedOnObj}
